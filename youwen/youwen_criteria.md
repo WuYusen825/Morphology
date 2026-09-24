@@ -161,6 +161,10 @@ CSV 为 UTF-8（带 BOM，Excel 可直接打开）。
 - 分析集内的亦声同音对 63 个：F 42、L 8、C 5、U 8。普通同音对 133 个：F 15、L 3、C 0、U 73、X 42。
 - **重要**：这些是 Claude 知道标签时做的初判，不是盲编码，只能作方向参考。正式使用前需要第二编码人盲编，可以另做一张盲编码表，但要等 Qu 交回现在这张之后。
 
+**κ 的敏感性分析**：有 3 个盲编码条目在 Qu 编码完成前可能已经暴露（outline.md 中作为例子出现）。计算 κ 时要同时报告全部 100 条的结果和剔除这 3 条后的结果：`python3 kappa.py <表> yisheng_claude_codes.csv --exclude <三个成员字>`。具体是哪 3 条记在项目记忆中，Qu 交回编码表之前不在这里列出。
+
+**B13（오제중 2015）**：此文讨论的是王筠的古今字理论（分別文、累增字），不是大徐本与小徐本的比较，所以对核对小徐对齐没有帮助。它给出的分別文、累增字定义可作为 `identical_relation_type` 中 L、F 两类的依据，但须核对《说文释例》原文。
+
 **8. 模型（已试跑，初步）**：`yisheng_stats.py --models` 输出 `yisheng_models.csv`。
 - 模型形式为 outcome ~ label + (1|phonetic)。本环境没有 R，所以用 statsmodels 的 Bayes 变分近似（BinomialBayesMixedGLM）拟合随机截距模型，并用按声符聚类的 GEE 作对照；p 值取 GEE 的单侧值，4 个检验做 Holm 校正。
 - 语义协变量和 H2 要等盲编码完成后才能拟合。投稿前建议用 R 的 lme4::glmer 复核。
