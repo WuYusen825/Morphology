@@ -31,3 +31,8 @@ for r,m in zip(rows,mc):
 json.dump(rows,open('rows.json','w'),ensure_ascii=False,indent=0)
 from collections import Counter
 print(len(rows),Counter(r['mc_match'] for r in rows),Counter(r['relation'] for r in rows),sum(1 for r in rows if not r['duan_rhyme_group']))
+# 过滤：以声符为部首但另有他声（或"闕"）的字不属该声符系列
+rows=[r for r in rows if not (r['relation']=='部屬會意(無聲)' and ('聲' in r['sw_gloss'] or r['sw_gloss'].startswith('闕')))]
+for r in rows:
+    if r['relation']=='部屬會意(無聲)': r['relation']='會意（聲符作形旁，無聲）'
+json.dump(rows,open('rows.json','w'),ensure_ascii=False,indent=0)
