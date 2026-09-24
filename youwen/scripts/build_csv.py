@@ -1,6 +1,6 @@
 import json,csv,coding,os,sys
 R=json.load(open('rows.json'))
-HEADRHYME={'戔':'十四部','侖':'十三部','農':'九部','句':'四部','皮':'十七部','兼':'七部','巠':'十一部','叚':'五部','冓':'四部','堯':'二部','喬':'二部','氐':'十五部','票':'二部','叕':'十五部','青':'十一部'}
+HEADRHYME={'戔':'十四部','侖':'十三部','農':'九部','句':'四部','皮':'十七部','兼':'七部','巠':'十一部','叚':'五部','冓':'四部','堯':'二部','喬':'二部','氐':'十五部','票':'二部','叕':'十五部','青':'十一部','方':'十部','古':'五部','可':'十七部','其':'一部','各':'五部'}
 ORDER=list(coding.CORE)
 R.sort(key=lambda r:(ORDER.index(r['series']), r['relation']!='phonetic_head', r['sw_id']))
 out=[]
@@ -18,11 +18,11 @@ for i,r in enumerate(R,1):
     if '反义' in note: flags.append('counterexample_opposite_meaning')
     if r['relation'] not in('聲','phonetic_head'): flags.append('relation_'+r['relation'])
     core,src,altcore,altsrc=coding.CORE[s]
-    out.append({'row_id':i,'series':s,'char':r['char'],'relation_in_shuowen':r['relation'],
+    out.append({'row_id':i,'group':r['group'],'series':s,'char':r['char'],'relation_in_shuowen':r['relation'],
       'shuowen_gloss':r['sw_gloss'],'shuowen_id':r['sw_id'],'daxu_fanqie':r['dx_fanqie'],
       'guangyun_position':r['gy_primary'],'guangyun_fanqie':r['gy_fanqie'],'mc_bs2014':r['bs_mc'],
       'mc_match_method':m,'mc_confidence':conf,'guangyun_all_readings':r['gy_all'],
-      'oc_bs2014':'','oc_status':'pending: BS2014 table not reachable from sandbox',
+      'oc_bs2014':'','oc_status':'pending: BS2014 table not reachable from sandbox','oc_zhengzhang':'','oc_zz_status':'pending: 郑张尚芳《上古音系》(2003/2013) 字表待获取',
       'duan_rhyme_group':r['duan_rhyme_group'],'series_head_rhyme_group':HEADRHYME[s],
       'duan_semantic_remarks':r['duan_youwen_remarks'],'duan_loan_extension_remarks':r['duan_loan_or_extension_remarks'],
       'claimed_core':core,'claimed_core_source':src,'code_core':code,
