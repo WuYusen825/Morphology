@@ -22,7 +22,7 @@ for i,r in enumerate(R,1):
       'shuowen_gloss':r['sw_gloss'],'shuowen_id':r['sw_id'],'daxu_fanqie':r['dx_fanqie'],
       'guangyun_position':r['gy_primary'],'guangyun_fanqie':r['gy_fanqie'],'mc_bs2014':r['bs_mc'],
       'mc_match_method':m,'mc_confidence':conf,'guangyun_all_readings':r['gy_all'],
-      'oc_bs2014':'','oc_status':'pending: BS2014 table not reachable from sandbox','oc_zhengzhang':'','oc_zz_status':'pending: 郑张尚芳《上古音系》(2003/2013) 字表待获取',
+      'oc_bs2014':r['oc_bs2014'],'oc_bs_match':r['oc_bs_match'],'oc_bs_gloss':r['oc_bs_gloss'],'oc_bs_gsr':r['oc_bs_gsr'],'oc_bs_all_readings':r['oc_bs_all'],'morph_relation_to_head':r['morph_relation_to_head'],'morph_diff':r['morph_diff'],'oc_schuessler2007':r['oc_schuessler2007'],'schuessler_wordfamily':r['schuessler_wordfamily'],'schuessler_gloss':r['schuessler_gloss'],
       'duan_rhyme_group':r['duan_rhyme_group'],'series_head_rhyme_group':HEADRHYME[s],
       'duan_semantic_remarks':r['duan_youwen_remarks'],'duan_loan_extension_remarks':r['duan_loan_or_extension_remarks'],
       'claimed_core':core,'claimed_core_source':src,'code_core':code,
@@ -30,7 +30,7 @@ for i,r in enumerate(R,1):
       'flags':';'.join(flags),
       'src_gloss':'說文解字(大徐本) via shuowen.org data, github.com/shuowenjiezi/shuowen',
       'src_duan':'段玉裁《說文解字注》 via same dataset (duan_notes field)',
-      'src_mc':'廣韻 via tshet-uinh 0.15.1 (nk2028); MC notation = Baxter-Sagart 2014 via tshet-uinh-examples baxter.js',
+      'src_mc':'廣韻 via tshet-uinh 0.15.1 (nk2028); MC notation = Baxter-Sagart 2014 via tshet-uinh-examples baxter.js','src_oc':'BS2014: github.com/digling/cddb datasets/Baxter2014/raw/D_ocbs.tsv (commit 054fb4c); Schuessler 2007: same repo datasets/Schuessler2007',
       'duan_full_notes':r['duan_full']})
 os.makedirs(sys.argv[1],exist_ok=True)
 with open(os.path.join(sys.argv[1],'youwen_pilot.csv'),'w',newline='',encoding='utf-8-sig') as f:

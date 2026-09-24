@@ -1,0 +1,23 @@
+﻿comparison,yisheng_n,yisheng_regular,yisheng_rate,ordinary_n,ordinary_regular,ordinary_rate,fisher_one_sided
+all phonetics,65,37,0.569,266,102,0.383,0.0051
+matched phonetics (n=44),49,29,0.592,125,57,0.456,0.074
+
+category counts (relation,category,n)
+亦聲,C,9
+亦聲,I,17
+亦聲,NA,159
+亦聲,O,13
+亦聲,O2,3
+亦聲,R,20
+亦聲,V,3
+省聲,C,1
+省聲,NA,11
+省聲,O,2
+省聲,R,1
+聲,C,23
+聲,I,15
+聲,NA,784
+聲,O,96
+聲,O2,17
+聲,R,87
+聲,V,28
