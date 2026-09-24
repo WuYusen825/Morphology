@@ -3,3 +3,7 @@ H1a,MC identical,1035,152,2.38,1.69-3.34,2.9e-07,2.77,1.96-3.93,5.75,1.2e-06
 H1b,MC tone/voicing alt | non-identical,839,137,1.29,0.87-1.91,0.1,1.35,0.82-2.23,1.18,0.2
 H1b-OC,OC R | non-identical,281,95,1.17,0.62-2.22,0.31,1.18,0.61-2.29,0.49,0.31
 H1c,member departing | alternation,183,66,2.44,1.34-4.48,0.0019,4.15,1.73-9.96,3.19,0.0056
+H1a (excl. filed-under-phonetic),MC identical,1001,142,2.51,1.74-3.60,3.4e-07,2.91,1.98-4.27,5.45,1.3e-06
+H1b (excl. filed-under-phonetic),MC tone/voicing alt | non-identical,814,132,1.29,0.83-2.01,0.13,1.33,0.76-2.35,0.99,0.24
+H1b-OC (excl. filed-under-phonetic),OC R | non-identical,274,95,1.47,0.77-2.81,0.12,1.56,0.77-3.17,1.24,0.24
+H1c (excl. filed-under-phonetic),member departing | alternation,176,64,2.58,1.39-4.81,0.0014,5.14,1.81-14.62,3.07,0.0042

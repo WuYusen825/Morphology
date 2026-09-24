@@ -60,6 +60,16 @@ ex=[r for r in R if r['label_source']!='daxu']
 layer('Duan/Xiao Xu only (extra rows, 會意 in Da Xu)',ex)
 layer('Da Xu 聲, Duan adds 亦聲',[r for r in A if r['relation']=='聲' and r['duan_label']=='亦聲'])
 
+# H4（探索性）：归在以声符为部首之部的亦声字（普通形声字无一如此归部，所以只能在亦声字内部比较）
+def h4(name,pred):
+    rs=[r for r in yi if r['mc_relation']!='NA']; a=[r for r in rs if r['filed_under_phonetic']=='True']; b=[r for r in rs if r['filed_under_phonetic']=='False']
+    x=sum(map(pred,a)); y=sum(map(pred,b))
+    out.append(dict(hypothesis='H4',comparison=name+' (filed under phonetic vs other labels)',yisheng_hits=x,yisheng_n=len(a),yisheng_rate=round(x/len(a),3),
+        ordinary_hits=y,ordinary_n=len(b),ordinary_rate=round(y/len(b),3),fisher_one_sided='%.2g'%min(fisher(x,len(a)-x,y,len(b)-y),fisher(y,len(b)-y,x,len(a)-x)),
+        note=f"columns: filed-under-phonetic 亦聲 vs other 亦聲; two-sided-ish (min of one-sided); {sum(r['filed_under_phonetic']=='True' for r in yi)} of {len(yi)} labels filed under phonetic; no plain 聲 is"))
+h4('MC identical',lambda r:r['mc_relation']=='identical')
+h4('MC tone/voicing alternation',lambda r:r['mc_relation']=='tone_voicing_alt')
+
 if '--models' in sys.argv:
     import pandas as pd, numpy as np, statsmodels.api as sm, statsmodels.formula.api as smf
     from statsmodels.genmod.bayes_mixed_glm import BinomialBayesMixedGLM
@@ -69,6 +79,8 @@ if '--models' in sys.argv:
            ('H1b-OC','OC R | non-identical',ni_oc,lambda r:r['morph_relation_auto']=='R'),
            ('H1c','member departing | alternation',alt,lambda r:r['mc_qusheng_direction']=='member')]
     res=[]
+    sub=lambda rows:[r for r in rows if r.get('filed_under_phonetic')!='True']
+    tests+=[(h+' (excl. filed-under-phonetic)',n,sub(rows),p) for h,n,rows,p in tests]
     for h,name,rows,pred in tests:
         df=pd.DataFrame(dict(y=[int(pred(r)) for r in rows],label=[int(r['relation']=='亦聲') for r in rows],phon=[r['phonetic'] for r in rows]))
         g=smf.gee('y ~ label',groups='phon',data=df,family=sm.families.Binomial(),cov_struct=sm.cov_struct.Exchangeable()).fit()
@@ -80,7 +92,8 @@ if '--models' in sys.argv:
             gee_OR=round(math.exp(b),2),gee_CI95=f'{math.exp(b-1.96*se):.2f}-{math.exp(b+1.96*se):.2f}',gee_p_one_sided=p1,
             glmm_vb_OR=round(math.exp(bm),2),glmm_vb_CI95=f'{math.exp(bm-1.96*sd):.2f}-{math.exp(bm+1.96*sd):.2f}',
             glmm_vb_z=round(bm/sd,2)))
-    ps=[x['gee_p_one_sided'] for x in res]; adj=multipletests(ps,method='holm')[1]
+    k=len(res)//2   # Holm 分别在主分析和"剔除本部亦声"两组内部做
+    adj=list(multipletests([x['gee_p_one_sided'] for x in res[:k]],method='holm')[1])+list(multipletests([x['gee_p_one_sided'] for x in res[k:]],method='holm')[1])
     for x,a in zip(res,adj): x['gee_p_one_sided']='%.2g'%x['gee_p_one_sided']; x['holm_p']='%.2g'%a
     with open(os.path.join(sys.argv[1],'yisheng_models.csv'),'w',newline='',encoding='utf-8-sig') as f:
         w=csv.DictWriter(f,fieldnames=list(res[0]));w.writeheader();w.writerows(res)

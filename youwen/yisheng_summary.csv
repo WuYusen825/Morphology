@@ -54,3 +54,5 @@ H3,Da Xu + Xiao Xu both label (aligned) (56 items),10,47,0.213,,,,,MC-identical 
 H3,"Da Xu labels, Xiao Xu drops (aligned) (12 items)",2,10,0.2,,,,,MC-identical among items with MC; semantic codes pending
 H3,"Duan/Xiao Xu only (extra rows, 會意 in Da Xu) (39 items)",9,32,0.281,,,,,MC-identical among items with MC; semantic codes pending
 H3,"Da Xu 聲, Duan adds 亦聲 (4 items)",1,4,0.25,,,,,MC-identical among items with MC; semantic codes pending
+H4,MC identical (filed under phonetic vs other labels),9,34,0.265,54,143,0.378,0.15,columns: filed-under-phonetic 亦聲 vs other 亦聲; two-sided-ish (min of one-sided); 40 of 212 labels filed under phonetic; no plain 聲 is
+H4,MC tone/voicing alternation (filed under phonetic vs other labels),7,34,0.206,26,143,0.182,0.46,columns: filed-under-phonetic 亦聲 vs other 亦聲; two-sided-ish (min of one-sided); 40 of 212 labels filed under phonetic; no plain 聲 is

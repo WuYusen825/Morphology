@@ -135,6 +135,7 @@ for i,r in enumerate(rows):
     x=XX.get(r['sw_id'])
     r['xiaoxu_label']=('亦聲' if x['xiaoxu_yisheng']=='True' else '無') if x and x['agreement']!='not_aligned' else ('未对齐' if x else '')
     r['identical_relation_type']=REL.get((r['char'],r['phonetic']),'') if r['mc_relation']=='identical' else ''
+    r['filed_under_phonetic']=str(d['radical']==r['phonetic'])   # 归在以声符为部首的部中（王筠"分別文之在本部者"，H4）
     r['in_analysis_set']=str(r['label_source']=='daxu' and r['relation'] in ('亦聲','聲') and r['is_xinfu']=='False')
     r['src']='说文: shuowenjiezi/shuowen（大徐正文 explanation；段注 duan_notes）; 广韵: tshet-uinh 0.15.1; BS2014: digling/cddb Baxter2014/raw/D_ocbs.tsv; 小徐: kanripo/KR1j0019 via yisheng_daxu_xiaoxu.csv'
 rows.sort(key=lambda r:(r['phonetic'],r['label_source']!='daxu',r['relation']!='亦聲',r['sw_id']))
