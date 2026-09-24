@@ -1,4 +1,5 @@
 ﻿phonetic,head_in_shuowen,head_gloss,head_dx_fanqie,char,sw_id,relation,shuowen_gloss,daxu_fanqie,mc_bs2014,guangyun_position,mc_confidence,head_mc_bs2014,oc_bs2014,oc_bs_match,head_oc_bs2014,head_oc_bs_match,morph_relation_auto,morph_diff,src
+㒳,True,再也。从冂，闕。《易》曰：“參天㒳地。”凡㒳之屬皆从㒳。,良奬切,兩,4789,亦聲,二十四銖爲一兩。从一；㒳，平分，亦聲。,良奬切,ljangX,來開三陽上,initial_only,ljangX,*p.raŋʔ,mc_match,,not_in_bs,NA,,说文: shuowenjiezi/shuowen; 广韵: tshet-uinh 0.15.1; BS2014: digling/cddb Baxter2014/raw/D_ocbs.tsv
 㖾,False,,,遌,1130,亦聲,相遇驚也。从辵从㖾，㖾亦聲。,五各切,ngak,疑開一唐入,identical_fanqie,,*ŋˤak,mc_match,,not_in_bs,NA,,说文: shuowenjiezi/shuowen; 广韵: tshet-uinh 0.15.1; BS2014: digling/cddb Baxter2014/raw/D_ocbs.tsv
 㖾,False,,,㓵,2734,聲,刀劒刃也。从刀㖾聲。,五各切,,,none,,,not_in_bs,,not_in_bs,NA,,说文: shuowenjiezi/shuowen; 广韵: tshet-uinh 0.15.1; BS2014: digling/cddb Baxter2014/raw/D_ocbs.tsv
 㖾,False,,,鄂,4078,聲,江夏縣。从邑㖾聲。,五各切,ngak,疑開一唐入,identical_fanqie,,,not_in_bs,,not_in_bs,NA,,说文: shuowenjiezi/shuowen; 广韵: tshet-uinh 0.15.1; BS2014: digling/cddb Baxter2014/raw/D_ocbs.tsv
@@ -115,6 +116,7 @@
 亾,True,逃也。从入从𠃊。凡亾之屬皆从亾。,武方切,喪,977,亦聲,亾也。从哭从亾。會意。亾亦聲。,息郎切,sang,心開一唐平,identical_fanqie,,*s-mˤaŋ,mc_match,,not_in_bs,NA,,说文: shuowenjiezi/shuowen; 广韵: tshet-uinh 0.15.1; BS2014: digling/cddb Baxter2014/raw/D_ocbs.tsv
 亾,True,逃也。从入从𠃊。凡亾之屬皆从亾。,武方切,𦬆,513,聲,艸耑。从艸亾聲。,武方切,,,none,,,not_in_bs,,not_in_bs,NA,,说文: shuowenjiezi/shuowen; 广韵: tshet-uinh 0.15.1; BS2014: digling/cddb Baxter2014/raw/D_ocbs.tsv
 亾,True,逃也。从入从𠃊。凡亾之屬皆从亾。,武方切,𢻲,2027,聲,撫也。从攴亾聲。讀與撫同。,芳武切,,,none,,,not_in_bs,,not_in_bs,NA,,说文: shuowenjiezi/shuowen; 广韵: tshet-uinh 0.15.1; BS2014: digling/cddb Baxter2014/raw/D_ocbs.tsv
+从,True,隨行也。从辵、从，从亦聲。,慈用切,從,5203,亦聲,隨行也。从辵、从，从亦聲。,慈用切,dzjowngH,從三鍾去,initial+rhyme+tone,dzjowng,*[dz]oŋ-s,mc_match,,not_in_bs,NA,,说文: shuowenjiezi/shuowen; 广韵: tshet-uinh 0.15.1; BS2014: digling/cddb Baxter2014/raw/D_ocbs.tsv
 令,True,發號也。从亼、卪。,力正切,鈴,9334,亦聲,令丁也。从金从令，令亦聲。,郎丁切,leng,來開四青平,identical_fanqie,ljeng,,not_in_bs,*riŋ,mc_match,NA,,说文: shuowenjiezi/shuowen; 广韵: tshet-uinh 0.15.1; BS2014: digling/cddb Baxter2014/raw/D_ocbs.tsv
 令,True,發號也。从亼、卪。,力正切,玲,150,聲,玉聲。从玉令聲。,郎丁切,leng,來開四青平,identical_fanqie,ljeng,,not_in_bs,*riŋ,mc_match,NA,,说文: shuowenjiezi/shuowen; 广韵: tshet-uinh 0.15.1; BS2014: digling/cddb Baxter2014/raw/D_ocbs.tsv
 令,True,發號也。从亼、卪。,力正切,苓,365,聲,卷耳也。从艸令聲。,郎丁切,leng,來開四青平,identical_fanqie,ljeng,,not_in_bs,*riŋ,mc_match,NA,,说文: shuowenjiezi/shuowen; 广韵: tshet-uinh 0.15.1; BS2014: digling/cddb Baxter2014/raw/D_ocbs.tsv
@@ -168,6 +170,7 @@
 兩,True,二十四銖爲一兩。从一；㒳，平分，亦聲。,良奬切,緉,8710,亦聲,履兩枚也。一曰絞也。从糸从兩，兩亦聲。,力讓切,ljangH,來開三陽去,identical_fanqie,ljangX,,not_in_bs,*p.raŋʔ,mc_match,NA,,说文: shuowenjiezi/shuowen; 广韵: tshet-uinh 0.15.1; BS2014: digling/cddb Baxter2014/raw/D_ocbs.tsv
 兩,True,二十四銖爲一兩。从一；㒳，平分，亦聲。,良奬切,脼,2677,聲,膎肉也。从肉兩聲。,良獎切,ljangX,來開三陽上,initial+rhyme+tone,ljangX,,not_in_bs,*p.raŋʔ,mc_match,NA,,说文: shuowenjiezi/shuowen; 广韵: tshet-uinh 0.15.1; BS2014: digling/cddb Baxter2014/raw/D_ocbs.tsv
 兩,True,二十四銖爲一兩。从一；㒳，平分，亦聲。,良奬切,蜽,8879,聲,蛧蜽也。从虫兩聲。,良獎切,ljangX,來開三陽上,initial+rhyme+tone,ljangX,,not_in_bs,*p.raŋʔ,mc_match,NA,,说文: shuowenjiezi/shuowen; 广韵: tshet-uinh 0.15.1; BS2014: digling/cddb Baxter2014/raw/D_ocbs.tsv
+八,True,別也。象分別相背之形。凡八之屬皆从八。,博拔切,𠔁,715,亦聲,分也。从重八。八，別也。亦聲。《孝經說》曰：“故上下有別。”,兵列切,,,none,peat,,not_in_bs,*pˤret,mc_match,NA,,说文: shuowenjiezi/shuowen; 广韵: tshet-uinh 0.15.1; BS2014: digling/cddb Baxter2014/raw/D_ocbs.tsv
 八,True,別也。象分別相背之形。凡八之屬皆从八。,博拔切,𠔯,1747,亦聲,賦事也。从菐从八。八，分之也。八亦聲。讀若頒。一曰讀若非。,布還切,paen,幫二刪平,identical_fanqie,peat,,not_in_bs,*pˤret,mc_match,NA,,说文: shuowenjiezi/shuowen; 广韵: tshet-uinh 0.15.1; BS2014: digling/cddb Baxter2014/raw/D_ocbs.tsv
 八,True,別也。象分別相背之形。凡八之屬皆从八。,博拔切,匹,8381,亦聲,四丈也。从八、匸。八揲一匹，八亦聲。,普吉切,phjit,滂三A真入,initial+rhyme+tone,peat,*pʰi[t],mc_match,*pˤret,mc_match,V,"ini,phar,med,v;uncertain",说文: shuowenjiezi/shuowen; 广韵: tshet-uinh 0.15.1; BS2014: digling/cddb Baxter2014/raw/D_ocbs.tsv
 八,True,別也。象分別相背之形。凡八之屬皆从八。,博拔切,䏌,2637,聲,振䏌也。从肉八聲。,許訖切,,,none,peat,,not_in_bs,*pˤret,mc_match,NA,,说文: shuowenjiezi/shuowen; 广韵: tshet-uinh 0.15.1; BS2014: digling/cddb Baxter2014/raw/D_ocbs.tsv

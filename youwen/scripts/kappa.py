@@ -1,4 +1,5 @@
-# 用法：python3 kappa.py <已填写的 blind_coding_sheet.xlsx> <youwen_pilot.csv>
+# 用法：python3 kappa.py <已填写的 blind_coding_sheet.xlsx> <yisheng_claude_codes.csv>
+# （旧版右文表用 youwen_pilot.csv；两份 csv 都有 series/char/code_core 列）
 # 输出 Cohen's κ（四类 Y/E/N/X；以及严口径 Y vs 非Y）与分歧清单
 import sys,csv
 from collections import Counter
@@ -6,7 +7,8 @@ from openpyxl import load_workbook
 ws=load_workbook(sys.argv[1])['编码']
 B={}
 for r in ws.iter_rows(min_row=2,values_only=True):
-    if r[7]: B[(r[1],r[3])]=str(r[7]).strip().upper()
+    v=r[5] if len(r)<10 else r[7]   # 亦声表第 6 列、右文表第 8 列
+    if v: B[(r[1],r[3])]=str(v).strip().upper()
 A={(r['series'],r['char']):r['code_core'] for r in csv.DictReader(open(sys.argv[2],encoding='utf-8-sig'))}
 pairs=[(A[k],b) for k,b in B.items() if k in A]
 def kappa(p):

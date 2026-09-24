@@ -9,7 +9,9 @@ HEAD={}
 for d in D:
     for c in [d['wordhead']]+d['indexes']: HEAD.setdefault(c,d)
 yi=re.compile(r'([^\s，。、；：“”《》从])亦聲')
-phons=sorted({m.group(1) for d in D for m in [yi.search(d['explanation'])] if m})
+# 正则取不到声符的 3 条亦声字头，按释义手工指定声符：從"从亦聲"、𠔁"八…亦聲"、兩"㒳…亦聲"
+MANUAL={'從':'从','𠔁':'八','兩':'㒳'}
+phons=sorted({m.group(1) for d in D for m in [yi.search(d['explanation'])] if m}|set(MANUAL.values()))
 rows=[]
 for P in phons:
     pat=re.compile('从[^。]{0,5}?'+re.escape(P)+'(省)?(亦)?聲')
@@ -17,7 +19,7 @@ for P in phons:
     for d in D:
         if d['wordhead']==P: continue
         y=yi.search(d['explanation'])
-        if y and y.group(1)==P: rel='亦聲'
+        if (y and y.group(1)==P) or MANUAL.get(d['wordhead'])==P: rel='亦聲'
         else:
             m=pat.search(d['explanation'])
             if not m: continue
