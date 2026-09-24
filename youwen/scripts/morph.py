@@ -26,3 +26,21 @@ def compare(a,b):
     elif 'v' in diff: cat='V'
     else: cat='O' if place(A['ini'])==place(B['ini']) and place(A['ini']) is not None else 'O2'
     return cat, ','.join(diff)+(';uncertain' if A['uncertain'] or B['uncertain'] else '')
+def affix_detail(a,b):
+    # R 类细分：列出成员字相对声符字在哪些成分上不同，写作"成分:声符值>成员值"，∅ 表示空
+    if not a or not b: return ''
+    A,B=parts(a),parts(b); out=[]
+    for k in ('pre','phar','med','suf'):
+        if A[k]!=B[k]:
+            f=lambda x:('ˤ' if x else '∅') if k=='phar' else (x or '∅')
+            out.append(f'{k}:{f(B[k])}>{f(A[k])}')
+    return ';'.join(out)
+def affix_type(a,b):
+    # 单一差异时给出具体类型，便于按词缀拆分 R；多处差异记 multi
+    d=affix_detail(a,b).split(';') if affix_detail(a,b) else []
+    if len(d)!=1: return 'multi' if d else ''
+    k,v=d[0].split(':'); src,tgt=v.split('>')
+    if k=='suf': return 'suf_'+('+'+tgt if src=='∅' else ('-'+src if tgt=='∅' else src+'>'+tgt))
+    if k=='pre': return 'pre_'+('+'+tgt if src=='∅' else ('-'+src if tgt=='∅' else src+'>'+tgt))
+    if k=='phar': return 'phar_'+('lost' if src=='ˤ' else 'gained')
+    return 'med_'+('+'+tgt if src=='∅' else ('-'+src if tgt=='∅' else src+'>'+tgt))

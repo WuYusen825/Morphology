@@ -1,0 +1,5 @@
+﻿hypothesis,outcome,n,n_phonetics,gee_OR,gee_CI95,gee_p_one_sided,glmm_vb_OR,glmm_vb_CI95,glmm_vb_z,holm_p
+H1a,MC identical,1035,152,2.38,1.69-3.34,2.9e-07,2.77,1.96-3.93,5.75,1.2e-06
+H1b,MC tone/voicing alt | non-identical,839,137,1.29,0.87-1.91,0.1,1.35,0.82-2.23,1.18,0.2
+H1b-OC,OC R | non-identical,281,95,1.17,0.62-2.22,0.31,1.18,0.61-2.29,0.49,0.31
+H1c,member departing | alternation,183,66,2.44,1.34-4.48,0.0019,4.15,1.73-9.96,3.19,0.0056

@@ -1,23 +1,56 @@
-﻿comparison,yisheng_n,yisheng_regular,yisheng_rate,ordinary_n,ordinary_regular,ordinary_rate,fisher_one_sided
-all phonetics,65,37,0.569,266,102,0.383,0.0051
-matched phonetics (n=44),49,29,0.592,125,57,0.456,0.074
-
-category counts (relation,category,n)
-亦聲,C,9
-亦聲,I,17
-亦聲,NA,162
-亦聲,O,13
-亦聲,O2,3
-亦聲,R,20
-亦聲,V,3
-省聲,C,1
-省聲,NA,11
-省聲,O,2
-省聲,R,1
-聲,C,23
-聲,I,15
-聲,NA,784
-聲,O,96
-聲,O2,17
-聲,R,87
-聲,V,28
+﻿hypothesis,comparison,yisheng_hits,yisheng_n,yisheng_rate,ordinary_hits,ordinary_n,ordinary_rate,fisher_one_sided,note
+H1a,"MC identical syllable, all phonetics",63,177,0.356,133,858,0.155,4.5e-09,
+H1a,"MC identical syllable, matched phonetics (n=121)",50,148,0.338,130,839,0.155,5.2e-07,
+H1a,"OC (BS) identical, all phonetics",15,60,0.25,13,249,0.052,2.1e-05,
+H1a,"OC (BS) identical, matched phonetics (n=42)",13,47,0.277,4,119,0.034,1.8e-05,
+H1b,"OC R (affix/alternation only) among non-identical, all phonetics",18,45,0.4,84,236,0.356,0.34,
+H1b,"OC R (affix/alternation only) among non-identical, matched phonetics (n=31)",13,33,0.394,40,86,0.465,0.82,
+H1b,"OC R subtype med_+r among non-identical, all phonetics",1,45,0.022,6,236,0.025,0.71,descriptive
+H1b,"OC R subtype med_-r among non-identical, all phonetics",0,45,0.0,2,236,0.008,1,descriptive
+H1b,"OC R subtype multi among non-identical, all phonetics",5,45,0.111,33,236,0.14,0.77,descriptive
+H1b,"OC R subtype phar_gained among non-identical, all phonetics",1,45,0.022,6,236,0.025,0.71,descriptive
+H1b,"OC R subtype pre_+Cə- among non-identical, all phonetics",0,45,0.0,1,236,0.004,1,descriptive
+H1b,"OC R subtype pre_+m- among non-identical, all phonetics",0,45,0.0,2,236,0.008,1,descriptive
+H1b,"OC R subtype pre_+s- among non-identical, all phonetics",0,45,0.0,1,236,0.004,1,descriptive
+H1b,"OC R subtype pre_+s. among non-identical, all phonetics",0,45,0.0,5,236,0.021,1,descriptive
+H1b,"OC R subtype pre_+sə. among non-identical, all phonetics",0,45,0.0,1,236,0.004,1,descriptive
+H1b,"OC R subtype pre_-C. among non-identical, all phonetics",2,45,0.044,0,236,0.0,0.025,descriptive
+H1b,"OC R subtype pre_-Cə. among non-identical, all phonetics",0,45,0.0,1,236,0.004,1,descriptive
+H1b,"OC R subtype pre_-N- among non-identical, all phonetics",1,45,0.022,1,236,0.004,0.3,descriptive
+H1b,"OC R subtype pre_-m- among non-identical, all phonetics",2,45,0.044,6,236,0.025,0.38,descriptive
+H1b,"OC R subtype pre_m->C. among non-identical, all phonetics",0,45,0.0,1,236,0.004,1,descriptive
+H1b,"OC R subtype suf_+-s among non-identical, all phonetics",0,45,0.0,2,236,0.008,1,descriptive
+H1b,"OC R subtype suf_+ʔ among non-identical, all phonetics",1,45,0.022,9,236,0.038,0.83,descriptive
+H1b,"OC R subtype suf_+ʔ-s among non-identical, all phonetics",0,45,0.0,1,236,0.004,1,descriptive
+H1b,"OC R subtype suf_-s>ʔ among non-identical, all phonetics",1,45,0.022,0,236,0.0,0.16,descriptive
+H1b,"OC R subtype suf_-ʔ among non-identical, all phonetics",1,45,0.022,1,236,0.004,0.3,descriptive
+H1b,"OC R subtype suf_-ʔ-s among non-identical, all phonetics",0,45,0.0,1,236,0.004,1,descriptive
+H1b,"OC R subtype suf_ʔ-s>ʔ among non-identical, all phonetics",1,45,0.022,0,236,0.0,0.16,descriptive
+H1b,"OC R subtype suf_ʔ>-s among non-identical, all phonetics",0,45,0.0,1,236,0.004,1,descriptive
+H1b,"OC R subtype suf_ʔ>ʔ-s among non-identical, all phonetics",2,45,0.044,3,236,0.013,0.18,descriptive
+H1b,"OC category O among non-identical, all phonetics",13,45,0.289,85,236,0.36,0.86,descriptive
+H1b,"OC category O2 among non-identical, all phonetics",3,45,0.067,17,236,0.072,0.65,descriptive
+H1b,"OC category V among non-identical, all phonetics",3,45,0.067,28,236,0.119,0.91,descriptive
+H1b,"OC category C among non-identical, all phonetics",8,45,0.178,22,236,0.093,0.083,descriptive
+H1b,"MC tone/voicing alternation among non-identical, all phonetics",33,114,0.289,150,725,0.207,0.034,
+H1b,"MC tone/voicing alternation among non-identical, matched phonetics (n=80)",26,93,0.28,129,566,0.228,0.17,
+H1c,"member has departing tone, among tone/voicing alternations, all phonetics",16,33,0.485,43,150,0.287,0.025,
+H1c,"member has departing tone, among tone/voicing alternations, matched phonetics (n=22)",11,24,0.458,18,77,0.234,0.033,
+H1c,"head has departing tone, among tone/voicing alternations, all phonetics",5,33,0.152,15,150,0.1,0.28,descriptive
+H1c,"member-departing derivative, among all MC pairs, all phonetics",16,177,0.09,43,858,0.05,0.032,
+H1c,"member-departing derivative, among all MC pairs, matched phonetics (n=121)",15,148,0.101,43,839,0.051,0.018,
+H2-confound,"paronomastic gloss (definition contains the phonetic), all phonetics",58,212,0.274,11,953,0.012,3.3e-35,
+H2-confound,"paronomastic gloss (definition contains the phonetic), matched phonetics (n=135)",53,170,0.312,11,953,0.012,2.9e-36,
+H1a-sens,"MC identical, paronomastic glosses removed, all phonetics",40,126,0.317,131,848,0.154,2.1e-05,
+H1a-types,identical pairs of relation type L,8,63,0.127,3,133,0.023,0.0055,"descriptive; Claude first-pass, unblinded"
+H1a-types,identical pairs of relation type F,42,63,0.667,15,133,0.113,5.5e-15,"descriptive; Claude first-pass, unblinded"
+H1a-types,identical pairs of relation type C,5,63,0.079,0,133,0.0,0.0031,"descriptive; Claude first-pass, unblinded"
+H1a-types,identical pairs of relation type U,8,63,0.127,73,133,0.549,1,"descriptive; Claude first-pass, unblinded"
+H1a-types,identical pairs of relation type X,0,63,0.0,42,133,0.316,1,"descriptive; Claude first-pass, unblinded"
+H3,Da Xu + Duan both label (170 items),49,143,0.343,,,,,MC-identical among items with MC; semantic codes pending
+H3,"Da Xu labels, Duan drops (39 items)",13,32,0.406,,,,,MC-identical among items with MC; semantic codes pending
+H3,"Da Xu labels, Duan text missing in data (3 items)",1,2,0.5,,,,,MC-identical among items with MC; semantic codes pending
+H3,Da Xu + Xiao Xu both label (aligned) (56 items),10,47,0.213,,,,,MC-identical among items with MC; semantic codes pending
+H3,"Da Xu labels, Xiao Xu drops (aligned) (12 items)",2,10,0.2,,,,,MC-identical among items with MC; semantic codes pending
+H3,"Duan/Xiao Xu only (extra rows, 會意 in Da Xu) (39 items)",9,32,0.281,,,,,MC-identical among items with MC; semantic codes pending
+H3,"Da Xu 聲, Duan adds 亦聲 (4 items)",1,4,0.25,,,,,MC-identical among items with MC; semantic codes pending
