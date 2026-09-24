@@ -313,6 +313,16 @@
 - 相关性：闪米特语词根是右文比较的最佳类型学对照，这篇代表最新的反思。
 - 获取：🟢 https://revistes.uab.cat/catjl/article/view/v24-n1-bobeck
 
+**E12. Rasin, Ezer, Omer Preminger & David Pesetsky. 2024.** A re-evaluation of Arad's argument for roots. In Robert Autry et al. (eds.), *Proceedings of the 39th West Coast Conference on Formal Linguistics*, 382–392. Somerville, MA: Cascadilla Proceedings Project.
+- 摘要：重新检验 Arad（E3）的希伯来语材料，发现部分“名词派生”动词同样有不可预测的意义，“意义不可预测 ↔ 词根派生”的相关并不成立。
+- 相关性：对 E3 的直接反驳。本文用 Arad 的“派生词蕴含词基意义”诊断时，必须同时回应这篇。
+- 获取：🟢 https://www.lingref.com/cpp/wccfl/39/paper3651.pdf
+
+**E13. （作者待核）** 二徐本《說文》亦聲字差異探討. 韩国 KCI 收录期刊，文章编号 ART002078031。
+- 摘要：题目显示专门比较大徐本、小徐本《说文》在“亦声”标注上的差异。全文在本环境中无法打开。
+- 相关性：对应文献综述中的 H3（两个版本标注不一致的字）。
+- 获取：🟡 KCI 通常免费，需要在 kci.go.kr 下载
+
 ---
 
 ## F. 学位论文
