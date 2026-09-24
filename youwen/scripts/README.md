@@ -7,3 +7,4 @@
 5. 人工编码在 `coding.py` 中（C 字典），修改后重跑 4 即可。
 7. 上古音：`git clone https://github.com/digling/cddb`，在 `python3 extract.py` 之后运行 `python3 add_oc.py cddb`，再重跑第 4 步
 8. 问题二（亦声）：`python3 yisheng.py <outdir> cddb && python3 yisheng_stats.py <outdir>`
+9. 小徐本对照：`git clone https://github.com/kanripo/KR1j0019`；`python3 xiaoxu_align.py <outdir> KR1j0019`
