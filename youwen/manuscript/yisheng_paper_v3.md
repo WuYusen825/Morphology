@@ -141,10 +141,10 @@ The clearest result is also the simplest. More than a third of the labelled char
 | Dà Xú fǎnqiè identical | 68/204 (33.3%) | 128/947 (13.5%) | GEE OR 2.43 [1.74, 3.39] |
 | MC identical, paronomastic glosses removed | 40/126 (31.7%) | 131/848 (15.4%) | Fisher p = 2.1 × 10⁻⁵ |
 | MC identical, 40 labels filed under own phonetic removed | – | – | GEE OR 2.51 [1.74, 3.60]; Holm p = 1.3 × 10⁻⁶ |
-| MC identical, Wang Yun's 9 rejected labels removed ‡ | 59/168 (35.1%) | 133/858 (15.5%) | GEE OR 2.37 [1.68, 3.36] |
+| MC identical, Wang Yun's 9 rejected labels removed | 59/168 (35.1%) | 121/818 (14.8%) | GEE OR 2.51 [1.76, 3.57]; one-sided p = 1.8 × 10⁻⁷ |
 | OC (Baxter–Sagart) identical | 15/60 (25.0%) | 13/249 (5.2%) | Fisher p = 2.1 × 10⁻⁵ |
 
-*Note.* Fisher tests are one-sided. The random-intercept model gives OR 2.77 [1.96, 3.93] for the first row. ‡ Our re-run, to be confirmed against the project's model scripts; removing 媄 as well gives OR 2.34 [1.65, 3.32].
+*Note.* Fisher tests are one-sided. The random-intercept model gives OR 2.77 [1.96, 3.93] for the first row. Removing Wang's nine labels also removes the phonetics left without a labelled member, hence the smaller ordinary group; removing 媄 as well, or recoding the nine as ordinary compounds instead of removing them, gives OR 2.47 and 2.49.
 
 ### 4.2 Other affixes and alternations (H1b)
 
@@ -179,9 +179,9 @@ We framed the hypothesis on the assumption that the label picks out the derived 
 | Neither (other tone contrast, or voicing only) | 12/33 (36.4%) | 92/150 (61.3%) | descriptive |
 | Any departing-tone alternation | 21/33 (63.6%) | 58/150 (38.7%) | GEE OR 2.42 [1.32, 4.46] |
 | Member departing, among departing-tone pairs | 16/21 (76.2%) | 43/58 (74.1%) | Fisher p = 1.0 (two-sided) |
-| Member departing, Wang Yun's 9 rejected labels removed ‡ | 13/29 (44.8%) | 43/150 (28.7%) | GEE OR 2.21 [1.14, 4.29], one-sided p = 0.010; Fisher p = 0.069 |
+| Member departing, Wang Yun's 9 rejected labels removed | 13/29 (44.8%) | 43/140 (30.7%) | GEE OR 2.11 [1.08, 4.11]; one-sided p = 0.014 (Holm ≈ 0.04) |
 
-*Note.* ‡ Our re-run, to be confirmed against the project's model scripts; removing 媄 as well changes nothing, 媄 being homophonous with 美.
+*Note.* Removing 媄 as well changes nothing, 媄 being homophonous with 美; recoding the nine as ordinary compounds gives OR 2.04 [1.04, 3.98], one-sided p = 0.019.
 
 ### 4.4 Meaning (H2)
 
@@ -199,12 +199,13 @@ The descriptive relation types agree. Of the 63 homophonous labelled pairs, the 
 | Related, paronomastic glosses removed | 18/26 (69.2%) | 6/50 (12.0%) | GEE OR 16.4 [5.1, 52.9] |
 | Near-synonymous (Y) | 8/33 (24.2%) | 0/50 (0%) | Fisher p = 3.5 × 10⁻⁴ |
 | Related, first (non-blind) coding | 27/35 (77.1%) | 8/53 (15.1%) | descriptive |
+| Related, Wang Yun's 9 rejected labels removed | 23/31 (74.2%) | 6/50 (12.0%) | GEE OR 20.5 [6.6, 63.9] |
 
 *Note.* Agreement between the two LLM codings: κ = 0.77 (four categories, n = 100); see Section 3.3.
 
 ### 4.5 Recensions and filing position (H3, H4)
 
-Both exploratory analyses come back negative, and both are informative. Duan keeps the label on 170 of the 212 entries and drops it from 39 (three have no Duan text in the digital edition), yet the entries he drops are, if anything, more often homophonous than those he keeps: 13 of 32 against 49 of 143 (41% against 34%; Fisher p = 0.54). 旄 "banner of yak tails" and 禬 "a sacrifice to gather blessings" show why. Duan's text gives them as 毛聲 and 會聲, but his notes on both call them 形聲包會意; what he changed was the wording of the analysis, not his view of the words. The Xiǎo Xú text could be aligned reliably for only 68 entries, 12 of which (貧 among them) lack the label, and because the aligned entries are far less often homophonous than the rest (12 of 57 against 51 of 120), they cannot support an inference either way. Wang Yun's verdicts supply a partial check where the alignment fails, and removing the nine labels he rejects leaves H1a intact and H1c weaker but standing (Tables 2 and 4; see Section 5.2).
+Both exploratory analyses come back negative, and both are informative. Duan keeps the label on 170 of the 212 entries and drops it from 39 (three have no Duan text in the digital edition), yet the entries he drops are, if anything, more often homophonous than those he keeps: 13 of 32 against 49 of 143 (41% against 34%; Fisher p = 0.54). 旄 "banner of yak tails" and 禬 "a sacrifice to gather blessings" show why. Duan's text gives them as 毛聲 and 會聲, but his notes on both call them 形聲包會意; what he changed was the wording of the analysis, not his view of the words. The Xiǎo Xú text could be aligned reliably for only 68 entries, 12 of which (貧 among them) lack the label; the other 144 have not yet been collated. Because the aligned entries are far less often homophonous than the rest (12 of 57 against 51 of 120), they cannot support an inference either way. Wang Yun's verdicts supply a partial check where the alignment fails, and removing the nine labels he rejects leaves H1a and H2 intact and H1c weaker but standing (Tables 2, 4 and 5; see Section 5.2).
 
 Filing position fares no better. The 40 labels filed under their own phonetic, the candidates for Wang's third kind, are less, not more, often homophonous than the others (9 of 34, 26.5%, against 54 of 143, 37.8%; Fisher p = 0.24, two-sided).
 
@@ -230,9 +231,9 @@ The departing-tone result also corrects an assumption with which we began. We ex
 
 Wang Yun would have read these results differently. On his rule a differentiated graph filed outside its base's section takes a plain phonetic, yet 42 of the 50 homophonous labelled pairs that the first-pass coding classes as L or F are filed outside it. Either the Dà Xú departs from Xu's convention on a large scale, which is Wang's view, or the convention is partly Wang's own; he himself lets 傾, 𨻺 and 䫇 keep labels that his rule would withhold.
 
-The population cannot settle the matter, but it can bound it. Seven of the nine labels Wang rejects fall on exactly the relations that drive the main results: 愾, 恇, 婚 and 姻 are homophonous with their phonetics, and 娶, 緉 and 坪 are the departing-tone members of their pairs. Yet removing all nine leaves H1a untouched and weakens H1c without removing it: the clustered odds ratio falls from 2.44 to 2.21 and stays significant (one-sided p = 0.010), although the unclustered Fisher test no longer is (p = 0.07; Tables 2 and 4). His verdicts do not separate the sound relations either, for three of the four labels he accepts (禮, 祏, 柵) are homophonous too. What decides a case for Wang is meaning, an original sense against an extended or borrowed one, and that criterion cuts across identity and \*-s alike.
+The population cannot settle the matter, but it can bound it. Seven of the nine labels Wang rejects fall on exactly the relations that drive the main results: 愾, 恇, 婚 and 姻 are homophonous with their phonetics, and 娶, 緉 and 坪 are the departing-tone members of their pairs. Yet removing all nine leaves H1a and H2 much as they were (OR 2.51 and 20.5) and weakens only H1c, whose odds ratio falls from 2.44 to 2.11 (one-sided p = 0.014, about 0.04 after Holm correction, so with little to spare); recoding the nine as ordinary compounds instead of removing them gives the same picture (Tables 2, 4 and 5). His verdicts do not separate the sound relations either, for three of the four labels he accepts (禮, 祏, 柵) are homophonous too. What decides a case for Wang is meaning, an original sense against an extended or borrowed one, and that criterion cuts across identity and \*-s alike.
 
-Attribution is what remains open. Wang examined thirteen labels, and the Xiǎo Xú could be aligned for only 68 (Section 4.5); his remarks report seven on which it lacks the label (貧, 柵, 娶, 婚, 姻, 坪, 媄), only one of which, 貧, is among the aligned entries. If the unexamined remainder holds many such additions, the pattern of Section 5.1 belongs in part to the Dà Xú's editors, Xu Xuan or those before him, rather than to Xu Shen. It would still be a pattern in a native analysis, and a telling one: an editor who added the label where a graph writes the same word, or its \*-s derivative, recognised the same relation our tests detect. Which hand is responsible, and for how many labels, only a collation of the Xiǎo Xú in facsimile can say.
+Attribution is what remains open. Wang examined thirteen labels, and the Xiǎo Xú has so far been compared for only 68 of the 212, the other 144 not yet collated (Section 4.5); his remarks report seven on which it lacks the label (貧, 柵, 娶, 婚, 姻, 坪, 媄), only one of which, 貧, is among the aligned entries. If the unexamined remainder holds many such additions, the pattern of Section 5.1 belongs in part to the Dà Xú's editors, Xu Xuan or those before him, rather than to Xu Shen. It would still be a pattern in a native analysis, and a telling one: an editor who added the label where a graph writes the same word, or its \*-s derivative, recognised the same relation our tests detect. Which hand is responsible, and for how many labels, only a collation of the Xiǎo Xú in facsimile can say.
 
 ### 5.3 Roots, words and the diagnosis of derivation
 
@@ -252,7 +253,7 @@ The most serious limitation concerns meaning. Both semantic codings were produce
 
 The phonological evidence has gaps of its own. MC readings are *Guǎngyùn* positions matched to Dà Xú fǎnqiè and therefore postdate Xu Shen, and some tone-change readings may be later innovations; the fǎnqiè-string check rules out the matching procedure as the source of H1a, but not the chronological gap. Old Chinese forms cover only a quarter of the pairs and depend partly on phonetic-series evidence, which limits H1b. Alternations between the departing and entering tones (\*-ks beside \*-k), \*-s derivatives with different MC rhymes, were not coded, so the H1c test is conservative, and no comparison with an independent reconstruction such as Schuessler (2007) has yet been made.
 
-Two caveats remain. The text is digital, with heuristically identified *xīnfù*, and every cited form must be checked in print, above all against the 1963 Zhonghua facsimile of the Dà Xú. The Xiǎo Xú e-text, moreover, is too incomplete to test H3, and until that recension is collated in facsimile, the share of the labels that goes back to Xu Shen rather than to his editors cannot be fixed (Section 5.2). And because the hypotheses were refined after an exploratory look, every test is reported, the null for H1b and the unplanned decomposition of H1c included.
+Two caveats remain. The text is digital, with heuristically identified *xīnfù*, and every cited form must be checked in print, above all against the 1963 Zhonghua facsimile of the Dà Xú. The Xiǎo Xú, moreover, has been compared for only 68 of the 212 labels, too few to test H3, and until the other 144 are collated in facsimile, the share of the labels that goes back to Xu Shen rather than to his editors cannot be fixed (Section 5.2). And because the hypotheses were refined after an exploratory look, every test is reported, the null for H1b and the unplanned decomposition of H1c included.
 
 ## 7. Conclusion
 
