@@ -81,3 +81,12 @@ g=smf.gee('y ~ label',groups='series',data=df2,family=sm.families.Binomial(),cov
 b_,se=g.params['label'],g.bse['label']; print('H2 GEE nopar',len(df2),math.exp(b_),math.exp(b_-1.96*se),math.exp(b_+1.96*se),g.pvalues['label']/2)
 print('n in identity-semantic model', len(b))
 ps=[2.9e-07,0.1,0.31,0.0019,g.pvalues['label']/2]
+
+# ---- Sensitivity: drop the labels Wang Yun rejects in Shuowen shili juan 3 (10a-15a), and 媄 (juan 8, 7b) ----
+rej9=list('貧愾恇娶婚姻婢緉坪')
+for name,drop in [('minus Wang 9',rej9),('minus Wang 9 + 媄',rej9+['媄'])]:
+    B=A[~((A.label==1)&A.char.isin(drop))]
+    mcB=B[B.mc_relation!='NA'].dropna(subset=['mc_relation'])
+    fis(mcB,mcB.mc_relation=='identical',f'H1a {name}')
+    altB=mcB[mcB.mc_relation=='tone_voicing_alt']
+    fis(altB,altB.mc_qusheng_direction=='member',f'H1c {name}')
