@@ -18,8 +18,8 @@ for i,r in R1.items():
         t=R2[i]; read=t['reading']; src='round2'; quote=t['quote']; note=t['note']; ju=t['juan']
     if i in FIX: read,note=FIX[i]
     if read=='未找到' and d.get('is_xinfu')=='True': why='新附'
-    elif read=='未找到': why='电子本缺文'
     elif ju=='25': why='卷二十五据大徐补'
+    elif read=='未找到': why='电子本缺文'
     elif i in SUSPECT: why='疑据大徐补入'; note=SUSPECT[i]
     else: why=''
     layer='unknown' if why else ('both' if read=='亦聲' else 'daxu_only')
