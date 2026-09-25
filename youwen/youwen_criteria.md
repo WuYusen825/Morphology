@@ -235,11 +235,35 @@ CSV 为 UTF-8（带 BOM，Excel 可直接打开）。
 - 王筠驳而没有引小徐的 愾、恇、婢，四部叢刊本三字都作亦声。他驳这三字靠的是自己的语义标准，不是版本证据。緉 在卷二十五，无从判断。
 - 王筠认可的：祏、胖、䫇 两本都作亦声；柵、𨻺 小徐作"聲"，王筠明知小徐不作亦声仍认可（柵 他自己说了）；禮、傾 在电子本缺文处。像 也在缺文处，王筠说小徐作"象聲"，无法核对。
 
-**缺文作为局限处理（Qu，2026-09-25）**：电子本缺文是整页或半页漏录（kanripo SBCK 分支的 <pb:> 页码可见，如卷八第 1 叶幺、𢆶、叀三部全缺）。䋛 实在卷二十五，已改归"卷二十五据大徐补"，缺文剩 56 条，分布在 22 卷约 90 个页面（`yisheng_xiaoxu_gap_pages.csv`）。合法影印本本会话拿不到；Qu 上传的 book2 是《貞觀政要》，book3 来自 Z-Library（PDF creator 为 1lib.sk），不用。Qu 决定"先作为局限写吧"（2026-09-25 15:35，由 Qu 的桌面应用直接发到本会话）。缺文页码保留，日后拿到合法影印本仍可补核。分层计数不变：两本共有 100、仅大徐 48、无从判断 64（缺文 56、卷二十五 7、詔 1）；两本共有亦声上的重跑结果也不变。
+**第三轮：扫描本核读（2026-09-25 晚，取代上面的局限处理）**
 
-可直接用于论文的英文（供论文线程改写）：
+Qu 在 GitHub Release「说文解字」上传了国家图书馆扫描的《四部叢刊》本《說文繫傳通釋》（卷 1–29，7 个 PDF；文件大小、元数据都正常，扉页题"四部叢刊經部 說文繫傳通釋"，与电子本同一版本）。4 个子代理把电子本缺文的 57 条（分析集 56 条加 帟）逐条在扫描页上找到并转录许说，结果连同 PDF 页码、叶次写在 `yisheng_xiaoxu_round3_scan_reads.tsv`。我抽查了 像、瑁 两条，与子代理一致。
 
-> The Xiao Xu recension was collated from the digital *Sibu congkan* text (Kanseki Repository KR1j0019). Of the 212 labels, 100 are also marked *yìshēng* in Xiao Xu and 48 are not. The remaining 64 could not be settled: 56 fall on pages that the digital text omits in whole or in part, seven lie in juan 25, which the received Xiao Xu text supplies from Da Xu, and one (詔) carries a Da Xu-style fanqie and is probably also a Da Xu insertion. The 56 omitted entries could be checked only against a facsimile, which we did not have. The gaps are accidents of transcription spread across 22 juan, so there is no obvious reason for them to differ systematically from the 148 labels we could collate; the tests restricted to labels shared by both recensions (Table X) are therefore reported as a robustness check, not as a replacement for the main analysis.
+- 扫描本读法：亦聲 41，聲 12（枰、𤞛、忘、琥、拲、鞣、娣、黃、政、㓝、匌、鍒），無聲 2（像 "象也從人象讀若養字之養"，𣀆 "朋侵也從攴羣"），原书空白 1（瑁：许说到"天子執瑁四寸從玉"后，下接的一段版面空白；臣鍇说"本取於上冒之故曰亦聲"，暗示原作亦聲，但正文看不到，列为无从判断），未见 1（帟，不在分析集；巾部无此字，幕 下"帷在上曰幕"与大徐 帟 说解相近）。
+- 糶 反切作"他弔切"（小徐通例作"反"），和 詔 一样疑据大徐补入，列为无从判断。
+- 舌 作"從干口于亦聲"，"于"当是"干"之讹，按亦声计。
+- 电子本给的叶次常比原书差 1–3 叶；新表用扫描本的叶次。
+
+**更新后的分层（分析集 212 条）**：两本都作亦声 140，仅大徐 62，无从判断 10（卷二十五 7、詔、糶、瑁）。能判断的 202 条中，大徐多出的占 62 条（31%）。
+
+**只用两本共有的亦声重跑**（单侧 GEE，按声符聚类）：
+
+| 检验 | 原结果 | 只留两本共有 | 仅大徐改记为"聲" |
+|---|---|---|---|
+| H1a 中古同音 | 63/177 vs 133/858，OR 2.38（1.69–3.34） | 35/122 vs 89/591，OR 1.94（1.23–3.06），p = 0.002 | OR 1.84，p = 0.003 |
+| H1c 交替中成员为去声 | 16/33 vs 43/150，OR 2.44（1.34–4.48） | 11/24 vs 30/113，OR 2.44（1.14–5.24），p = 0.011 | OR 2.64，p = 0.006 |
+| H2 语义 Y/E（盲编码） | 25/33 vs 6/50，OR 22.0 | 16/22 vs 6/50，OR 19.8（5.5–70.8），p = 2×10⁻⁶ | OR 9.4 |
+| H2 去掉声训 | 18/26 vs 6/50，OR 16.4 | 13/19 vs 6/50，OR 16.1（4.4–59.2） | OR 10.8 |
+
+Holm 校正后（三检验）：H1a 0.004，H1c 0.011，H2 7×10⁻⁶，都显著。H1c 从 14 个亦声对增加到 24 个，置信区间下限离 1 更远。
+
+**H3（亦声内部，两本共有 vs 仅大徐，双侧，探索性）**：中古同音 35/122（29%）对 24/48（50%），GEE OR 0.39（0.19–0.80），p = 0.01（三项 Holm 后约 0.03）；声调/清浊交替 24/122 对 8/48，p = 0.63；盲编码 Y/E 16/22 对 8/10。补齐后，大徐多出的亦声同音比例明显更高。这和王筠"凡引申假借之義，皆併入聲中，往往小徐不出而大徐出之"的判断方向一致：大徐多出的标注更多落在同音关系上。
+
+**与王筠对照的更新**：禮、傾 两本都作亦声（王筠都认可）。像 小徐作"從人象"，无"聲"字，王筠说小徐作"象聲"，同样没有"亦"。其余见上。
+
+可直接用于论文的英文（取代先前的局限段落）：
+
+> The Xiao Xu recension was collated against the *Sibu congkan* edition, using the digital text (Kanseki Repository KR1j0019) and, for the pages that the digital text omits, the National Library of China scan of the same edition. Of the 212 labels, 140 are also marked *yìshēng* in Xiao Xu and 62 are not. Ten could not be settled: seven lie in juan 25, which the received Xiao Xu text supplies from Da Xu; two (詔, 糶) carry Da Xu-style fanqie and are probably Da Xu insertions as well; and in one (瑁) the relevant line is blank in the print.
 
 ## 7. 已知局限
 
