@@ -248,7 +248,9 @@ Three consequences follow. For Old Chinese morphology, Xu's labels are a native 
 
 **Data availability.** The dataset (`yisheng_dataset.csv`), the coding sheets, and the scripts for extraction, coding and statistics are available at [repository link to be added].
 
-**Declarations.** [Author contributions, funding and competing interests to be added.] The semantic coding reported in Section 3.4 was carried out with a large language model, and an LLM-based assistant was used in preparing the data and the draft. [This statement must be checked against the journal's current policy on AI use.]
+**Declarations.** [Author contributions, funding and competing interests to be added.]
+
+**Use of AI tools** [placeholder; adapt to the journal's current policy]. An LLM-based assistant (Claude, Anthropic) was used to extract and organise the data, run the statistical scripts and draft the text. Both semantic codings in Section 3.4 were made by LLM instances, one of them blind to the label; they are reported as agreement between two LLM codings, not as human inter-coder reliability. The author checked [to be specified] and takes full responsibility for the content.
 
 ---
 
