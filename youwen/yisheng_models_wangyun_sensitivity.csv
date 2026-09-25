@@ -1,0 +1,21 @@
+﻿variant,hypothesis,outcome,n,n_phonetics,labelled_hits,labelled_n,ordinary_hits,ordinary_n,gee_OR,gee_CI95,gee_p_one_sided,glmm_vb_OR,glmm_vb_CI95
+original,H1a,MC identical syllable,1035,152,63,177,133,858,2.38,1.69-3.34,2.9e-07,2.77,1.96-3.93
+original,H1c,member departing | tone/voicing alternation,183,66,16,33,43,150,2.44,1.34-4.48,0.0019,4.15,1.73-9.96
+original,H2,"semantic Y/E (blind LLM coding, X excluded)",83,58,25,33,6,50,22.01,7.12-68.03,3.9e-08,,
+original,H2,"same, paronomastic glosses removed",76,51,18,26,6,50,16.36,5.06-52.85,1.5e-06,,
+drop Wang 9,H1a,MC identical syllable,986,147,59,168,121,818,2.51,1.76-3.57,1.8e-07,2.92,2.04-4.16
+drop Wang 9,H1c,member departing | tone/voicing alternation,169,63,13,29,43,140,2.11,1.08-4.11,0.014,3.16,1.29-7.74
+drop Wang 9,H2,"semantic Y/E (blind LLM coding, X excluded)",81,56,23,31,6,50,20.46,6.55-63.89,1e-07,,
+drop Wang 9,H2,"same, paronomastic glosses removed",76,51,18,26,6,50,16.36,5.06-52.85,1.5e-06,,
+drop Wang 10 (+媄),H1a,MC identical syllable,985,146,58,167,121,818,2.47,1.73-3.52,3e-07,2.87,2.00-4.10
+drop Wang 10 (+媄),H1c,member departing | tone/voicing alternation,169,63,13,29,43,140,2.11,1.08-4.11,0.014,3.16,1.29-7.74
+drop Wang 10 (+媄),H2,"semantic Y/E (blind LLM coding, X excluded)",81,56,23,31,6,50,20.46,6.55-63.89,1e-07,,
+drop Wang 10 (+媄),H2,"same, paronomastic glosses removed",76,51,18,26,6,50,16.36,5.06-52.85,1.5e-06,,
+Wang 9 recoded as 聲,H1a,MC identical syllable,990,147,59,168,122,822,2.49,1.76-3.54,1.7e-07,2.9,2.03-4.14
+Wang 9 recoded as 聲,H1c,member departing | tone/voicing alternation,171,64,13,29,45,142,2.04,1.04-3.98,0.019,3.13,1.27-7.74
+Wang 9 recoded as 聲,H2,"semantic Y/E (blind LLM coding, X excluded)",83,58,23,31,8,52,15.35,5.21-45.29,3.7e-07,,
+Wang 9 recoded as 聲,H2,"same, paronomastic glosses removed",76,51,18,26,6,50,16.36,5.06-52.85,1.5e-06,,
+Wang 10 recoded as 聲,H1a,MC identical syllable,989,146,58,167,122,822,2.46,1.73-3.50,2.8e-07,2.85,1.99-4.07
+Wang 10 recoded as 聲,H1c,member departing | tone/voicing alternation,171,64,13,29,45,142,2.04,1.04-3.98,0.019,3.13,1.27-7.74
+Wang 10 recoded as 聲,H2,"semantic Y/E (blind LLM coding, X excluded)",83,58,23,31,8,52,15.35,5.21-45.29,3.7e-07,,
+Wang 10 recoded as 聲,H2,"same, paronomastic glosses removed",76,51,18,26,6,50,16.36,5.06-52.85,1.5e-06,,
