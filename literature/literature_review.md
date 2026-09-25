@@ -4,12 +4,13 @@
 
 **Target journal:** *Language and Linguistics* (English).
 
-**Status:** v0.2, 2026-09-24. This draft becomes §2 of the paper. It follows the section numbering and the hypotheses of `outline.md`, which the topic thread owns. Changes from v0.1:
+**Status:** v0.2, 2026-09-24, with a small update on 2026-09-25 (last item in the list below). This draft becomes §2 of the paper. It follows the section numbering and the hypotheses of `outline.md`, which the topic thread owns. Changes from v0.1:
 - §2.1 adds Wang Yun's *fēnbiéwén* and *lěizēngzì*, his three kinds of *yìshēng*, and recent work by Li Guoying, Jiang Zhiyuan, Xu Shushi, and Li and Guo. It also gives the path from the 227 labelled entries to the 212 that are analysed.
 - §2.2 uses example pairs whose sound relation is stated correctly. (One v0.1 example, given as a tone-only pair, also differs in the initial.)
 - §2.4 is now descriptive. The answer to Rasin et al. (2024) moves to §5.2.
 - §2.5 states the outline's hypotheses H1a–H3.
-- All example pairs are taken from outside the 100-item blind coding sheet, so this draft can be read before the coding is finished.
+- The example pairs were chosen from outside the 100-item blind coding sheet while the coding was under way.
+- Update of 2026-09-25, after the coding had finished: §2.1 gives the juan 8 location of Wang Yun's definitions and discusses two of his own examples, 娶 and 傾, both known here only through O (2015). §2.5 adds the outline's H4.
 
 Reference codes in square brackets (e.g., [C12]) point to `bibliography.md`. `literature_review_access_log.md` records which sources were read in full and which only from abstracts or through quotations in other works. Every claim that rests on such a source must be checked against the original before submission.
 
@@ -33,7 +34,7 @@ Wang Yun 王筠 (1784–1854) took a further step, and it is the one most direct
 - If the added component changes the meaning, the new form is a "differentiated graph" (*fēnbiéwén* 分別文). This happens for one of two reasons. Either the graph's proper meaning had been taken over by a borrowed meaning, and the component was added to keep the two apart. Or the graph had many meanings, and the new form takes over only one of them.
 - If the added component leaves the meaning unchanged, the new form is an "accumulated graph" (*lěizēngzì* 累增字). One case is when the old meaning was obscure and the component was added to make it explicit.
 
-These definitions are in juan 8 of the *Shìlì* (quoted in O Je-jung 2015: 469) [B13]. Wang also classified the *yìshēng* label itself. As quoted by Li and Guo (2019) [B14], he writes: "言亦聲者凡三種：會意而兼聲者，一也；形聲字而兼意者，二也；分別文之在本部者，三也" ("*yìshēng* is said of three kinds: meaning-compounds that also indicate the sound; phonetic compounds that also indicate the meaning; and differentiated graphs placed in their own section"). On our reading, the third kind means differentiated graphs that Xu files in the section headed by their base graph. Wang therefore already tied the label, in part, to graphic differentiation, the case in which one word, or one meaning of a word, receives a graph of its own. The third example given above appears to be such a case: under 琀, Duan notes that the classics mostly write the word as 含 (經傳多用含).
+These definitions open juan 8 of the *Shìlì* (leaf 1 of the Zhonghua shuju facsimile, as quoted in O Je-jung 2015: 469) [B13]. Wang also classified the *yìshēng* label itself. As quoted by Li and Guo (2019) [B14], he writes: "言亦聲者凡三種：會意而兼聲者，一也；形聲字而兼意者，二也；分別文之在本部者，三也" ("*yìshēng* is said of three kinds: meaning-compounds that also indicate the sound; phonetic compounds that also indicate the meaning; and differentiated graphs placed in their own section"). On our reading, the third kind means differentiated graphs that Xu files in the section headed by their base graph. Wang therefore already tied the label, in part, to graphic differentiation, the case in which one word, or one meaning of a word, receives a graph of its own. The third example given above appears to be such a case: under 琀, Duan notes that the classics mostly write the word as 含 (經傳多用含). Yet 琀 is filed under 玉, not under 含. Wang's own examples in juan 8 likewise show that his differentiated graphs form a wider class than his third kind of *yìshēng*. Two of them carry the label in the Dà Xú text: 娶 "to take a wife", which he calls the differentiated graph of 取 "to take", and 傾 "to lean", from 頃 "head not upright" (O 2015: 471–473). Xu files these under 女 and 人, not under their base graphs, so on our reading Wang would count their labels among his first two kinds. His other examples, such as 恭 "reverent" beside 共, carry no label.
 
 Wang, however, stated his three kinds as a classification of characters. He gave no counts, and he did not consider the sound relation between the two words. Recent work also warns against conflating his categories with the older exegetical notion of "ancient and modern graphs" (*gǔjīnzì* 古今字). Jiang Zhiyuan 蔣志遠 (2021) argues that the two belong to different theoretical levels, and that the conflation began with Xu Hao's 徐灝 later commentary on Duan, not with Wang himself [B12]. Ma Weicheng 馬偉成 (2012) studies how Wang treats phonetics that also carry meaning in his *Shuōwén jiězì jùdòu* 說文解字句讀 [B15]. The *Shìlì* itself has not yet been consulted for this draft, because the available scan cannot be read here. Wang's wording is therefore cited through O (2015) and Li and Guo (2019), and it must be checked against the original.
 
@@ -102,6 +103,7 @@ The present study asks whether *yìshēng* annotations *covary* with independent
 - **H1c (direction).** Among pairs that differ only in tone and/or voicing, the labelled character is the departing-tone (*-s) member more often than in unlabelled pairs. In other words, the label picks out the derivative, not the base.
 - **H2 (semantic inclusion).** The meaning of a labelled character includes that of its phonetic character more often than for unlabelled members. The difference must survive the removal of paronomastic glosses, which define a character by its own phonetic (as 政 is glossed 正也).
 - **H3 (label stability; exploratory, two-sided).** Items on which the Dà Xú text, the Xiǎo Xú text and Duan's emended text disagree differ from stable items on H1a and H2.
+- **H4 (Wang Yun's third kind; exploratory, two-sided).** The 40 labelled characters filed in the section of their own phonetic differ on H1a and H2 from the other 172 labels, which reflect Xu's independent judgement.
 
 H1 is split into three parts because identity and affixation are different relations. Identity is what Wang Yun's accumulated and differentiated graphs, and conversion, would produce. An affixal difference is what derivation proper would produce. If the label tracks identity and the direction of *-s but not affixal differences in general, *yìshēng* would mark a new graph for the same word, or for a minimally derived one, rather than affixal derivation as such. If it tracks none of them, the label is a graphic and exegetical category, and the result would support Wang Li's and Chen Xiaoqiang's warnings against "substituting the character for the word".
 
@@ -159,7 +161,7 @@ Codes in brackets refer to `bibliography.md`. † marks volume or page data not 
 - Wang, Li 王力. 1982. 同源字典. Beijing: Shangwu yinshuguan. [A8]
 - Wang, Ning 王寧. 2015. 漢字構形學導論. Beijing: Shangwu yinshuguan. [B8]
 - Wang, Niansun 王念孫. 1796. 廣雅疏證. [A3]
-- Wang, Yun 王筠. 1837. 說文釋例. Edition to be fixed; cited here through O 2015 and Li & Guo 2019. † [A11]
+- Wang, Yun 王筠. 1837. 說文釋例. Facsimile reprint, Beijing: Zhonghua shuju (1988 as cited in O 2015; usually dated 1987, to be checked). Cited here through O 2015 and Li & Guo 2019. † [A11]
 - Wang, Yunlu 王雲路 & Wang Cheng 王誠. 2014. 漢語詞彙核心義研究. Beijing: Shangwu yinshuguan. [B7]
 - Xu, Shen 許慎. 100 CE. 說文解字. Dà Xú recension; facsimile Beijing: Zhonghua shuju, 1963. Digital text: shuowenjiezi/shuowen (GitHub, Apache-2.0).
 - Xu, Shushi. 2024. An analysis of Duan Yucai's theory of *shengyi tongyuan* in his annotations to the *Shuowen jiezi*. PhD thesis, University of Wales Trinity Saint David. [F1]
