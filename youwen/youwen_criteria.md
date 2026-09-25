@@ -235,7 +235,11 @@ CSV 为 UTF-8（带 BOM，Excel 可直接打开）。
 - 王筠驳而没有引小徐的 愾、恇、婢，四部叢刊本三字都作亦声。他驳这三字靠的是自己的语义标准，不是版本证据。緉 在卷二十五，无从判断。
 - 王筠认可的：祏、胖、䫇 两本都作亦声；柵、𨻺 小徐作"聲"，王筠明知小徐不作亦声仍认可（柵 他自己说了）；禮、傾 在电子本缺文处。像 也在缺文处，王筠说小徐作"象聲"，无法核对。
 
-**尚未解决**：57 条电子本缺文（整段或整部脱漏，如 示部开头、人部、攴部、心部一段）要看原书影印件才能定。本会话网络不通 archive.org 和 Wikimedia Commons。国家图书馆有《説文解字繫傳通釋》扫描本放在 Wikimedia Commons（NLC511-023031404035286-35685），版本未标明，可能不是四部叢刊所据本。如需补齐，要请 Qu 下载后上传。
+**缺文作为局限处理（Qu，2026-09-25）**：电子本缺文是整页或半页漏录（kanripo SBCK 分支的 <pb:> 页码可见，如卷八第 1 叶幺、𢆶、叀三部全缺）。䋛 实在卷二十五，已改归"卷二十五据大徐补"，缺文剩 56 条，分布在 22 卷约 90 个页面（`yisheng_xiaoxu_gap_pages.csv`）。合法影印本本会话拿不到；Qu 上传的 book2 是《貞觀政要》，book3 来自 Z-Library（PDF creator 为 1lib.sk），不用。Qu 决定先作为局限写进论文。分层计数不变：两本共有 100、仅大徐 48、无从判断 64（缺文 56、卷二十五 7、詔 1）；两本共有亦声上的重跑结果也不变。
+
+可直接用于论文的英文（供论文线程改写）：
+
+> The Xiao Xu recension was collated from the digital *Sibu congkan* text (Kanseki Repository KR1j0019). Of the 212 labels, 100 are also marked *yìshēng* in Xiao Xu and 48 are not. The remaining 64 could not be settled: 56 fall on pages that the digital text omits in whole or in part, seven lie in juan 25, which the received Xiao Xu text supplies from Da Xu, and one (詔) carries a Da Xu-style fanqie and is probably also a Da Xu insertion. The 56 omitted entries could be checked only against a facsimile, which we did not have. Because they are spread across 22 juan and do not cluster in any semantic field, we have no reason to expect them to differ systematically from the 148 we could collate; the tests restricted to labels shared by both recensions (Table X) are therefore reported as a robustness check, not as a replacement for the main analysis.
 
 ## 7. 已知局限
 
