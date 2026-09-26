@@ -11,7 +11,8 @@
 
 | 要看什么 | 文件 |
 |---|---|
-| 论文当前稿（v5，约 6,800 词） | [`youwen/manuscript/yisheng_paper_v5.md`](youwen/manuscript/yisheng_paper_v5.md)，Word 版 `yisheng_paper_v5.docx` |
+| 论文当前稿（v6） | [`youwen/manuscript/yisheng_paper_v6.md`](youwen/manuscript/yisheng_paper_v6.md)，Word 版 [`yisheng_paper_v6.docx`](youwen/manuscript/yisheng_paper_v6.docx) |
+| v6 大徐本引文核对与编码来源 | [`daxu_source_audit_v6.md`](youwen/manuscript/daxu_source_audit_v6.md)、[`coding_provenance_v6.md`](youwen/manuscript/coding_provenance_v6.md) |
 | 文献综述（论文第 2 节的底稿） | [`youwen/literature_review.md`](youwen/literature_review.md) |
 | 注释书目（编号 A1–F2，综述和论文都按这个编号引用） | [`youwen/bibliography.md`](youwen/bibliography.md) |
 | 数据怎么来的、判定标准、各轮结果 | [`youwen/youwen_criteria.md`](youwen/youwen_criteria.md)（亦声部分在 §6b–§6e） |
@@ -19,18 +20,17 @@
 | Codex / Claude 共同变更日志 | [`PROJECT_LOG.md`](PROJECT_LOG.md)（两者修改项目前先读，修改后追加记录） |
 | v5 参考文献 DOI 核对表 | [`youwen/doi_audit_v5.md`](youwen/doi_audit_v5.md) |
 
-v1–v4 是旧稿，只留作对照。以后改稿请另存为 v6，不要覆盖 v5。
+v1–v5 是旧稿，只留作对照。以后实质改稿请另存为 v7，不要覆盖 v6。
 
 ### 论文还缺什么
 
-- 作者姓名与单位、各项声明（作者贡献、基金、利益冲突）
-- 数据可用性声明里的仓库链接（可以用本仓库，也可以投稿前在 Zenodo 存档取得 DOI）
-- AI 使用声明：稿中已有占位文字，须按期刊现行政策改写
-- 100 条语义编码的人工编码：现有的 κ = 0.773 是**两次 LLM 编码之间**的一致度，论文里不能称为人工编码者信度；如果审稿人要求，可由 Qu 人工编一部分
+- 作者单位、基金和利益冲突等投稿声明仍需补全。
+- v6 已写仓库数据链接与 AI 使用声明；投稿前按目标期刊当时的规则复核措辞。
+- 两位作者已独立盲编 100 条并一致认同最终值，也复核了 196 个同音关系类型；个人原始工作记录未保存。历史 κ = 0.773 属于两次 LLM 编码，不能称为人工编码者信度。详见编码来源说明。
 - 参考文献里标 † 的条目：卷期页码还没在出版社页面核实，投稿前要去掉 †
-- 引用的《说文》字形须对照 1963 年中华书局影印大徐本核对（稿中第 6 节已写明）
+- v6 的关键例字说解与析形句已对照早稻田所藏陈昌治 1873 年刻本扫描，核对位置见记录；212 条分析集尚未全部逐页对校。1963 年中华书局本为此本缩印，但未直接翻检纸本。
 
-## 主要结论（v5）
+## 主要结论（v6）
 
 - 分析集：大徐本 227 条亦声字头，去掉 4 条"亦"本身作声符的误检和 11 条新附，得 212 条，分布在 172 个声符上；对照组是同声符的 953 个普通形声字。
 - 亦声字与声符字更常同音（H1a，OR 2.38），更常是去声 \*-s 的关系（H1c，OR 2.44），语义上也更常相关（H2）；其他词缀（H1b）没有差别。
@@ -42,7 +42,7 @@ v1–v4 是旧稿，只留作对照。以后改稿请另存为 v6，不要覆盖
 
 ```
 youwen/
-├── manuscript/            论文稿 v1–v5（.md 为主，.docx 为 Word 版）和论文里补充数字的核对脚本
+├── manuscript/            论文稿 v1–v6（.md 为主，.docx 为 Word 版）、v6 来源记录和核数脚本
 ├── literature_review.md   英文文献综述
 ├── literature_review_access_log.md   哪些文献读了全文、哪些只读了摘要
 ├── bibliography.md        注释书目
@@ -62,7 +62,7 @@ youwen/
 |---|---|
 | `yisheng_dataset.csv` | 主数据集：亦声字和同声符普通形声字，含中古音、上古音（Baxter–Sagart 2014）、语音关系、是否新附、是否进入分析集（`in_analysis_set`）等 |
 | `yisheng_summary.csv` | 各假设的描述统计和 Fisher 检验 |
-| `yisheng_models.csv` | 主模型：按声符聚类的 GLMM（变分贝叶斯近似）与 GEE，Holm 校正 |
+| `yisheng_models.csv` | 原分析输出含 GLMM（变分贝叶斯近似）与按声符聚类的 GEE；v6 正文主要报告 GEE，Holm 校正 |
 | `yisheng_models_wangyun_sensitivity.csv` | 敏感性分析：去掉王筠认为是大徐误增的 9（或 10）条后重跑 |
 | `yisheng_models_xiaoxu_sensitivity.csv` | 敏感性分析：只用大小徐两本共有的亦声字，以及 H3（仅大徐 vs 两本共有） |
 | `yisheng_daxu_xiaoxu.csv` | 小徐本对照第一轮：按说解自动对齐（70 条可靠） |
@@ -71,7 +71,7 @@ youwen/
 | `yisheng_xiaoxu_collation_final.csv` | 小徐本对照最终结果（`layer` 列：both 140 / daxu_only 62 / unknown 10） |
 | `yisheng_xiaoxu_gap_pages.csv` | 电子本缺文条目在四部丛刊本中的页码 |
 | `blind_coding_sheet.xlsx` | 100 条语义关系盲编码表（不显示是否亦声） |
-| `blind_coding_sheet_llm_coded.xlsx` | 独立 LLM 子代理的盲编码结果 |
+| `blind_coding_sheet_llm_coded.xlsx` | 历史 LLM 盲编码表；数值与两位作者后来独立盲编、复核后的最终一致编码完全相同，故 v6 沿用该文件，见编码来源说明 |
 | `yisheng_claude_codes.csv` | 第一编码（Claude，编码时知道组别） |
 | `blind_coding_llm_protocol.md`、`blind_coding_kappa_output.txt` | 第二编码的做法和 κ 结果 |
 | `youwen_pilot.csv`、`youwen_series_summary.csv`、`youwen_layer2_later_chars.csv`、`blind_coding_sheet_youwen_old.xlsx` | 早期"右文"试点（15 个声符系列），只作背景 |
