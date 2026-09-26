@@ -1,0 +1,25 @@
+# 运行脚本时临时下载的外部数据仓库（见 README 的"外部数据来源"）
+youwen/scripts/shuowen/
+youwen/scripts/cddb/
+youwen/scripts/KR1j0019/
+youwen/scripts/tshet-uinh-examples/
+youwen/scripts/cjkvi-ids/
+youwen/scripts/sbck/
+
+# 脚本在 youwen/scripts/ 里生成的中间文件
+youwen/scripts/sw.pkl
+youwen/scripts/rows.json
+youwen/scripts/stats.json
+youwen/scripts/yisheng_rows.json
+youwen/scripts/q.json
+youwen/scripts/q2.json
+youwen/scripts/q3.json
+youwen/scripts/gap_pages.csv
+
+# Python、Node、编辑器
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+.DS_Store
+~$*
