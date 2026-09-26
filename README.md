@@ -16,6 +16,8 @@
 | 注释书目（编号 A1–F2，综述和论文都按这个编号引用） | [`youwen/bibliography.md`](youwen/bibliography.md) |
 | 数据怎么来的、判定标准、各轮结果 | [`youwen/youwen_criteria.md`](youwen/youwen_criteria.md)（亦声部分在 §6b–§6e） |
 | 王筠《说文释例》原文录文与书页 | [`youwen/shili_pages/README.md`](youwen/shili_pages/README.md) |
+| Codex / Claude 共同变更日志 | [`PROJECT_LOG.md`](PROJECT_LOG.md)（两者修改项目前先读，修改后追加记录） |
+| v5 参考文献 DOI 核对表 | [`youwen/doi_audit_v5.md`](youwen/doi_audit_v5.md) |
 
 v1–v4 是旧稿，只留作对照。以后改稿请另存为 v6，不要覆盖 v5。
 
@@ -144,4 +146,4 @@ python3 kappa.py ../blind_coding_sheet_llm_coded.xlsx ../yisheng_claude_codes.cs
 
 ## 用 Codex 或其他 AI 助手
 
-仓库根目录的 [`AGENTS.md`](AGENTS.md) 写了给 AI 助手的工作规则（改稿怎么存版本、哪些说法论文里不能写、哪些文件不能重新生成等），Codex 会自动读取。
+仓库根目录的 [`AGENTS.md`](AGENTS.md) 写了共同工作规则（改稿怎么存版本、哪些说法论文里不能写、哪些文件不能重新生成等）；[`CLAUDE.md`](CLAUDE.md) 是 Claude Code 的入口。两者修改项目内容前都应同步分支并读 [`PROJECT_LOG.md`](PROJECT_LOG.md) 的最近条目，修改后在同一次提交中追加记录。助手的私有记忆不能替代当前仓库文件。

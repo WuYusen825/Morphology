@@ -2,6 +2,13 @@
 
 项目简介、目录和重跑步骤见 [`README.md`](README.md)。下面是在这个仓库里工作时必须遵守的规则。
 
+## 跨助手同步：每次修改前后
+
+- 开始修改论文、书目、数据、脚本或项目规则前，先同步正在工作的 GitHub 分支，阅读本文件、`README.md`、[`PROJECT_LOG.md`](PROJECT_LOG.md) 的最近条目，并打开将要修改的现行权威文件。不要只凭 Codex 或 Claude 各自的私有记忆判断现状。
+- 以用户当前要求和已核实的仓库文件为准；如果私有记忆与仓库记录不一致，先查 Git 历史和实际文件，再更新记忆。尤其要核实 README 指定的当前论文版本，不能从旧稿或旧日志推断。
+- 每次修改上述项目内容或形成会影响后续工作的决定后，在同一次提交中向 `PROJECT_LOG.md` **追加**条目，写清日期、执行者、修改文件、原因、验证结果和权威版本是否变化。数据口径的细节仍须写入 `youwen/youwen_criteria.md`，文献阅读程度仍须写入 `youwen/literature_review_access_log.md`。
+- Claude Code 的入口文件是 [`CLAUDE.md`](CLAUDE.md)；它指向同一套共享规则和日志。Codex 的本地 `.codex/project-memory/` 只是辅助索引，不能代替 GitHub 上的共享日志。
+
 ## 沟通
 
 - 用中文和 Qu 交流。论文正文用英文写（目标期刊是英文刊），除非 Qu 另有要求。
