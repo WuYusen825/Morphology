@@ -12,7 +12,7 @@
 | 要看什么 | 文件 |
 |---|---|
 | 论文当前稿（v6） | [`youwen/manuscript/yisheng_paper_v6.md`](youwen/manuscript/yisheng_paper_v6.md)，Word 版 [`yisheng_paper_v6.docx`](youwen/manuscript/yisheng_paper_v6.docx) |
-| v6 大徐本引文核对与编码来源 | [`daxu_source_audit_v6.md`](youwen/manuscript/daxu_source_audit_v6.md)、[`coding_provenance_v6.md`](youwen/manuscript/coding_provenance_v6.md) |
+| v6 大徐本抽核与编码来源 | [`daxu_spotcheck_v6.csv`](youwen/manuscript/daxu_spotcheck_v6.csv)、[`daxu_source_audit_v6.md`](youwen/manuscript/daxu_source_audit_v6.md)、[`coding_provenance_v6.md`](youwen/manuscript/coding_provenance_v6.md) |
 | 文献综述（论文第 2 节的底稿） | [`youwen/literature_review.md`](youwen/literature_review.md) |
 | 注释书目（编号 A1–F2，综述和论文都按这个编号引用） | [`youwen/bibliography.md`](youwen/bibliography.md) |
 | 数据怎么来的、判定标准、各轮结果 | [`youwen/youwen_criteria.md`](youwen/youwen_criteria.md)（亦声部分在 §6b–§6e） |
@@ -28,7 +28,7 @@ v1–v5 是旧稿，只留作对照。以后实质改稿请另存为 v7，不要
 - v6 已写仓库数据链接与 AI 使用声明；投稿前按目标期刊当时的规则复核措辞。
 - 两位作者已独立盲编 100 条并一致认同最终值，也复核了 196 个同音关系类型；个人原始工作记录未保存。历史 κ = 0.773 属于两次 LLM 编码，不能称为人工编码者信度。详见编码来源说明。
 - 参考文献里标 † 的条目：卷期页码还没在出版社页面核实，投稿前要去掉 †
-- v6 的关键例字说解与析形句已对照早稻田所藏陈昌治 1873 年刻本扫描，核对位置见记录；212 条分析集尚未全部逐页对校。1963 年中华书局本为此本缩印，但未直接翻检纸本。
+- v6 的关键例字与分析集 212 条中的 104 条已对照早稻田所藏陈昌治 1873 年刻本扫描作定点抽核，核对位置见记录；抽核并非随机，余下 108 条未在本轮核查。1963 年中华书局本为此本缩印，但未直接翻检纸本。
 
 ## 主要结论（v6）
 
