@@ -45,3 +45,12 @@
 - **PDF 与 MD**：44 份原有 PDF 改为 `Author_Date_Title.pdf`，各部分内部用空格，并清理可选的 PDF Info／XMP 元数据；原名、新名及校验值留在本地 `论文/参考文献PDF/重命名与元数据清理清单.json`。这 44 份各有一份分页 Markdown；另有两组截图整理成的文章 Markdown（Pulleyblank 2000／1973）和一份转换说明，所以共 47 份 MD。《同源字典》和早稻田《说文解字》十册按用户要求未做 OCR，未转写的扫描页仅保留原 PDF 页链接；其余 OCR 文本尚未逐字校对。
 - **两份截图 PDF**：将 `MORPHOLOGY IN OLD CHINESE` 的 26 张截图（包含后来补入的阅读器第 5 页）和 `Some New Hypothese` 的 15 张截图分别裁去浏览器界面、按页序合成图像 PDF，命名为 `Pulleyblank_2000_Morphology in Old Chinese.pdf` 和 `Pulleyblank_1973_Some New Hypotheses Concerning Word Families in Chinese.pdf`。原截图保留，生成脚本在本地 `论文/参考文献MD/make_screenshot_pdfs.py`；对应 Markdown 提供 OCR 文字，图像 PDF 本身没有文字层。
 - **验证与给 Claude 的通知**：Release 现有 46 份 PDF、47 份 MD 和 1 份 JSON 清单，共 94 个附件；远端附件的名称、显示标签、字节数与 SHA-256 均与本地清单一致。两份新 PDF 均核对页数、元数据与全部页面缩略图；第 5 页顺序正确。使用任何文献作为论文依据前，仍须按 `AGENTS.md` 核实来源与原页；这次文件整理不等于已完成全文校对或来源审查。本次未更改仓库内论文、数据、文献阅读程度或统计口径，当前权威正文仍是 v6。工作区中用户未提交的 `youwen/manuscript/yisheng_paper_v5.docx` 改动不属于本次提交。
+
+
+## 2026-09-28 · Codex · 期刊 Discussion 精读与理论推理比较
+
+- **用户要求**：精读本地参考文献的讨论部分，以 Markdown 为主、必要时回查 PDF，重点学习期刊 research articles 如何从现象推进理论、划定严谨与推测边界、表达贡献。
+- **已完成**：新增 `youwen/discussion_close_reading.md` 和 `youwen/discussion_reading_index.md`，以 14 篇期刊研究／论证文章为主体，另列 2 篇特殊体裁期刊文章和 3 篇对照材料。逐篇阅读范围与来源定位写入索引，同时在 `youwen/literature_review_access_log.md` 第 10 节追加实际阅读记录。研究文章、演讲修订、概述、综述、导论和会议论文没有混记；局部精读不记为整部通读。
+- **内容**：比较功能重分类、历史多来源模型、派生方向的竞争解释、词族联合预测、结构诊断、音义相关到机制的推断、文字证据的形成层次；记录语言表达和可复用的讨论自检问题。对 v6 的应用为论证建议，不是已经验证或采用的新理论结论；不能将发表身份当作每个推论都正确或已知实际录用原因。
+- **验证**：根据本地原文复核关键结论、具体比较及文献体裁；双栏错序处回查 Monaghan PDF 第 5–11 页及李宁、郭抒远第 1–2 页。检查了笔记的 19 处来源引用、21 个定义链接及本地目标文件，索引的 Release 链接来自现有上传清单。本轮没有重做远端参考文献附件审计，也没有逐字校对全部 OCR。
+- **当前权威**：仍为 `youwen/manuscript/yisheng_paper_v6.md` 与同名 DOCX；未改正文、数据、编码、统计或原典抽核范围。用户已有的 `youwen/manuscript/yisheng_paper_v5.docx` 未提交改动继续保留，不纳入此次提交。后续若按笔记实质改稿，仍须另存 v7 并逐项核对其所需证据。
