@@ -107,3 +107,11 @@
 - **回查 PDF**：Monaghan 的双栏 Markdown 交错，回到 PDF 第 5–11 页按栏读方法、结果与讨论，并目验讨论页；李宁、郭抒远回读 PDF 第 1–2 页。其余以 MD 为主；OCR 中古字形和拟音没有在本轮逐字校订。
 - **可复用成果**：[精读笔记](discussion_close_reading.md) 分析观察、推理桥梁、理论推进、合理推测和语言动作，并区分可辨认贡献与不可知的真实录用原因；[阅读范围索引](discussion_reading_index.md) 逐篇给出 MD 行号／PDF 页码、本地定位与 Literature Release 原件链接。后续使用文献时，以这个具体范围补充前面历史条目；旧条目中的“未读／只读摘要”不再代表上述已补读部分的当前状态。
 - **边界**：未扩大原典扫描核查，未改变稿件版本、作者编码事实或数据统计。对 v6 Discussion 的启发仅作为阅读建议保存，尚未执行正文修改或新的理论模型检验。
+
+## 12. 2026-09-28 追加：Release `学习` 中 11 篇 *Morphology* 2026 研究文章的 Discussion 精读（Claude）
+
+- **本轮范围**：Lõo 等（36:11）、Barbu Mititelu 等（36:12）、Sandström & Rosenberg（36:13）、Saicová Římalová（36:14）、Berg（36:15）、Huyghe 等（36:16）、Igartua（36:17）、Ševčíková & Hledíková（36:18）、Cohen 等（36:19）、Nikolaev 等（36:20）、Sandell（36:21）。每篇都完整读了摘要、引言、讨论与结论，以及讨论所依赖的结果段落；方法细节、例句串和附录只略读。逐篇页码范围见 [阅读范围索引](discussion_reading_index.md) 第二部分（第 20–30 条）。
+- **来源核对**：PDF 从本仓库 Release `学习` 经 GitHub API 下载，与 Release 所列 SHA-256 一致；元数据确认为 Springer 正式出版 PDF。10 篇开放获取（9 篇 CC BY 4.0，1 篇 CC BY-NC-ND 4.0），Barbu Mititelu 等为订阅文章，只转述、短引。这 11 篇不在 `bibliography.md` 中，也没有作为 v6 的参考文献使用；本轮只用于学习讨论写法。
+- **成果**：[第二轮精读笔记](discussion_close_reading_morphology2026.md) 与更新后的 [Discussion 精读总结](Discussion精读总结.md)。
+- **编号说明**：合并 Codex 分支时，本日志两边都追加了“第 10 节”；按时间先后，Claude 的 Karlgren 一节保留为第 10 节，Codex 的期刊 Discussion 精读一节改为第 11 节，本节为第 12 节。
+- **边界**：未改变 v6 正文、编码、数据、统计或原典抽核范围；若将来把其中某篇作为论文参考文献引用，须先补入书目并核对卷期页码。

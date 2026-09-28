@@ -40,3 +40,4 @@
 - 只用合法公开的来源。不要使用、下载或提交影子图书馆（Z-Library、1lib 等）的文件；Release `book` 和 `book3` 就是这类文件，不要打开。
 - 新的扫描 PDF 在使用前先查元数据（`pdfinfo` 的 Creator/Producer），确认书名和来源。
 - 只读了摘要的文献，要在 `youwen/literature_review_access_log.md` 里注明。
+- 本仓库是私有仓库。在 Claude Code 云端会话里，`github.com/.../releases/download/...` 链接会返回 404；改用 API：先用 GitHub 工具（或 `api.github.com/repos/WuYusen825/Morphology/releases/tags/<tag>`）查到附件 id，再 `curl -L -H "Accept: application/octet-stream" https://api.github.com/repos/WuYusen825/Morphology/releases/assets/<id>` 下载，并与 Release 列出的 SHA-256 核对。云端环境没有 `pdfinfo`；可 `pip install pymupdf` 查元数据、抽文字（`pypdf` 会因系统 `cryptography` 损坏而报错）。
