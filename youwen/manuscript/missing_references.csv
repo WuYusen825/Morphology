@@ -1,0 +1,25 @@
+﻿编号,类别,类型,作者,年份,篇名,刊名/书名,卷期页码/出版,链接,备注
+07,期刊,报纸文章,陳爍,2022,"論""右文說""的局限與出路",中華讀書報,2022-08-31，第8版,https://epaper.gmw.cn/zhdsb/html/2022-08/31/nw.D110000zhdsb_20220831_3-08.htm,光明网电子报，全文免费
+14,期刊,硕士论文,許育龍,2005,《說文》亦聲字研究,淡江大學碩士論文,,https://ndltd.ncl.edu.tw,未查到在线记录；在台湾博硕士论文系统检索作者/题名，或查淡江大学电子学位论文
+18,期刊,期刊论文,"Karlgren, Bernhard",1934,Word families in Chinese,Bulletin of the Museum of Far Eastern Antiquities,5: 9–120,https://catalog.hathitrust.org/Record/101890258,HathiTrust 目录记录，未确认能否看全文；不在 WoS/JSTOR
+20,期刊,期刊论文,李寧; 郭抒遠,2019,《說文解字》亦聲字誤為形聲字例析,文教資料,2019(4),https://m.fx361.com/news/2019/0417/5007170.html,参考网有全文；PDF 请在知网检索题名下载
+25,期刊,期刊论文,"Pulleyblank, Edwin G.",1973,Some new hypotheses concerning word families in Chinese,Journal of Chinese Linguistics,1(1): 111–125,https://www.jstor.org/action/doBasicSearch?Query=%22Some+new+hypotheses+concerning+word+families+in+Chinese%22,JSTOR 检索链接（未查到固定链接）
+26,期刊,期刊论文,"Pulleyblank, Edwin G.",2000,Morphology in Old Chinese,Journal of Chinese Linguistics,28(1): 26–51,https://www.jstor.org/stable/23754003,JSTOR
+03,书,书中章节,"Baxter, William H.; Sagart, Laurent",1998,Word formation in Old Chinese,New Approaches to Chinese Word Formation,"Packard (ed.), 35–76. Mouton de Gruyter",https://doi.org/10.1515/9783110809084.35,章节有 DOI，可在 De Gruyter 单独下载
+04,书,专著,"Baxter, William H.; Sagart, Laurent",2014,,Old Chinese: A New Reconstruction,Oxford University Press,,
+05,书,专著,"Boltz, William G.",1994,,The Origin and Early Development of the Chinese Writing System,American Oriental Society,,
+08,书,专著,陳曉強,2021,,形聲字聲符示源功能研究,上海古籍出版社,,
+10,书,古籍,段玉裁,1815,,說文解字注,經韻樓本；上海古籍出版社影印,,
+11,书,专著,"Galambos, Imre",2006,,Orthography of Early Chinese Writing: Evidence from Newly Excavated Manuscripts,Eötvös Loránd University,,
+17,书,专著,蔣志遠,2021,,"王筠""古今字""研究",社會科學文獻出版社,,
+19,书,专著,李國英,2020 [1996],,小篆形聲字研究（修訂本）,中華書局,,
+27,书,专著,"Qiu, Xigui",2000,,Chinese Writing,Society for the Study of Early China,,Mattos & Norman 译
+29,书,专著,"Sagart, Laurent",1999,,The Roots of Old Chinese,John Benjamins,,
+31,书,专著,"Schuessler, Axel",2007,,ABC Etymological Dictionary of Old Chinese,University of Hawai'i Press,,
+32,书,古籍,沈括,c. 1088,,夢溪筆談,卷十四,,
+33,书,书中章节,沈兼士,1933,右文說在訓詁學上之沿革及其推闡,慶祝蔡元培先生六十五歲論文集,重印於《沈兼士學術論文集》，中華書局 1986,,找重印本更容易
+34,书,专著,王力,1982,,同源字典,商務印書館,,
+35,书,古籍,王念孫,1796,,廣雅疏證,,,
+37,书,古籍,徐鍇,10世纪,,說文解字繫傳,四部叢刊本,,稿中已引数字本（Kanseki KR1j0019），PDF 可选
+38,书,古籍,許慎,100,,說文解字,大徐本；中華書局 1963 影印,,稿中已引数字本（GitHub），PDF 可选
+40,书,专著,曾昭聰,2002,,形聲字聲符示源功能述論,黃山書社,,
