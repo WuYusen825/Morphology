@@ -1,0 +1,41 @@
+analysis set: 亦聲 212 phonetics 172 | 聲 1019
+OC, all phonetics
+  I identical                  亦聲 15/60 (25.0%)  聲 16/263 (6.1%)  one-sided p=6.1e-05
+  R affix/alternation only     亦聲 18/60 (30.0%)  聲 86/263 (32.7%)  one-sided p=0.71
+  I+R                          亦聲 33/60 (55.0%)  聲 102/263 (38.8%)  one-sided p=0.016
+OC, matched phonetics (n=42)
+  I identical                  亦聲 13/47 (27.7%)  聲 4/119 (3.4%)  one-sided p=1.8e-05
+  R affix/alternation only     亦聲 14/47 (29.8%)  聲 51/119 (42.9%)  one-sided p=0.96
+  I+R                          亦聲 27/47 (57.4%)  聲 55/119 (46.2%)  one-sided p=0.13
+MC, all phonetics
+  identical syllable           亦聲 63/177 (35.6%)  聲 143/920 (15.5%)  one-sided p=3.9e-09
+  tone/voicing alternation     亦聲 33/177 (18.6%)  聲 157/920 (17.1%)  one-sided p=0.34
+  directional qusheng          亦聲 16/177 (9.0%)  聲 44/920 (4.8%)  one-sided p=0.022
+MC, matched phonetics (n=121)
+  identical syllable           亦聲 50/148 (33.8%)  聲 130/839 (15.5%)  one-sided p=5.2e-07
+  tone/voicing alternation     亦聲 31/148 (20.9%)  聲 148/839 (17.6%)  one-sided p=0.2
+  directional qusheng          亦聲 15/148 (10.1%)  聲 43/839 (5.1%)  one-sided p=0.018
+Gloss contains phonetic
+  definition contains phonetic 亦聲 58/212 (27.4%)  聲 11/1019 (1.1%)  one-sided p=1.4e-36
+Duan layer: Duan 亦聲 entries 212 | both 170 | Xu only (Duan drops) 42 | Duan only (Duan adds) 42
+  Xu-only: 㞣㵞䩡係像劑功否墨奸娣娶媄忘息愾拲整旄昦柵燓琥瓏眇瞑禬舒詔酣鈴阢陷陸黃𠔁𠭥𠮱𢔟𢿳𨻺𨿳
+  Duan-only: 㔹㽥䏔也仄冥医博叛咢垒塋壹孚屔彤恩戌朻椁櫑漏碬糾絫綴耏膌莫萅葬葻諰閨頛馺鳧鼏𢖽𣦼𤲑𩡩
+MC relation by Da Xu / Duan label layer
+  Xu and Duan (stable)     n=143  identical 49 (34%)  alternation 28  of which qusheng-derivative 14
+  Xu only (Duan drops)     n=34   identical 14 (41%)  alternation 5  of which qusheng-derivative 2
+  Duan only (Duan adds)    n=4    identical 1 (25%)  alternation 0  of which qusheng-derivative 0
+  neither (plain 聲)        n=916  identical 142 (16%)  alternation 157  of which qusheng-derivative 44
+Direction among tone/voicing alternations
+  亦聲: n=33  member departing-tone 16  head departing-tone 5
+  聲: n=157  member departing-tone 44  head departing-tone 15
+  member-is-departing among alternations: 亦聲 16/33 vs 聲 44/157, one-sided p=0.02
+  亦聲 departing-tone derivatives: 仲/中 從/从 緉/兩 娶/取 授/受 雊/句 琀/含 鄯/善 憙/喜 妊/壬 字/子 坪/平 腥/星 珥/耳 殯/賓 劑/齊
+Conditional on non-identical pairs
+  OC R among non-identical     亦聲 18/45 (40.0%)  聲 86/247 (34.8%)  one-sided p=0.31
+  OC R non-ident, matched (31) 亦聲 13/33 (39.4%)  聲 40/86 (46.5%)  one-sided p=0.82
+  MC alternation among non-ident 亦聲 33/114 (28.9%)  聲 157/777 (20.2%)  one-sided p=0.025
+  MC alt non-ident, matched (80) 亦聲 26/93 (28.0%)  聲 129/566 (22.8%)  one-sided p=0.17
+  MC alt without member-qu     亦聲 17/114 (14.9%)  聲 113/777 (14.5%)  one-sided p=0.51
+Wang kind 3: labelled entries filed under their own phonetic 40 of 212 | 聲 entries filed under their own phonetic 0
+  filed under own phonetic   MC n=34 identical 9 (26%)  alternation 7  other 18
+  other labels               MC n=143 identical 54 (38%)  alternation 26  other 63
