@@ -38,3 +38,10 @@
 - **发现与正文处理**：䢈（陈本扫描 0003，80）首句见 `日月合宿爲辰`，电子文本作 `日月合宿从辰`，后续 `辰亦聲` 公式一致。此前发现的 𨻺 在陈本扫描预期位置未见，仍只作为这个印本的待解版本差异。v6 §3.1、§6 及数据可用性段落已限定抽核范围；现有统计、数据与脚本不变。
 - **Word 字形处理**：DOCX 预览对个别扩展汉字显示方框，英文正文因此以 U+4888、U+28EFA、U+20501 码位指代；抽核 CSV 与中文记录仍保留原字头 䢈、𨻺、𠔁，方便按字检索。此处理不改条目身份或统计。
 - **给 Claude 的约定位置通知**：请按用户最新指示使用本条范围口径，不沿用上条“继续核完 212 条”的待办；仅在用户另行要求时扩展版本校勘。不要把 104 条写成随机抽样、把 𨻺 推广为所有版本缺字，或把旧 LLM κ = 0.773 写成作者间信度。若未来实质改稿，依 `AGENTS.md` 另存 v7。用户在 v5 DOCX 的未提交改动不属于本次提交。
+
+## 2026-09-28 · Codex · 参考文献 PDF／Markdown 整理与 Literature Release
+
+- **目的与位置**：按用户要求整理仓库外的本地 `论文/参考文献PDF/` 与 `论文/参考文献MD/`，并上传到本仓库的 [Literature Release](https://github.com/WuYusen825/Morphology/releases/tag/literature)（tag `literature`）。这些参考文献文件及转换脚本留在本地，没有加入本 Git 分支；Release 的 [上传清单](https://github.com/WuYusen825/Morphology/releases/download/literature/literature-upload-manifest.json) 列出原相对路径、远端附件名、字节数和 SHA-256。
+- **PDF 与 MD**：44 份原有 PDF 改为 `Author_Date_Title.pdf`，各部分内部用空格，并清理可选的 PDF Info／XMP 元数据；原名、新名及校验值留在本地 `论文/参考文献PDF/重命名与元数据清理清单.json`。这 44 份各有一份分页 Markdown；另有两组截图整理成的文章 Markdown（Pulleyblank 2000／1973）和一份转换说明，所以共 47 份 MD。《同源字典》和早稻田《说文解字》十册按用户要求未做 OCR，未转写的扫描页仅保留原 PDF 页链接；其余 OCR 文本尚未逐字校对。
+- **两份截图 PDF**：将 `MORPHOLOGY IN OLD CHINESE` 的 26 张截图（包含后来补入的阅读器第 5 页）和 `Some New Hypothese` 的 15 张截图分别裁去浏览器界面、按页序合成图像 PDF，命名为 `Pulleyblank_2000_Morphology in Old Chinese.pdf` 和 `Pulleyblank_1973_Some New Hypotheses Concerning Word Families in Chinese.pdf`。原截图保留，生成脚本在本地 `论文/参考文献MD/make_screenshot_pdfs.py`；对应 Markdown 提供 OCR 文字，图像 PDF 本身没有文字层。
+- **验证与给 Claude 的通知**：Release 现有 46 份 PDF、47 份 MD 和 1 份 JSON 清单，共 94 个附件；远端附件的名称、显示标签、字节数与 SHA-256 均与本地清单一致。两份新 PDF 均核对页数、元数据与全部页面缩略图；第 5 页顺序正确。使用任何文献作为论文依据前，仍须按 `AGENTS.md` 核实来源与原页；这次文件整理不等于已完成全文校对或来源审查。本次未更改仓库内论文、数据、文献阅读程度或统计口径，当前权威正文仍是 v6。工作区中用户未提交的 `youwen/manuscript/yisheng_paper_v5.docx` 改动不属于本次提交。
