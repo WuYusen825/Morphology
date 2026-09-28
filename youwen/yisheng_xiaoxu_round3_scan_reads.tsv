@@ -1,0 +1,58 @@
+sw_id	char	reading	pdf	pdf_page	half	leaf	quote	confidence	note
+3786	枰	聲	n3.pdf	69	right	011-27b	平也從木平聲	high	Juan 11 starts at PDF p42 (left), so the TOC page is off by one. 樔 is at 27a (p68 left); 枰 is the last column of 27b. The 臣鍇 commentary continues on 28a ('今謂碁局為枰亦言上平也…') and has no 亦聲 remark.
+4634	窞	亦聲	n4.pdf	62	left	014-9a	坎中小坎也從穴從臽臽亦声易曰入于坎窞一曰旁入也	high	Juan 14 1a = p54 left. 窳 is at 8b (p62 right). The digital leaf ids run about 1 to 2 leaves low.
+4640	竀	亦聲	n4.pdf	62	left	014-9a	正視也從穴中正見正亦声	high	Same half-leaf as 窞.
+4726	瘧	亦聲	n4.pdf	67	right	014-13b	寒熱休作病從疒虐虐亦声	high	Printed as 從疒虐, with no second 從. 痟 is at 13a (p66 left).
+4896	帟	未見	n4.pdf	74-77		014-20b..023b		medium	Checked the whole 巾部 from its start at 20b (p74 right) to its end ('文六十四 重八', 23b, p77 right). No 帟 headword was found. 席 is at 23a (p76 left), followed by 幐, 幩, 幝, and so on. 幕 on 22a reads '帷在上曰幕', which is close to the Da Xu 帟 gloss 在上曰帟. Headwords on p74 left and p75 right were read at 150 dpi only.
+4919	敝	亦聲	n4.pdf	78	left	014-25a	帗也一曰敗衣也從攴㡀㡀亦声	high	Printed as 從攴㡀, with no second 從. There is no 臣鍇 commentary; the fanqie 毗制反 follows.
+4944	仲	亦聲	n4.pdf	81	right	015-2b	中也從人中中亦声	high	Juan 15 1a = p79 left. The fanqie 直控反 follows, with no commentary.
+5030	傾	亦聲	n4.pdf	85	left	015-7a	仄也從人從頃頃亦声	high	The fanqie is 去營切. The preceding 侍 is printed '承也從人從寺' with no 聲.
+5157	像	無聲	n4.pdf	91	right	015-12b	象也從人象讀若養字之養	high	Printed as 從人象, with no 聲 at all. 臣鍇 commentary follows: 按尚書曰崇德象賢…
+5203	從	亦聲	n4.pdf	93	right	015-14b	隨行也從辵从从亦聲	high	The 从部 header is at 14a (p92 left).
+6303	𤞛	聲	n5.pdf	61	right	019-9b	妄強犬也從犬壯声	high	Juan 19 1a = p52 left. The fanqie 在郎反 follows directly, with no commentary. The entry comes after 獷 and 狀.
+6671	息	亦聲	n5.pdf	81	left	020-9a	喘也從心自自亦声	high	Juan 20 1a = p73 left. This is the second entry of 心部.
+6796	懝	亦聲	n5.pdf	86	left	020-14a	駿也從心疑疑亦声一曰惶也	high	The gloss character is printed like 駿, where Da Xu has 騃. The entry is the first column of 14a, before 忽 and 忘 on 14b, so Xiao Xu's order differs from Da Xu's. 臣鍇 commentary follows: 猶儓儗也.
+6810	忘	聲	n5.pdf	87	right	020-14b	不識也從心亡声	high	The fanqie 勿強反 follows directly, with no commentary.
+9758	酒	亦聲	n7.pdf	65	left	028-17a	就也所以就人性之善惡从水从酉酉亦声一曰造也吉凶所造起也古者儀狄作酒醪禹嘗之而美遂疏儀狄杜康作林酒	high	Juan 28 1a = p49 left. This is the first entry after 酉. It is printed with 从 and has 杜康作林酒 (sic, for 秫). 臣鍇 commentary follows: 周禮五齊…
+5	吏	亦聲	n1.pdf	5	left	001-2a	治人者也從一從史史亦聲	high	臣鍇曰吏之理人心主於一也…凡言亦聲備言之耳義不主於聲會意 連致反. Juan 1 leaf 1a verified at p4 left (so leaf L a = left of p3+L); digital leaf ids in juan 1 run ~2 leaves behind the scan (digital 禔 001-3b is actually on 5a).
+12	禮	亦聲	n1.pdf	8	left	001-5a	履也所以事神致福也從示從豊豊亦聲	high	臣鍇曰通論備矣 力體反. Right half of p8 shows fold 四 (4b), confirming left = 5a.
+111	琥	聲	n1.pdf	15	left	001-12a	發兵瑞玉爲虎文從玉虎聲春秋傳曰賜子家子雙琥是	high	Headword+gloss begin in last column of p15 left (12a); 聲春秋傳曰賜子家子雙琥是 continues at top of p16 right (12b). Plain 從玉虎聲, no 亦. Note 子家子 (extra 子) vs Da Xu 子家. 臣鍇按周禮曰白琥禮西方…
+120	瑁	不清	n1.pdf	16	left	001-13a	諸侯執圭朝天子天子執玉以冒之似犂冠周禮曰天子執瑁四寸從玉□□□□	medium	This part of the page has blank gaps: the upper parts of several columns (also in 珽 before it) show only bleed-through, confirmed on a contrast-enhanced render. The seal headword shows only a 王 element. The words after 從玉 (expected 冒冒亦聲臣鍇) fall in a blank gap. The visible commentary reads 曰圭上有物冒之也犂冠既犂鑱也今犂鍇音義同本取於上冒之故曰亦聲 母報反, so 臣鍇 implies 亦聲, but the formula itself is not printed or legible.
+203	琀	亦聲	n1.pdf	21	left	001-18a	送死曰中玉也從玉含含亦聲	high	No 臣鍇 commentary; the fanqie 侯勘反 follows directly. The printed text has 曰 (or a wide 口) where Da Xu has 口: 送死曰中玉也.
+2492	幽	亦聲	n2.pdf	71	left	008-2a	隱也從山中𢆶𢆶亦聲	high	Printed 𢆶 as 丝-like form. 臣鍇曰山中隱處 伊虬反.
+2494	叀	亦聲	n2.pdf	72	right	008-2b	專小謹也從幺省屮財見也屮亦聲凡叀之屬皆從叀	high	屮 printed as 中-like form. 臣鍇曰叀專也幺小子也…
+2518	𠭘	亦聲	n2.pdf	74	right	008-4b	坑地從𣦼井井亦聲	high	Printed 坑地 (Da Xu 坑也), and 從𣦼井, not 從𣦼從井. 臣鍇曰陷穽也會意 從性反.
+2694	腥	亦聲	n2.pdf	83	right	008-13b	星見食豕令肉中生小息肉也從肉星星亦聲	high	The seal headword is at the foot of the last column of 13a (p82 left). The 說解 is in the first column of 13b (p83 right). The formula reads 從肉星, not 從肉從星. 臣鍇按禮曰豕望視而交睫腥…
+2794	刺	亦聲	n2.pdf	87	right	008-17b	君殺大夫曰刺刺直傷也從刀從朿朿亦聲	high	朿 is printed in a 東-like form. No 臣鍇 commentary; the fanqie 七賜反 follows.
+3850	糶	亦聲	n4.pdf	5	left	012-2a	出穀也從出從䊮䊮亦聲	high	The phonetic component is printed as 米+翟 (read as 䊮). No 臣鍇 commentary; the fanqie 他弔切 follows (切, not 反). Juan 12 leaf 1a is at p3 left.
+7667	否	亦聲	n6.pdf	42	right	023-1b	不也從口不不亦声	high	The entry is in 不部 at the start of juan 23 (1a is at p41 left; the TOC's p40 is still juan 22). The formula reads 從口不, not 從口從不, and 聲 is printed as 声. 臣鍇曰否者不可之意見于言也 付刃反.
+8042	拲	聲	n6.pdf	57	right	023-16b	兩手共同械也從手共声周禮曰上罪梏拲而桎	high	Plain 從手共声, with no 亦 and no 從…從. The gloss is printed as 兩手共同械也, with an extra 共 in the small double column. No 臣鍇 commentary; the fanqie 短悚反 follows. The 或體 從木 comes next.
+8070	姓	亦聲	n6.pdf	58	left	024-1a	人所生也古之神聖人母感天而生子故稱天子因生以爲姓從女生生亦声	high	This is the second entry of juan 24 (女部, after 女). The formula reads 從女生, not 從女從生. There is no 春秋傳 quotation before 臣鍇. 臣鍇曰據典氏妻附寶感…
+1633	𧥣	亦聲	n2.pdf	15	left	005-13a	扣也如求婦先𧥣叕之從言口口亦聲	high	口亦 at column foot, 聲 at top of next column; 臣鍇曰頻繁哀求之意…猆走反. Found on 13a (fold 十三); digital anchors 11b/14a are loose
+1745	菐	亦聲	n2.pdf	21	right	005-18b	瀆菐也從丵從廾廾亦聲凡菐之屬皆從菐	high	臣鍇曰瀆菐瀆也兩手捧持丵叢雜也
+1746	僕	亦聲	n2.pdf	21	right	005-18b	給事者從人從菐菐亦聲	high	same half-leaf as 菐; 臣鍇按春秋左傳…
+1782	釁	亦聲	n2.pdf	25	left	006-2a	血祭也象祭竈也從爨省酉酉所以祭也從分分亦聲	high	no 從 before 酉 (從爨省酉); 爨部 opens juan 6 here (juan 6 1a = p24 left), not juan 5; 臣鍇曰酉酒也分分牲也許僅反
+1789	鞣	聲	n2.pdf	26	right	006-2b	耎也從革柔聲	high	plain 柔聲, no 從柔/亦; 臣鍇曰皮革之柔耎也然尤反
+2125	𢌨	亦聲	n2.pdf	48	left	007-3a	相顧視而行從目從㢟㢟亦聲	high	no 也 after 行; 㢟 printed in a 延-like form; fanqie 余羡反
+2225	齅	亦聲	n2.pdf	54	right	007-8b	以鼻就臭也從鼻臭臭亦聲讀若畜牲之畜	high	only one 從 (從鼻臭); 臣鍇曰此會意香秀反. Leaf is 8b (fold on p54 left reads 九); digital anchors 10a/10b are about 2 leaves off
+2230	奭	亦聲	n2.pdf	54	right	007-8b	盛也從大從皕皕亦聲此燕召公名讀若郝史篇名醜	high	臣鍇曰史篇謂史籀所作蒼頡十五篇也希式反
+2351	瞿	亦聲	n2.pdf	62	left	007-17a	鷹隼之視也從隹䀠亦聲凡瞿之屬皆從瞿讀若章句之句又音衢	high	only one 從 and 䀠 written once (從隹䀠亦聲); 臣鍇曰驚視也禮曰見似目瞿會意九遇反. Anchors 15a/15b are loose; fold reads 十七
+2984	筑	亦聲	n3.pdf	9	left	009-7a	以竹曲五絃之樂也從竹巩從巩持之也從竹亦聲	high	note wording 從竹巩從巩持之也 and 從竹亦聲 (not 竹亦聲 alone); 臣鍇按史記高漸離擊…
+3024	𤯌	亦聲	n3.pdf	13	right	009-10b	和也麻調也從甘麻甘亦聲讀若函	high	厤 printed as a 麻-like glyph (headword has 厤); only one 從 (從甘麻); 臣鍇曰麻… Leaf 10b by juan start (juan 9 1a = p3 left); anchors 11a/11b are about 1 leaf off
+8109	娣	聲	n6.pdf	60	left	024-3a	女弟也從女弟声	high	plain 弟声 (the page uses the short form 声), no 亦; fanqie 笛計反, no 臣鍇. Leaf 3a (juan 24 1a = p58 left); anchors 2a/2b are about 1 leaf off
+8381	匹	亦聲	n6.pdf	73	left	024-16a	四丈也從匸八八揲一匹八亦声	high	臣鍇曰會意篇七反; 声 short form. Leaf 16a (fold 十六); anchors 14a/14b are about 2 leaves off
+9156	黃	聲	n7.pdf	30	left	026-10a	地之色也从田炗声炗古文光也凡黃之屬皆從黃	high	plain 炗声 with 从田 (only one component marker), no 亦; no 臣鍇, fanqie 戶荒反. Juan 26 1a = p21 left
+1437	舌	亦聲	n2.pdf	4	right	005-1b	在口所以言也別味也從干口于亦聲凡舌之屬皆從舌	medium	Juan 5 (1a = n2 p3 left); the phonetic before 亦聲 is printed like 于 (probably a form of 干, possibly a misprint); Da Xu 从干从口 appears as 從干口 with one 從
+1995	整	亦聲	n2.pdf	40	left	006-17a	齊也從攴從束正亦聲	high	Written 從攴從束正亦聲 with no 從 before 正; 臣鍇曰束之又小擊之使正會意. Juan 6 1a = n2 p24 left (TOC page 23 is one page off); p40 left is 17a, and the 版心 shows 七
+1998	政	聲	n2.pdf	40	left	006-17a	正也從攴正聲	high	Da Xu 从攴从正正亦聲; Xiao Xu has 從攴正聲. The last column of 17a runs 正也從攴正 / 聲臣鍇曰政…
+2029	敡	亦聲	n2.pdf	42	right	006-18b	侮也從攴從易易亦聲	high	臣鍇曰輕易之也 列義反
+2032	𣀆	無聲	n2.pdf	42	right	006-18b	朋侵也從攴羣	high	No 聲 at all: 朋侵也從攴羣 is followed directly by 臣鍇曰史云羣盜此意也 其分反 (read as 會意)
+2075	甫	亦聲	n2.pdf	44	left	006-21a	男子美稱從用父父亦聲	high	No 也 after 稱; 臣鍇曰男子之美稱言用也父者老也會意 分武反. Last text leaf of juan 6; juan 7 starts on p46
+3177	阱	亦聲	n3.pdf	26	right	010-2b	陷也從𨸏井井亦聲	high	𨸏 is printed in the 𠂤 form; 臣鍇曰𨸏其岸會意也 從性反. Juan 10 1a = n3 p24 left; the 版心 on p25 shows 二
+3178	㓝	聲	n3.pdf	26	right	010-2b	罰皐也從刀井易曰井法也井聲	high	Da Xu 从井从刀…井亦聲; Xiao Xu has 從刀井 … 井聲 with no 亦. 辠 is printed as 皐. 臣鍇曰通論…
+3218	饗	亦聲	n3.pdf	28	left	010-5a	鄉人飲酒也從鄉從食鄉亦聲	high	臣鍇曰會意 忻岡反
+3261	䢈	亦聲	n3.pdf	30	left	010-7a	日月合宿為辰從會辰辰亦聲	high	為辰 in place of Da Xu 从辰; 臣鍇曰春秋左傳曰日月所會謂之辰…會意 石倫反. By the scan count this is 7a, not the 6a/6b of the digital anchors
+4325	圅	亦聲	n4.pdf	38	right	013-12b	舌也象形舌體𢎘𢎘亦聲	high	𢎘 is printed in a 弓-like form and 聲 as 声; Da Xu's 𢎘从𢎘 is absent; 臣鍇曰…當依篆作…. Juan 13 1a = n4 p26 left
+5742	㖃	亦聲	n5.pdf	30	right	017-9b	厚怒聲從口后后亦聲	high	聲 is printed 声; 臣鍇曰東方朔十洲記… 蒿厚反. Juan 17 1a = n5 p21 left; the 版心 shows 九
+5782	匌	聲	n5.pdf	32	left	017-12a	帀也從勹合聲	high	No 臣鍇 commentary; the text is 帀也從勹合 / 声 後閤反. Da Xu 从勹从合合亦聲
+9405	鍒	聲	n7.pdf	41	right	027-8b	鐵之耎也從金柔聲	high	Gloss is printed 鐵之耎也 (Da Xu 𨮯之耎也); 从 and 声 are printed in these forms; no 臣鍇; 然尤反. It is among the last entries of 金部, just before 文百九十七. Juan 27 1a = n7 p33 left
