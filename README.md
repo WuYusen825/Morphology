@@ -52,7 +52,7 @@ youwen/
 ├── youwen_criteria.md     数据说明、编码方案、判定标准和各轮结果
 ├── scripts/               数据抽取、编码和统计脚本（见下文"怎样重跑"）
 ├── shili_pages/           王筠《说文释例》卷三、卷八的书页图像和录文
-├── sources/               《说文释例》卷八的国图扫描 PDF
+├── sources/               《说文释例》卷八的国图扫描 PDF、Karlgren 1934 扫描 PDF
 └── *.csv / *.tsv / *.xlsx 数据和结果（见下表）
 ```
 
@@ -86,6 +86,7 @@ CSV 都是 UTF-8 带 BOM（`utf-8-sig`），用 Excel 直接打开不会乱码�
 |---|---|---|
 | Release `book1` | 王筠《说文释例》卷三，国家图书馆扫描（archive.org 条目 `02076570.cn`） | 可用 |
 | `youwen/sources/shuowen_shili_juan08_NLC_02076575.cn.pdf` | 《说文释例》卷八，国家图书馆扫描（archive.org 条目 `02076575.cn`） | 可用 |
+| `youwen/sources/karlgren_word_families_BMFEA05_archive_Bulletin477728.pdf` | Karlgren, Word Families in Chinese（BMFEA 5，第 9–120 页，附书名页和目录），远东古物博物馆自传 archive.org 条目 `Bulletin477728`，CC0 | 可用 |
 | Release `说文解字` | 四部丛刊本《說文繫傳通釋》，国家图书馆扫描；小徐本对照第三轮用的就是它 | 可用 |
 | Release `book` | Z-Library 来源的《说文释例》PDF | **不要使用**，建议删除这个 Release |
 | Release `book3` | 《说文解字繫传》现代影印本，PDF 元数据显示来自 Z-Library，且有版权页 | **不要使用**，建议删除这个 Release |

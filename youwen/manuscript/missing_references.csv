@@ -1,7 +1,7 @@
 ﻿编号,类别,类型,作者,年份,篇名,刊名/书名,卷期页码/出版,链接,备注
 07,期刊,报纸文章,陳爍,2022,"論""右文說""的局限與出路",中華讀書報,2022-08-31，第8版,https://epaper.gmw.cn/zhdsb/html/2022-08/31/nw.D110000zhdsb_20220831_3-08.htm,光明网电子报，全文免费
 14,期刊,硕士论文,許育龍,2005,《說文》亦聲字研究,淡江大學碩士論文,,https://ndltd.ncl.edu.tw,未查到在线记录；在台湾博硕士论文系统检索作者/题名，或查淡江大学电子学位论文
-18,期刊,期刊论文,"Karlgren, Bernhard",1934,Word families in Chinese,Bulletin of the Museum of Far Eastern Antiquities,5: 9–120,https://catalog.hathitrust.org/Record/101890258,HathiTrust 目录记录，未确认能否看全文；不在 WoS/JSTOR
+18,期刊,期刊论文,"Karlgren, Bernhard",1934,Word families in Chinese,Bulletin of the Museum of Far Eastern Antiquities,5: 9–120,https://archive.org/details/Bulletin477728,已下载：youwen/sources/karlgren_word_families_BMFEA05_archive_Bulletin477728.pdf（博物馆自传，CC0）。该卷书名页印 1933，稿中作 1934，待核
 20,期刊,期刊论文,李寧; 郭抒遠,2019,《說文解字》亦聲字誤為形聲字例析,文教資料,2019(4),https://m.fx361.com/news/2019/0417/5007170.html,参考网有全文；PDF 请在知网检索题名下载
 25,期刊,期刊论文,"Pulleyblank, Edwin G.",1973,Some new hypotheses concerning word families in Chinese,Journal of Chinese Linguistics,1(1): 111–125,https://www.jstor.org/action/doBasicSearch?Query=%22Some+new+hypotheses+concerning+word+families+in+Chinese%22,JSTOR 检索链接（未查到固定链接）
 26,期刊,期刊论文,"Pulleyblank, Edwin G.",2000,Morphology in Old Chinese,Journal of Chinese Linguistics,28(1): 26–51,https://www.jstor.org/stable/23754003,JSTOR
@@ -17,9 +17,9 @@
 29,书,专著,"Sagart, Laurent",1999,,The Roots of Old Chinese,John Benjamins,,
 31,书,专著,"Schuessler, Axel",2007,,ABC Etymological Dictionary of Old Chinese,University of Hawai'i Press,,
 32,书,古籍,沈括,c. 1088,,夢溪筆談,卷十四,,
-33,书,书中章节,沈兼士,1933,右文說在訓詁學上之沿革及其推闡,慶祝蔡元培先生六十五歲論文集,重印於《沈兼士學術論文集》，中華書局 1986,,找重印本更容易
+33,书,书中章节,沈兼士,1933,右文說在訓詁學上之沿革及其推闡,慶祝蔡元培先生六十五歲論文集,重印於《沈兼士學術論文集》，中華書局 1986,https://commons.wikimedia.org/wiki/File:NTUL-2382698_%E6%85%B6%E7%A5%9D%E8%94%A1%E5%85%83%E5%9F%B9%E5%85%88%E7%94%9F%E5%85%AD%E5%8D%81%E4%BA%94%E6%AD%B2%E8%AB%96%E6%96%87%E9%9B%86_v.1.pdf,台大图书馆扫描原书（上下两册，Wikimedia Commons；v.2 把链接末尾改成 v.2）；未确认沈文在哪一册。本环境下载被限流，未取得
 34,书,专著,王力,1982,,同源字典,商務印書館,,
 35,书,古籍,王念孫,1796,,廣雅疏證,,,
-37,书,古籍,徐鍇,10世纪,,說文解字繫傳,四部叢刊本,,稿中已引数字本（Kanseki KR1j0019），PDF 可选
+37,书,古籍,徐鍇,10世纪,,說文解字繫傳,四部叢刊本,,仓库 Release「说文解字」已有四部丛刊本扫描，不缺
 38,书,古籍,許慎,100,,說文解字,大徐本；中華書局 1963 影印,,稿中已引数字本（GitHub），PDF 可选
 40,书,专著,曾昭聰,2002,,形聲字聲符示源功能述論,黃山書社,,
