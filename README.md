@@ -19,6 +19,7 @@
 | 王筠《说文释例》原文录文与书页 | [`youwen/shili_pages/README.md`](youwen/shili_pages/README.md) |
 | Codex / Claude 共同变更日志 | [`PROJECT_LOG.md`](PROJECT_LOG.md)（两者修改项目前先读，修改后追加记录） |
 | v5 参考文献 DOI 核对表 | [`youwen/doi_audit_v5.md`](youwen/doi_audit_v5.md) |
+| 期刊 Discussion 写法学习（两轮精读的总结与对 v6 的建议） | [`youwen/Discussion精读总结.md`](youwen/Discussion精读总结.md)；逐篇笔记 [`discussion_close_reading.md`](youwen/discussion_close_reading.md)、[`discussion_close_reading_morphology2026.md`](youwen/discussion_close_reading_morphology2026.md)，阅读范围 [`discussion_reading_index.md`](youwen/discussion_reading_index.md) |
 
 v1–v5 是旧稿，只留作对照。以后实质改稿请另存为 v7，不要覆盖 v6。
 
@@ -52,7 +53,7 @@ youwen/
 ├── youwen_criteria.md     数据说明、编码方案、判定标准和各轮结果
 ├── scripts/               数据抽取、编码和统计脚本（见下文"怎样重跑"）
 ├── shili_pages/           王筠《说文释例》卷三、卷八的书页图像和录文
-├── sources/               《说文释例》卷八的国图扫描 PDF
+├── sources/               《说文释例》卷八的国图扫描 PDF、Karlgren 1934 扫描 PDF
 └── *.csv / *.tsv / *.xlsx 数据和结果（见下表）
 ```
 
@@ -86,10 +87,13 @@ CSV 都是 UTF-8 带 BOM（`utf-8-sig`），用 Excel 直接打开不会乱码�
 |---|---|---|
 | Release `book1` | 王筠《说文释例》卷三，国家图书馆扫描（archive.org 条目 `02076570.cn`） | 可用 |
 | `youwen/sources/shuowen_shili_juan08_NLC_02076575.cn.pdf` | 《说文释例》卷八，国家图书馆扫描（archive.org 条目 `02076575.cn`） | 可用 |
+| `youwen/sources/karlgren_word_families_BMFEA05_archive_Bulletin477728.pdf` | Karlgren, Word Families in Chinese（BMFEA 5，第 9–120 页，附书名页和目录），远东古物博物馆自传 archive.org 条目 `Bulletin477728`，CC0 | 可用 |
 | Release `说文解字` | 四部丛刊本《說文繫傳通釋》，国家图书馆扫描；小徐本对照第三轮用的就是它 | 可用 |
 | Release `book` | Z-Library 来源的《说文释例》PDF | **不要使用**，建议删除这个 Release |
 | Release `book3` | 《说文解字繫传》现代影印本，PDF 元数据显示来自 Z-Library，且有版权页 | **不要使用**，建议删除这个 Release |
 | Release `book2` | 《贞观政要》，传错了书 | 与本项目无关 |
+| Release `literature` | 参考文献 PDF 与分页 Markdown（Codex 整理，见 `PROJECT_LOG.md` 2026-09-28 条目与上传清单） | 可用；使用前仍须核对原页 |
+| Release `学习` | 11 篇 *Morphology* 2026 研究文章（10 篇开放获取，1 篇订阅文章），用于学习 Discussion 写法 | 可用；只作写法学习，未列入书目 |
 
 ## 外部数据来源
 

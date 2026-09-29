@@ -39,6 +39,14 @@
 - **Word 字形处理**：DOCX 预览对个别扩展汉字显示方框，英文正文因此以 U+4888、U+28EFA、U+20501 码位指代；抽核 CSV 与中文记录仍保留原字头 䢈、𨻺、𠔁，方便按字检索。此处理不改条目身份或统计。
 - **给 Claude 的约定位置通知**：请按用户最新指示使用本条范围口径，不沿用上条“继续核完 212 条”的待办；仅在用户另行要求时扩展版本校勘。不要把 104 条写成随机抽样、把 𨻺 推广为所有版本缺字，或把旧 LLM κ = 0.773 写成作者间信度。若未来实质改稿，依 `AGENTS.md` 另存 v7。用户在 v5 DOCX 的未提交改动不属于本次提交。
 
+## 2026-09-28 · Claude · 缺失参考文献清单与 Karlgren 1934 扫描
+
+- **起因**：Qu 要求把 v6 参考文献里还没有 PDF 的条目下载到本仓库。Qu 本地已有 17 篇（编号 01、02、06、09、12、13、15、16、21、22、23、24、28、30、36、39、41，按 v6 参考文献顺序编号）。
+- **本次变更**：新增 `youwen/manuscript/missing_references.csv`，列出其余 24 条，分“期刊”（含报纸文章和硕士论文，给链接）和“书”（含书中章节和古籍，给书名）；新增 `youwen/sources/karlgren_word_families_BMFEA05_archive_Bulletin477728.pdf`；`README.md` 原书扫描表补一行。未修改正文、数据或脚本；当前权威正文仍为 v6。
+- **Karlgren 1934 来源**：archive.org 条目 `Bulletin477728`，由远东古物博物馆（Statens museer för världskultur）自行上传，许可为 CC0 1.0。原 PDF 252 页，元数据 Producer 为 ilovepdf.com，修改日期 2017-04-02；截出书名页、目录和正文 PDF 第 11–122 页（原书第 9–120 页），共 114 页。目录确认 Karlgren 一文起于第 9 页、下一篇 Waley 起于第 121 页，与 v6 所列页码一致。**待核**：该卷书名页印“STOCKHOLM 1933”，v6 作 1934；只下载未读，阅读程度不变。
+- **未能取得**：Karlgren 以外的期刊条目（JSTOR、知网等）要北外图书馆登录；本云端会话没有内置浏览器，无法让 Qu 登录。另外本仓库是公开仓库，出版社或数据库的受版权保护 PDF 不应提交进来，需 Qu 决定放在哪里。沈兼士 1933 所在论文集有台大图书馆扫描（Wikimedia Commons），本环境下载被限流。条目 37（四部丛刊本《系传》）已在 Release「说文解字」，清单已注明不缺。
+- **验证**：CSV 共 24 行，编号与 v6 参考文献顺序核对无误；截出的 PDF 逐页抽查首、末页文字层，确认起止正确。
+
 ## 2026-09-28 · Codex · 参考文献 PDF／Markdown 整理与 Literature Release
 
 - **目的与位置**：按用户要求整理仓库外的本地 `论文/参考文献PDF/` 与 `论文/参考文献MD/`，并上传到本仓库的 [Literature Release](https://github.com/WuYusen825/Morphology/releases/tag/literature)（tag `literature`）。这些参考文献文件及转换脚本留在本地，没有加入本 Git 分支；Release 的 [上传清单](https://github.com/WuYusen825/Morphology/releases/download/literature/literature-upload-manifest.json) 列出原相对路径、远端附件名、字节数和 SHA-256。
@@ -60,6 +68,17 @@
 - 按用户“把以上总结出来的东西写进一个 md”的要求，新增 `youwen/Discussion精读总结.md`，整理上一轮六项主要认识、论文实例、对亦声研究的启发及写作自检问题，并链接完整精读笔记与原文索引。
 - 本次仅整理既有阅读成果，没有新增阅读范围或修改论文、数据及统计。检查 Markdown 内容、相对链接和提交范围；现行权威稿仍为 v6，既有 v5 DOCX 改动保留。
 
+## 2026-09-28 · Claude · 学习 Release：*Morphology* 2026 讨论精读，更新 Discussion 精读总结
+
+- **用户要求**：在 Codex 精读 14 篇参考文献的基础上，继续精读 Release `学习` 中的 *Morphology* 论文，学习讨论怎样从数据推进到理论创新、严谨与推测的边界、语言、详略与创新类型；后又追加“怎样联系文献结论、呼应前人理论”；并说明怎样用于亦声稿，更新 `youwen/Discussion精读总结.md`。
+- **合并**：先把 `claude/library-to-github-8wdy00`（Codex 当天三次提交：Literature Release 记录、讨论精读笔记与索引、单独的精读总结）合并进本分支。`PROJECT_LOG.md` 与 `youwen/literature_review_access_log.md` 两边都在末尾追加，按时间先后保留双方；访问日志中 Codex 的“第 10 节”改为第 11 节，Codex 上一条日志提到的“第 10 节”即现在的第 11 节。
+- **资料**：Release `学习` 有 11 个 PDF（*Morphology* 36:11–36:21）。经 GitHub API 下载到会话临时目录，SHA-256 与 Release 所列一致；元数据确认为 Springer 正式出版 PDF；10 篇开放获取，Barbu Mititelu 等为订阅文章，只转述、短引。PDF 未提交进仓库。
+- **变更文件**：新增 `youwen/discussion_close_reading_morphology2026.md`（逐篇笔记）；`youwen/Discussion精读总结.md` 改为第二版，整合两轮阅读，新增第 4 节（与文献对话的动作），第 8 节写对亦声稿的应用（期刊定位、v6 讨论诊断、v7 讨论布局与篇幅预算、逐段建议、前人主张计分表草稿、英文示范段落、严谨边界清单、未执行的可选新分析）；`youwen/discussion_reading_index.md` 增第二部分（第 20–30 条）；`youwen/literature_review_access_log.md` 增第 12 节；`README.md` 在文件表加一行，在 Release 表补 `literature`、`学习` 两行；`AGENTS.md` 的“资料来源”加一条下载与读 PDF 的做法。
+- **验证**：逐篇阅读范围记入索引；总结与笔记中的英文引语逐条回到文字层核对；v6 的数字与引文取自 v6 正文，示范段落注明写入 v7 前须回到结果文件复核；新旧文件中 35 个相对链接全部存在。
+- **从失败中得到的做法**：私有仓库的 `github.com/.../releases/download/...` 链接在云端会话返回 404，改用 API 附件端点（`Accept: application/octet-stream`）即可；环境无 `pdfinfo`，`pypdf` 因系统 `cryptography` 损坏报错，改用 `pip install pymupdf`。已写入 `AGENTS.md`。
+- **更正**：GitHub API 显示本仓库为 private（2026-09-28 核对）；此前 Claude 条目称“本仓库是公开仓库”不准确。
+- **未改动**：v6 正文与 DOCX、数据、脚本、编码、统计和大徐抽核范围均未改，当前权威稿仍为 v6。首投期刊记录仍是 *Language and Linguistics*；*Morphology* 的 SSCI 收录状态仍待 Qu 在 MJL 核实。总结第 8 节的改稿建议和可选新分析都未执行；若采用，须另存 v7，新分析须按 `AGENTS.md` 先写脚本和结果文件。
+
 ## 2026-09-29 · Codex · 整合本地与 Claude 第二版为宏观 Discussion 指导
 
 - **用户要求**：读取 GitHub 上 Claude 精读11篇 Morphology 文献后更新的版本，以及本地原总结，生成一份新的宏观指导 Markdown。
@@ -67,3 +86,9 @@
 - **产出**：新增 `youwen/Discussion宏观写作指导.md`，在通用写作层面整合中心问题、理论推进、诊断力、文献关系、推理边界、推测、章节篇幅、语言和贡献，附简短流程及亦声应用方向。来源采用固定提交链接。另在本地 `literature_review_access_log.md` 第11节记录本轮阅读层级；Claude 分支上的历史节号可能不同，不据数字合并覆盖记录。
 - **校准**：区分叙述顺序与事前预测、零结果与反例、针对性稳健检查与排除全部伪影；不把11篇文章的共同倾向当作期刊硬性政策，不强制所有文章裁决具名理论或遵循固定篇幅、推测顺序。未把第二版的期刊收录、审稿周期、字数预算及未执行新分析转为通用要求。
 - **验证和范围**：检查三份输入的版本、全部正文读取范围、新文档的来源引用和文件链接；本轮未重新审读11篇原文，不把笔记批评当作新的全文审计结论。当前论文仍为 v6，目标期刊及数据口径不变；原有 v5 DOCX 未提交改动不纳入此次提交。
+
+## 2026-09-29 · Claude · 合并 PR #1 分支到 v7 工作分支
+
+- **目的**：按 coordinator 选定的默认做法（GitHub 上传线程此前向 Qu 提出过同一方案），从默认分支 `claude/project-thread-lj0ffs`（`b3aec15`，已含 PR #2）新建 `claude/yisheng-paper-v7-ougcnb`，并把 PR #1 分支 `claude/yisheng-manuscript-an2sc4`（`2957321`）合并进来，使 v7 分支同时带有 `missing_references.csv`、Karlgren 1934 扫描、*Morphology* 2026 精读笔记与第二版 `Discussion精读总结.md`，以及 Codex 的 `Discussion宏观写作指导.md`。
+- **冲突处理**：只在 `PROJECT_LOG.md` 与 `youwen/literature_review_access_log.md` 冲突，两边都是末尾追加。按日期保留双方：本日志中 Claude 2026-09-28 条目在前、Codex 2026-09-29 条目在后；访问日志中 Codex 2026-09-29 一节由“第 11 节”改为第 13 节（Codex 在上方日志条目里说的“第11节”即现在的第 13 节）。其余文件自动合并，未改内容。
+- **未改动**：正文、数据、脚本、编码和统计口径不变；当前权威稿在本次合并时仍为 v6。

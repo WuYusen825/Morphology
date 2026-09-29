@@ -96,8 +96,11 @@
 - **印本问题**：第 10 叶背面有四处空围（□），都在“亦聲而不言者”一段，不影响“三种”一句；同叶第 6 行首字印作“嚳”，按文意（《诗》“有覺德行”）应是“覺”。如要引用这一段，须用中华书局影印本或别的印本核对。
 - **综述的修改**：§2.1 改引原书，补上王筠对分别文的规则、胖字、他认可和否定的字，以及第 1 叶的小注；§2.5 补了 H3、H4 和王筠的关系。
 
+## 10. 2026-09-28 追加：Karlgren 1934 已取得扫描
 
-## 10. 2026-09-28 追加：期刊论文 Discussion 与推理结构精读
+- **Karlgren 1934（C1）**：远东古物博物馆在 archive.org 自传的 BMFEA 第 5 卷（条目 `Bulletin477728`，CC0），已截出该文放在 `sources/karlgren_word_families_BMFEA05_archive_Bulletin477728.pdf`。**只下载，还没读**，阅读程度仍按第 3 节。该卷书名页印 1933，引用年份待核。
+
+## 11. 2026-09-28 追加：期刊论文 Discussion 与推理结构精读
 
 - **本轮范围**：以本地参考文献 Markdown 为主，精读 14 篇期刊研究／论证文章的讨论、结论和所需证据段落：Zhang 2022、Jacques 2016／2022、Mei 2012、Sagart 与 Baxter 2012、Bonami 与 Strnadová 2019、Arad 2003、Monaghan 等 2014、Meng 等 2025、Hill 与 List 2019、吳濟仲 2015、李宁与郭抒远 2019、Karlgren 1933、Pulleyblank 1973。此处 Karlgren 为馆刊整期中《Word Families in Chinese》的选段，不是整期通读；Mei 等的主要支持段落也按实读范围记录，不称全篇逐行读完。
 - **另列体裁**：Aronoff 2007 为主席演讲修订的期刊理论文；Pulleyblank 2000 为较早手册稿形成的概述。Rasin 等 2024 是会议论文，Dingemanse 等 2015 是综述，Hathout 与 Namer 2019 是专刊导论，作为对照阅读，没有混算为核心 research articles。
@@ -105,8 +108,17 @@
 - **可复用成果**：[精读笔记](discussion_close_reading.md) 分析观察、推理桥梁、理论推进、合理推测和语言动作，并区分可辨认贡献与不可知的真实录用原因；[阅读范围索引](discussion_reading_index.md) 逐篇给出 MD 行号／PDF 页码、本地定位与 Literature Release 原件链接。后续使用文献时，以这个具体范围补充前面历史条目；旧条目中的“未读／只读摘要”不再代表上述已补读部分的当前状态。
 - **边界**：未扩大原典扫描核查，未改变稿件版本、作者编码事实或数据统计。对 v6 Discussion 的启发仅作为阅读建议保存，尚未执行正文修改或新的理论模型检验。
 
-## 11. 2026-09-29 追加：两版 Discussion 总结的宏观整合
+## 12. 2026-09-28 追加：Release `学习` 中 11 篇 *Morphology* 2026 研究文章的 Discussion 精读（Claude）
+
+- **本轮范围**：Lõo 等（36:11）、Barbu Mititelu 等（36:12）、Sandström & Rosenberg（36:13）、Saicová Římalová（36:14）、Berg（36:15）、Huyghe 等（36:16）、Igartua（36:17）、Ševčíková & Hledíková（36:18）、Cohen 等（36:19）、Nikolaev 等（36:20）、Sandell（36:21）。每篇都完整读了摘要、引言、讨论与结论，以及讨论所依赖的结果段落；方法细节、例句串和附录只略读。逐篇页码范围见 [阅读范围索引](discussion_reading_index.md) 第二部分（第 20–30 条）。
+- **来源核对**：PDF 从本仓库 Release `学习` 经 GitHub API 下载，与 Release 所列 SHA-256 一致；元数据确认为 Springer 正式出版 PDF。10 篇开放获取（9 篇 CC BY 4.0，1 篇 CC BY-NC-ND 4.0），Barbu Mititelu 等为订阅文章，只转述、短引。这 11 篇不在 `bibliography.md` 中，也没有作为 v6 的参考文献使用；本轮只用于学习讨论写法。
+- **成果**：[第二轮精读笔记](discussion_close_reading_morphology2026.md) 与更新后的 [Discussion 精读总结](Discussion精读总结.md)。
+- **编号说明**：合并 Codex 分支时，本日志两边都追加了“第 10 节”；按时间先后，Claude 的 Karlgren 一节保留为第 10 节，Codex 的期刊 Discussion 精读一节改为第 11 节，本节为第 12 节。
+- **边界**：未改变 v6 正文、编码、数据、统计或原典抽核范围；若将来把其中某篇作为论文参考文献引用，须先补入书目并核对卷期页码。
+
+## 13. 2026-09-29 追加：两版 Discussion 总结的宏观整合（Codex）
 
 - **实际读取**：完整读本地第一版 `Discussion精读总结.md`（提交 `99be2c8`），并从 GitHub 另一分支 `claude/yisheng-manuscript-an2sc4` 的提交 `2957321` 完整读取 Claude 的第二版同名总结及 `discussion_close_reading_morphology2026.md`。
 - **阅读层级**：本轮读取的是总结与11篇文章的逐篇笔记，没有重新逐篇读该11篇论文全文；不得将本条记为本轮新增的11篇原文精读。Claude 自述的原文阅读范围以其分支上的索引及笔记为准。
 - **产出**：`Discussion宏观写作指导.md` 综合理论推进、诊断性比较、文献对话、桥接假设、合理推测、篇幅组织、语言及贡献定位，并保留来源提交链接。原本地第一版和远端第二版均未覆盖；论文、编码、数据及统计未修改。
+- **编号说明**：Codex 在默认分支上把本节记为“第 11 节”；2026-09-29 合并两条分支时按时间顺序改为第 13 节（第 11 节是 Codex 的期刊 Discussion 精读，第 12 节是 Claude 的 *Morphology* 2026 精读）。
