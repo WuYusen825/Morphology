@@ -1,0 +1,67 @@
+H1a: 63/177 (35.6%) vs 133/858 (15.5%) fisherOR=3.01 p1=4.5e-09 | GEE OR=2.38 [1.69-3.34] p2=5.8e-07 n=1035 k=152
+Da Xu fanqie identical: 68/204 (33.3%) vs 128/947 (13.5%) fisherOR=3.20 p1=1.6e-10 | GEE OR=2.43 [1.74-3.39] p2=1.8e-07 n=1151 k=164
+fq coverage {0: 947, 1: 204}
+H1c member departing | alt: 16/33 (48.5%) vs 43/150 (28.7%) fisherOR=2.34 p1=0.025 | GEE OR=2.44 [1.34-4.48] p2=0.0038 n=183 k=66
+departing involved | alt: 21/33 (63.6%) vs 58/150 (38.7%) fisherOR=2.78 p1=0.0077 | GEE OR=2.42 [1.32-4.46] p2=0.0044 n=183 k=66
+member departing | departing involved: 16/21 (76.2%) vs 43/58 (74.1%) fisherOR=1.12 p1=0.55 | GEE OR=0.27 [0.03-2.78] p2=0.27 n=79 k=39
+departing alternation among all MC pairs: 21/177 (11.9%) vs 58/858 (6.8%) fisherOR=1.86 p1=0.018 | GEE OR=1.64 [1.04-2.57] p2=0.032 n=1035 k=152
+member-departing among all MC pairs: 16/177 (9.0%) vs 43/858 (5.0%) fisherOR=1.88 p1=0.032 | GEE OR=1.91 [1.13-3.22] p2=0.016 n=1035 k=152
+head-departing among all MC pairs: 5/177 (2.8%) vs 15/858 (1.7%) fisherOR=1.63 p1=0.25 | GEE OR=0.86 [0.41-1.78] p2=0.68 n=1035 k=152
+relation                     亦聲   聲
+mc_tone_head mc_tone_member        
+上            上                3   4
+             平                1  11
+入            入                3  10
+去            去                0   1
+平            上                5  46
+             平                0  20
+voicing among alt relation            亦聲   聲
+mc_voicing_differs        
+False               23  92
+True                10  58
+identity or member-departing: 79/177 (44.6%) vs 176/858 (20.5%) fisherOR=3.12 p1=9.3e-11 | GEE OR=2.53 [1.87-3.42] p2=1.6e-09 n=1035 k=152
+relation                 亦聲    聲
+mc_confidence                   
+identical_fanqie        121  571
+initial+rhyme+tone       30  172
+initial_only             15   56
+no_match_first_reading    3   23
+rhyme+tone_only           8   36
+relation                 亦聲    聲
+head_mc_confidence              
+identical_fanqie        121  534
+initial+rhyme+tone       37  250
+initial_only             12   63
+no_match_first_reading    5    4
+rhyme+tone_only           2    7
+100
+{'聲': 60, '亦聲': 39, nan: 1} {'True': 94, 'False': 5, nan: 1}
+   item series char relation relation_d
+81   81      廾    弈       亦聲        NaN
+analysis-set items 94 {'聲': 59, '亦聲': 35}
+LLM blind all: Y+E 25/33 vs 6/50 OR=22.9 p=3.9e-09 | Y only 8/33 vs 0/50 OR=inf p=0.00035
+LLM blind no paronomastic: Y+E 18/26 vs 6/50 OR=16.5 p=7e-07 | Y only 6/26 vs 0/50 OR=inf p=0.0011
+Claude first-pass all: Y+E 27/35 vs 8/53 OR=19.0 p=5.2e-09 | Y only 13/35 vs 1/53 OR=30.7 p=1.3e-05
+Claude first-pass no paronomastic: Y+E 19/27 vs 8/53 OR=13.4 p=1.4e-06 | Y only 8/27 vs 1/53 OR=21.9 p=0.00053
+mc_relation      identical  other  tone_voicing_alt
+relation semrel                                    
+亦聲       0               0      8                 0
+         1               9     10                 6
+聲        0               3     35                 6
+         1               1      4                 1
+              Coef.     P>|z|
+Intercept -2.851302  0.000004
+label      0.333545  0.691764
+semrel     1.837127  0.037984
+              Coef.         P>|z|
+Intercept -2.245737  3.115781e-06
+label      3.053070  8.851619e-07
+ident      1.837127  3.798380e-02
+phonetics in sample 63
+paronomastic among labelled sample paronomastic_gloss  False  True
+relation                       
+亦聲                     27     8
+聲                      59     0
+H2 GEE 83 58 22.0115843533004 7.1217758316683835 68.03216742487041 3.9386934825188404e-08
+H2 GEE nopar 76 16.36058896828927 5.064576211054673 52.8511883788136 1.4942211345024909e-06
+n in identity-semantic model 83
