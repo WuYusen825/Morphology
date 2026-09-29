@@ -12,6 +12,7 @@
 | 要看什么 | 文件 |
 |---|---|
 | 论文当前稿（v6） | [`youwen/manuscript/yisheng_paper_v6.md`](youwen/manuscript/yisheng_paper_v6.md)，Word 版 [`yisheng_paper_v6.docx`](youwen/manuscript/yisheng_paper_v6.docx) |
+| v6 系统重构修改计划（2026-09-29） | [`v6_系统重构修改计划.md`](youwen/manuscript/v6_系统重构修改计划.md)，附[关键例组核查](youwen/manuscript/lexical_examples_audit_v7.md)；六章方案、原文依据、旧稿迁移和待做分析 |
 | v6 大徐本抽核与编码来源 | [`daxu_spotcheck_v6.csv`](youwen/manuscript/daxu_spotcheck_v6.csv)、[`daxu_source_audit_v6.md`](youwen/manuscript/daxu_source_audit_v6.md)、[`coding_provenance_v6.md`](youwen/manuscript/coding_provenance_v6.md) |
 | 文献综述（论文第 2 节的底稿） | [`youwen/literature_review.md`](youwen/literature_review.md) |
 | 注释书目（编号 A1–F2，综述和论文都按这个编号引用） | [`youwen/bibliography.md`](youwen/bibliography.md) |
@@ -21,6 +22,8 @@
 | v5 参考文献 DOI 核对表 | [`youwen/doi_audit_v5.md`](youwen/doi_audit_v5.md) |
 
 v1–v5 是旧稿，只留作对照。以后实质改稿请另存为 v7，不要覆盖 v6。
+
+2026-09-29 用户将本轮交付收束为**修改 plan**。已生成的 [`yisheng_paper_v7.md`](youwen/manuscript/yisheng_paper_v7.md) 是含占位符的未完成工作稿，仅保留备查，不是新权威版本，也未生成 Word 版。实施修改时以计划为准继续完成 v7。下方“主要结论（v6）”记录旧稿表述；其中同词身份、H1b“其他词缀”、去声方向及传本归属的解释需要按计划校准，不能视为本轮重新确认的结论。
 
 ### 论文还缺什么
 
