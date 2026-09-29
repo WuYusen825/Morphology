@@ -12,6 +12,7 @@
 | 要看什么 | 文件 |
 |---|---|
 | 论文当前稿（v6） | [`youwen/manuscript/yisheng_paper_v6.md`](youwen/manuscript/yisheng_paper_v6.md)，Word 版 [`yisheng_paper_v6.docx`](youwen/manuscript/yisheng_paper_v6.docx) |
+| v6 系统重构修改计划（2026-09-29 修订） | [`v6_系统重构修改计划.md`](youwen/manuscript/v6_系统重构修改计划.md)：以解释和理论推进为中心，保留七章框架，展开四节讨论；附[关键例组核查](youwen/manuscript/lexical_examples_audit_v7.md) |
 | v6 大徐本抽核与编码来源 | [`daxu_spotcheck_v6.csv`](youwen/manuscript/daxu_spotcheck_v6.csv)、[`daxu_source_audit_v6.md`](youwen/manuscript/daxu_source_audit_v6.md)、[`coding_provenance_v6.md`](youwen/manuscript/coding_provenance_v6.md) |
 | 文献综述（论文第 2 节的底稿） | [`youwen/literature_review.md`](youwen/literature_review.md) |
 | 注释书目（编号 A1–F2，综述和论文都按这个编号引用） | [`youwen/bibliography.md`](youwen/bibliography.md) |
@@ -22,6 +23,8 @@
 | 期刊 Discussion 写法学习（两轮精读的总结与对 v6 的建议） | [`youwen/Discussion精读总结.md`](youwen/Discussion精读总结.md)；逐篇笔记 [`discussion_close_reading.md`](youwen/discussion_close_reading.md)、[`discussion_close_reading_morphology2026.md`](youwen/discussion_close_reading_morphology2026.md)，阅读范围 [`discussion_reading_index.md`](youwen/discussion_reading_index.md) |
 
 v1–v5 是旧稿，只留作对照。以后实质改稿请另存为 v7，不要覆盖 v6。
+
+2026-09-29 用户将本轮交付收束为**修改 plan**，并要求纠正上一版计划防御性表述过多的问题。现计划发展 v6 的解释主线，将事实核对集中到实施附表。已生成的 [`yisheng_paper_v7.md`](youwen/manuscript/yisheng_paper_v7.md) 是上一版思路下的未完成工作稿，含占位符，留存备查；实施时依据修订计划从 v6 继续。下方“主要结论（v6）”记录当前稿表述。
 
 ### 论文还缺什么
 
