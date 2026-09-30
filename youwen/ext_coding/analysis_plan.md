@@ -249,3 +249,10 @@ v7 的盲编样本只有 6 个相关的普通对，这个比较做不了（v7 §
   - 表上显示了抽查类型（B 列）和两次盲编的编码（H、I 列），说明页要求先只看释义判断、再看编码。评审指出这样作者判断不独立于编码；若作者因此更接近编码，§8 里估计的假阳率偏低。
   - 已改：`ext_summary.md` §7、§8（含给论文的两段英文），`ext_author_check.py` 的输出头和 `ext_author_check_output.txt` 第二行，`ext_bias_sensitivity.py` 及其输出的措辞，`youwen_criteria.md` §10，`PROJECT_LOG.md`。
   - 数字、检验和结论都不变：重跑后 `yisheng_models_ext_author_check.csv` 与 `yisheng_bias_sensitivity_grid.csv` 逐格相同，两个输出文件只有措辞不同。这是记录更正，不是分析改动；主检验仍是 §4.2 的第一次盲编结果。
+- **2026-09-30 18:45 UTC，第二次回答替换的敏感性分析 X5（探索性，事后，不进判读）。**
+  - 来源：撰稿线程（v9）经协调者 18:29 转来；评审在 `v8_review.md` 里手算得 OR 2.39 [1.38, 4.14]，要求用脚本复现。
+  - 做法：新脚本 `ext_second_answer_sensitivity.py`（不改既有脚本）。把第一次盲编第 3、6 批新条目（97 + 96 个，锚定条目不动）的第一次回答换成 `raw/pass1_b03_second_answer_not_used.txt`、`raw/pass1_b06_second_answer_not_used.txt` 里的第二次回答，重算 P1、S1、S2、S3、S6、S8、S9、X1、X3、X4；另跑只换第 3 批、只换第 6 批两个版本。没有把两份回答合成共识，没有新编码。
+  - 与上面 08:38 条的关系：那条规则（每个代理实例第一份完整合格的回答算数）不变，主检验仍是 §4.2 的第一次回答结果。那两份“不进任何分析”的回答这次只进这一项探索性分析，与主分析分开。第 3 批的第二份与第一份出自同一上下文，不独立；第 6 批的第二份是同一提示的独立重新运行。
+  - 自检：脚本先不替换，重现 `yisheng_models_ext_coding.csv` 里 P1、S1、S2、S3、X3、S8、X4 各行（逐格相同），并核对第一份回答与 `ext_codes_long.csv` 的 code1 逐条相同，再做替换；重跑两次输出逐字节相同。
+  - 结果：主检验 71/139 对 21/74，OR 2.39 [1.38, 4.14]（对照 73/141 对 23/79，2.35 [1.43, 3.86]），与评审手算相同；只换第 3 批 2.32 [1.42, 3.79]，只换第 6 批 2.40 [1.39, 4.14]；S1、S2、S3 的判读不变；X3（探索）单侧 p 0.0497，靠着 .05 的界。结果在 `ext_second_answer_sensitivity_output.txt`、`yisheng_models_ext_second_answer.csv`、`ext_second_answer_items.csv`，摘要 §9。
+  - 命名：撰稿线程和评审叫它“S6”，与 §4.3 的 S6（只算 Y）同名不同物，这里记为 X5。
