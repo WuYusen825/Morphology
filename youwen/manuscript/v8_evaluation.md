@@ -1,5 +1,7 @@
 # v8 评价：并入扩大盲编之后
 
+> **更正（2026-09-30，v9 时加）**：本文件多处把作者核验写成“联合核验”“一份联合判断”“两位作者一起填”。Qu 在评审线程 16:42 更正：126 条由两位作者各自核对，再汇总成一张表；13:24 的“一起”只是说两位都参与。数字、检验和结论不变。v9 起正文写 “each reviewed … separately and consolidated their judgments”，见 [`yisheng_paper_v9_numbers.md`](yisheng_paper_v9_numbers.md)。v8 正文保持原样，留作历史。
+
 日期：2026-09-30。对象：[`yisheng_paper_v8.md`](yisheng_paper_v8.md)（Word 版 [`yisheng_paper_v8.docx`](yisheng_paper_v8.docx)），数字出处见 [`yisheng_paper_v8_numbers.md`](yisheng_paper_v8_numbers.md)。
 
 [`v7_evaluation.md`](v7_evaluation.md) 里没有变的部分（对照两份 Discussion 总结、v6 六个缺口、严谨边界清单）不再重复，本文件只写 v8 相对 v7 的变化。v8 的修订依据评审线程对扩大盲编的复核（[`v7_review/ext_coding_review.md`](v7_review/ext_coding_review.md)）的 §4（措辞 W1–W4）和 §5（修订清单）；**v8 本身还待评审线程复核。**

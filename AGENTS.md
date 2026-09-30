@@ -15,8 +15,9 @@
 
 ## 改论文稿
 
-- 当前稿是 `youwen/manuscript/yisheng_paper_v8.md`（2026-09-30，v7 加扩大盲编的结果），v8 新增、改动和删去的数字的出处在同目录的 `yisheng_paper_v8_numbers.md`，没变的数字见 `yisheng_paper_v7_numbers.md`。有实质改动时另存为下一个版本号（`yisheng_paper_v9.md`），不要覆盖旧稿；需要 Word 版时用 pandoc 从 .md 转出同名 .docx，加 `--reference-doc=yisheng_paper_v6.docx` 沿用 Word 样式。`yisheng_paper_v7_codex_partial.md` 是 Codex 按旧计划写到一半的稿子，不是 v7。
-- 正文 5,000–7,000 词（不含参考文献和表格）。
+- 当前稿是 `youwen/manuscript/yisheng_paper_v9.md`（2026-09-30，v8 的长版，并入评审对 v8 的意见和数据线程的两项新分析），v9 新增、改动和恢复的数字的出处在同目录的 `yisheng_paper_v9_numbers.md`，没变的数字见 `yisheng_paper_v8_numbers.md` 与 `yisheng_paper_v7_numbers.md`。有实质改动时另存为下一个版本号（`yisheng_paper_v10.md`），不要覆盖旧稿；需要 Word 版时用 pandoc 从 .md 转出同名 .docx，加 `--reference-doc=yisheng_paper_v6.docx` 沿用 Word 样式。`yisheng_paper_v7_codex_partial.md` 是 Codex 按旧计划写到一半的稿子，不是 v7。
+- *Morphology* 是双盲评审（据搜索引擎摘要，Springer 页面会话打不开）。投稿用匿名版 `yisheng_paper_v9_anonymised.docx` 加题名页 `yisheng_v9_title_page.docx`（.md 同名）。改了完整版 .md 之后，运行 `python3 youwen/scripts/yisheng_make_submission_files.py v9` 重新生成这三个 .md/.docx：脚本断言匿名版没有作者姓名、单位和仓库属主名，DOCX 的作者属性为空，表和图都进了 Word。不要手改匿名版。
+- 篇幅：Qu 2026-09-30 13:58 取消了 5,000–7,000 词的上限，改为参考 *Morphology* 和往期论文的投稿要求，重点是把事情说清楚；v9 正文约 8,600 词（不含摘要、表格、表注和参考文献），连表约 10,600 词。加长要给读者更清楚的内容（例、表、检验），不为凑字数。*Morphology* 自己的字数要求会话读不到，待 Qu 核对。
 - 写作风格（Qu 的要求）：详略得当；各节、各段长短不要一样，按重要性分配；段落结构和句式要有变化。
 - 论文里的数字必须来自 `youwen/` 下的结果文件（`yisheng_summary.csv`、`yisheng_models*.csv`（含 v7 的 `yisheng_models_v7_checks.csv` 与扩大盲编的 `ext_coding/yisheng_models_ext_coding.csv`、`ext_coding/yisheng_models_ext_author_check.csv`）、`yisheng_xiaoxu_collation_final.csv`、`blind_coding_kappa_output.txt`、`ext_coding/ext_kappa_output.txt`）或 `manuscript_checks_output.txt`，不要手算后直接写进稿子。新的检验先写进脚本、输出到结果文件，再引用。
 
@@ -25,7 +26,7 @@
 - **王筠**：《说文释例》卷三说亦声"凡三種"，第三种是"分別文之在本部者"。不能写成王筠把亦声等同于分别文。本文的贡献是对他的说法做第一次全体、控制语音的检验。
 - 王筠认为大徐误增的 9 条（貧 愾 恇 娶 婚 姻 婢 緉 坪）不能当作他认可的亦声例；卷三里他认可的是 禮 祏 胖 柵；卷八引 傾 𨻺 䫇 的亦声而未加反驳。原文与叶次见 `youwen/shili_pages/README.md`。
 - **语义编码的一致度**（κ = 0.773）是历史两次 LLM 编码之间的一致度，不能称为人工编码者信度。按 Qu 2026-09-30 的决定（“直接用LLM编码的两份原始表”），论文以两份机器编码表为编码记录：盲编一轮（`blind_coding_sheet_llm_coded.xlsx`）用于分析，建库时知道组别的第一轮（`yisheng_claude_codes.csv`）作对照；两位作者的独立编码与盲编逐项一致，写成核验，个人工作表未保存。不要把机器编码表说成作者自己的原始表，文件名不改。详见 `youwen/manuscript/coding_provenance_v6.md` 与 `youwen/youwen_criteria.md` §9。论文仍须有 AI 使用声明。
-- **扩大盲编（`youwen/ext_coding/`）的写法**：677 条新条目由两次独立的 LLM 盲编，κ = 0.817 是机器之间的一致度；主检验 H5 用第一次盲编（OR 2.35 [1.43, 3.86]），作者核验只作敏感性分析（2.73）。Qu 交回的 126 条核验是两位作者**一起**填的一份联合判断，表上看得到两次盲编的编码，不能称为独立编码或作者间信度。写“pre-specified”，不写“preregistered”（分析计划在编码前提交并有时间戳，但没有在外部平台登记）。声符内估计写“点估计相近但不精确”，不说“主要来自跨声符比较”；核心层（两本共有且无声训）的 1.80 [0.95, 3.42] 是探索性检验，写“most likely Xu's own”，不写“Xu's own”。不要说“意义先行”被否定，也不要说“基字假说”被证实（它通过了一项预先写定的检验，另两项预测未检验）。
+- **扩大盲编（`youwen/ext_coding/`）的写法**：677 条新条目由两次独立的 LLM 盲编，κ = 0.817 是机器之间的一致度；主检验 H5 用第一次盲编（OR 2.35 [1.43, 3.86]），作者核验只作敏感性分析（2.73）。Qu 交回的 126 条核验由两位作者**各自**核对、再汇总成一张表（Qu 2026-09-30 16:42 更正了 13:24 的“一起”，“一起”只是说两位都参与）；在手的只有汇总表，表上看得到两次盲编的编码，所以写 “each reviewed … separately and consolidated their judgments”，不写 joint 或 jointly，不能称为独立编码，也不能据此报作者间信度（κ 0.735、0.798 是汇总判断对机器）。写“pre-specified”，不写“preregistered”（分析计划在编码前提交并有时间戳，但没有在外部平台登记）。声符内估计写“点估计相近但不精确”，不说“主要来自跨声符比较”；核心层（两本共有且无声训）的 1.80 [0.95, 3.42] 是探索性检验，写“most likely Xu's own”，不写“Xu's own”。不要说“意义先行”被否定，也不要说“基字假说”被证实（它通过了一项预先写定的检验，另两项预测未检验）。
 - 小徐本对照以 `yisheng_xiaoxu_collation_final.csv` 为准（140 两本共有 / 62 仅大徐 / 10 无从判断）；更早的中间数字（100/48/64 等）已作废。
 - 计数口径：227 条是大徐本亦声字头原始数，212 条（172 个声符）是分析集。
 

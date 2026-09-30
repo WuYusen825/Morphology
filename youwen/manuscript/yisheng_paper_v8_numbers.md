@@ -1,5 +1,7 @@
 # v8 正文数字的来源
 
+> **更正（2026-09-30，v9 时加）**：本文件多处把作者核验写成“联合核验”“一份联合判断”“两位作者一起填”。Qu 在评审线程 16:42 更正：126 条由两位作者各自核对，再汇总成一张表；13:24 的“一起”只是说两位都参与。数字、检验和结论不变。v9 起正文写 “each reviewed … separately and consolidated their judgments”，见 [`yisheng_paper_v9_numbers.md`](yisheng_paper_v9_numbers.md)。v8 正文保持原样，留作历史。
+
 对象：[`yisheng_paper_v8.md`](yisheng_paper_v8.md)（2026-09-30）。v8 是 v7 加上扩大盲编的结果和作者核验。**v7 里没有变的数字，出处仍见 [`yisheng_paper_v7_numbers.md`](yisheng_paper_v7_numbers.md)**；本文件只列 v8 新增、改动和删去的数字。
 
 正文 6,987 词（按拉丁字母词与数字计，不含摘要、表格、表注、标题与参考文献，口径与 v7 相同；正文另有汉字 263 个），摘要 249 词。

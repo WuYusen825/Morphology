@@ -327,5 +327,15 @@ Holm 校正后（三检验）：H1a 0.004，H1c 0.011，H2 7×10⁻⁶，都显�
 - **引用的数字**：v8 引用的扩大盲编数字只出自 `ext_coding/yisheng_models_ext_coding.csv`（P1、S1–S9、X1–X4b 和描述行）、`ext_coding/yisheng_models_ext_author_check.csv`、`ext_coding/ext_kappa_output.txt`、`ext_coding/ext_author_check_output.txt`；逐项出处见 `manuscript/yisheng_paper_v8_numbers.md`。v8 没有新做分析，没有改动任何数据文件、编码表、模型结果或正式计数。
 - **头条与敏感性分析**：H5 的头条是第一次盲编（OR 2.35 [1.43, 3.86]，判读规则判为支持 (C)）；作者核验替换后的 2.73 是敏感性分析，不替换头条。
 - **口径**：进入 H5 的是编为相关（Y 或 E）、有中古音、去掉专名的 220 对（亦声 141，普通 79），“近音”指中古音同音或去声交替。H2 的分母是 634 对（亦声 172，普通 462，专名已去掉）。首批样本的 H2（25/33 对 6/50，OR 22.0）仍是正式数字，在表 5 里与扩大编码并列；首批样本框外 4 对的说明（去掉后 OR 20.2）移到表 5 的注。
-- **写法的界线**：见 `AGENTS.md` 的“扩大盲编的写法”。κ 只是机器之间的一致度；核验是两位作者一起填的联合判断；写 “pre-specified”，不写 “preregistered”；核心层 1.80 [0.95, 3.42] 是探索性检验；“意义先行”未被否定；“基字假说”只通过了一项预先写定的检验，另两项预测未检验。
+- **写法的界线**：见 `AGENTS.md` 的“扩大盲编的写法”。κ 只是机器之间的一致度；核验是两位作者各自核对再汇总的一张表（Qu 16:42 更正；v8 当时写成联合判断，v9 已改）；写 “pre-specified”，不写 “preregistered”；核心层 1.80 [0.95, 3.42] 是探索性检验；“意义先行”未被否定；“基字假说”只通过了一项预先写定的检验，另两项预测未检验。
 - **复核**：评审线程对扩大盲编的复核（2026-09-30 09:00）在 `manuscript/v7_review/ext_coding_review.md`，连同复核脚本、输出和 `extended_coding_spec.md`；v8 待评审线程复核。
+
+## 12. 2026-09-30 v9 对结果的使用（主稿线程）
+
+- **引用的数字**：v9 引用的扩大盲编数字出自 `ext_coding/yisheng_models_ext_coding.csv`、`ext_coding/yisheng_models_ext_author_check.csv`、`ext_coding/yisheng_models_ext_second_answer.csv`（第二次回答替换，X5）、`ext_coding/ext_kappa_output.txt`、`ext_coding/ext_author_check_output.txt`、`ext_coding/ext_bias_sensitivity_output.txt`；v7 的数字仍出自 `yisheng_models_v7_checks.csv`。逐项出处见 `manuscript/yisheng_paper_v9_numbers.md`。v9 没有新做分析，没有改动任何数据文件、编码表、模型结果或正式计数。
+- **新写的脚本**（只读结果文件）：`scripts/yisheng_v9_counts.py` 从 `ext_codes_long.csv` 和 `ext_author_check_output.txt` 重算正文里结果文件不直接给出的计数（767/212/555、被剔出的 35 + 5 + 93、两次盲编不一致 76 条及其类型、一次编为相关另一次编为 N 的 17 + 31），带断言；`scripts/yisheng_v9_figure.py` 画图 1；`scripts/yisheng_make_submission_files.py` 生成匿名版、题名页和三个 DOCX。
+- **口径**：表 9（同音字对的关系类型）的普通对限于 172 个声符的框内：133 对（F 15、L 3、U 73、X 42、C 0）。数据集里按全部普通行数得 143，多出的行不在框内，不用。表 5 的 16 个亦声对是“成员为去声交替成员”的全部亦声对，编码用盲编码（新条目用第一次盲编）。
+- **作者核验的写法**：两位作者各自核对 126 条，再汇总成一张表（Qu 2026-09-30 16:42 的更正）；v9 全文写 “each reviewed … separately and consolidated their judgments”，没有 joint、jointly；汇总表显示了两次盲编的编码，不独立于它们；只有汇总表在手，不报作者间一致度。
+- **偏差临界点与第二次回答替换**：都是探索性的事后分析，数据线程做，v9 只引用：要把合并 OR 降到 1 需要约 11% 的真不相关普通对被编成相关，降到 2 需要约 6%；两次盲编之间 4%；作者汇总判断折合约 10%（区间 2.5%–21%）。第 3、6 批改用第二次回答，主检验 OR 2.39 [1.38, 4.14]。主检验仍是第一次盲编的 2.35。
+- **双盲**：*Morphology* 据搜索引擎摘要是双盲评审，投稿用匿名版加题名页；匿名版没有作者、单位、资助与利益声明，仓库链接换成“匿名副本经投稿系统提供”。仓库目前私有且属主名暴露作者，投稿前要另备匿名的数据副本（OSF 匿名只读链接，待 Qu 决定）。
+- **复核**：v9 待评审线程复核；评审对 v8 的意见在 `v7_work/review/v8_review.md`。
