@@ -250,6 +250,19 @@ for _, r in AN[AN.p1_code != AN.orig_code].iterrows():
     lines.append(f'锚定分歧（第一次）{r.phonetic}/{r.char}：原 {r.orig_code}，第一次 {r.p1_code}')
 for _, r in AN[AN.p2_code != AN.orig_code].iterrows():
     lines.append(f'锚定分歧（第二次）{r.phonetic}/{r.char}：原 {r.orig_code}，第二次 {r.p2_code}')
+# 附记（2026-09-30 编码开始后、正式运行前加入，见 analysis_plan.md §7）：同一代理实例多交的回答，不进任何分析
+extra = [(p, b) for p in (1, 2) for b in range(1, N_BATCH + 1)
+         if not DRY and os.path.exists(os.path.join(E, 'raw', f'pass{p}_b{b:02d}_second_answer_not_used.txt'))]
+if extra:
+    lines.append('')
+    lines.append('附记（不进分析，见 analysis_plan.md §7）：同一代理实例多交的第二份回答与算数的第一份比较')
+    for p, b in extra:
+        n = int((key[f'p{p}_batch'].astype(int) == b).sum())
+        g1 = parse(os.path.join(E, 'raw', f'pass{p}_b{b:02d}.txt'), n)
+        g2 = parse(os.path.join(E, 'raw', f'pass{p}_b{b:02d}_second_answer_not_used.txt'), n)
+        a1, a2 = [g1[i][0] for i in range(1, n + 1)], [g2[i][0] for i in range(1, n + 1)]
+        k4, p4 = kappa(a1, a2)
+        lines.append(f'  第{"一二"[p - 1]}次盲编第 {b} 批：n={n}，四类一致 {sum(x == y for x, y in zip(a1, a2))}/{n}，κ={k4:.3f}')
 open(os.path.join(OUT, 'ext_kappa_output.txt'), 'w', encoding='utf-8').write('\n'.join(lines) + '\n')
 
 # ---------- 9. 作者核验表：两次盲编的全部分歧 + 其余新条目中随机 50 条（不显示组别） ----------
