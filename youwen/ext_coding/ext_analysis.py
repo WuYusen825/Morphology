@@ -211,6 +211,10 @@ add('exploratory', 'X2 near ~ label + Y: coefficient of label | related, pass-1 
 CORE = frame('code1', sub=lambda x: x[(x.paronomastic_gloss != 'True') & ((x.label == 0) | (x.layer == 'both'))])
 add('exploratory', 'X3 near ~ label | related, labels shared with Xiao Xu and no paronomastic gloss (v7 core; ordinary without paronomastic gloss)', CORE[CORE.related == 1], 'near',
     note='added after the first run; S2 and S3 combined, as in the v7 core (92 pairs, not conditioned on relatedness: GEE 1.59 [0.97, 2.61])')
+add('exploratory', 'X4 near ~ label | related, the 677 newly coded items only, pass-1 codes', PR[PR.source == 'extended'], 'near',
+    note='added after the reviewer check (v7_work/review/ext_coding_review.md §2); the 90 original items alone are row X4b')
+add('exploratory', 'X4b near ~ label | related, the 90 original blind-coded items only (original blind codes)', PR[PR.source == 'original_100'], 'near',
+    note='added with X4; old (v7): 14/25 vs 2/6, Fisher p 0.39')
 
 # ---------- 7. 描述 ----------
 ALLL = C[C.label == 1].copy(); ALLL['related'] = ALLL.code1.isin(['Y', 'E']).astype(int)
