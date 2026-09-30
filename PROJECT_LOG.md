@@ -80,3 +80,24 @@
   - 框与 v7 相同（172 个声符，212 / 953）。框内已编亦声 35、普通 55，评审方案写的是 56；未编亦声 177（142 个有中古音），未编普通 898（803 个有中古音），评审方案写的是 897。
   - 普通组抽 500 个，但改为按有无上古构拟分层的等概率抽样，理由见计划 §2.3。
 - **未改动**：`yisheng_dataset.csv`、`yisheng_models*.csv`、`blind_coding_sheet*.xlsx`、`yisheng_claude_codes.csv` 及论文各稿。权威论文版本不变（仍以 v7 分支 / PR #3 为准）。
+
+## 2026-09-30 · Claude（扩大盲编数据线程）· 扩大盲编：两次盲编完成，分析结果
+
+- **编码**：14 批全部收回，提示与 `prompts/` 逐字核对相同，回答全部可解析。原始回答和来源记录见 `youwen/ext_coding/raw/`。
+  - 两个代理实例多交了一份回答（第一次盲编第 3、6 批），按计划 §7 只用第一份。
+- **分析**：`ext_analysis.py` 正式运行，新增以下文件：
+  - `blind_coding_extended_pass1.xlsx`、`blind_coding_extended_pass2.xlsx`（两次盲编表）；
+  - `ext_codes_long.csv`；
+  - `yisheng_models_ext_coding.csv`、`ext_kappa_output.txt`；
+  - `ext_check_sheet.xlsx`、`ext_check_key.csv`（作者核验表，126 条）；
+  - `ext_summary.md`（结果摘要）。
+- **主要结果**：
+  - 主检验 73/141 对 23/79，GEE OR 2.35 [1.43, 3.86]，单侧 p = 0.0004，按预定规则判为支持 (C)。
+  - 声符内 MH OR 2.01 [0.75, 5.39]，不显著。
+  - H2 重估为 OR 21.6 [13.3, 35.0]。
+  - 两次盲编四类 κ 0.817。
+- **看过结果后的改动**（计划 §7 已记）：
+  - S6（只算 Y）完全分离，GEE 给出发散值。脚本加了保护，S6 改记为不可估，其余各行不变。
+  - 补三个探索性检验 X1–X3，不进判读。
+- **未改动**：`yisheng_dataset.csv`、`yisheng_models*.csv`、`manuscript_checks_output.txt`、`blind_coding_sheet*.xlsx`、`yisheng_claude_codes.csv` 及论文各稿。权威论文版本不变。
+- **后续**：论文怎么改由主稿线程决定；作者核验回来后，另做敏感性分析。

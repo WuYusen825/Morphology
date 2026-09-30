@@ -123,7 +123,8 @@ def gee(df, formula, term):
         try:
             g = smf.gee(formula, groups='phonetic', data=x, family=sm.families.Binomial(), cov_struct=cs).fit()
             b, se = g.params[term], g.bse[term]
-            if np.isfinite(b) and np.isfinite(se) and se > 0:
+            # |b| < 10 且 se < 10：排除完全分离时的发散估计（编码后加入，见 analysis_plan.md §7）
+            if np.isfinite(b) and np.isfinite(se) and 0 < se < 10 and abs(b) < 10:
                 return dict(OR=math.exp(b), lo=math.exp(b - 1.96 * se), hi=math.exp(b + 1.96 * se),
                             p2=2 * norm.sf(abs(b / se)), p1=norm.sf(b / se), cov=nm, n=len(x), clusters=x.phonetic.nunique())
         except Exception:
@@ -139,7 +140,7 @@ def mh(df, y):
     st = StratifiedTable(tabs); lo, hi = st.oddsratio_pooled_confint()
     return dict(strata=len(tabs), OR=st.oddsratio_pooled, lo=lo, hi=hi, p=st.test_null_odds(correction=False).pvalue)
 def verdict(g):
-    if g is None: return 'not estimable'
+    if g is None: return 'not estimable (GEE; e.g. complete separation)'
     c = g['p1'] < 0.05; a = g['hi'] < SESOI
     if c and a: return 'mixed: excess significant but upper CI below 2 (small residual sound effect)'
     if c: return 'supports C (same word / minimal derivation)'
@@ -199,6 +200,17 @@ add('secondary', 'S9 near ~ related + label: coefficient of label, pass-1 codes'
 for grp, nm in [(1, 'labelled'), (0, 'ordinary')]:
     add('secondary', f'S9 near ~ related within {nm} pairs, pass-1 codes', P[P.label == grp], 'near', x='related',
         note='group1 = related, group0 = unrelated; old (v7): ' + ('14/25 vs 0/8' if grp else '2/6 vs 4/40'))
+
+# ---------- 6b. 探索（编码完成、看过主结果之后加入，见 analysis_plan.md §7；不是预注册检验，不进判读） ----------
+PE = frame('code1', related=('E',))
+add('exploratory', 'X1 near ~ label | pairs coded E only, pass-1 codes (stand-in for S6, which is not estimable)', PE[PE.related == 1], 'near',
+    note='added after the first run: S6 has only 4 ordinary pairs coded Y (0 near), so the strength-of-relatedness bias is checked within E instead')
+PRY = PR.copy(); PRY['isY'] = (PRY.code1 == 'Y').astype(int)
+add('exploratory', 'X2 near ~ label + Y: coefficient of label | related, pass-1 codes (adjusts for Y vs E)', PRY, 'near', formula='near ~ label + isY',
+    note='added after the first run; group1 = labelled, group0 = ordinary')
+CORE = frame('code1', sub=lambda x: x[(x.paronomastic_gloss != 'True') & ((x.label == 0) | (x.layer == 'both'))])
+add('exploratory', 'X3 near ~ label | related, labels shared with Xiao Xu and no paronomastic gloss (v7 core; ordinary without paronomastic gloss)', CORE[CORE.related == 1], 'near',
+    note='added after the first run; S2 and S3 combined, as in the v7 core (92 pairs, not conditioned on relatedness: GEE 1.59 [0.97, 2.61])')
 
 # ---------- 7. 描述 ----------
 ALLL = C[C.label == 1].copy(); ALLL['related'] = ALLL.code1.isin(['Y', 'E']).astype(int)
