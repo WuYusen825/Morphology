@@ -168,3 +168,9 @@
 - **命名**：撰稿线程和评审叫它“S6”，与分析计划 §4.3 的 S6（只算 Y）同名不同物，文件里记为 X5。
 - **新文件**（`youwen/ext_coding/`）：`ext_second_answer_sensitivity.py`、`ext_second_answer_sensitivity_output.txt`、`yisheng_models_ext_second_answer.csv`、`ext_second_answer_items.csv`（两份回答逐条对照）；摘要 §9、计划 §7、`youwen/youwen_criteria.md` §10 已记。
 - **未改动**：原数据文件、既有模型结果、既有脚本、论文稿。主检验仍是第一次盲编的 OR 2.35，判读不变；是否写进论文由主稿线程决定。
+
+## 2026-09-30 · Claude（扩大盲编数据线程）· 措辞更正：“预注册”改为“分析前已固定”
+
+- **缘起**：撰稿线程发现 `ext_bias_sensitivity_output.txt` 局限第 7 条写了“预注册”，协调者 23:27 转来。本项目只写 pre-specified（分析前已固定）：分析计划在编码前提交（7b7c249），但 OSF 上什么也没注册。
+- **已改**（只改措辞，数字、检验和结论不变）：`ext_bias_sensitivity.py` 里的这一句和重跑后的 `ext_bias_sensitivity_output.txt`（与上一版只差这一行，`yisheng_bias_sensitivity_grid.csv` 逐格相同）；计划 §7 里 18:31 条的一句（并在 §7 末尾记一条更正）；`ext_analysis.py` 里的一行注释；PR #4 说明里的“pre-registered rule”。
+- **已搜**：`youwen/ext_coding/` 下所有文件、`youwen_criteria.md`、`PROJECT_LOG.md`、`ext_summary.md` 里没有其他“预注册 / preregistered / pre-registered”。`youwen/manuscript/yisheng_paper_v6.md` 里的 “were not preregistered” 是 Codex 的 v6，说的是没有预注册，与本规矩一致，未动。
