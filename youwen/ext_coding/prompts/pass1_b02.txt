@@ -1,0 +1,112 @@
+Code 102 character pairs from the Shuowen glosses given below. Each item gives an item number, a phonetic character with its Shuowen gloss, and a member character (a character written with that phonetic) with its Shuowen gloss; the structural analysis (从某, 某聲 and the like) has been removed from the glosses. Use ONLY the glosses in this prompt and your own knowledge of classical Chinese and the Shuowen. Do NOT read, search or open any file on disk, and do NOT use any web or search tool. Work alone and give your answer directly. Do NOT try to recall or check whether Xu Shen analyses the member character as 某聲, 某亦聲 or 會意.
+
+For each item, compare the 本义 of the member character with the 本义 of the phonetic character. Pick one code:
+Y: the same or near-synonymous meaning (厓 山邊也 / 涯 水邊也). E: connected only through one step of extension or inference (亡 逃也 / 忘 不識也). N: no semantic relation is visible. X: the member character is a proper name (place, river, surname, named plant or animal).
+
+Judge by 本义 only, not later or loan meanings. Where a gloss is "None", judge from your knowledge of that character's Shuowen 本义, with confidence 1 unless sure. A pun-style gloss (e.g. 狗 "叩也") is not evidence of a real semantic relation by itself. Confidence 1–3; a note of ≤15 characters. When unsure between two codes, prefer E over Y and N over E.
+
+Output exactly 102 lines: item, code, confidence, note (tab-separated).
+
+Items (item, phonetic character, its gloss, member character, its gloss; tab-separated):
+1	竹	冬生艸也。象形。下垂者，箁箬也。	筑	以竹曲五弦之樂也。
+2	取	捕取也。	郰	魯下邑。孔子之鄉。
+3	豈	還師振旅樂也。一曰欲也，登也。	闓	開也。
+4	豈	還師振旅樂也。一曰欲也，登也。	塏	高燥也。
+5	豊	行禮之器也。	澧	水。出南陽雉衡山，東入汝。
+6	丩	相糾繚也。一曰瓜瓠結丩起。象形。	訆	大呼也。
+7	會	合也。	繪	會五采繡也。《虞書》曰：“山龍華蟲作繪。”《論語》曰：“繪事後素。”
+8	章	樂竟爲一章。	障	隔也。
+9	句	曲也。	軥	軶下曲者。
+10	夾	持也。	頰	面㫄也。
+11	徹	通也。	勶	發也。
+12	卑	賤也。執事也。	粺	毇也。
+13	芻	刈艸也。象包束艸之形。	犓	以芻莖養牛也。
+14	先	前進也。	洗	洒足也。
+15	奇	異也。一曰不耦。	旖	旗旖施也。
+16	干	犯也。	皯	面黑气也。
+17	骨	肉之覈也。	顝	大頭也。
+18	𥄕	目不正也。	𤊾	火不明也。
+19	四	陰𢿙也。象四分之形。	牭	四歲牛。
+20	生	進也。象艸木生出土上。	胜	犬膏臭也。
+21	䀠	左右視也。	瞿	鷹隼之視也。
+22	卑	賤也。執事也。	脾	土藏也。
+23	令	發號也。	伶	弄也。
+24	四	陰𢿙也。象四分之形。	泗	受泲水，東入淮。
+25	象	長鼻牙，南越大獸，三秊一乳，象耳牙四足之形。	羋	羊鳴也。
+26	取	捕取也。	娶	取婦也。
+27	匡	飲器，筥也。	恇	怯也。
+28	夾	持也。	䵌	赤黃也。一曰輕易人䵌姁也。
+29	朿	木芒也。象形。	責	求也。
+30	疋	足也。上象腓腸，下	䝪	齎財卜問爲䝪。
+31	共	同也。	洪	洚水也。
+32	芻	刈艸也。象包束艸之形。	雛	雞子也。
+33	句	曲也。	絇	纑繩絇也。
+34	因	就也。	姻	壻家也。女之所因，故曰姻。
+35	先	前進也。	詵	致言也。
+36	兩	二十四銖爲一兩。	蜽	蛧蜽也。
+37	句	曲也。	駒	馬二歲曰駒，三歲曰駣。
+38	氣	饋客芻米也。	愾	大息也。
+39	芻	刈艸也。象包束艸之形。	媰	婦人妊身也。
+40	耳	主聽也。象形。	𩱓	粉餅也。
+41	奇	異也。一曰不耦。	騎	跨馬也。
+42	弋	橜也。象折木衺銳著形。	必	分極也。
+43	日	實也。太陽之精不虧。	涅	黑土在水中也。
+44	易	蜥易，蝘蜓，守宮也。象形。《祕書》說：日月爲易，象陰陽也。一曰	賜	予也。
+45	鬼	人所歸爲鬼。	傀	偉也。
+46	予	推予也。象相予之形。	野	郊外也。
+47	丩	相糾繚也。一曰瓜瓠結丩起。象形。	朻	高木也。
+48	元	始也。	沅	水。出牂牁故且蘭，東北入江。
+49	召	𧦝也。	沼	池水。
+50	井	八家一井，象構韓形。•，𦉥之象也。古者伯益初作井。	妌	靜也。
+51	壬	位北方也。陰極陽生，故《易》曰：“龍戰于野。”戰者，接也。象人褢妊之形。承亥壬以子，生之敘也。與巫同意。壬承辛，象人脛。脛，任體也。	妊	孕也。
+52	䊮	穀也。	糶	出穀也。
+53	賓	所敬也。	𩴱	鬼皃。
+54	半	物中分也。	㪵	量物分半也。
+55	冥	幽也。	蓂	析蓂，大薺也。
+56	穴	土室也。	貁	鼠屬。善旋。
+57	敬	肅也。	憼	敬也。
+58	否	不也。	嚭	大也。
+59	句	曲也。	姁	嫗也。
+60	合	合口也。	鴿	鳩屬。
+61	會	合也。	鄶	祝融之後，妘姓所封。潧洧之間。鄭滅之。
+62	章	樂竟爲一章。	墇	擁也。
+63	子	十一月，陽气動，萬物滋，人以爲偁。象形。	李	果也。
+64	延	長行也。	挻	長也。
+65	日	實也。太陽之精不虧。	衵	日日所常衣。
+66	句	曲也。	跔	天寒足跔也。
+67	會	合也。	噲	咽也。
+68	井	八家一井，象構韓形。•，𦉥之象也。古者伯益初作井。	𠭘	坑也。
+69	高	崇也。象臺觀高之形。	縞	鮮色也。
+70	易	蜥易，蝘蜓，守宮也。象形。《祕書》說：日月爲易，象陰陽也。一曰	緆	細布也。
+71	耒	手耕曲木也。	䒹	耕多艸。
+72	監	臨下也。	㜮	過差也。
+73	取	捕取也。	冣	積也。
+74	卑	賤也。執事也。	䇑	短人立䇑䇑皃。
+75	廣	殿之大屋也。	懬	闊也。一曰廣也，大也。一曰寬也。
+76	畱	止也。	羀	曲梁寡婦之笱。魚所畱也。
+77	㚔	所以驚人也。	執	捕罪人也。
+78	㢟	安步㢟㢟也。	𢌨	相顧視而行也。
+79	正	是也。	鉦	鐃也。似鈴，柄中，上下通。
+80	取	捕取也。	黀	麻䕸也。
+81	臤	堅也。	𧼒	行皃。
+82	棥	藩也。	樊	鷙不行也。
+83	見	視也。	垷	涂也。
+84	亢	人頸也。	魧	大貝也。一曰魚膏。
+85	𠤎	變也。	化	教行也。
+86	厂	山石之厓巖，人可居。象形。	雁	鳥也。
+87	四	陰𢿙也。象四分之形。	柶	《禮》有柶。柶，匕也。
+88	自	鼻也。象鼻形。	詯	膽气滿聲在人上。
+89	及	逮也。	靸	小兒履也。
+90	令	發號也。	魿	蟲連行紆行者。
+91	𢎘	嘾也。艸木之華未發圅然。象形。	圅	舌也。象形。舌體𢎘。𢎘
+92	氣	饋客芻米也。	鎎	怒戰也。
+93	龍	鱗蟲之長。能幽，能明，能細，能巨，能短，能長；春分而登天，秋分而潛淵。	礱	䃺也。
+94	平	語平舒也。	抨	撣也。
+95	茻	眾艸也。	莽	南昌謂犬善逐菟艸中爲莽。
+96	八	別也。象分別相背之形。	𠔁	分也。
+97	頃	頭不正也。	潁	水。出潁川陽城乾山，東入淮。
+98	羊	祥也。	羕	水長也。
+99	令	發號也。	零	餘雨也。
+100	敬	肅也。	璥	玉也。
+101	丂	气欲舒出。纸上礙於一也。丂，古文以爲亏字，又以爲巧字。	考	老也。
+102	奇	異也。一曰不耦。	觭	角一俛一仰也。

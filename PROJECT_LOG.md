@@ -174,3 +174,77 @@
 - **本次变更**：`youwen/manuscript/v7_evaluation.md` 第 0、6 节和 README“论文还缺什么”改写为“已决定，进行中”。
 - **后续**：结果回来后修订 v7 的 §3.3、§4.3、表 5、§5.2、§6 和摘要，另存或在本 PR 上修订前先读本日志，修订稿再交评审线程复核。
 - **未改动**：论文正文、数据和统计口径都没有改。
+
+## 2026-09-30 · Claude（扩大盲编数据线程）· 扩大盲编：编码前写定抽样与分析计划
+
+- **用户决定**：Qu 在 v7 评审线程的决策卡上选“扩大盲编”（2026-09-30 06:23）。方案来自评审线程 `v7_work/review/extended_coding_spec.md`，由协调线程交给本线程。本线程在分支 `claude/youwen-extended-blind-coding-ynngrw` 上工作，不动 v7 分支和论文稿。
+- **本次提交（编码前）**：新增 `youwen/ext_coding/`：
+  - `analysis_plan.md`：分析计划，含抽样、编码流程、主检验与判读规则、次要检验、已知偏差；
+  - `ext_sample.py` 与其输出 `ext_items_key.csv`、`prompts/`（14 批完整提示）；
+  - `ext_analysis.py`：编码后运行的分析脚本，已用随机编码空跑，空跑输出未入库。
+  - `youwen_criteria.md` 追加 §10。
+- **核对**：
+  - 框与 v7 相同（172 个声符，212 / 953）。框内已编亦声 35、普通 55，评审方案写的是 56；未编亦声 177（142 个有中古音），未编普通 898（803 个有中古音），评审方案写的是 897。
+  - 普通组抽 500 个，但改为按有无上古构拟分层的等概率抽样，理由见计划 §2.3。
+- **未改动**：`yisheng_dataset.csv`、`yisheng_models*.csv`、`blind_coding_sheet*.xlsx`、`yisheng_claude_codes.csv` 及论文各稿。权威论文版本不变（仍以 v7 分支 / PR #3 为准）。
+
+## 2026-09-30 · Claude（扩大盲编数据线程）· 扩大盲编：两次盲编完成，分析结果
+
+- **编码**：14 批全部收回，提示与 `prompts/` 逐字核对相同，回答全部可解析。原始回答和来源记录见 `youwen/ext_coding/raw/`。
+  - 两个代理实例多交了一份回答（第一次盲编第 3、6 批），按计划 §7 只用第一份。
+- **分析**：`ext_analysis.py` 正式运行，新增以下文件：
+  - `blind_coding_extended_pass1.xlsx`、`blind_coding_extended_pass2.xlsx`（两次盲编表）；
+  - `ext_codes_long.csv`；
+  - `yisheng_models_ext_coding.csv`、`ext_kappa_output.txt`；
+  - `ext_check_sheet.xlsx`、`ext_check_key.csv`（作者核验表，126 条）；
+  - `ext_summary.md`（结果摘要）。
+- **主要结果**：
+  - 主检验 73/141 对 23/79，GEE OR 2.35 [1.43, 3.86]，单侧 p = 0.0004，按预定规则判为支持 (C)。
+  - 声符内 MH OR 2.01 [0.75, 5.39]，不显著。
+  - H2 重估为 OR 21.6 [13.3, 35.0]。
+  - 两次盲编四类 κ 0.817。
+- **看过结果后的改动**（计划 §7 已记）：
+  - S6（只算 Y）完全分离，GEE 给出发散值。脚本加了保护，S6 改记为不可估，其余各行不变。
+  - 补三个探索性检验 X1–X3，不进判读。
+- **未改动**：`yisheng_dataset.csv`、`yisheng_models*.csv`、`manuscript_checks_output.txt`、`blind_coding_sheet*.xlsx`、`yisheng_claude_codes.csv` 及论文各稿。权威论文版本不变。
+- **后续**：论文怎么改由主稿线程决定；作者核验回来后，另做敏感性分析。
+
+## 2026-09-30 · Claude（扩大盲编数据线程）· 按评审复核补探索性检验 X4，改摘要措辞
+
+- **评审结论**：评审线程复核了 PR #4（`v7_work/review/ext_coding_review.md`），结论是全部数字独立复现，三处偏离可以接受。
+- **结果文件**：`ext_analysis.py` 加探索性检验 X4 与 X4b，新结果写入 `yisheng_models_ext_coding.csv`。
+  - X4 只用新编 677 条：59/116 对 21/73，OR 2.42 [1.37, 4.25]，单侧 p = 0.001。
+  - X4b 只用原 90 条：14/25 对 2/6，不显著。
+  - 其余各行和核验表不变。
+- **`ext_summary.md` 措辞**：
+  - 声符内比较改为“点估计相近但不精确”，不再说“主要见于跨声符比较”；
+  - “许慎本人的标注”改为“最可能出自许慎的标注”，并注明 X3 是探索性检验；
+  - 写明结果排除的是什么。
+- **计划**：§7 记下这次改动。
+- **未改动**：原数据文件、既有模型结果和论文稿。
+
+## 2026-09-30 · Claude（扩大盲编数据线程）· 作者核验回来：一致率与改判后的敏感性分析
+
+- **来源**：Qu 交回填好的核验表，原样存为 `youwen/ext_coding/ext_check_sheet_author_filled.xlsx`（126 条，无备注，未注明是一人还是两人填写）。
+- **新增文件**：
+  - `ext_author_check.py`（不改 `ext_analysis.py`）；
+  - `ext_author_check_output.txt`；
+  - `yisheng_models_ext_author_check.csv`；
+  - `ext_summary.md` 加 §7。
+- **一致率**：
+  - 随机抽的 50 条，作者同意共同编码 45 条；
+  - 不一致的 76 条，作者同第二次 50、同第一次 23、都不同 3；
+  - 估计到 677 条（分层加权）：作者对第一次盲编四类 κ 0.735，对第二次 0.798。这是作者对 LLM 的一致度，不是作者间信度。
+- **改判后**：
+  - 用作者判断替换核验过的 126 条，其余新条目两次盲编相同；
+  - 主检验 70/138 对 19/74，OR 2.73 [1.61, 4.65]，规则下仍支持 (C)，声符内 MH 2.26 [0.80, 6.33]；
+  - 主检验仍以第一次盲编的 2.35 为准，改判后的结果作为敏感性分析。
+- **计划**：§7 已记，含 §4.5 之外补的描述性项目。
+- **未改动**：原数据文件、既有模型结果、论文稿，以及 `ext_analysis.py`。权威论文版本不变。
+
+## 2026-09-30 · Claude（扩大盲编数据线程）· 补记核验人
+
+- Qu 说明，上一条记的核验表是两位作者一起填的，即一份联合判断，不是两人各自独立的判断。
+- `ext_summary.md` §7、`ext_author_check.py` 的输出头和 `ext_author_check_output.txt` 的第二行已改；计划 §7 和 `youwen_criteria.md` §10 已补记。
+- 数字、检验和结论都不变（重跑后 `yisheng_models_ext_author_check.csv` 逐格相同）。这份联合判断不能用来算作者间一致度。
+- 摘要 §7 加了一段英文可用的核验说明。
