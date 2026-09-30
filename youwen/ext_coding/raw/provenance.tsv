@@ -7,3 +7,5 @@ pass	batch	collected_utc	prompt_identical_to_file	tool_uses_reported	parsable_li
 1	6	2026-09-30 08:41	True	1 (SubagentHandback)	101	101
 1	7	2026-09-30 08:42	True	1 (SubagentHandback)	101	101
 2	1	2026-09-30 08:42	True	1 (SubagentHandback)	102	102
+2	2	2026-09-30 08:45	True	1 (SubagentHandback)	102	102
+2	3	2026-09-30 08:46	True	1 (SubagentHandback)	102	102
