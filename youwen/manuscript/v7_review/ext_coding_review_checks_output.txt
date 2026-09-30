@@ -1,0 +1,32 @@
+frame 212 953 172
+original items in frame 90 dup keys 0
+anchors 35 p1==orig 32 p2==orig 33 key orig_code==sheet 35
+coded in frame 767 labelled 212 ordinary 555
+ordinary without MC 0 labelled without MC 35
+long-file rows 767 matched 767 code1 diff 0 code2 diff (new only) 0 cat4 diff 0
+kappa new p1 vs p2 four-way 0.817 (0.888) related 0.850 (0.913)
+
+P1 73/141 vs 23/79 OR 2.35 [1.43, 3.86] p1=0.00038 | MH 2.01 [0.75, 5.39] strata=37 cmh p=0.19 clusters 129
+S1 ident 54/141 vs 15/79 OR 2.57 [1.35, 4.87] p1=0.0019 | MH 1.57 [0.57, 4.32] strata=37 cmh p=0.39
+S2 nopar 43/94 vs 20/73 OR 2.09 [1.18, 3.71] p1=0.0059
+S3 shared 41/93 vs 23/79 OR 1.81 [1.04, 3.15] p1=0.017
+X3 core 27/66 vs 20/73 OR 1.80 [0.95, 3.42] p1=0.036
+S5 pass2 70/138 vs 23/83 OR 2.44 [1.49, 3.99] p1=0.00019 | MH 2.60 [0.95, 7.09] strata=39 cmh p=0.071
+H2 pass1 141/172 vs 79/462 OR 21.57 [13.31, 34.98] p1=6.5e-36
+H2 pass2 138/172 vs 83/459 OR 18.07 [11.69, 27.93] p1=4.4e-39
+S9 near~related+label OR 2.34 [1.51, 3.63] p1=7.8e-05 | label OR 1.98 [1.30, 3.02] p1=0.00076
+ S9 labelled related near 73/141, unrelated near 8/31
+ S9 ordinary related near 23/79, unrelated near 60/383
+related by cat4 (labelled, ordinary):
+label           0   1
+cat4                 
+alt_departing   8  19
+alt_other       6   8
+identical      15  54
+other          50  60
+
+kappa related binary (X as unrelated) 0.833 (0.928)
+P1 with second answers for p1 b03/b06: 71/139 vs 21/74 OR 2.39 [1.38, 4.14] p1=0.00089
+P1 new items only 59/116 vs 21/73 OR 2.42 [1.37, 4.25] p1=0.0011
+{'ordinary_mc_only': 395, 'labelled': 177, 'ordinary_mc_oc': 105}
+ordinary with MC 858 with OC forms (morph_relation_auto notna) 248
