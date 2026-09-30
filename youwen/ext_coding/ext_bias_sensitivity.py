@@ -2,7 +2,7 @@
 # 来源：独立评审对 v8 的意见（v7_work/review/v8_review.md “偏差敏感性分析”一节）经协调者转来。
 # 问题：如果 (A)“意义先行”为真（标注只由真实相关决定，给定真实相关后标注与读音无关），
 #       编码把真实不相关的字对错判为“相关”的比例要多大，才能在编为相关的字对里造出观察到的近音差别（P1：73/141 对 23/79）？
-#       再与实际看到的编码分歧对照（两次盲编之间；第一次盲编与作者联合判断之间）。
+#       再与实际看到的编码分歧对照（两次盲编之间；第一次盲编与作者汇总判断之间）。
 # 用法（在仓库根目录）：python3 youwen/ext_coding/ext_bias_sensitivity.py
 # 读：ext_codes_long.csv、ext_check_sheet_author_filled.xlsx、ext_check_key.csv
 # 写：ext_bias_sensitivity_output.txt、yisheng_bias_sensitivity_grid.csv
@@ -163,7 +163,7 @@ for l, nm in [(0, '普通'), (1, '亦声')]:
     out(f'    以第二次为参照：第二次编为不相关的 {d2t[l,0]} 对里第一次编为相关的 {d2t[l,1]} 对，假阳率 {pct(fpv)} [{pct(cfp[0])}, {pct(cfp[1])}]；第一次编为相关的 {d2t[l,2]} 对里第二次不同意的占 {sh:.0%} [{csh[0]:.0%}, {csh[1]:.0%}]')
     out(f'    以第一次为参照：第一次编为不相关的 {d2t[l,3]} 对里第二次编为相关的 {d2t[l,4]} 对，假阳率 {pct(fpr)} [{pct(cfpr[0])}, {pct(cfpr[1])}]')
 out('  （两次盲编之间的分歧大致是每次各自随机误差之和，所以单次的随机假阳率约是上面数字的一半；系统性误差——两次犯同样的错——看不出来。）')
-# (b) 第一次盲编 vs 作者联合判断：分层估计
+# (b) 第一次盲编 vs 作者汇总判断：分层估计
 ws = openpyxl.load_workbook(os.path.join(E, 'ext_check_sheet_author_filled.xlsx'))['核验']
 Ad = pd.DataFrame(list(ws.iter_rows(min_row=2, values_only=True)), columns=['check_id', 'why', 'phon', 'pg', 'char', 'mg', 'author', 'p1s', 'p2s', 'note'])
 Ad['check_id'] = Ad.check_id.astype(str)
@@ -175,7 +175,7 @@ M = M0[M0.sw_id.isin(fr.index) & (M0.author != 'X')].copy()
 M['label'] = fr.label.loc[M.sw_id].values; M['near'] = fr.near.loc[M.sw_id].values
 M['R1'] = fr.R1.loc[M.sw_id].values; M['Ra'] = M.author.isin(YE).astype(int)
 M['w'] = np.where(M.dis, 1.0, 601 / 50)
-out(f'  作者联合判断的核验条目中，框内且作者不判 X 的 {len(M)} 条（不一致层 {int(M.dis.sum())}，随机层 {int((~M.dis).sum())}，随机层每条代表 601/50 = 12.02 条）。')
+out(f'  作者汇总判断的核验条目中，框内且作者不判 X 的 {len(M)} 条（不一致层 {int(M.dis.sum())}，随机层 {int((~M.dis).sum())}，随机层每条代表 601/50 = 12.02 条）。')
 for l, nm in [(0, '普通'), (1, '亦声')]:
     s = M[(M.label == l) & (M.R1 == 1)]
     out(f'    {nm}对里第一次编为相关的抽查条目：随机层 {int((~s.dis).sum())} 条（作者判为不相关 {int(((~s.dis) & (s.Ra == 0)).sum())} 条），不一致层 {int(s.dis.sum())} 条（作者判为不相关 {int((s.dis & (s.Ra == 0)).sum())} 条）')
@@ -219,7 +219,7 @@ out('')
 out('  各参照下普通组假阳的估计（对照第二节的临界点：OR* = 1 需要 fp_O 11.5%，即 50/79 = 63% 的普通相关对是假阳）：')
 g4 = two[0]['fp'] / (1 - two[0]['fp']); ga = ast[0][0] / (1 - ast[0][0])
 out(f'    两次盲编（第二次为参照）：fp_O {pct(two[0]["fp"])}，折合 {g4*nU_O:.0f}/{nR_O} = {g4*nU_O/nR_O:.0%} 的普通相关对是假阳')
-out(f'    作者联合判断：fp_O {pct(ast[0][0])}，折合 {ga*nU_O:.0f}/{nR_O} = {ga*nU_O/nR_O:.0%}；直接数：第一次编为相关的普通对里作者判为不相关的占 {ast[0][1]:.0%}（约 {int(round(ast[0][1]*nR_O))}/{nR_O}）')
+out(f'    作者汇总判断：fp_O {pct(ast[0][0])}，折合 {ga*nU_O:.0f}/{nR_O} = {ga*nU_O/nR_O:.0%}；直接数：第一次编为相关的普通对里作者判为不相关的占 {ast[0][1]:.0%}（约 {int(round(ast[0][1]*nR_O))}/{nR_O}）')
 out('')
 
 # ---------- 4. 在实际看到的假阳率下，校正后的 OR* ----------
@@ -231,7 +231,7 @@ def corrected(fps, fpb, same):
     return o, np.percentile(vals, 2.5), np.percentile(vals, 97.5)
 fp2s = two[0]['fp']; fp2b = d2b[:, 0, 1] / d2b[:, 0, 0]
 corr = {}
-for key, nm, fps, fpb in [('two', '两次盲编（第二次为参照）', fp2s, fp2b), ('auth', '作者联合判断', ast[0][0], fpO_b)]:
+for key, nm, fps, fpb in [('two', '两次盲编（第二次为参照）', fp2s, fp2b), ('auth', '作者汇总判断', ast[0][0], fpO_b)]:
     for same, tag in [(False, '只校正普通组（fp_L = 0）'), (True, '两组假阳率相同')]:
         o, lo_, hi_b = corrected(fps, fpb, same); corr[(key, same)] = (o, lo_, hi_b)
         out(f'  {nm}，fp_O = {pct(fps)}，{tag}：OR* = {o:.2f}，95% 区间 [{lo_:.2f}, {hi_b:.2f}]')
@@ -267,8 +267,8 @@ for fpL in [0.0, 0.05, 0.10, 0.20, 0.30]:
         lo, hi, nv = boot_q(fpL, fpO)
         grid.append(dict(kind='grid', fp_L=fpL, fp_O=fpO, OR_star=round(v, 3) if not np.isnan(v) else '', OR_star_boot_lo=round(lo, 3), OR_star_boot_hi=round(hi, 3) if np.isfinite(hi) else ''))
 out('限制：')
-out('  1. 对照用的是编码人之间的分歧（两次盲编、作者的联合判断）。它们衡量编码的随机误差，以及作者与盲编之间的差别，不是相对于许慎本人判断的系统偏离；'
-    '如果基于释义的“相关”与许慎所见的“相关”之间有所有编码人共有的系统差异，这里看不出来。作者联合判断是两位作者一起填的一份，不是独立的两份。')
+out('  1. 对照用的是编码人之间的分歧（两次盲编、作者汇总判断）。它们衡量编码的随机误差，以及作者与盲编之间的差别，不是相对于许慎本人判断的系统偏离；'
+    '如果基于释义的“相关”与许慎所见的“相关”之间有所有编码人共有的系统差异，这里看不出来。作者汇总判断是两位作者各自核对后汇总成的一张表，在手的只有汇总表。表上显示了抽查类型和两次盲编的编码；如果作者因此更接近它们，这里估计的假阳率偏低（偏向 (C)）。')
 pL = fisher_exact([[tot[1, 1, 0], tot[1, 1, 1]], [tot[1, 0, 0], tot[1, 0, 1]]])[1]
 out('  2. 假设编码误差与读音无关（编码人看不到读音，这一点由流程保证）。但亦声组里编为不相关的字对集中在不近音一侧（近音 %d/%d，不近音 %d/%d，Fisher p = %.3f），'
     '说明基于释义的“相关”与读音本来就有联系（这也是 (C) 预测的，但 (A) 下真实相关与读音相近同样可以有联系）；校正按“误差与读音无关”处理，不能区分两者。' % (tot[1, 1, 0], tot[1, 1, :].sum(), tot[1, 0, 0], tot[1, 0, :].sum(), pL))
@@ -286,7 +286,7 @@ sm = ['要点（数字见下文各节；探索性，主检验不变）：',
       f'  1. 如果 (A) 为真（真实 OR = 1），要把合并 OR {crude:.2f} 拉到 1，真实不相关的普通对里要有 {pct(x1)} 被编成“相关”，即 {nR_O} 个编为相关的普通对里约 {f1:.0f} 个（{f1/nR_O:.0%}）是假阳；拉到 2 需要 {pct(x2)}（{f2/nR_O:.0%}），拉到 1.5 需要 {pct(x15)}（{f15/nR_O:.0%}）；自助法 95% 下限降到 1 需要 {pct(xlo)}。亦声组的假阳率几乎不影响这些数（fp_L 0–30% 时 OR* = 1 需要 {pct(x1)}–{pct(x1h)}）；两组相同时 {pct(xnd)} 就够。',
       f'  2. 所以需要的不是两组误差不同，而是基数：编为不相关的字对，普通组 {nU_O} 对，亦声组 {nU_L} 对。(A) 为真时“真实相关”是混杂因素，编码对它的测量误差在普通组里留下剩余混杂；普通组的假阳主要落在占多数的不近音对里，把编为相关的普通对的近音比例压低。',
       f'  3. 对照：两次盲编之间普通组假阳率 {pct(two[0]["fp"])}（第一次编为相关的 {d2t[0,2]} 个普通对里 {two[0]["sh"]:.0%} 第二次不同意），按它校正 OR* = {corr[("two", False)][0]:.2f} [{corr[("two", False)][1]:.2f}, {corr[("two", False)][2]:.2f}]；随机误差抹不掉这个差别。',
-      f'  4. 作者联合判断的抽查样本给出 {pct(ast[0][0])} [{pct(cfpO[0])}, {pct(cfpO[1])}]（第一次编为相关的普通对里作者判为不相关 {ast[0][1]:.0%} [{cfsO[0]:.0%}, {cfsO[1]:.0%}]，亦声对 {ast[1][1]:.0%} [{cfsL[0]:.0%}, {cfsL[1]:.0%}]），按它校正 OR* = {corr[("auth", False)][0]:.2f} [{corr[("auth", False)][1]:.2f}, {corr[("auth", False)][2]:.2f}]（{pct(ast[0][0])} 与临界值 {pct(x1)} 相近），但区间太宽，不能说明问题。原因是随机层里第一次编为相关的普通对只有 5 个（作者判为不相关 2 个），其余多来自两次盲编分歧的字对；还有 {len(unc)} 个编为相关的普通对没有作者判断。',
+      f'  4. 作者汇总判断的抽查样本给出 {pct(ast[0][0])} [{pct(cfpO[0])}, {pct(cfpO[1])}]（第一次编为相关的普通对里作者判为不相关 {ast[0][1]:.0%} [{cfsO[0]:.0%}, {cfsO[1]:.0%}]，亦声对 {ast[1][1]:.0%} [{cfsL[0]:.0%}, {cfsL[1]:.0%}]），按它校正 OR* = {corr[("auth", False)][0]:.2f} [{corr[("auth", False)][1]:.2f}, {corr[("auth", False)][2]:.2f}]（{pct(ast[0][0])} 与临界值 {pct(x1)} 相近），但区间太宽，不能说明问题。原因是随机层里第一次编为相关的普通对只有 5 个（作者判为不相关 2 个），其余多来自两次盲编分歧的字对；还有 {len(unc)} 个编为相关的普通对没有作者判断。',
       f'  5. 结论：两次盲编之间的随机误差不足以抹掉这个差别；两次盲编共有的系统偏差（若有，最可能是 E 的阈值比作者宽）要多大才够：降到 2 或使下限到 1 约 {pct(x2)}，降到 1 约 {pct(x1)}；现有核验样本既不能肯定也不能排除。把其余 {len(unc)} 个没有作者判断的普通相关对补判完，可以把“假阳占多少”变成数出来的数。',
       f'  6. 另一条路（按释义编码在近音的普通对里漏判相关）：普通组里真实相关的近音对被编为相关的机会只有不近音对的 {1/crude:.2f}（[{rlo:.2f}, {rhi:.2f}]），即 {nU_near} 个编为不相关的普通近音对里约 {miss:.0f} 个其实相关，而不近音的几乎没有漏判；编码人看不到读音，要成立得是意义联系在同音的普通对里更常藏在释义之外、在亦声对里不然。作者核验里这类字对只抽查了 {len(Mn)} 个，其中判为相关 {int((Mn.Ra == 1).sum())} 个，数太少。',
       '']

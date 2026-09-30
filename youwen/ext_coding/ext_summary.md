@@ -152,8 +152,8 @@ H2 的点估计几乎不变，区间窄了很多。旧值没有改动，仍在 `
 ## 7 作者核验结果（2026-09-30）
 
 **核验表**：Qu 交回的 `ext_check_sheet_author_filled.xlsx`（原样保存，未改一格）共 126 条：两次盲编不一致的全部 76 条，加上两次一致的条目中随机抽的 50 条。表中不显示组别。
-- 表中没有备注。据 Qu 说明（13:24），这是两位作者一起填出的一份联合判断，不是两人各自独立的判断，所以不能据此算作者间的一致度。
-- 表说明要求先判断、再看盲编。这一点无从验证。
+- 表中没有备注。据 Qu 在评审线程的说明（16:42，经协调者转来；更正了我 13:24 对“一起”的误读）：126 条由两位作者各自分开核对，再汇总成这一张表，每条一个编码。在手的只有汇总表，所以下面的一致率是“作者汇总判断对 LLM”，不是作者间一致度；汇总时两人判断不同的条目怎么定，Qu 未说明。两位作者各自的原表是否还在，评审已问 Qu；若能上传，可按层加权补算作者间一致度。
+- 表上显示了抽查类型（B 列）和两次盲编的编码（H、I 列），说明页要求先只看释义判断、再看编码。这一点无从验证，所以作者判断不独立于两次盲编的编码。
 
 脚本 `ext_author_check.py`，输出 `ext_author_check_output.txt` 和 `yisheng_models_ext_author_check.csv`。脚本先用“不替换”的数据重现了 `yisheng_models_ext_coding.csv` 的对应各行（逐格相同），再做替换。
 
@@ -207,10 +207,11 @@ H2 的点估计几乎不变，区间窄了很多。旧值没有改动，仍在 `
 - 主检验仍是按 §4.2 的第一次盲编结果（2.35），改判后的结果作为敏感性分析报告。
 
 **对论文的影响**：作者核验已做完，论文里可以写：
-- 核验的做法：两位作者一起核验 126 条，即全部 76 条不一致加随机 50 条，得到一份联合判断；
-- 一致率和 κ：用上面的分层估计，注明是作者对 LLM，不是作者间信度；
+- 核验的做法：两位作者各自核验 126 条，即全部 76 条不一致加随机 50 条，汇总成一张表、每条一个编码；在手的只有汇总表；
+- 一致率和 κ：用上面的分层估计，注明是作者汇总判断对 LLM，不是作者间信度；表上显示了两次盲编的编码，核验不独立于它们；
 - 主结果对改判稳健：OR 2.35 → 2.73，规则下结论不变。
-- 英文可作：“The two authors jointly reviewed 126 of the 677 newly coded items: all 76 on which the two LLM passes disagreed and 50 drawn at random from the 601 on which they agreed. They agreed with the shared code on 45 of the 50 random items; on the 76 disagreements they sided with the second pass 50 times and the first 23 times (three items matched neither). Estimated over all 677 items, four-class κ between this joint judgment and the analysed first pass is 0.735. Replacing the checked codes with the joint judgment leaves the primary result unchanged (OR 2.73, 95% CI 1.61–4.65).”
+- 英文可作：“Each of the two authors checked 126 of the 677 newly coded items separately (all 76 on which the two LLM passes disagreed and 50 drawn at random from the 601 on which they agreed), and their judgments were consolidated into one code per item. The consolidated judgment agreed with the shared code on 45 of the 50 random items; on the 76 disagreements it sided with the second pass 50 times and the first 23 times (three items matched neither). Estimated over all 677 items, four-class κ between the consolidated judgment and the analysed first pass is 0.735. Replacing the checked codes with the consolidated judgment leaves the primary result unchanged (OR 2.73, 95% CI 1.61–4.65).”
+- 写进论文时注明：κ 是作者汇总判断对 LLM，不是作者间一致度（在手的只有汇总表）；核验表显示了两次盲编的编码，所以核验不独立于它们。
 
 ## 8 偏差敏感性：“相关”的误编要多大，才能抹掉近音差别（探索性，2026-09-30）
 
@@ -234,7 +235,7 @@ H2 的点估计几乎不变，区间窄了很多。旧值没有改动，仍在 `
 | 参照 | 普通组假阳率 | 编为相关的普通对里被否定的比例 | 按它校正的 OR* |
 |---|---|---|---|
 | 两次盲编（第二次为参照） | 4.2% [2.1, 6.8]（第一次为参照：5.1%） | 19% [10, 30]（14/73） | 2.20 [1.18, 4.34] |
-| 作者联合判断（抽查样本，加权） | 10.2% [2.5, 20.6] | 47% [14, 89]（约 37/79） | 1.29 [0.00, 3.84] |
+| 作者汇总判断（抽查样本，加权） | 10.2% [2.5, 20.6] | 47% [14, 89]（约 37/79） | 1.29 [0.00, 3.84] |
 | 需要（降到 OR* = 1） | 11.5% | 63%（50/79） | 1 |
 
 - **两次盲编之间的随机误差抹不掉这个差别**：4%–5% 的分歧只能把 OR 从 2.61 降到约 2.2，下限 1.18 仍高于 1。
@@ -244,7 +245,8 @@ H2 的点估计几乎不变，区间窄了很多。旧值没有改动，仍在 `
 
 **限制**：
 
-- 对照的是编码人之间的分歧，不是相对于许慎本人判断的系统偏离。“释义里看得出的相关”与“许慎所见的相关”之间若有所有编码人共有的差别（最可能是 E 的阈值），两次盲编看不出来，作者联合判断（一份，不是两人独立的判断）也只在抽查样本里看到一部分。
+- 对照的是编码人之间的分歧，不是相对于许慎本人判断的系统偏离。“释义里看得出的相关”与“许慎所见的相关”之间若有所有编码人共有的差别（最可能是 E 的阈值），两次盲编看不出来，作者汇总判断（两位作者各自核对后汇总成一张表，在手的只有汇总表）也只在抽查样本里看到一部分。
+- 核验表上显示了两次盲编的编码。如果作者因此更接近它们，估计的假阳率偏低（偏向 (C)）。下一张表若要测假阳率本身，应隐去编码和抽查类型，并打乱顺序。
 - 假设编码误差与读音无关。但亦声组里编为不相关的字对集中在不近音一侧（近音 8/81，不近音 23/91，Fisher p = 0.010），说明释义相关与读音本来就有联系；校正不能区分这是 (C) 还是 (A) 下真实相关与读音的联系。
 - “相关”只分有无；X1（只算 E，1.80）、X2（控制 Y/E，2.13）已在 §3 处理强弱之差，但 Y/E 本身也是编出来的。
 
@@ -252,4 +254,4 @@ H2 的点估计几乎不变，区间窄了很多。旧值没有改动，仍在 `
 
 - 可以写：主检验的支持在随机编码误差面前站得住；在两次盲编共有的系统偏差面前，它有条件：假阳率约 6% 足以把 OR 降到最小关心效应 2，11.5% 足以使它为 1，现有核验样本不能排除这个量级。因此“支持 (C)”宜写成中等、有前提，与 §6 的措辞一致。
 - 要把它变成一个数出来的数：请作者把其余 53 个编为相关的普通对补判完（再加 49 个编为不相关的普通近音对，另一条路），共约 100 个，做法同 §7。这一步需要 Qu 的时间，未做，听协调者决定。
-- 英文可作（可选）：“Because relatedness is the main confounder and is coded with error, false positives among ordinary pairs, which are mostly unrelated, can leave residual confounding. A false-positive rate of 11.5% among truly unrelated ordinary pairs (about 50 of the 79 coded as related, whatever the rate among labelled pairs) would reduce the near-sound odds ratio to 1, and 5.9% would reduce it to 2. The two blind passes disagree far less than this (4–5%), but they come from one model family, and the authors’ joint check, which includes only five randomly drawn ordinary pairs on which the passes agreed, cannot exclude a shared bias of this size.”
+- 英文可作（可选）：“Because relatedness is the main confounder and is coded with error, false positives among ordinary pairs, which are mostly unrelated, can leave residual confounding. A false-positive rate of 11.5% among truly unrelated ordinary pairs (about 50 of the 79 coded as related, whatever the rate among labelled pairs) would reduce the near-sound odds ratio to 1, and 5.9% would reduce it to 2. The two blind passes disagree far less than this (4–5%), but they come from one model family, and the authors’ check, which included only five randomly drawn ordinary pairs on which the passes agreed and showed both passes’ codes on the sheet, cannot exclude a shared bias of this size.”
