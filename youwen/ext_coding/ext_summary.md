@@ -150,7 +150,7 @@ H2 的点估计几乎不变，区间窄了很多。旧值没有改动，仍在 `
 ## 7 作者核验结果（2026-09-30）
 
 **核验表**：Qu 交回的 `ext_check_sheet_author_filled.xlsx`（原样保存，未改一格）共 126 条：两次盲编不一致的全部 76 条，加上两次一致的条目中随机抽的 50 条。表中不显示组别。
-- 表中没有备注，也没有注明是一人还是两人填写。论文里要写明是谁核验的。
+- 表中没有备注。据 Qu 说明（13:24），这是两位作者一起填出的一份联合判断，不是两人各自独立的判断，所以不能据此算作者间的一致度。
 - 表说明要求先判断、再看盲编。这一点无从验证。
 
 脚本 `ext_author_check.py`，输出 `ext_author_check_output.txt` 和 `yisheng_models_ext_author_check.csv`。脚本先用“不替换”的数据重现了 `yisheng_models_ext_coding.csv` 的对应各行（逐格相同），再做替换。
@@ -205,6 +205,7 @@ H2 的点估计几乎不变，区间窄了很多。旧值没有改动，仍在 `
 - 主检验仍是按 §4.2 的第一次盲编结果（2.35），改判后的结果作为敏感性分析报告。
 
 **对论文的影响**：作者核验已做完，论文里可以写：
-- 核验的做法：126 条，即全部 76 条不一致加随机 50 条；
+- 核验的做法：两位作者一起核验 126 条，即全部 76 条不一致加随机 50 条，得到一份联合判断；
 - 一致率和 κ：用上面的分层估计，注明是作者对 LLM，不是作者间信度；
 - 主结果对改判稳健：OR 2.35 → 2.73，规则下结论不变。
+- 英文可作：“The two authors jointly reviewed 126 of the 677 newly coded items: all 76 on which the two LLM passes disagreed and 50 drawn at random from the 601 on which they agreed. They agreed with the shared code on 45 of the 50 random items; on the 76 disagreements they sided with the second pass 50 times and the first 23 times (three items matched neither). Estimated over all 677 items, four-class κ between this joint judgment and the analysed first pass is 0.735. Replacing the checked codes with the joint judgment leaves the primary result unchanged (OR 2.73, 95% CI 1.61–4.65).”

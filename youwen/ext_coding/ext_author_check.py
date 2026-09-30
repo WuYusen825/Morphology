@@ -54,7 +54,7 @@ def views(s):
     return {'四类': list(s), '相关(Y/E)/不相关': [c in 'YE' for c in s], 'Y/非Y': [c == 'Y' for c in s]}
 
 out('作者核验结果（Qu 交回的 ext_check_sheet_author_filled.xlsx，126 条：两次盲编不一致的全部 76 条 + 两次一致的条目中随机抽的 50 条）')
-out('表中没有备注，也没有注明是一人还是两人填写。')
+out('表中没有备注。据 Qu 说明（2026-09-30 13:24，问“是一人还是两位作者一起填”，答“一起”），这是两位作者一起填出的一份联合判断，不是两人各自独立的判断。')
 out('')
 out('作者判断的分布： ' + '，'.join(f'{k} {int((M.author == k).sum())}' for k in 'YENX'))
 out('')
