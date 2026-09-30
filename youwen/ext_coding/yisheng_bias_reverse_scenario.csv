@@ -1,0 +1,7 @@
+﻿tier,test,n,n_phonetics,group1_hits,group1_n,group1_rate,group0_hits,group0_n,group0_rate,gee_OR,gee_CI95,gee_p_one_sided,gee_p_one_sided_exact,gee_p_two_sided,mh_strata,mh_OR,mh_CI95,cmh_p_two_sided,fisher_p_two_sided,verdict,note
+control,P1r near ~ label | related,220,129,73,141,0.518,23,79,0.291,2.35,1.43-3.86,0.00038,0.0003811,0.00076,37,2.01,0.75-5.39,0.19,0.0012,supports C (same word / minimal derivation),
+control,S1r MC identical ~ label | related,220,129,54,141,0.383,15,79,0.19,2.57,1.35-4.87,0.0019,0.00193,0.0039,37,1.57,0.57-4.32,0.39,0.0038,supports C (same word / minimal derivation),
+fold_all,P1r near ~ label | related,251,146,81,172,0.471,23,79,0.291,2.0,1.23-3.26,0.0026,0.002566,0.0051,43,2.18,0.86-5.48,0.11,0.0087,supports C (same word / minimal derivation),
+fold_all,S1r MC identical ~ label | related,251,146,61,172,0.355,15,79,0.19,2.31,1.22-4.38,0.0051,0.005141,0.01,43,1.69,0.66-4.33,0.28,0.0081,supports C (same word / minimal derivation),
+fold_far,P1r near ~ label | related,243,142,73,164,0.445,23,79,0.291,1.76,1.11-2.80,0.0081,0.008095,0.016,42,1.75,0.67-4.56,0.29,0.025,supports C (same word / minimal derivation),
+fold_far,S1r MC identical ~ label | related,243,142,54,164,0.329,15,79,0.19,2.03,1.09-3.78,0.013,0.01295,0.026,42,1.37,0.51-3.67,0.55,0.033,supports C (same word / minimal derivation),

@@ -258,6 +258,7 @@ H2 的点估计几乎不变，区间窄了很多。旧值没有改动，仍在 `
 - 要把它变成一个数出来的数：请作者把其余 53 个编为相关的普通对补判完（再加 49 个编为不相关的普通近音对，另一条路），共约 100 个，做法同 §7。这一步需要 Qu 的时间，未做，听协调者决定。
 - 英文可作（可选）：“Because relatedness is the main confounder and is coded with error, false positives among ordinary pairs, which are mostly unrelated, can leave residual confounding. A false-positive rate of 11.5% among truly unrelated ordinary pairs (about 50 of the 79 coded as related, whatever the rate among labelled pairs) would reduce the near-sound odds ratio to 1, and 5.9% would reduce it to 2. The two blind passes disagree far less than this (4–5%), but they come from one model family, and the authors’ check, which included only five randomly drawn ordinary pairs on which the passes agreed and showed both passes’ codes on the sheet, cannot exclude a shared bias of this size.”
 
+- **反方向情景**（评审对 v9 的 S3，探索性，`ext_bias_reverse_scenario_output.txt`）：把亦声组里编为无关的 31 对（其中近音只有 8 个）全部并入相关组，近音 81/172 对 23/79，GEE OR 2.00 [1.23, 3.26]（合并优势比 2.17，即评审手算的数），按规则仍支持 (C)，区间下限仍在 1 以上，但点估计降到了最小关心效应 2；只并入其中不近音的 23 对（最不利的取法）是 1.76 [1.11, 2.80]。
 
 ## 9 第二次回答替换（X5，探索性，2026-09-30）
 
