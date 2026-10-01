@@ -6,10 +6,17 @@ Word files in youwen/manuscript/submission/ and the figure files Fig1.*, and pri
 (for what only a person can judge or what is only reported). The exit status is 1 if any check fails. The checks cover
 only what a script can see; the checklist in submission/SUBMISSION_CHECKLIST.md says which requirements need the authors.
 
-Run from anywhere:  python3 youwen/scripts/yisheng_submission_audit.py v10
+If youwen/manuscript/submission/supplement/ exists, the seven Online Resource files in it are checked against the captions of the
+anonymised manuscript as well (names, captions, row and file counts, empty properties, no names, e-mail addresses or local paths).
+With --rerun-esm7 the analysis package ESM_7.zip is unpacked into a temporary folder and run (about a minute).
+
+Run from anywhere:  python3 youwen/scripts/yisheng_submission_audit.py v10 [--rerun-esm7]
 """
+import io
 import re
+import subprocess
 import sys
+import tempfile
 import unicodedata
 import zipfile
 from pathlib import Path
@@ -29,7 +36,150 @@ def plain(s):
     return unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode().lower()
 
 
-def main(v):
+EMAIL = re.compile(r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+")
+LOCAL_PATH = re.compile(r"/home/|/mnt/|/tmp/|/root/|/Users/|[A-Z]:\\Users")
+SESSION_ID = re.compile(r"claude\.ai/|session_[0-9A-Za-z]{10,}|cmsg_|cse_")
+SUPPLEMENT_REVEALING = REVEALING + ["Wu Yusen", "Qu Weiyi", "English and International Studies"]
+
+
+def norm(s):
+    """Caption text compared without Markdown emphasis, line breaks and doubled blanks."""
+    return re.sub(r"\s+", " ", unicodedata.normalize("NFC", s.replace("*", ""))).strip()
+
+
+def text_of_member(name, data):
+    if name.lower().endswith(".xlsx"):
+        import openpyxl
+        wb = openpyxl.load_workbook(io.BytesIO(data), data_only=True)
+        parts = [" ".join(wb.sheetnames)]
+        for ws in wb.worksheets:
+            for row in ws.iter_rows():
+                for c in row:
+                    if isinstance(c.value, str):
+                        parts.append(c.value)
+                    if c.comment:
+                        parts.append(c.comment.text + (c.comment.author or ""))
+        return "\n".join(parts)
+    try:
+        return data.decode("utf-8-sig")
+    except UnicodeDecodeError:
+        return data.decode("latin-1")
+
+
+def xlsx_props(data):
+    z = zipfile.ZipFile(io.BytesIO(data))
+    core = z.read("docProps/core.xml").decode("utf-8") if "docProps/core.xml" in z.namelist() else ""
+    app = z.read("docProps/app.xml").decode("utf-8") if "docProps/app.xml" in z.namelist() else ""
+    filled = [t for t in ("creator", "lastModifiedBy", "description", "subject", "keywords", "category")
+              if re.search(rf"<(?:dc|cp):{t}>[^<]+</", core)]
+    filled += [t for t in ("Company", "Manager") if re.search(rf"<{t}>[^<]+</", app)]
+    return filled
+
+
+def supplement_checks(anon, rerun):
+    sup = SUB / "supplement"
+    if not sup.is_dir():
+        check(True, "supplement files (submission/supplement/)", "not in the repository yet", info=True)
+        return
+    import openpyxl
+    import pymupdf
+    listed = {int(n): (f, norm(cap)) for n, f, cap in re.findall(r"^\*\*Online Resource (\d+)\*\* \((ESM_\d+\.\w+)\) (.*)$", anon, re.M)}
+    present = sorted(p.name for p in sup.iterdir())
+    check(present == sorted(f for f, _ in listed.values()) and len(listed) == 7,
+          "supplement folder holds exactly the files named in the manuscript, ESM_n.ext", f"{present}")
+    blobs = {}
+    for n, (fname, cap) in sorted(listed.items()):
+        path = sup / fname
+        if not path.exists():
+            check(False, f"{fname} exists")
+            continue
+        data = path.read_bytes()
+        blobs[fname] = data
+        # the caption inside the file (title block of the PDF, sheet About, README of the zip) is the manuscript's caption
+        if fname.endswith(".pdf"):
+            d = pymupdf.open(stream=data, filetype="pdf")
+            first = norm(d[0].get_text())
+            check(cap in first and "Withheld for double-anonymous review" in first and bool(re.search(r"Journal:? Morphology", first)),
+                  f"{fname}: caption on page 1 identical to the manuscript's, authors and corresponding author withheld", f"{d.page_count} pages")
+            md = d.metadata
+            filled = [k for k in ("author", "subject", "keywords", "creator", "producer") if md.get(k)]
+            check(not filled, f"{fname}: PDF properties without author, creator or producer", f"title: {md.get('title')!r}; filled: {filled}")
+        elif fname.endswith(".xlsx"):
+            wb = openpyxl.load_workbook(io.BytesIO(data), read_only=True)
+            about = {str(r[0]): r[1] for r in wb["About"].iter_rows(values_only=True) if r and r[0]}
+            check(norm(str(about.get("Caption", ""))) == cap and about.get("Authors") == about.get("Corresponding author (affiliation, e-mail)") == "Withheld for double-anonymous review"
+                  and about.get("Journal") == "Morphology",
+                  f"{fname}: sheet About carries the manuscript's caption, authors and corresponding author withheld",
+                  f"sheets {len(wb.sheetnames)}, first {wb.sheetnames[0]}, last {wb.sheetnames[-1]}")
+            check(wb.sheetnames[0] == "About" and wb.sheetnames[-1] == "data_dictionary", f"{fname}: first sheet About, last sheet data_dictionary")
+            check(not xlsx_props(data), f"{fname}: workbook properties empty (no creator, last modifier, company)", f"filled: {xlsx_props(data)}")
+        else:
+            z = zipfile.ZipFile(io.BytesIO(data))
+            readme = [m for m in z.namelist() if m.endswith("README.txt") and m.count("/") == 1]
+            txt = norm(z.read(readme[0]).decode("utf-8-sig")) if readme else ""
+            check(bool(readme) and ("Caption: " + cap) in txt and "Withheld for double-anonymous review" in txt,
+                  f"{fname}: README caption identical to the manuscript's, authors and corresponding author withheld", f"{len(z.namelist())} members")
+            roots = {m.split("/")[0] for m in z.namelist()}
+            check(len(roots) == 1 and not any(re.search(r"(^|/)(\.|__MACOSX|Thumbs\.db)", m) for m in z.namelist()) and z.comment == b"",
+                  f"{fname}: one root folder, no hidden or system files, no zip comment", f"{sorted(roots)}")
+            bad = [m for m in z.namelist() if m.endswith(".xlsx") and xlsx_props(z.read(m))]
+            check(not bad, f"{fname}: workbooks inside have empty properties", f"{bad}")
+        # nothing that identifies the authors, in the text of any file or member
+        members = {fname: data}
+        if fname.endswith(".zip"):
+            members = {f"{fname}/{m}": z.read(m) for m in z.namelist() if not m.endswith("/")}
+        hits = []
+        for label, blob in members.items():
+            if label.endswith(".pdf"):
+                d = pymupdf.open(stream=blob, filetype="pdf")
+                text = "\n".join(pg.get_text() for pg in d) + str(d.metadata)
+            elif label.endswith((".png", ".jpg", ".eps", ".tif", ".tiff", ".pdf")):
+                continue
+            else:
+                text = text_of_member(label, blob)
+            # self_check.py lists the path prefixes it looks for ('/home/', '/tmp/'); that list is not a hit
+            paths = [] if label.endswith("scripts/self_check.py") else [LOCAL_PATH]
+            for pat in [re.compile(re.escape(b), re.I) for b in SUPPLEMENT_REVEALING] + [EMAIL, SESSION_ID] + paths:
+                m = pat.search(text)
+                if m:
+                    hits.append(f"{label}: {m.group(0)!r}")
+        check(not hits, f"{fname}: no author name, affiliation, e-mail address, local path or session id in any text or member", f"{hits[:4]}")
+
+    # row and file counts that the captions and the text state
+    if "ESM_2.xlsx" in blobs and "ESM_3.xlsx" in blobs:
+        rows = {}
+        for fname, sheets in (("ESM_2.xlsx", ("pairs", "recension_collation", "daxu_spotcheck")),
+                              ("ESM_3.xlsx", ("first_sample", "enlarged_coding", "author_check", "second_answers"))):
+            wb = openpyxl.load_workbook(io.BytesIO(blobs[fname]), read_only=True)
+            for s in sheets:
+                rows[s] = sum(1 for r in wb[s].iter_rows(min_row=2, values_only=True) if any(c is not None for c in r))
+        want = {"pairs": 1333, "recension_collation": 227, "daxu_spotcheck": 104, "first_sample": 100, "enlarged_coding": 767,
+                "author_check": 126, "second_answers": 203}
+        check(rows == want, "data rows per sheet (1,333 pairs; 227 collated; 104 checked; 100, 767, 126 and 203 codings)", f"{rows}")
+        stated = {"1,333 extracted pairs", "767 pairs", "677 new items", "90 first-sample items", "126 pairs", "227 labelled entries", "104 entries"}
+        check(all(x in anon for x in stated), "the numbers behind these row counts are the ones stated in the captions", f"{sorted(stated)}")
+    if "ESM_5.zip" in blobs:
+        names = zipfile.ZipFile(io.BytesIO(blobs["ESM_5.zip"])).namelist()
+        pr = [m for m in names if "/prompts/" in m and m.endswith(".txt")]
+        ra = [m for m in names if "/raw_answers/" in m and m.endswith(".txt")]
+        check(len(pr) == 14 and len(ra) == 16 and sum("second_answer_not_used" in m for m in ra) == 2,
+              "ESM_5: 14 prompts, 14 raw answers and the 2 unused second answers", f"{len(names)} files: {len(pr)} prompts, {len(ra)} answer files")
+    if "ESM_7.zip" in blobs:
+        names = zipfile.ZipFile(io.BytesIO(blobs["ESM_7.zip"])).namelist()
+        check(len(names) == 67, "ESM_7: 67 members", f"{len(names)}")
+        if rerun:
+            with tempfile.TemporaryDirectory() as tmp:
+                zipfile.ZipFile(io.BytesIO(blobs["ESM_7.zip"])).extractall(tmp)
+                root = next(Path(tmp).iterdir())
+                done = subprocess.run([sys.executable, "scripts/run_all.py"], cwd=root, capture_output=True, text=True, timeout=1200)
+                m = re.search(r"(\d+) checks passed, (\d+) failed", done.stdout)
+                check(done.returncode == 0 and bool(m) and m.group(2) == "0",
+                      "ESM_7: unpacked and run (python scripts/run_all.py): all checks pass, exit status 0", m.group(0) if m else done.stdout[-300:])
+        else:
+            check(True, "ESM_7 rerun", "skipped (add --rerun-esm7); last result in the checklist, Section 8", info=True)
+
+
+def main(v, rerun=False):
     full = (M / f"yisheng_paper_{v}.md").read_text(encoding="utf-8")
     anon = (M / f"yisheng_paper_{v}_anonymised.md").read_text(encoding="utf-8")
     page = (M / f"yisheng_{v}_title_page.md").read_text(encoding="utf-8")
@@ -237,6 +387,9 @@ def main(v):
     allw = len(re.findall(r"[A-Za-z]+", anon.split("## References")[0]))
     check(True, "Chinese characters in the text", f"{allcjk} characters against {allw} Latin-script words; they are examples and data, with pinyin or English", info=True)
 
+    # ---- supplement (Online Resources 1-7) ---------------------------------------------------------------------------------------
+    supplement_checks(anon, rerun)
+
     width = max(len(n) for _, n, _ in results)
     for status, name, detail in results:
         print(f"{status:4s}  {name:{min(width, 78)}s}  {detail}")
@@ -246,4 +399,5 @@ def main(v):
 
 
 if __name__ == "__main__":
-    sys.exit(main(sys.argv[1] if len(sys.argv) > 1 else "v10"))
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    sys.exit(main(args[0] if args else "v10", rerun="--rerun-esm7" in sys.argv))

@@ -115,6 +115,7 @@ PASS  Fig1.eps 119 mm wide                                                      
 PASS  Fig1.eps: fonts embedded                                                        
 PASS  Fig1.eps: no author, for or copyright line, no author's name                    
 PASS  no paragraph that is mostly Chinese                                             0 found
-INFO  Chinese characters in the text                                                  473 characters against 10916 Latin-script words; they are examples and data, with pinyin or English
+INFO  Chinese characters in the text                                                  473 characters against 10976 Latin-script words; they are examples and data, with pinyin or English
+INFO  supplement files (submission/supplement/)                                       not in the repository yet
 
-100 passed, 0 failed, 18 for information
+100 passed, 0 failed, 19 for information

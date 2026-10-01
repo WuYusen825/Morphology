@@ -27,14 +27,14 @@
 | §3.1、§3.3、§3.4、§3.5、§3.6 | 新增或改写 “Online Resource n” 引用（首次引用顺序 1–7），去掉 “in the repository” | 指南：补充材料须在正文里以 “Online Resource n” 引用 |
 | §3.6 | 新增小节 “Use of large language models”（内容即 v9 Declarations 里的 “Use of AI tools”，加两处交叉引用） | 指南：语言模型的使用须写在方法部分 |
 | 图 1 | 图注改为 Springer 的形式（**Fig. 1**，数字后和末尾不加标点，写明线条和标记含义）；图重画为 119 mm 宽、8 pt Arial 兼容字体、黑白、EPS/TIFF/PNG | 指南的图件要求 |
-| 文末 | 原 “Data availability”（仓库路径）、“Declarations”、“Use of AI tools” 改成 “Supplementary Information”（7 条 caption）与 “Statements and Declarations”：完整版含 Funding、Competing interests、Ethics approval and consent、Coding、Author contributions、Data availability；**匿名稿只留 Data availability**，其余按 Snapp 双盲页（稿件文件不含基金、竞争利益、伦理、贡献、致谢声明）移到题名页，在界面里填 | 指南的标题与内容要求；仓库地址不能出现在匿名稿里；Snapp 的双盲规定 |
+| 文末 | 原 “Data availability”（仓库路径）、“Declarations”、“Use of AI tools” 改成 “Supplementary Information”（7 条 caption）与 “Statements and Declarations”：完整版含 Funding、Competing interests、Ethics approval and consent、Coding、Author contributions、Data availability；**匿名稿只留 Data availability**，其余按 Snapp 双盲页（稿件文件不含基金、竞争利益、伦理、贡献、致谢声明）移到题名页，在界面里填 | 指南的标题与内容要求；仓库地址不能出现在匿名稿里；Snapp 的双盲规定。Data availability 用数据线程 2026-10-01 09:49 随补充材料给出的措辞（“coder instances” 改为论文用语 “Claude instances”），多了一句说明陈本和国图扫描不再分发 |
 | 参考文献 | Baxter & Sagart (1998, 2014)、Sagart (1999)、Schuessler (2007) 补了 DOI（Crossref 2026-10-01 核对） | 指南：有 DOI 一律写成完整链接 |
 | 作者单位 | “Beijing Foreign Studies University, School of English and International Studies, Beijing, China” | 指南：机构、（院系）、城市、国家 |
 | §3.3、§5.3、§5.4 | “judgement” 4 处统一为 “judgment”（全文其余 12 处已是 “judgment”）；“the released files” 改为 “the supplementary files” | 拼写一致；补充材料不叫 released |
 
 ## 补充材料说明里的数字（“Supplementary Information” 一节）
 
-数据线程 2026-10-01 04:30 给出临时清单（ESM_1–7，经协调者转来）；下列数字已逐个对文件核过。
+数据线程 2026-10-01 04:30 给出临时清单（ESM_1–7，经协调者转来），09:49 交付成品；下列数字已逐个对文件核过，七份文件自带的 caption 与正文 “Supplementary Information” 一节逐字相同（脚本比对）。成品里的行数：`pairs` 1,333、`recension_collation` 227、`daxu_spotcheck` 104、`first_sample` 100、`enlarged_coding` 767、`author_check` 126、`second_answers` 203；ESM_7 解压后重跑 `run_all.py`：249 项通过、0 失败。
 
 | caption 里的数字 | 出处 |
 |---|---|

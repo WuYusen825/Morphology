@@ -6,9 +6,9 @@
 
 ## 0 结论
 
-- **v10 可以交给 Qu 填完个人信息后投稿**，前提是数据线程的补充材料 ESM_1–7 交付并通过一次合规与数字核对（评审线程做）。
+- **v10 可以交给 Qu 填完个人信息后投稿**。数据线程的补充材料 ESM_1–7 已于 2026-10-01 09:49 交付并由我核过（见下和核对表第 8 节）；还有两处措辞等数据线程更正，之后由评审线程做一次合规与数字核对。
 - 自查脚本 `youwen/scripts/yisheng_submission_audit.py` 对匿名稿、题名页、cover letter、图和补充材料清单共 100 项检查全部通过、0 项失败（输出在 [`submission/audit_v10_output.txt`](submission/audit_v10_output.txt)）；核对表里按 “满足／不适用／需 Qu／待补充材料” 逐条列了指南的要求。
-- 还缺的都是只有 Qu 能给的：通讯作者及邮箱、ORCID、作者贡献、“再用过材料” 与 “编委身份” 的确认；以及补充材料成品。题名页和 cover letter 里以 `[TO BE SUPPLIED: …]` 占位，Word 里高亮显示。
+- 还缺的都是只有 Qu 能给或能定的：通讯作者及邮箱、ORCID、作者贡献、“再用过材料” 与 “编委身份” 的确认，对陈本扫描的核对是 Codex 读的还是作者也看了（论文 §3.1 的 “We visually checked”），补充材料的许可（核对表第 9 节）。题名页和 cover letter 里以 `[TO BE SUPPLIED: …]` 占位，Word 里高亮显示。
 
 ## 1 做了什么
 
@@ -19,7 +19,7 @@
 | 正文结构 | 十进制标题；§3.6 新增 “Use of large language models”；文末依次为 Supplementary Information（7 条 caption）、Statements and Declarations（匿名稿里只有 Data availability，见第 3 节第 7 项）、References |
 | 图 1 | 重画为 119 mm 宽、8 pt 的 Arial 兼容字体、黑白（靠标记形状和空心/实心区分）、线宽至少 0.6 pt；EPS（字体嵌入）、TIFF、PNG 三份，PNG 为 2811 × 2490 像素、600 dpi；图题用 Springer 的写法 |
 | 参考文献 | 按 APA 第 7 版的格式，4 条补了 DOI（Crossref 核对），共 17 条有 DOI；按第一作者姓氏排序（脚本检查） |
-| 补充材料 | 正文引用 Online Resource 1–7（首次引用顺序 1–7），列出 7 条 caption，数据可用性声明改为 “Included in the paper or Supplementary Information”，不再出现仓库地址；caption 里的数字已对文件核过 |
+| 补充材料 | 正文引用 Online Resource 1–7（首次引用顺序 1–7），列出 7 条 caption，数据可用性声明改为 “Included in the paper or Supplementary Information”，不再出现仓库地址；caption 和数字已对补充材料文件核过（七份文件自带的 caption 与正文逐字相同） |
 | 双盲 | 匿名稿正文、DOCX 内部全部 XML 和属性、图片元数据里没有作者姓名、单位、仓库属主名（脚本逐项查） |
 | 英文为主要呈现语言 | 正文、图表标题、题名页、声明、补充材料说明都是英文，汉字只作例证和数据，附拼音或英文释义 |
 
@@ -38,8 +38,8 @@
 1. **Word 里的实际显示。** 没有 Word，只用 LibreOffice 渲染逐页看过版面。三线表和图在 Word 里应当一样，但请 Qu 打开看一遍。
 2. **图的宽度。** 指南按 “大开本 84/174 mm、小开本 119 mm” 分；我没有查到 *Morphology* 的开本，按小开本取 119 mm（高不超过 195 mm）。排版部门可以缩放，不影响审稿。
 3. **字体。** 图里用的是 Liberation Sans（与 Arial 度量兼容），没有装 Arial。
-4. **补充材料文件本身。** 数据线程仍在建；我只核了 caption 里的数字，没有打开文件。每个文件里写 “作者姓名、通讯作者邮箱” 的指南要求与双盲相冲突，核对表第 8 节建议送审版写 “withheld”，请 Qu 知悉。
-5. **第三方数据的许可。** ESM_2 里再分发中古音（tshet-uinh）和上古音（cddb/Baxter–Sagart）数据，许可条款仓库里只记了 *Shuōwén* 数据的 Apache-2.0；请数据线程在 ESM_1 里注明。
+4. **补充材料文件本身。** 我对着文件核了：七份文件的 caption 与正文逐字相同，行数和数字与 caption 一致，文件属性和全部文本里没有作者信息，ESM_7 在这里重跑 249 项通过。没有 Excel 和 Acrobat，xlsx 没在 Excel 里打开过，PDF 只渲染看了两页。每个文件里写 “作者姓名、通讯作者邮箱” 的指南要求与双盲相冲突，每份文件开头的识别块里作者栏写 “Withheld for double-anonymous review”，请 Qu 知悉。
+5. **第三方数据的许可。** ESM_1 §8 写了各来源和条款（说文文本 Apache-2.0、nk2028 的 Qieyun 数据 CC0 和 tshet-uinh 软件 MIT、cddb 仓库 GPL-3.0），作者自己的贡献用 CC BY 4.0、代码用 MIT。这些条款是数据线程读原文后写的，我没有核各来源的 LICENSE 原文；作者自己的许可选择和是否保留 Baxter–Sagart 构拟串由 Qu 定。
 6. **语言模型版本。** 方法部分只写了 “Claude (Anthropic)” 和 “Codex (OpenAI)”，没有版本号（各次编码用的模型版本在材料里能否查到，要看数据线程的 `provenance.tsv`）。
 7. **声明放在稿件里还是界面里。** Morphology 的指南 PDF 一边说 “Statements and Declarations” 随论文发表，没有声明的稿件会被退回，一边说换用 Snapp 后作者贡献、竞争利益等在界面里填。Springer Nature 的 Snapp 双盲页（我 2026-10-01 抓取原页核对）明确写稿件文件不应含致谢、贡献、竞争利益、伦理和基金声明，也没有提题名页和数据可用性声明。我按 Snapp 页办：匿名稿只留 Data availability，Funding、Competing interests、Ethics 三段和 “Coding” 一段（后者含作者姓名，内容已见 §3.3–3.5）移到题名页，那是在界面里逐项填写的英文底稿。如编辑部要求声明写进稿件，全文版里有现成的，删去 Author contributions 后贴回即可（核对表第 4 节）。
 

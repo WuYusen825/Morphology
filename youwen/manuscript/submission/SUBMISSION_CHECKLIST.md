@@ -2,7 +2,7 @@
 
 日期：2026-10-01。依据：Qu 2026-10-01 04:08 随消息发来的两份 PDF（Morphology 的 *Submission guidelines*，Springer Nature 的 *Submit faster on Snapp*）。对象：本目录下的投稿文件和 `youwen/manuscript/yisheng_paper_v10*.md`。
 
-状态只有四种：**满足**（做了，且有检查依据）、**不适用**、**需 Qu**（只有 Qu 能给或能定）、**待补充材料**（等数据线程交付 ESM_1–7 后再核）。机器核对的项目由 `youwen/scripts/yisheng_submission_audit.py` 执行，输出存在 [`audit_v10_output.txt`](audit_v10_output.txt)；括号里的名称是脚本里的检查项。Word 里的实际显示我这里无法看到（只用 LibreOffice 渲染逐页看过），见最后一节第 7 项。
+状态只有四种：**满足**（做了，且有检查依据）、**不适用**、**需 Qu**（只有 Qu 能给或能定）、**待数据线程**（补充材料里有措辞要更正，改好后我再核）。机器核对的项目由 `youwen/scripts/yisheng_submission_audit.py` 执行，输出存在 [`audit_v10_output.txt`](audit_v10_output.txt)；括号里的名称是脚本里的检查项。Word 里的实际显示我这里无法看到（只用 LibreOffice 渲染逐页看过），见最后一节第 7 项。
 
 ## 1 要上传什么
 
@@ -12,7 +12,7 @@
 | 图单独提供时，矢量用 EPS、半色调用 TIFF，文件名为 “Fig” + 编号（Fig1.eps） | 满足 | `Fig1.eps`（字体已嵌入）、`Fig1.tif`、`Fig1.png`；嵌入稿件的是 PNG |
 | 双盲：作者信息和声明在系统界面里填，不放在稿件里或单独的题名页里 | 满足（需 Qu 在界面里填） | 匿名稿不含任何作者信息，也不含致谢、贡献、竞争利益、伦理、基金声明（第 4 节）；`Title_page.docx` 不上传，仅作为在界面里逐项填写的底稿，系统若要求题名页再传 |
 | 先上传稿件，不要预先填字段；上传后核对系统自动抽取的标题、摘要和声明（Snapp） | 需 Qu | 上传后核对一次抽取结果 |
-| 补充材料：见第 8 节 | 待补充材料 | |
+| 补充材料：见第 8 节 | 满足（待数据线程改几处措辞后复核） | 七份文件 ESM_1–7 已于 2026-10-01 09:49 交付并核过 |
 | cover letter | 满足（有占位） | `Cover_letter.docx`；日期、署名、“是否再用过材料”待 Qu |
 
 ## 2 正文（Title Page、Text）
@@ -89,38 +89,55 @@
 | 稿件原创、未曾发表、未同时投他处；如有再用（学位论文、会议稿）须在 cover letter 里说明 | 需 Qu | cover letter 写了 “原创、未发表、未一稿两投”，“再用的材料” 一条留作 Qu 确认 |
 | 全体作者已批准稿件及其提交；所在机构（如需）已同意 | 需 Qu | cover letter 已写 “All authors have approved…”，请 Qu 确认属实 |
 | 可推荐或回避审稿人（可选）；推荐须附机构邮箱或主页链接 | 需 Qu（可选） | 不填也可以 |
-| 第三方数据与软件的使用许可 | 待补充材料 | *Shuōwén* 数据（shuowenjiezi，Apache-2.0）已在正文写明；ESM_2 里再分发的中古音（tshet-uinh）和上古音（cddb/Baxter–Sagart）数据的许可条款，请数据线程在 ESM_1 里注明 |
+| 第三方数据与软件的使用许可 | 需 Qu 确认 | ESM_1 §8 和各文件的 About／README 写明来源与条款：*Shuōwén* 文本 Apache-2.0；中古音（nk2028 的 Qieyun 数据 CC0，tshet-uinh 软件 MIT）；上古音构拟字符串来自 Baxter–Sagart，经 cddb 仓库（GPL-3.0），引用时请引 Baxter 和 Sagart（2014）。作者自己的贡献（编码、标注、表、文档）用 CC BY 4.0、代码用 MIT，是数据线程提议的，由 Qu 定。我没有核各来源的 LICENSE 原文（这些仓库不在本环境可访问的范围内），上述条款是数据线程读原文后写的。是否在 CC BY 4.0 的文件里再分发 GPL-3.0 仓库里的 Baxter–Sagart 构拟串，请 Qu 定：保留（现状，各列保留原条款，文件里已写明），或删去 `oc_bs2014`、`head_oc_bs2014` 两列只留派生类别（会影响 ESM_7 的自检，要数据线程重做） |
 
 ## 8 补充材料（Supplementary Information）
 
-数据线程建 `submission/supplement/`，临时清单是 ESM_1–7（2026-10-01 04:30 经协调者转来）；正文已按该清单引用，caption 的数字已对文件核过。
+数据线程 2026-10-01 09:49 交付七份文件（共约 1.8 MB，在共享文件夹 `v7_work/submission/supplement/`；等它改完下面两处措辞、我复核后，提交进仓库的 `youwen/manuscript/submission/supplement/`）。我对着文件本身核的，不是对着数据线程发来的缩写。
 
 | 要求 | 状态 | 说明 |
 |---|---|---|
-| 文件按 ESM_n.ext 连号命名；文字用 PDF，表格用 xlsx/csv，多文件打成 zip；每份附一句简明 caption | 满足（清单）/ 待补充材料（文件） | ESM_1.pdf、ESM_2.xlsx、ESM_3.xlsx、ESM_4.pdf、ESM_5.zip、ESM_6.xlsx、ESM_7.zip |
+| 文件按 ESM_n.ext 连号命名；文字用 PDF，表格用 xlsx/csv，多文件打成 zip；每份附一句简明 caption | 满足 | ESM_1.pdf（13 页）、ESM_2.xlsx、ESM_3.xlsx、ESM_4.pdf（9 页）、ESM_5.zip（34 个文件）、ESM_6.xlsx（21 个 sheet）、ESM_7.zip（67 个文件）；名称与 SI 一节一致 |
 | 正文里写明引用，格式 “Online Resource n”；正文里放每份的 caption | 满足 | §3.1、§3.3–3.6 引用，首次引用顺序 1–7；“Supplementary Information” 一节列出 7 条 caption（Online Resources cited in order；each listed with file name and caption） |
-| 补充材料原样发布，不转换、不编辑 | 待补充材料 | 文件交付前须定稿 |
-| 每个文件里写明文章题目、刊名、作者姓名、通讯作者单位和邮箱 | 需 Qu / 待补充材料 | 与双盲相冲突：送审版本的补充文件里只写题目和刊名，作者栏写 “withheld”，录用后再补作者信息。这一做法请 Qu 知悉 |
-| 提供数据给审稿人时，数据里的作者信息也应匿名（Research data and peer review） | 待补充材料 | 数据线程已发现作者核验表的文件属性里有作者本名，包里改用重建的数据 |
+| 每份文件自带的 caption 与正文里的一致 | 满足 | 脚本逐字比对 7/7（PDF 首页、xlsx 的 About 表、zip 里的 README） |
+| 补充材料原样发布，不转换、不编辑 | 满足（待改措辞后定稿） | 数据线程交付的文件就是要上传的文件；下面 “待数据线程” 两处改完后以新文件为准 |
+| 每个文件里写明文章题目、刊名、作者姓名、通讯作者单位和邮箱 | 需 Qu 知悉 | 与双盲相冲突：每份文件开头有识别块——题名、刊名、caption，“Authors” 和 “Corresponding author” 都写 “Withheld for double-anonymous review”，录用后再补 |
+| 提供数据给审稿人时，数据里的作者信息也应匿名（Research data and peer review） | 满足 | 文件属性全空（xlsx、PDF、zip 里的 xlsx）；我扫了七份文件的全部文本、单元格、属性、zip 成员名和额外字段，没有姓名、单位、邮箱、本地路径和会话号；仓库链接只有两个开源来源（digling/cddb、shuowenjiezi/shuowen） |
+| 数据与论文数字一致 | 满足 | 行数与 caption 一致：1,333 对、212＋953、227 条对勘、104 条登记、100 对、767 对（677＋90）、126 条核验（76＋50）、203 条第二次回答（193＋10）；我在这里解压 ESM_7 跑 `python scripts/run_all.py`，249 项通过、0 失败（25 个预期输出一致、189 个论文数字、20 项完整性），约 50 秒 |
+| 英文为主要呈现语言（Qu 04:08） | 满足 | 所有表头、说明、文档都是英文，汉字只作数据，每个汉字列带 U+ 码位列 |
+| 文件版面 | 满足（有限） | 这里没有 Excel 和 Acrobat：用 openpyxl 和 PyMuPDF 读了结构，渲染看了 ESM_1 的第 1、11 页（CJK 字体已嵌入）；xlsx 没有在 Excel 里打开过 |
+| “谁做了什么” 与论文、`coding_provenance_v6.md` 一致 | 待数据线程 | ESM_1 §4.1、§4.4、§5、§9 逐句对过：首样本、126 条核验、196 个关系类型、Codex 协助源核对、三条手工解决的字头都有出处，没有新增的说法。两处措辞待更正（已告知协调者，2026-10-01 09:58）：(a) 锚定条目写成 “每批都重复”，实际每批 5 个、共 35 个不同条目、每遍各编一次（ESM_1 三处、ESM_3 数据字典、ESM_5 README、ESM_7 数据字典）；(b) 小徐扫描 “spot-checked (two entries)” 后面的 “no further human check” 容易读成抽查是人做的，记录是 Claude 线程抽查了像、瑁两条 |
+| ESM_4 §7 “偏离记录” 是完整的原始记录 | 需 Qu 知悉 | 里面有 13:25 把核验表记成 “together” 的条目、18:37 的更正条目（附作者原话的译文）和提交号 7b7c249；与论文 “later changes are logged (Online Resource 4)” 一致，是真实记录，审稿人能读到那次更正的来龙去脉。要删减的话只能不改事实和数字 |
+| 作者核验原表的作者信息 | 需 Qu 知悉 | 仓库里的 `youwen/ext_coding/ext_check_sheet_author_filled.xlsx`（Qu 上传的原表，逐字节原样保存）的 “最后修改者” 属性是作者本名；补充材料里用的是合并后重建的表，没有这个问题。以后做 OSF 或 Zenodo 的匿名数据副本时不要放它，或先洗掉属性；仓库若要公开，同样先处理 |
+| 重建脚本 | 待入库 | 数据线程的 `supplement_build/`（内部，不上传）在共享文件夹 `v7_work/supplement_build/`，其 README 写了重建顺序；等它改完措辞、七份文件定稿后，与文件一起提交到 `youwen/scripts/supplement_build/` |
+| 自查脚本覆盖补充材料 | 满足 | `yisheng_submission_audit.py` 在 `submission/supplement/` 里有文件时再查：七个文件名与 SI 一节一致、每份自带的 caption 与正文逐字相同、行数和文件数、属性为空、全部文本里无姓名、单位、邮箱、本地路径、会话号；加 `--rerun-esm7` 会解压 ESM_7 重跑（约 1 分钟）。我用改坏的副本（加创作者属性、加邮箱、改 caption）验证过它会报错。注意：它不扫描措辞是否越过论文已有的 “谁做了什么”，那一项靠上面一行的人工对照 |
 
 ## 9 需要 Qu 回答或决定的事
+
+投稿前必须回答（1–6）：
 
 1. 通讯作者是谁，邮箱是什么（界面里要填，题名页和 cover letter 的占位都要换）。
 2. 两位作者的 ORCID（有就给，没有可不填）。
 3. 作者贡献：谁整理数据与分析、谁写初稿；或回 “两人共同完成”。
 4. 这篇稿子的内容是否以学位论文、会议论文等形式发表过；两位是否都不是 *Morphology* 编委。
-5. 补充材料之外，是否要把数据另存到 Zenodo 或 OSF 获得 DOI（指南 “strongly encouraged”，但不是必须；若要，在录用后补一句并加一条 DataCite 格式的参考文献）。
-6. 是否推荐审稿人（可选，需机构邮箱或主页）。
-7. 用 Word 打开 `Manuscript_anonymised.docx`，翻一遍表格和图 1（我只能用 LibreOffice 看，三线表在 Word 里应当一样，但没法保证）。
-8. 补充材料文件里 “作者栏写 withheld” 的做法是否接受（第 8 节）。
-9. 期刊的 SSCI 身份仍未核实、快审期刊的取舍仍由 Qu 定（见 `v7_work/journals/`），这不是排版问题，但决定投不投 *Morphology*。
+5. 论文 §3.1 写 “We visually checked the headword, gloss and formula of 104 of them … against the Waseda University Library scan”，而记录（v6 的核查记录）是 Codex 逐页读的扫描，补充材料 ESM_1 写 “with the assistance of Codex”，§3.6 写 Codex “assisted with source checks”。请二选一：(a) 是 Codex 读的扫描，两位作者没有自己逐页看——我把 §3.1 那句改成 “were checked page by page against the scan, with Codex’s assistance (Section 3.6)”；(b) 两位作者也逐页看了——保持现状。
+6. 补充材料的许可：作者自己的贡献用 CC BY 4.0、代码用 MIT，第三方各列保留原条款（第 7 节末行）是否同意；Baxter–Sagart 构拟串是保留还是删去。
 
-没有做的事，按 Qu 04:08 的指示：评审 S1（组内相关率）和 S3（反方向偏差情景）没有并入正文，v10 的数字与 v9 相同。
+可选或知悉（7–12）：
+
+7. 补充材料之外，是否要把数据另存到 Zenodo 或 OSF 获得 DOI（指南 “strongly encouraged”，但不是必须；若要，在录用后补一句并加一条 DataCite 格式的参考文献；匿名副本里不放第 8 节说的那份原表）。
+8. 是否推荐审稿人（可选，需机构邮箱或主页）。
+9. 用 Word 打开 `Manuscript_anonymised.docx`，翻一遍表格和图 1（我只能用 LibreOffice 看，三线表在 Word 里应当一样，但没法保证）。
+10. 补充材料文件里 “作者栏写 Withheld” 的做法（第 8 节）和 ESM_4 里的完整偏离记录（第 8 节）是否接受。
+11. 匿名稿里不放 Funding、Competing interests、Ethics、Author contributions，只留 Data availability（第 4 节）：这是按 Snapp 双盲页办的，万一编辑部要求放回稿件，第 4 节末行有办法。
+12. 期刊的 SSCI 身份仍未核实、快审期刊的取舍仍由 Qu 定（见 `v7_work/journals/`），这不是排版问题，但决定投不投 *Morphology*。
+
+没有做的事，按 Qu 04:08 的指示：评审 S1（组内相关率）和 S3（反方向偏差情景）没有并入正文，v10 的数字与 v9 相同；S3 的反方向情景只在补充材料 ESM_6、ESM_7 里。
 
 ## 10 在 Snapp 里的填写顺序（给 Qu）
 
 1. 上传 `Manuscript_anonymised.docx`（一个文件，含全文、表和图）。不要预先填字段；上传后核对系统抽取的标题、摘要。
 2. 在界面里填：作者与单位、通讯作者及邮箱、ORCID、作者贡献、竞争利益、基金（无）；数据可用性选 “Included in the paper or Supplementary Information”，粘贴稿件里的 Data availability 一段；伦理选 “不适用”。这些内容的英文底稿都在 `Title_page.docx`。
-3. 上传补充材料 ESM_1–7（数据线程交付后）。
+3. 上传补充材料 ESM_1–7（`submission/supplement/`），不要改文件、不要重命名；每份在界面里按 “Online Resource n” 加 caption（caption 在匿名稿 “Supplementary Information” 一节，也在每份文件开头）。
 4. 图：嵌在稿件里即可；系统若要求，再上传 `Fig1.eps` 或 `Fig1.png`。
 5. cover letter：用 `Cover_letter.docx` 的正文，补全日期和署名后上传或粘贴。

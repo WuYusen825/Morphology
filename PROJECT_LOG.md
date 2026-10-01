@@ -384,3 +384,25 @@
   - 重新生成匿名稿、题名页、cover letter 及其 DOCX，复制到 `submission/`；`SUBMISSION_CHECKLIST.md` 第 1、4 节、`v10_evaluation.md`（§3 第 7 项）、`yisheng_paper_v10_numbers.md`（“文末” 一行）、README、AGENTS.md、`youwen_criteria.md` 同步。完整版 `yisheng_paper_v10.md` 不变，仍含全部声明；如编辑部要求声明写进稿件，删去 Author contributions（含作者姓名缩写）后贴回即可。
 - **从这件事得到的做法**：搜索摘要和抓取原页对同一页说得不一样（搜索摘要提到 “separate Title Page”，原页没有）；以抓取到的原页为准，并分别写明哪些是原页明文、哪些是推断。云端环境里 `WebSearch`/`WebFetch` 可以访问 springernature.com；投稿规则以平台页和期刊指南的原文为准，不以记忆或摘要为准。
 - **未改动**：论文正文、表、图、数字、参考文献；数据文件和 `ext_coding/` 里数据线程的文件；补充材料（仍在数据线程手里）。
+
+## 2026-10-01 · Claude（主稿线程）· 补充材料 ESM_1–7 到手：核对，数据可用性声明换成数据线程的版本，核对表重写，自查脚本加补充材料一节
+
+- **起因**：数据线程 09:49 交付补充材料 ESM_1–7（共享文件夹 `v7_work/submission/supplement/`，约 1.8 MB；协调者转来，附一句话缩写）。我对着文件本身核，不对缩写：文件名、每份文件里自带的 caption、行数和数字、文档属性、有无作者信息、ESM_7 重跑、“谁做了什么”的措辞。本次提交只含正文侧、文档和自查脚本；七份文件和数据线程的重建脚本等它改完下面第 5 点的措辞、我复核后另提交（现在提交会在仓库里留下两份 1.8 MB 的二进制）。
+- **核对结果**：
+  1. 七份文件的完整 caption（PDF 第 1 页、xlsx 的 About 表、zip 里的 README）与匿名稿 Supplementary Information 一节的七条逐字相同（去掉斜体标记后比对）；文件名 ESM_n.ext 与清单一致。
+  2. 行数与 caption 一致：`pairs` 1,333，`recension_collation` 227，`daxu_spotcheck` 104，`first_sample` 100，`enlarged_coding` 767，`author_check` 126，`second_answers` 203；ESM_5 共 34 个文件（14 个提示、14 份原始回答、2 份未用的第二次回答）；ESM_6 共 21 个 sheet；ESM_7 共 67 个文件。
+  3. PDF 和 xlsx 的文档属性、zip 内 xlsx 的属性均无作者、最后修改者、公司；全部文本、单元格、批注、zip 成员名和额外字段里没有作者姓名、单位、邮箱、本地路径和会话号；仓库链接只有两个第三方来源（digling/cddb、shuowenjiezi/shuowen）。
+  4. ESM_7 解压后在这里重跑 `python scripts/run_all.py`：249 项通过、0 项失败（25 个预期输出一致、189 个论文数字、20 项完整性），约 53 秒，与数据线程所报一致。
+  5. 与来源记录有出入的两处措辞，已报协调者，由数据线程改 ESM_1、ESM_3、ESM_5、ESM_7：(a) 锚定条目写成 “每个批次都重复”，实际每批 5 个、共 35 个不同的首样本条目，每遍各编一次（ESM_1 第 6、7、9 页，ESM_3 数据字典，ESM_5 README 的 item_key 说明，ESM_7 数据字典 3 行）；(b) ESM_1 小徐对勘一行：Claude 线程抽查的是 像、瑁 两条（`youwen_criteria.md` 第 240 行附近），“no further human check” 容易让人以为抽查是人做的，应写成对勘由 Claude 实例完成、抽查由 Claude 实例做、没有人工核对。可选的第三处：第一次出现 “coders”“coder instances” 的地方加 “(Claude instances)”，与论文用词一致。论文 §3.6、Declarations 与 `coding_provenance_v6.md` 之间没有新增的 “谁做了什么” 的说法。
+  6. 没有做到的：这里没有 Excel 和 Acrobat，xlsx 和 PDF 没有实际打开过（用 openpyxl 和 PyMuPDF 读了，渲染看了 ESM_1 第 1、11 页和 ESM_4 第 1 页）；各来源的许可原文没有核（相关仓库不在本环境可访问的范围内），ESM_1 §8 的条款是数据线程读原文后写的。
+- **改了什么**：
+  - `yisheng_paper_v10.md` 的 Data availability 一段换成数据线程的措辞，“coder instances” 改为 “Claude instances”（与 §3.4 一致）；匿名稿、题名页及其 DOCX 重新生成，复制到 `submission/`；自查仍为 100 项通过。
+  - `SUBMISSION_CHECKLIST.md` 重写：状态为 满足／不适用／需 Qu／待数据线程／待入库；第 4 节说明匿名稿只留 Data availability 和退路；第 7 节第三方许可一行记为 “需 Qu 确认”；新增第 8 节（补充材料核对）和第 9 节（要 Qu 回答的事项：6 项必答、6 项选答）。`v10_evaluation.md`、`yisheng_paper_v10_numbers.md`、README 的 “待 Qu” 一条同步。
+  - `yisheng_submission_audit.py`：`submission/supplement/` 里有文件时再查七份文件的名称、自带 caption 与匿名稿的逐字一致、行数和文件数、属性、全部文本里的姓名、单位、邮箱、本地路径和会话号；`--rerun-esm7` 解压 ESM_7 并重跑。用改坏的副本（加创作者属性、加邮箱、改 caption）验证过能报错。把七份文件临时放进 `submission/supplement/` 测试：132 项通过、0 失败（含重跑）；仓库里现在没有这个文件夹，所以保存的输出是 100 项通过加一行 “not in the repository yet”。
+- **需 Qu**（核对表第 9 节）：(1) 通讯作者及邮箱、ORCID、作者贡献、是否以学位论文或会议稿发表过、是否有人是 *Morphology* 编委；(2) §3.1 “We visually checked … 104 of them” 对陈本扫描，是 Codex 读的还是作者也逐页看了（二选一，决定把句子改成什么）；(3) 补充材料的许可：作者自己的贡献 CC BY 4.0、代码 MIT，第三方列保留原条款（说文文本 Apache-2.0；上古音构拟字符串来自 Baxter–Sagart，经 cddb，GPL-3.0；中古音来自 nk2028，CC0／MIT）；是否在 CC BY 文件里保留 Baxter–Sagart 构拟串。这是数据线程的提议，**需 Qu 确认**。
+- **留意**：`youwen/ext_coding/ext_check_sheet_author_filled.xlsx` 与 Qu 上传的作者核验原表逐字节相同，文件属性里有作者本名；以后做 OSF 或 Zenodo 的匿名数据副本时必须去掉或洗掉它（补充材料里的 `author_check` 是合并后重建的数据，没有这个问题）。S3 反向情景（GEE OR 2.00 [1.23, 3.26]）只在 ESM_6、ESM_7，正文不提。补充材料的自检脚本不扫描人名，论文、cover letter 和核对表里不要写 “自检会检查个人信息”。ESM_5 与 ESM_7/data/raw 都含原始回答，是有意重复。ESM_4 第 7 节的完整偏离记录（含 13:25 的 “together” 条目和 18:37 的更正）审稿人能读到，需 Qu 知悉。
+- **从这件事得到的做法**：
+  - 交付包对文件本身核，不对发送方的一句话缩写：“锚定条目每批重复” 要读 ESM_1 的批次说明和 ESM_3 的条目表才发现与 “每批 5 个” 不符。
+  - 后台 Bash 任务里启动长时间运行的脚本，返回的 “completed (exit 0)” 只是外层 shell 的结束，不是脚本的结束；要另开一个后台 until 循环，等输出文件里出现 “exit 0”（ESM_7 的 run_all 约 53 秒）。
+  - 内置安全检查会拦下 `rm -rf *` 一类的清理命令：不要绕，改用全新的目录，需要删的只删自己刚建的具体文件。
+- **未改动**：论文正文（除数据可用性一段）、表、图、数字；参考文献；数据文件和 `ext_coding/` 里数据线程的文件；Qu 的 v5 DOCX 未提交改动。
