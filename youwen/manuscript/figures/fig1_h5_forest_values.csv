@@ -1,0 +1,14 @@
+label,kind,OR,lo,hi,hits1,n1,hits0,n0
+"All related pairs (main test, H5)",pre,2.35,1.43,3.86,73,141,23,79
+Identity only,pre,2.57,1.35,4.87,54,141,15,79
+Paronomastic glosses removed,pre,2.09,1.18,3.71,43,94,20,73
+Labels shared by both recensions,pre,1.81,1.04,3.15,41,93,23,79
+Second blind pass,pre,2.44,1.49,3.99,70,138,23,83
+Pairs on which the passes agree,pre,2.6,1.48,4.57,68,132,18,65
+"Shared labels, no paronomastic gloss",expl,1.8,0.95,3.42,27,66,20,73
+Pairs coded E only,expl,1.8,1.0,3.25,49,103,23,75
+Adjusted for Y against E,expl,2.13,1.26,3.63,73,141,23,79
+The 677 new items only,expl,2.42,1.37,4.25,59,116,21,73
+Second answers used in two batches,expl,2.39,1.38,4.14,71,139,21,74
+"Authors' consolidated judgment, 126 codes",sens,2.73,1.61,4.65,70,138,19,74
+"Main test within series (MH, 37 phonetics)",mh,2.01,0.75,5.39,73,141,23,79

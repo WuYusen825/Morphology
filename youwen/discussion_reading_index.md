@@ -2,6 +2,8 @@
 
 2026-09-28。本表记录实际读取的正文范围，不将题名检索、摘要阅读或局部精读记作全文通读。分析见 [精读笔记](discussion_close_reading.md)。
 
+**第二部分（Claude，同日追加）** 记录 Release `学习` 中 11 篇 *Morphology* 2026 研究文章的实际阅读范围，分析见 [第二轮精读笔记](discussion_close_reading_morphology2026.md)，综合见 [Discussion 精读总结](Discussion精读总结.md)。第一部分的说明只适用于第一部分。
+
 **范围：14 篇核心期刊研究／论证文章；2 篇体裁特殊的期刊补充文章；3 篇对照材料。** 体裁按本地文章标题页、正文自述和版面识别。本轮不是外网书目审计，作者稿页码与正式刊页分别对待。
 
 以本地 Markdown 为主要载体。Monaghan 与李宁、郭抒远的双栏混排影响逻辑顺序，回查了 PDF；其余 OCR 的罕见字与拟音未逐字校订，笔记未据这些缺损新建词源结论。MD 行号以本轮文件为准，PDF 页码默认文件物理页。
@@ -146,3 +148,77 @@
 本轮没有把专著、工具书、学位论文、原典扫描以及整部论文集纳入 research article 的统一比较。Barrett（2007）为书评；陈烁（2022）为报刊书评／评论；Xu Shushi（2024）为学位论文；Hathout—Namer 和 Dingemanse 的体裁见上表。王筠、说文原典和此前版本校勘的阅读程度沿用原有专项记录，没有因本轮工作扩大。
 
 未修改论文、语义编码、数据或统计。文献的推理质量评价属于本轮阅读分析，不能当作已经新增的实证结果；实际审稿和录用原因不在可知范围内。
+
+## 第二部分：Release `学习` 中的 11 篇 *Morphology* 2026 研究文章
+
+2026-09-28，Claude。**范围：11 篇期刊研究文章**，均为 *Morphology* 第 36 卷（Springer，2026）的出版社正式 PDF。文件从本仓库 Release `学习` 经 GitHub API 下载，与 Release 所列 SHA-256 逐一核对一致；元数据 Creator 为 VTeX PDF Tools，Producer 含 “SPRINGER SBM; licensed version”。阅读用 PyMuPDF 抽取的文字层（单栏排版，无错序），页码为文章自身页码，与 PDF 物理页一致。
+
+“全读”指逐段读过；“略读”指只读小节首尾、表格与结论句。例句串、附录与参考文献不计入阅读范围。Release 属于私有仓库，浏览器需登录 GitHub 才能打开；DOI 链接指向出版社页面。
+
+### 20. Lõo, Tomaschek, Lippus & Tucker（2026），Morphological effects in Estonian spontaneous speech: evidence from an online typing study；*Morphology* 36:11
+
+- **类型：** 期刊研究文章（实验）。CC BY-NC-ND 4.0。收稿 2024-12-19，录用 2026-04-26。
+- **实际阅读：** 第 1–24 页全读，含 §4 Discussion & conclusion（第 20–24 页）。
+- **原文：** [Release PDF](https://github.com/WuYusen825/Morphology/releases/download/%E5%AD%A6%E4%B9%A0/s11525-026-09459-4.pdf) · [DOI 10.1007/s11525-026-09459-4](https://doi.org/10.1007/s11525-026-09459-4)。
+
+### 21. Barbu Mititelu, Iordăchioaia, Leseva & Stoyanova（2026），Measuring the degree of transparency of English derivational suffixes；*Morphology* 36:12
+
+- **类型：** 期刊研究文章（资源 + 计算）。订阅文章（© The Author(s), under exclusive licence to Springer Nature），笔记只转述并引用短语。收稿 2025-03-31，录用 2026-05-07。
+- **实际阅读：** 第 1–29 页（§1–§8）全读；附录图表略看。
+- **原文：** [Release PDF](https://github.com/WuYusen825/Morphology/releases/download/%E5%AD%A6%E4%B9%A0/s11525-026-09460-x.pdf) · [DOI 10.1007/s11525-026-09460-x](https://doi.org/10.1007/s11525-026-09460-x)。
+
+### 22. Saicová Římalová（2026），The asymmetric overabundance of synthetic and analytic imperfective future forms in contemporary Czech；*Morphology* 36:14
+
+- **类型：** 期刊研究文章（语料）。CC BY 4.0。收稿 2025-08-04，录用 2026-05-27。
+- **实际阅读：** 第 1–14 页全读；第 14–23 页的结果表与分析段落读过，例句串（约第 15–18、23–27 页）略读；§4.1.3、§4.2.3、§4.3、§5 全读（第 20–21、27–32 页）。
+- **原文：** [Release PDF](https://github.com/WuYusen825/Morphology/releases/download/%E5%AD%A6%E4%B9%A0/s11525-026-09461-w.pdf) · [DOI 10.1007/s11525-026-09461-w](https://doi.org/10.1007/s11525-026-09461-w)。
+
+### 23. Sandström & Rosenberg（2026），Semantic influences on visual processing of compounds and pseudo-compounds: a masked priming study in Swedish；*Morphology* 36:13
+
+- **类型：** 期刊研究文章（实验）。CC BY 4.0。收稿 2025-04-12，录用 2026-05-29。
+- **实际阅读：** 第 1–24 页全读，含 §5 Discussion（第 19–23 页）与 §6 Concluding remarks（第 23–24 页）；附录模型表略看。
+- **原文：** [Release PDF](https://github.com/WuYusen825/Morphology/releases/download/%E5%AD%A6%E4%B9%A0/s11525-026-09462-9.pdf) · [DOI 10.1007/s11525-026-09462-9](https://doi.org/10.1007/s11525-026-09462-9)。
+
+### 24. Huyghe, Salvadori, Varvara, Barque, Haas, Lombard, Monney, Tribout & Wauquier（2026），SONDE: a database for exploring the semantics of nouns derived from verbs in French；*Morphology* 36:16
+
+- **类型：** 期刊研究文章（资源 + 分析）。CC BY 4.0。收稿 2025-04-01，录用 2026-06-18。
+- **实际阅读：** 第 1–7、14–16、24–49 页全读；第 7–14 页（语义描述体系）与第 16–24 页（描述性分布）略读。
+- **原文：** [Release PDF](https://github.com/WuYusen825/Morphology/releases/download/%E5%AD%A6%E4%B9%A0/s11525-026-09463-8.pdf) · [DOI 10.1007/s11525-026-09463-8](https://doi.org/10.1007/s11525-026-09463-8)。
+
+### 25. Berg（2026），Morpheme order inside the noun: a typological approach；*Morphology* 36:15
+
+- **类型：** 期刊研究文章（类型学）。CC BY 4.0。收稿 2025-03-24，录用 2026-06-17。
+- **实际阅读：** 第 1–12 页全读；第 12–24 页读各小节结论、两处 interim summary 与 §4.4；§5–§6（第 24–31 页）全读。
+- **原文：** [Release PDF](https://github.com/WuYusen825/Morphology/releases/download/%E5%AD%A6%E4%B9%A0/s11525-026-09464-7.pdf) · [DOI 10.1007/s11525-026-09464-7](https://doi.org/10.1007/s11525-026-09464-7)。
+
+### 26. Igartua（2026），Multiple exponence in Basque and its diachronic sources；*Morphology* 36:17
+
+- **类型：** 期刊研究文章（历史形态学，文献材料）。CC BY 4.0。收稿 2025-02-05，录用 2026-07-20。
+- **实际阅读：** 第 1–11 页全读；§4–§5 材料略读，§4.5、§5.3.1–5.3.2、§5.6 全读（第 27–39 页）；§6–§8（第 39–46 页）全读。
+- **原文：** [Release PDF](https://github.com/WuYusen825/Morphology/releases/download/%E5%AD%A6%E4%B9%A0/s11525-026-09465-6.pdf) · [DOI 10.1007/s11525-026-09465-6](https://doi.org/10.1007/s11525-026-09465-6)。
+
+### 27. Sandell（2026），Parsing, productivity, and word prosody: the interaction of stress assignment and morphological processing in Vedic Sanskrit；*Morphology* 36:21
+
+- **类型：** 期刊研究文章（历史语料 + 统计），属 Cohen 与 Dabouis 主编的专题。CC BY 4.0。收稿 2025-07-07，录用 2026-07-24。
+- **实际阅读：** 第 1–5 页全读；第 5–15 页（§2 重音分析）略读；第 15–40 页（§3–§5）全读。
+- **原文：** [Release PDF](https://github.com/WuYusen825/Morphology/releases/download/%E5%AD%A6%E4%B9%A0/s11525-026-09466-5.pdf) · [DOI 10.1007/s11525-026-09466-5](https://doi.org/10.1007/s11525-026-09466-5)。
+
+### 28. Ševčíková & Hledíková（2026），Semantic transparency in the formation of denominal verbs in Czech；*Morphology* 36:18
+
+- **类型：** 期刊研究文章（语料 + 标注）。CC BY 4.0。收稿 2025-05-21，录用 2026-08-17。
+- **实际阅读：** 第 1–17 页全读；§3.3 语义类别体系略读；第 21–38 页（§4–§5）全读。
+- **原文：** [Release PDF](https://github.com/WuYusen825/Morphology/releases/download/%E5%AD%A6%E4%B9%A0/s11525-026-09467-4.pdf) · [DOI 10.1007/s11525-026-09467-4](https://doi.org/10.1007/s11525-026-09467-4)。
+
+### 29. Cohen, Carlson & Dussias（2026），Perceiving word structure in time: cross-linguistic evidence from English and Spanish；*Morphology* 36:19
+
+- **类型：** 期刊研究文章（实验）。CC BY 4.0。收稿 2025-07-04，录用 2026-09-01。
+- **实际阅读：** 第 1–11 页全读；实验方法略读；第 21–25、29–39 页（结果、各实验讨论、总讨论、结论）全读。
+- **原文：** [Release PDF](https://github.com/WuYusen825/Morphology/releases/download/%E5%AD%A6%E4%B9%A0/s11525-026-09469-2.pdf) · [DOI 10.1007/s11525-026-09469-2](https://doi.org/10.1007/s11525-026-09469-2)。
+
+### 30. Nikolaev, Chuang & Baayen（2026），Learning Finnish inflectional classes: experiments with the discriminative lexicon model；*Morphology* 36:20
+
+- **类型：** 期刊研究文章（计算模型）。CC BY 4.0。收稿 2025-04-28，录用 2026-09-01。
+- **实际阅读：** 第 1–9 页全读；第 9–20 页（屈折类、模型与材料）略读；第 20–34 页（结果与 §4 General discussion）全读。
+- **原文：** [Release PDF](https://github.com/WuYusen825/Morphology/releases/download/%E5%AD%A6%E4%B9%A0/s11525-026-09470-9.pdf) · [DOI 10.1007/s11525-026-09470-9](https://doi.org/10.1007/s11525-026-09470-9)。
+
+本部分未修改论文、语义编码、数据或统计。对各文推理质量的评价属于阅读分析，不是新增的实证结果；实际审稿和录用原因不在可知范围内。

@@ -1,0 +1,55 @@
+== 1. 组合检验（普通字保留全部；GEE 与 v6 的“共有”口径略有不同，MH 相同）
+all                              H1a identical      63/177 vs 133/858      GEE 2.38 [1.69, 3.34] p=5.8e-07  MH 2.15 [1.36, 3.42] p=0.00056 (121 phonetics)
+all                              departing alt (all) 21/177 vs 58/858       GEE 1.64 [1.04, 2.57] p=0.032  MH 2.05 [1.03, 4.11] p=0.039 (121 phonetics)
+all                              H1c member dep     16/33 vs 43/150        GEE 2.44 [1.34, 4.48] p=0.0038  MH 7.35 [1.09, 49.46] p=0.011 (22 phonetics)
+no paronomastic                  H1a identical      40/126 vs 131/848      GEE 1.99 [1.34, 2.96] p=0.00068  MH 1.54 [0.85, 2.78] p=0.14 (86 phonetics)
+no paronomastic                  departing alt (all) 11/126 vs 56/848       GEE 1.27 [0.72, 2.23] p=0.41  MH 1.68 [0.65, 4.34] p=0.3 (86 phonetics)
+no paronomastic                  H1c member dep     8/20 vs 42/147         GEE 1.82 [0.79, 4.22] p=0.16  MH 4.47 [0.65, 30.88] p=0.07 (14 phonetics)
+shared 140                       H1a identical      35/122 vs 133/858      GEE 1.83 [1.18, 2.82] p=0.0065  MH 1.58 [0.90, 2.78] p=0.089 (83 phonetics)
+shared 140                       departing alt (all) 14/122 vs 58/858       GEE 1.57 [0.94, 2.64] p=0.086  MH 2.23 [0.92, 5.40] p=0.083 (83 phonetics)
+shared 140                       H1c member dep     11/24 vs 43/150        GEE 2.32 [1.09, 4.93] p=0.028  MH 6.71 [1.01, 44.73] p=0.016 (17 phonetics)
+shared & no paronomastic (core)  H1a identical      24/92 vs 131/848       GEE 1.59 [0.97, 2.61] p=0.068  MH 1.22 [0.61, 2.46] p=0.56 (63 phonetics)
+shared & no paronomastic (core)  departing alt (all) 9/92 vs 56/848         GEE 1.46 [0.80, 2.69] p=0.22  MH 2.79 [0.91, 8.53] p=0.093 (63 phonetics)
+shared & no paronomastic (core)  H1c member dep     7/16 vs 42/147         GEE 2.03 [0.78, 5.29] p=0.15  MH 4.47 [0.65, 30.88] p=0.07 (12 phonetics)
+
+== 2. 亦声字按版本层 × 声训的中古四分剖面（%）
+both/paronomastic        n=  30 identical 36.7  alt_departing 16.7  alt_other 10.0  other 36.7
+both/plain               n=  92 identical 26.1  alt_departing 9.8  alt_other 7.6  other 56.5
+daxu_only/paronomastic   n=  17 identical 52.9  alt_departing 23.5  alt_other 0.0  other 23.5
+daxu_only/plain          n=  31 identical 48.4  alt_departing 6.5  alt_other 6.5  other 38.7
+unknown/paronomastic     n=   4 identical 75.0  alt_departing 25.0  alt_other 0.0  other 0.0
+unknown/plain            n=   3 identical 33.3  alt_departing 0.0  alt_other 0.0  other 66.7
+ORDINARY                 n= 858 identical 15.5  alt_departing 6.8  alt_other 10.7  other 67.0
+core vs other labelled, identical: 24/92 vs 39/85, Fisher p=0.0075
+
+== 3. 方向基线：两端恰有一端为去声
+tone_voicing_alt   label=1: compound is the departing end 16/21
+tone_voicing_alt   label=0: compound is the departing end 43/58
+other              label=1: compound is the departing end 15/23
+other              label=0: compound is the departing end 76/127
+
+== 4. 例字
+禮 豊 lejX lejX identical nan paronomastic=False layer=both filed=False type=F
+殯 賓 pjinH pjin tone_voicing_alt member paronomastic=True layer=both filed=False type=nan
+貧 分 bin pjun other nan paronomastic=True layer=daxu_only filed=False type=nan
+娶 取 tshjuH tshjuX tone_voicing_alt member paronomastic=True layer=daxu_only filed=False type=nan
+傾 頃 khjwieng khjwieng identical nan paronomastic=False layer=both filed=False type=L
+琀 含 homH hom tone_voicing_alt member paronomastic=False layer=both filed=False type=nan
+憙 喜 xiH xiX tone_voicing_alt member paronomastic=False layer=both filed=True type=nan
+珥 耳 nyiH nyiX tone_voicing_alt member paronomastic=False layer=both filed=False type=nan
+授 受 dzyuwH dzyuwX tone_voicing_alt member paronomastic=False layer=daxu_only filed=False type=nan
+妊 壬 nyimH nyim tone_voicing_alt member paronomastic=False layer=both filed=False type=nan
+腥 星 sengH seng tone_voicing_alt member paronomastic=True layer=both filed=False type=nan
+仲 中 drjuwngH trjuwng tone_voicing_alt member paronomastic=True layer=both filed=False type=nan
+字 子 dziH tsiX tone_voicing_alt member paronomastic=False layer=both filed=True type=nan
+雊 句 kuwH kuw tone_voicing_alt member paronomastic=False layer=both filed=False type=nan
+從 从 dzjowngH dzjowng tone_voicing_alt member paronomastic=False layer=both filed=True type=nan
+政 正 tsyengH tsyengH identical nan paronomastic=True layer=daxu_only filed=False type=L
+婚 昏 xwon xwon identical nan paronomastic=True layer=daxu_only filed=False type=F
+姻 因 'jin 'jin identical nan paronomastic=True layer=daxu_only filed=False type=F
+愾 氣 xj+jH xj+jH identical nan paronomastic=False layer=both filed=False type=F
+恇 匡 khjwang khjwang identical nan paronomastic=False layer=both filed=False type=U
+緉 兩 ljangH ljangX tone_voicing_alt member paronomastic=True layer=unknown filed=False type=nan
+坪 平 bjaengH bjaeng tone_voicing_alt member paronomastic=True layer=daxu_only filed=False type=nan
+婢 卑 bjieX pjie tone_voicing_alt none paronomastic=True layer=both filed=False type=nan
+胖 半 phanH panH other nan paronomastic=True layer=both filed=True type=nan

@@ -1,0 +1,152 @@
+PASS  abstract 150-250 words                                                          200 words by whitespace, 201 if each Chinese character counts, 202 by \w+ (decimals split)
+INFO  abstract margin                                                                 \w+ count 202
+PASS  4-6 keywords                                                                    6: Derivation; Lexical relatedness; Conversion; Phonetic compounds; Chinese writing system; Old Chinese
+PASS  no abbreviations in the abstract                                                
+PASS  decimal headings, at most three levels                                          31 headings; odd ones: []
+PASS  LLM use documented in the Methods (Section 3.6)                                 
+PASS  tables numbered 1..n with Arabic numerals                                       12 tables
+PASS  tables cited in text in consecutive numerical order                             first citations in this order: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+PASS  Table 1: footnote letters in the body match the note                            body ['a'], note ['a']
+INFO  Table 1: caption                                                                
+PASS  Table 2: footnote letters in the body match the note                            body [], note []
+INFO  Table 2: caption                                                                
+PASS  Table 3: footnote letters in the body match the note                            body [], note []
+INFO  Table 3: caption                                                                
+PASS  Table 4: footnote letters in the body match the note                            body [], note []
+INFO  Table 4: caption                                                                
+PASS  Table 5: footnote letters in the body match the note                            body [], note []
+INFO  Table 5: caption                                                                
+PASS  Table 6: footnote letters in the body match the note                            body ['a'], note ['a']
+INFO  Table 6: caption                                                                
+PASS  Table 7: footnote letters in the body match the note                            body [], note []
+INFO  Table 7: caption                                                                
+PASS  Table 8: footnote letters in the body match the note                            body ['a'], note ['a']
+INFO  Table 8: caption                                                                
+PASS  Table 9: footnote letters in the body match the note                            body [], note []
+INFO  Table 9: caption                                                                
+PASS  Table 10: footnote letters in the body match the note                           body [], note []
+INFO  Table 10: caption                                                               
+PASS  Table 11: footnote letters in the body match the note                           body [], note []
+INFO  Table 11: caption                                                               
+PASS  Table 12: footnote letters in the body match the note                           body [], note []
+INFO  Table 12: caption                                                               
+PASS  figure caption begins with bold 'Fig. 1'                                        
+PASS  no punctuation after the figure number or at the end of the caption             
+PASS  figure cited as 'Fig. 1' in the text, never 'Figure 1'                          
+PASS  figure embedded from Fig1.png at 119 mm                                         
+PASS  caption does not rely on colour words                                           
+PASS  reference list alphabetised by first author, then year                          37 entries
+PASS  DOIs written as full https://doi.org/ links                                     
+INFO  entries with a DOI                                                              17 of 37; without: 20 (books, Chinese-language works and proceedings Crossref does not know)
+PASS  journal and book titles italicised                                              
+PASS  every dated reference is cited in the text                                      not found: []
+INFO  in-text name-year pairs without an entry (for a person to look at)              Changzhi's 1873; Guoying 1996; Hledíková 2026; Jianshi 1935; Kuo 1090; Li 1982; Mititelu 2026; Ning 2019; Schuessler's 2007; Shuo 2022; Shushi 2024; Yucai 1815; Yun 1837; Zhang's 2022
+PASS  Statements and Declarations in the manuscript: Data availability                
+PASS  manuscript file has no Funding statement (Snapp double-anonymous instructions)  
+PASS  manuscript file has no Competing interests statement (Snapp double-anonymous instructions)  
+PASS  manuscript file has no Ethics approval and consent statement (Snapp double-anonymous instructions)  
+PASS  manuscript file has no Author contributions statement (Snapp double-anonymous instructions)  
+PASS  manuscript file has no Acknowledgements statement (Snapp double-anonymous instructions)  
+PASS  manuscript file has no Acknowledgments statement (Snapp double-anonymous instructions)  
+PASS  no author names or contributions in the anonymised manuscript                   
+PASS  Online Resources: cited ones are listed with a caption, numbered 1..n           listed [1, 2, 3, 4, 5, 6, 7], cited [1, 2, 3, 4, 5, 6, 7]
+PASS  every Online Resource is cited in the text, first citations in numerical order  first citations: [1, 2, 3, 4, 5, 6, 7]
+PASS  each Online Resource is listed with its file name ESM_n.ext and a caption       
+PASS  no unresolved markers in the anonymised manuscript                              
+PASS  no placeholders in the anonymised manuscript                                    
+PASS  title page and cover letter complete                                            0 placeholders left
+PASS  title page has: Corresponding author                                            
+PASS  title page has: Acknowledgements                                                
+PASS  title page has: Author contributions                                            
+PASS  title page has: Funding                                                         
+PASS  title page has: Competing interests                                             
+PASS  title page has: Data availability                                               
+PASS  anonymised manuscript does not contain 'Yusen'                                  
+PASS  anonymised manuscript does not contain 'Weiyi'                                  
+PASS  anonymised manuscript does not contain 'WuYusen'                                
+PASS  anonymised manuscript does not contain 'Beijing Foreign'                        
+PASS  anonymised manuscript does not contain 'BFSU'                                   
+PASS  anonymised manuscript does not contain 'Foreign Studies'                        
+PASS  anonymised manuscript does not contain 'github.com/WuYusen825'                  
+PASS  Manuscript_anonymised.docx exists                                               
+PASS  Manuscript_anonymised.docx: A4                                                  
+PASS  Manuscript_anonymised.docx: automatic page numbers, no other field codes        
+PASS  Manuscript_anonymised.docx: no endnotes                                         
+PASS  Manuscript_anonymised.docx: no tracked changes or comments                      
+PASS  Manuscript_anonymised.docx: Times New Roman                                     
+PASS  Manuscript_anonymised.docx: no 'Yusen' in any part of the file                  
+PASS  Manuscript_anonymised.docx: no 'Weiyi' in any part of the file                  
+PASS  Manuscript_anonymised.docx: no 'WuYusen' in any part of the file                
+PASS  Manuscript_anonymised.docx: no 'Beijing Foreign' in any part of the file        
+PASS  Manuscript_anonymised.docx: no 'BFSU' in any part of the file                   
+PASS  Manuscript_anonymised.docx: no 'Foreign Studies' in any part of the file        
+PASS  Manuscript_anonymised.docx: no 'github.com/WuYusen825' in any part of the file  
+PASS  Manuscript_anonymised.docx: author properties empty                             
+PASS  Manuscript_anonymised.docx: 12 tables as Word tables                            
+PASS  Manuscript_anonymised.docx: three-line tables                                   
+PASS  Manuscript_anonymised.docx: bold header rows                                    
+PASS  Manuscript_anonymised.docx: one figure, 119 mm wide                             
+PASS  Manuscript_anonymised.docx: figure has alternative text                         
+INFO  Manuscript_anonymised.docx: footnotes                                           0 (the paper uses none; Springer asks for footnotes, never endnotes)
+PASS  Title_page.docx exists                                                          
+PASS  Title_page.docx: A4                                                             
+PASS  Title_page.docx: automatic page numbers, no other field codes                   
+PASS  Title_page.docx: no endnotes                                                    
+PASS  Title_page.docx: no tracked changes or comments                                 
+PASS  Title_page.docx: Times New Roman                                                
+PASS  Cover_letter.docx exists                                                        
+PASS  Cover_letter.docx: A4                                                           
+PASS  Cover_letter.docx: automatic page numbers, no other field codes                 
+PASS  Cover_letter.docx: no endnotes                                                  
+PASS  Cover_letter.docx: no tracked changes or comments                               
+PASS  Cover_letter.docx: Times New Roman                                              
+PASS  Fig1.png exists (Springer naming: Fig + number)                                 
+PASS  Fig1.eps exists (Springer naming: Fig + number)                                 
+PASS  Fig1.tif exists (Springer naming: Fig + number)                                 
+PASS  Snapp: figure at least 1500 x 1200 pixels                                       2811 x 2490
+PASS  Fig1.png at 600 dpi                                                             (599.9988, 599.9988)
+PASS  figure 119 mm wide, at most 195 mm high                                         119 x 105 mm
+PASS  RGB (8 bits per channel)                                                        
+PASS  Fig1.png: no metadata beyond the resolution (no author, no software, no path)   ['dpi']
+PASS  Fig1.tif: 600 dpi RGB                                                           (2811, 2490), tiff_lzw
+PASS  Fig1.tif: no description, camera, software, date, artist, host or copyright tags  
+PASS  Fig1.eps is an EPS file                                                         
+PASS  Fig1.eps 119 mm wide                                                            119 mm
+PASS  Fig1.eps: fonts embedded                                                        
+PASS  Fig1.eps: no author, for or copyright line, no author's name                    
+PASS  no paragraph that is mostly Chinese                                             0 found
+INFO  Chinese characters in the text                                                  473 characters against 10939 Latin-script words; they are examples and data, with pinyin or English
+PASS  supplement folder holds exactly the files named in the manuscript, ESM_n.ext    ['ESM_1.pdf', 'ESM_2.xlsx', 'ESM_3.xlsx', 'ESM_4.pdf', 'ESM_5.zip', 'ESM_6.xlsx', 'ESM_7.zip']
+PASS  ESM_1.pdf: caption on page 1 identical to the manuscript's (apart from straight versus curly quotation marks), authors and corresponding author withheld  13 pages
+PASS  ESM_1.pdf: PDF properties without author, creator or producer                   title: 'Online Resource 1: guide to the electronic supplementary material'; filled: []
+PASS  ESM_1.pdf: no author name, affiliation, e-mail address, local path or session id in any text or member  []
+PASS  ESM_2.xlsx: sheet About carries the manuscript's caption, authors and corresponding author withheld  sheets 5, first About, last data_dictionary
+PASS  ESM_2.xlsx: first sheet About, last sheet data_dictionary                       
+PASS  ESM_2.xlsx: workbook properties empty (no creator, last modifier, company)      filled: []
+PASS  ESM_2.xlsx: no author name, affiliation, e-mail address, local path or session id in any text or member  []
+PASS  ESM_3.xlsx: sheet About carries the manuscript's caption, authors and corresponding author withheld  sheets 6, first About, last data_dictionary
+PASS  ESM_3.xlsx: first sheet About, last sheet data_dictionary                       
+PASS  ESM_3.xlsx: workbook properties empty (no creator, last modifier, company)      filled: []
+PASS  ESM_3.xlsx: no author name, affiliation, e-mail address, local path or session id in any text or member  []
+PASS  ESM_4.pdf: caption on page 1 identical to the manuscript's (apart from straight versus curly quotation marks), authors and corresponding author withheld  9 pages
+PASS  ESM_4.pdf: PDF properties without author, creator or producer                   title: 'Online Resource 4: analysis plan for the enlarged coding'; filled: []
+PASS  ESM_4.pdf: no author name, affiliation, e-mail address, local path or session id in any text or member  []
+PASS  ESM_5.zip: README caption identical to the manuscript's (apart from straight versus curly quotation marks), authors and corresponding author withheld  34 members
+PASS  ESM_5.zip: one root folder, no hidden or system files, no zip comment           ['enlarged_coding_materials']
+PASS  ESM_5.zip: workbooks inside have empty properties                               []
+PASS  ESM_5.zip: no author name, affiliation, e-mail address, local path or session id in any text or member  []
+PASS  ESM_6.xlsx: sheet About carries the manuscript's caption, authors and corresponding author withheld  sheets 21, first About, last data_dictionary
+PASS  ESM_6.xlsx: first sheet About, last sheet data_dictionary                       
+PASS  ESM_6.xlsx: workbook properties empty (no creator, last modifier, company)      filled: []
+PASS  ESM_6.xlsx: no author name, affiliation, e-mail address, local path or session id in any text or member  []
+PASS  ESM_7.zip: README caption identical to the manuscript's (apart from straight versus curly quotation marks), authors and corresponding author withheld  69 members
+PASS  ESM_7.zip: one root folder, no hidden or system files, no zip comment           ['analysis_code']
+PASS  ESM_7.zip: workbooks inside have empty properties                               []
+PASS  ESM_7.zip: no author name, affiliation, e-mail address, local path or session id in any text or member  []
+PASS  data rows per sheet (1,333 pairs; 227 collated; 104 checked; 100, 767, 126 and 203 codings)  {'pairs': 1333, 'recension_collation': 227, 'daxu_spotcheck': 104, 'first_sample': 100, 'enlarged_coding': 767, 'author_check': 126, 'second_answers': 203}
+PASS  the numbers behind these row counts are the ones stated in the captions         ['1,333 extracted pairs', '104 entries', '126 pairs', '227 labelled entries', '677 new items', '767 pairs', '90 first-sample items']
+PASS  ESM_5: 14 prompts, 14 raw answers and the 2 unused second answers               34 files: 14 prompts, 16 answer files
+PASS  ESM_7: 69 members (67 files of the package, the Apache-2.0 licence text and the NOTICE)  69
+PASS  ESM_7: unpacked and run (python scripts/run_all.py): all checks pass, exit status 0  249 checks passed, 0 failed
+
+133 passed, 0 failed, 17 for information

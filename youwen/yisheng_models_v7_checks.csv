@@ -1,0 +1,97 @@
+﻿section,comparison,labelled_hits,labelled_n,labelled_rate,ordinary_hits,ordinary_n,ordinary_rate,gee_OR,gee_CI95,gee_p_two_sided,mh_strata,mh_labelled_n,mh_ordinary_n,mh_OR,mh_CI95,cmh_p_two_sided,fisher_p_two_sided,note
+MC profile (all MC pairs),MC category: identical,63,177,0.356,133,858,0.155,2.38,1.69-3.34,5.8e-07,121,148,839,2.15,1.36-3.42,0.00056,6e-09,mutually exclusive categories; denominators = all pairs with MC readings at both ends
+MC profile (all MC pairs),MC category: alt_departing,21,177,0.119,58,858,0.068,1.64,1.04-2.57,0.032,121,148,839,2.05,1.03-4.11,0.039,0.028,mutually exclusive categories; denominators = all pairs with MC readings at both ends
+MC profile (all MC pairs),MC category: alt_other,12,177,0.068,92,858,0.107,0.62,0.33-1.14,0.13,121,148,839,0.61,0.28-1.30,0.2,0.13,mutually exclusive categories; denominators = all pairs with MC readings at both ends
+MC profile (all MC pairs),MC category: other,81,177,0.458,575,858,0.67,0.52,0.38-0.70,2.6e-05,121,148,839,0.44,0.28-0.70,0.00034,2.1e-07,mutually exclusive categories; denominators = all pairs with MC readings at both ends
+within-series,H1a MC identical (within phonetic),63,177,0.356,133,858,0.155,2.38,1.69-3.34,5.8e-07,121,148,839,2.15,1.36-3.42,0.00056,6e-09,MH pooled over phonetics with both labelled and ordinary members
+within-series,H1c member departing | tone/voicing alternation (within phonetic),16,33,0.485,43,150,0.287,2.44,1.34-4.48,0.0038,22,24,77,7.35,1.09-49.46,0.011,0.039,
+within-series,departing tone involved | tone/voicing alternation,21,33,0.636,58,150,0.387,2.42,1.32-4.46,0.0044,22,24,77,7.35,1.09-49.46,0.011,0.011,step 1 of the H1c decomposition
+within-series,non-departing tone/voicing alternation | non-identical MC pairs,12,114,0.105,92,725,0.127,0.7,0.36-1.36,0.29,80,93,566,0.47,0.19-1.15,0.093,0.65,the MC part of H1b once departing-tone alternations are set aside
+within-series,departing-tone alternation | non-identical MC pairs,21,114,0.184,58,725,0.08,2.12,1.38-3.26,0.00063,80,93,566,3.05,1.24-7.49,0.0083,0.0015,
+direction,member departing | departing-tone alternation,16,21,0.762,43,58,0.741,0.27,0.03-2.78,0.27,12,13,30,nan,nan-nan,nan,1,step 2 of the H1c decomposition
+direction,member departing | departing-tone alternation: conditional MLE OR (exact CI),16,21,0.762,43,58,0.741,1.11,0.31-4.57,,,,,,,,,columns gee_OR/gee_CI95 here hold the conditional MLE OR and its exact 95% CI
+OC R split,OC R (any) | non-identical OC pairs,18,45,0.4,84,236,0.356,1.17,0.62-2.22,0.63,31,33,86,0.89,0.30-2.63,0.84,0.61,H1b-OC as in yisheng_models.csv
+OC R split,OC R involving *-s | non-identical OC pairs,8,45,0.178,21,236,0.089,2.01,0.98-4.10,0.057,31,33,86,1.4,0.27-7.33,0.73,0.1,R with a suffix change involving -s (affix detail contains -s)
+OC R split,OC R not involving *-s | non-identical OC pairs,10,45,0.222,63,236,0.267,0.81,0.39-1.65,0.56,31,33,86,0.69,0.18-2.63,0.59,0.58,other affixes and alternations only
+MC other alternations split (descriptive),"non-departing alternation, voicing only | non-identical MC pairs",6,114,0.053,35,725,0.048,,,,,,,,,,0.82,descriptive; subcategories of alt_other
+MC other alternations split (descriptive),"non-departing alternation, level/rising tone only | non-identical MC pairs",5,114,0.044,48,725,0.066,,,,,,,,,,0.53,descriptive; subcategories of alt_other
+MC other alternations split (descriptive),"non-departing alternation, voicing and level/rising tone | non-identical MC pairs",1,114,0.009,9,725,0.012,,,,,,,,,,1,descriptive; subcategories of alt_other
+paronomastic glosses removed,"H1a MC identical, paronomastic glosses removed",40,126,0.317,131,848,0.154,1.99,1.34-2.96,0.00068,86,100,567,1.54,0.85-2.78,0.14,2.6e-05,expected counts as in v6 Table 2: 40/126 vs 131/848
+paronomastic glosses removed,"H1c member departing | tone/voicing alternation, paronomastic glosses removed",8,20,0.4,42,147,0.286,1.82,0.79-4.22,0.16,14,15,38,4.47,0.65-30.88,0.07,0.31,
+paronomastic glosses removed,"departing-tone alternation | all MC pairs, paronomastic glosses removed",11,126,0.087,56,848,0.066,1.27,0.72-2.23,0.41,86,100,567,1.68,0.65-4.34,0.3,0.35,
+direction baseline (descriptive),"member is the departing-tone end, pairs with exactly one departing end: tone/voicing-only pairs (labelled columns) vs pairs differing in other ways too (ordinary columns); labelled and ordinary compounds pooled",59,79,0.747,91,150,0.607,,,,,,,,,,0.041,baseline for the configuration effect; columns here are not labelled vs ordinary
+direction baseline (descriptive),"member is the departing-tone end, pairs differing in other ways too, labelled compounds only",15,23,0.652,,,,,,,,,,,,,,descriptive
+direction baseline (descriptive),"member is the departing-tone end, pairs differing in other ways too, ordinary compounds only",76,127,0.598,,,,,,,,,,,,,,descriptive
+labelled pairs by recension layer (descriptive),MC category: identical; shared layer (labelled columns) vs Da Xu-only layer (ordinary columns),35,122,0.287,24,48,0.5,,,,,,,,,,0.012,labelled pairs only; undecidable layer (7 pairs) left out
+labelled pairs by recension layer (descriptive),MC category: alt_departing; shared layer (labelled columns) vs Da Xu-only layer (ordinary columns),14,122,0.115,6,48,0.125,,,,,,,,,,0.8,labelled pairs only; undecidable layer (7 pairs) left out
+labelled pairs by recension layer (descriptive),MC category: alt_other; shared layer (labelled columns) vs Da Xu-only layer (ordinary columns),10,122,0.082,2,48,0.042,,,,,,,,,,0.51,labelled pairs only; undecidable layer (7 pairs) left out
+labelled pairs by recension layer (descriptive),MC category: other; shared layer (labelled columns) vs Da Xu-only layer (ordinary columns),63,122,0.516,16,48,0.333,,,,,,,,,,0.04,labelled pairs only; undecidable layer (7 pairs) left out
+remote pairs (descriptive),MC initial and final both differ | pairs in the other-difference category,45,81,0.556,284,575,0.494,,,,,,,,,,0.34,descriptive; the rest differ in initial only or in final only (tone may also differ)
+remote pairs (descriptive),OC relation R (affix or regular alternation only) | other-difference pairs with OC forms at both ends,6,29,0.207,48,179,0.268,,,,,,,,,,0.65,descriptive; OC categories as in youwen_criteria.md
+remote pairs (descriptive),coded semantically related (Y or E) | labelled other-difference pairs in the blind-coded sample,10,18,0.556,,,,,,,,,,,,,,descriptive; chars: 單舌詔息吏杽愷詵鼓窞必患羞係姓酒可舒
+recension layers (descriptive),MC identical among labels not filed under their phonetic: Da Xu-only (labelled columns) vs shared (ordinary columns),24,46,0.522,26,90,0.289,,,,,,,,,,0.0091,H3 without the filed-under labels (37 of the 40 are in the shared layer)
+recension layers (descriptive),paronomastic gloss (gloss uses the phonetic) among labelled entries: Da Xu-only (labelled columns) vs shared (ordinary columns),21,62,0.339,31,140,0.221,,,,,,,,,,0.084,"entries, not pairs; all 202 labelled entries of the two layers"
+related pairs only (descriptive),MC identical or departing-tone alternation | blind-coded pairs coded related (Y or E) with MC readings,14,25,0.56,2,6,0.333,,,,,,,,,,0.39,the comparison that would separate a meaning-first account from one in which the label also tracks sound; too few related ordinary pairs to decide
+related pairs only (descriptive),MC identical | blind-coded pairs coded related (Y or E) with MC readings,9,25,0.36,1,6,0.167,,,,,,,,,,0.63,the comparison that would separate a meaning-first account from one in which the label also tracks sound; too few related ordinary pairs to decide
+related pairs only (descriptive),"coded related (Y or E) | MC category identical, labelled and ordinary pooled",10,13,0.769,,,,,,,,,,,,,,descriptive; blind-coded sample
+related pairs only (descriptive),"coded related (Y or E) | MC category alt_departing, labelled and ordinary pooled",6,7,0.857,,,,,,,,,,,,,,descriptive; blind-coded sample
+related pairs only (descriptive),"coded related (Y or E) | MC category alt_other, labelled and ordinary pooled",1,6,0.167,,,,,,,,,,,,,,descriptive; blind-coded sample
+related pairs only (descriptive),"coded related (Y or E) | MC category other, labelled and ordinary pooled",14,53,0.264,,,,,,,,,,,,,,descriptive; blind-coded sample
+related pairs only (descriptive),MC identical or departing-tone alternation within labelled pairs: coded related (labelled columns) vs coded unrelated (ordinary columns),14,25,0.56,0,8,0.0,,,,,,,,,,0.01,"columns reused: here ""labelled"" = related pairs and ""ordinary"" = unrelated pairs of the one group named"
+related pairs only (descriptive),MC identical or departing-tone alternation within ordinary pairs: coded related (labelled columns) vs coded unrelated (ordinary columns),2,6,0.333,4,40,0.1,,,,,,,,,,0.17,"columns reused: here ""labelled"" = related pairs and ""ordinary"" = unrelated pairs of the one group named"
+Duan notes: head entries (descriptive),head entries whose Duan notes contain 形聲包會意,128,9833,,,,,,,,,,,,,,,each head entry counted once
+Duan notes: head entries (descriptive),head entries whose Duan notes contain 形聲中有會意,29,9833,,,,,,,,,,,,,,,each head entry counted once
+Duan notes: head entries (descriptive),head entries whose Duan notes contain 形聲兼會意,5,9833,,,,,,,,,,,,,,,each head entry counted once
+Duan notes: head entries (descriptive),head entries whose Duan notes contain 會意兼形聲,20,9833,,,,,,,,,,,,,,,each head entry counted once
+Duan notes: head entries (descriptive),head entries whose Duan notes contain 會意包形聲,22,9833,,,,,,,,,,,,,,,each head entry counted once
+Duan notes: head entries (descriptive),head entries whose Duan notes contain any of the five phrases,203,9833,,,,,,,,,,,,,,,each head entry counted once
+combined checks,H1a MC identical | paronomastic glosses removed,40,126,0.317,131,848,0.154,1.99,1.34-2.96,0.00068,86,100,567,1.54,0.85-2.78,0.14,2.6e-05,"labelled entries dropped, all ordinary compounds kept"
+combined checks,departing-tone alternation | all MC pairs | paronomastic glosses removed,11,126,0.087,56,848,0.066,1.27,0.72-2.23,0.41,86,100,567,1.68,0.65-4.34,0.3,0.35,"labelled entries dropped, all ordinary compounds kept"
+combined checks,H1c member departing | tone/voicing alternation | paronomastic glosses removed,8,20,0.4,42,147,0.286,1.82,0.79-4.22,0.16,14,15,38,4.47,0.65-30.88,0.07,0.31,"labelled entries dropped, all ordinary compounds kept"
+combined checks,H1a MC identical | shared labels only,35,122,0.287,133,858,0.155,1.83,1.18-2.82,0.0065,83,99,560,1.58,0.90-2.78,0.089,0.00073,"labelled entries dropped, all ordinary compounds kept"
+combined checks,departing-tone alternation | all MC pairs | shared labels only,14,122,0.115,58,858,0.068,1.57,0.94-2.64,0.086,83,99,560,2.23,0.92-5.40,0.083,0.092,"labelled entries dropped, all ordinary compounds kept"
+combined checks,H1c member departing | tone/voicing alternation | shared labels only,11,24,0.458,43,150,0.287,2.32,1.09-4.93,0.028,17,19,55,6.71,1.01-44.73,0.016,0.1,"labelled entries dropped, all ordinary compounds kept"
+combined checks,H1a MC identical | core: shared labels without paronomastic glosses,24,92,0.261,131,848,0.154,1.59,0.97-2.61,0.068,63,72,414,1.22,0.61-2.46,0.56,0.012,"labelled entries dropped, all ordinary compounds kept"
+combined checks,departing-tone alternation | all MC pairs | core: shared labels without paronomastic glosses,9,92,0.098,56,848,0.066,1.46,0.80-2.69,0.22,63,72,414,2.79,0.91-8.53,0.093,0.28,"labelled entries dropped, all ordinary compounds kept"
+combined checks,H1c member departing | tone/voicing alternation | core: shared labels without paronomastic glosses,7,16,0.438,42,147,0.286,2.03,0.78-5.29,0.15,12,13,29,4.47,0.65-30.88,0.07,0.25,"labelled entries dropped, all ordinary compounds kept"
+combined checks,H1a MC identical | Wang Yun's nine rejected labels removed,59,168,0.351,133,858,0.155,2.37,1.68-3.36,1.2e-06,115,139,787,2.26,1.40-3.64,0.00038,3.2e-08,"labelled entries dropped, all ordinary compounds kept"
+combined checks,departing-tone alternation | all MC pairs | Wang Yun's nine rejected labels removed,18,168,0.107,58,858,0.068,1.42,0.89-2.25,0.14,115,139,787,1.63,0.78-3.41,0.2,0.078,"labelled entries dropped, all ordinary compounds kept"
+combined checks,H1c member departing | tone/voicing alternation | Wang Yun's nine rejected labels removed,13,29,0.448,43,150,0.287,2.21,1.14-4.29,0.019,20,22,66,7.35,1.09-49.46,0.011,0.12,"labelled entries dropped, all ordinary compounds kept"
+combined checks,H1a MC identical | labels filed under own phonetic removed,54,143,0.378,133,858,0.155,2.51,1.74-3.60,6.7e-07,105,125,745,2.17,1.32-3.56,0.0011,5e-09,"labelled entries dropped, all ordinary compounds kept"
+combined checks,departing-tone alternation | all MC pairs | labels filed under own phonetic removed,18,143,0.126,58,858,0.068,1.69,1.04-2.75,0.034,105,125,745,2.02,0.96-4.26,0.06,0.025,"labelled entries dropped, all ordinary compounds kept"
+combined checks,H1c member departing | tone/voicing alternation | labels filed under own phonetic removed,13,26,0.5,43,150,0.287,2.58,1.39-4.81,0.0028,18,19,67,inf,nan-nan,0.0093,0.04,"labelled entries dropped, all ordinary compounds kept"
+labelled pairs by layer and gloss type (descriptive),"MC category identical | both layer, paronomastic gloss",11,30,0.367,,,,,,,,,,,,,,descriptive
+labelled pairs by layer and gloss type (descriptive),"MC category alt_departing | both layer, paronomastic gloss",5,30,0.167,,,,,,,,,,,,,,descriptive
+labelled pairs by layer and gloss type (descriptive),"MC category alt_other | both layer, paronomastic gloss",3,30,0.1,,,,,,,,,,,,,,descriptive
+labelled pairs by layer and gloss type (descriptive),"MC category other | both layer, paronomastic gloss",11,30,0.367,,,,,,,,,,,,,,descriptive
+labelled pairs by layer and gloss type (descriptive),"MC category identical | both layer, plain gloss",24,92,0.261,,,,,,,,,,,,,,descriptive
+labelled pairs by layer and gloss type (descriptive),"MC category alt_departing | both layer, plain gloss",9,92,0.098,,,,,,,,,,,,,,descriptive
+labelled pairs by layer and gloss type (descriptive),"MC category alt_other | both layer, plain gloss",7,92,0.076,,,,,,,,,,,,,,descriptive
+labelled pairs by layer and gloss type (descriptive),"MC category other | both layer, plain gloss",52,92,0.565,,,,,,,,,,,,,,descriptive
+labelled pairs by layer and gloss type (descriptive),"MC category identical | daxu_only layer, paronomastic gloss",9,17,0.529,,,,,,,,,,,,,,descriptive
+labelled pairs by layer and gloss type (descriptive),"MC category alt_departing | daxu_only layer, paronomastic gloss",4,17,0.235,,,,,,,,,,,,,,descriptive
+labelled pairs by layer and gloss type (descriptive),"MC category alt_other | daxu_only layer, paronomastic gloss",0,17,0.0,,,,,,,,,,,,,,descriptive
+labelled pairs by layer and gloss type (descriptive),"MC category other | daxu_only layer, paronomastic gloss",4,17,0.235,,,,,,,,,,,,,,descriptive
+labelled pairs by layer and gloss type (descriptive),"MC category identical | daxu_only layer, plain gloss",15,31,0.484,,,,,,,,,,,,,,descriptive
+labelled pairs by layer and gloss type (descriptive),"MC category alt_departing | daxu_only layer, plain gloss",2,31,0.065,,,,,,,,,,,,,,descriptive
+labelled pairs by layer and gloss type (descriptive),"MC category alt_other | daxu_only layer, plain gloss",2,31,0.065,,,,,,,,,,,,,,descriptive
+labelled pairs by layer and gloss type (descriptive),"MC category other | daxu_only layer, plain gloss",12,31,0.387,,,,,,,,,,,,,,descriptive
+labelled pairs by layer and gloss type (descriptive),"MC category identical | unknown layer, paronomastic gloss",3,4,0.75,,,,,,,,,,,,,,descriptive
+labelled pairs by layer and gloss type (descriptive),"MC category alt_departing | unknown layer, paronomastic gloss",1,4,0.25,,,,,,,,,,,,,,descriptive
+labelled pairs by layer and gloss type (descriptive),"MC category alt_other | unknown layer, paronomastic gloss",0,4,0.0,,,,,,,,,,,,,,descriptive
+labelled pairs by layer and gloss type (descriptive),"MC category other | unknown layer, paronomastic gloss",0,4,0.0,,,,,,,,,,,,,,descriptive
+labelled pairs by layer and gloss type (descriptive),"MC category identical | unknown layer, plain gloss",1,3,0.333,,,,,,,,,,,,,,descriptive
+labelled pairs by layer and gloss type (descriptive),"MC category alt_departing | unknown layer, plain gloss",0,3,0.0,,,,,,,,,,,,,,descriptive
+labelled pairs by layer and gloss type (descriptive),"MC category alt_other | unknown layer, plain gloss",0,3,0.0,,,,,,,,,,,,,,descriptive
+labelled pairs by layer and gloss type (descriptive),"MC category other | unknown layer, plain gloss",2,3,0.667,,,,,,,,,,,,,,descriptive
+labelled pairs by layer and gloss type (descriptive),MC identical: core labels (labelled columns) vs all other labels (ordinary columns),24,92,0.261,39,85,0.459,,,,,,,,,,0.0075,core = shared by both recensions and without a paronomastic gloss
+Duan notes (exploratory),MC identical: ordinary compounds with a Duan meaningful-phonetic note (labelled columns) vs other ordinary compounds (ordinary columns),4,21,0.19,129,837,0.154,,,,,,,,,,0.55,notes matched: 形聲包會意/形聲中有會意/會意包形聲/會意兼形聲/亦聲; flagged chars: 朻駫攽盼埤販鞈挾空曠鬀𧼏盛𨒌鎎笙鋻騶媿齍眽
+Duan notes (exploratory),MC identical: labelled (labelled columns) vs Duan-noted ordinary compounds (ordinary columns),63,177,0.356,4,21,0.19,,,,,,,,,,0.15,descriptive; 21 or so items only
+Duan notes (exploratory),MC departing-tone alternation: Duan-noted ordinary (labelled columns) vs other ordinary (ordinary columns),2,21,0.095,56,837,0.067,,,,,,,,,,0.65,descriptive
+exploratory comparisons (two-sided),MC identical: labels filed under their own phonetic (labelled columns) vs other labels (ordinary columns),9,34,0.265,54,143,0.378,,,,,,,,,,0.24,H4; yisheng_summary.csv gives one-sided p = 0.15 for the same counts
+exploratory comparisons (two-sided),MC identical: labels Duan drops (labelled columns) vs labels Duan keeps (ordinary columns),13,32,0.406,49,143,0.343,,,,,,,,,,0.54,"H3, Duan layer; entries without Duan text in the data left out"
+blind sample frame,H2 related (Y or E) | ordinary pairs outside the 172-phonetic comparison frame removed,25,33,0.758,6,46,0.13,20.19,6.56-62.13,1.6e-07,,,,,,,1.9e-08,"removed: 4 ordinary pairs (卒:碎、責:積、卒:淬、卒:焠), all coded unrelated; all 83 pairs give GEE OR 22.0"
+blind sample frame,descriptive logit on the 79 in-frame pairs: MC identical ~ label + related | coefficient of coded related,,,,,,,5.91,1.06-32.99,0.043,,,,,,,,"ordinary logistic regression, not GEE (columns gee_* hold its OR, Wald CI and p); same model as manuscript_checks.py on its 83 pairs"
+blind sample frame,descriptive logit on the 79 in-frame pairs: MC identical ~ label + related | coefficient of label,,,,,,,1.35,0.26-6.93,0.72,,,,,,,,"ordinary logistic regression, not GEE (columns gee_* hold its OR, Wald CI and p); same model as manuscript_checks.py on its 83 pairs"
+blind sample frame,descriptive logit on the 79 in-frame pairs: MC identical or departing-tone alternation ~ label + related | coefficient of coded related,,,,,,,10.06,2.17-46.58,0.0031,,,,,,,,"ordinary logistic regression, not GEE (columns gee_* hold its OR, Wald CI and p); same model as manuscript_checks.py on its 83 pairs"
+blind sample frame,descriptive logit on the 79 in-frame pairs: MC identical or departing-tone alternation ~ label + related | coefficient of label,,,,,,,1.28,0.29-5.55,0.74,,,,,,,,"ordinary logistic regression, not GEE (columns gee_* hold its OR, Wald CI and p); same model as manuscript_checks.py on its 83 pairs"
