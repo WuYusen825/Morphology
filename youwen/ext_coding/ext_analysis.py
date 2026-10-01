@@ -201,7 +201,7 @@ for grp, nm in [(1, 'labelled'), (0, 'ordinary')]:
     add('secondary', f'S9 near ~ related within {nm} pairs, pass-1 codes', P[P.label == grp], 'near', x='related',
         note='group1 = related, group0 = unrelated; old (v7): ' + ('14/25 vs 0/8' if grp else '2/6 vs 4/40'))
 
-# ---------- 6b. 探索（编码完成、看过主结果之后加入，见 analysis_plan.md §7；不是预注册检验，不进判读） ----------
+# ---------- 6b. 探索（编码完成、看过主结果之后加入，见 analysis_plan.md §7；不是分析前已固定的检验，不进判读） ----------
 PE = frame('code1', related=('E',))
 add('exploratory', 'X1 near ~ label | pairs coded E only, pass-1 codes (stand-in for S6, which is not estimable)', PE[PE.related == 1], 'near',
     note='added after the first run: S6 has only 4 ordinary pairs coded Y (0 near), so the strength-of-relatedness bias is checked within E instead')
