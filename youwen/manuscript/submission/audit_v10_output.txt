@@ -116,6 +116,37 @@ PASS  Fig1.eps: fonts embedded
 PASS  Fig1.eps: no author, for or copyright line, no author's name                    
 PASS  no paragraph that is mostly Chinese                                             0 found
 INFO  Chinese characters in the text                                                  473 characters against 10976 Latin-script words; they are examples and data, with pinyin or English
-INFO  supplement files (submission/supplement/)                                       not in the repository yet
+PASS  supplement folder holds exactly the files named in the manuscript, ESM_n.ext    ['ESM_1.pdf', 'ESM_2.xlsx', 'ESM_3.xlsx', 'ESM_4.pdf', 'ESM_5.zip', 'ESM_6.xlsx', 'ESM_7.zip']
+PASS  ESM_1.pdf: caption on page 1 identical to the manuscript's, authors and corresponding author withheld  13 pages
+PASS  ESM_1.pdf: PDF properties without author, creator or producer                   title: 'Online Resource 1: guide to the electronic supplementary material'; filled: []
+PASS  ESM_1.pdf: no author name, affiliation, e-mail address, local path or session id in any text or member  []
+PASS  ESM_2.xlsx: sheet About carries the manuscript's caption, authors and corresponding author withheld  sheets 5, first About, last data_dictionary
+PASS  ESM_2.xlsx: first sheet About, last sheet data_dictionary                       
+PASS  ESM_2.xlsx: workbook properties empty (no creator, last modifier, company)      filled: []
+PASS  ESM_2.xlsx: no author name, affiliation, e-mail address, local path or session id in any text or member  []
+PASS  ESM_3.xlsx: sheet About carries the manuscript's caption, authors and corresponding author withheld  sheets 6, first About, last data_dictionary
+PASS  ESM_3.xlsx: first sheet About, last sheet data_dictionary                       
+PASS  ESM_3.xlsx: workbook properties empty (no creator, last modifier, company)      filled: []
+PASS  ESM_3.xlsx: no author name, affiliation, e-mail address, local path or session id in any text or member  []
+PASS  ESM_4.pdf: caption on page 1 identical to the manuscript's, authors and corresponding author withheld  9 pages
+PASS  ESM_4.pdf: PDF properties without author, creator or producer                   title: 'Online Resource 4: analysis plan for the enlarged coding'; filled: []
+PASS  ESM_4.pdf: no author name, affiliation, e-mail address, local path or session id in any text or member  []
+PASS  ESM_5.zip: README caption identical to the manuscript's, authors and corresponding author withheld  34 members
+PASS  ESM_5.zip: one root folder, no hidden or system files, no zip comment           ['enlarged_coding_materials']
+PASS  ESM_5.zip: workbooks inside have empty properties                               []
+PASS  ESM_5.zip: no author name, affiliation, e-mail address, local path or session id in any text or member  []
+PASS  ESM_6.xlsx: sheet About carries the manuscript's caption, authors and corresponding author withheld  sheets 21, first About, last data_dictionary
+PASS  ESM_6.xlsx: first sheet About, last sheet data_dictionary                       
+PASS  ESM_6.xlsx: workbook properties empty (no creator, last modifier, company)      filled: []
+PASS  ESM_6.xlsx: no author name, affiliation, e-mail address, local path or session id in any text or member  []
+PASS  ESM_7.zip: README caption identical to the manuscript's, authors and corresponding author withheld  67 members
+PASS  ESM_7.zip: one root folder, no hidden or system files, no zip comment           ['analysis_code']
+PASS  ESM_7.zip: workbooks inside have empty properties                               []
+PASS  ESM_7.zip: no author name, affiliation, e-mail address, local path or session id in any text or member  []
+PASS  data rows per sheet (1,333 pairs; 227 collated; 104 checked; 100, 767, 126 and 203 codings)  {'pairs': 1333, 'recension_collation': 227, 'daxu_spotcheck': 104, 'first_sample': 100, 'enlarged_coding': 767, 'author_check': 126, 'second_answers': 203}
+PASS  the numbers behind these row counts are the ones stated in the captions         ['1,333 extracted pairs', '104 entries', '126 pairs', '227 labelled entries', '677 new items', '767 pairs', '90 first-sample items']
+PASS  ESM_5: 14 prompts, 14 raw answers and the 2 unused second answers               34 files: 14 prompts, 16 answer files
+PASS  ESM_7: 67 members                                                               67
+PASS  ESM_7: unpacked and run (python scripts/run_all.py): all checks pass, exit status 0  249 checks passed, 0 failed
 
-101 passed, 0 failed, 18 for information
+133 passed, 0 failed, 17 for information

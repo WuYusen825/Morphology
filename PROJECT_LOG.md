@@ -414,3 +414,11 @@
 - **作者贡献的英文**（CRediT 写法，**待 Qu 确认**）：“Yusen Wu: conceptualization, methodology, data curation, software, formal analysis, investigation, visualization, writing – original draft, writing – review and editing. Weiyi Qu: investigation (coding) and literature review.” 只按 Qu 的原话（Wu 做除编码和文献综述之外的全部，Qu 参与编码和文献综述）拆成通行类别，没有添加别的 “谁做了什么”。
 - **仍待**：作者贡献句子的确认、补充材料许可、数据线程改 ESM 措辞后补充材料入库。
 - **未改动**：论文正文、表、图、数字、参考文献、数据文件。
+
+## 2026-10-01 · Claude（主稿线程）· 补充材料 ESM_1–7（第二轮）复核并入库，重建脚本入库
+
+- **做了什么**：数据线程 14:07 交付改过措辞的 ESM_1、ESM_3、ESM_5、ESM_6、ESM_7（ESM_2、ESM_4 与上次逐字节相同）。我重核后把七份文件提交到 `youwen/manuscript/submission/supplement/`，数据线程的重建脚本和源文件提交到 `youwen/scripts/supplement_build/`（内部，不上传；`README_REPO.md` 说明路径依赖和不得进匿名数据副本）。
+- **复核结果**：`yisheng_submission_audit.py v10 --rerun-esm7` 133 项通过、0 失败（七个文件名与 SI 一节一致；七份自带的 caption 逐字相同；行数 1,333／227／104／100／767／126／203；ESM_5 14 个提示和 14＋2 份回答；ESM_7 67 个文件，解压重跑 249 项通过；属性全空；全部文本无姓名、单位、邮箱、本地路径、会话号）。措辞：ESM_1 里锚定条目改为 “每批加 5 个、共 35 个、每遍各编一次”，小徐对勘抽查改为 “by the Claude instance that supervised the round … no human check of the collation”，“coders (Claude instances)” 加了约定，旧句 “repeated in every batch”“no further human check”“settling differences” 已不在；ESM_3 数据字典同步。数据线程顺手做的三处（去掉 §9 第 2 条的分歧解决句、数据字典补充、Figure 1→Fig. 1）我核过，认可。
+- **核对表**：状态改为三种；第 3 节按 Qu 的回答更新；“谁做了什么” 一行改为满足；新增第 11 节（Baxter–Sagart 构拟字符串保留或删去、Apache-2.0 随附许可证文本、ESM_4 第 7 节保持逐字翻译）。README、AGENTS.md、`youwen_criteria.md` 同步。
+- **仍待**：Qu 确认作者贡献的英文句子；Qu 定许可和 Baxter–Sagart 列（我倾向保留）；数据线程在 ESM_7 加 `LICENSE-Apache-2.0.txt` 和 `NOTICE.txt`（67 个文件变 69 个，做完我重核 ESM_7 和审计脚本里的 67→69）；评审线程对 ESM_1–7 做一次合规与数字核对。
+- **未改动**：论文正文、表、图、数字；ESM_2、ESM_4；`ext_coding/` 里数据线程的文件。

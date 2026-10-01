@@ -348,5 +348,5 @@ Holm 校正后（三检验）：H1a 0.004，H1c 0.011，H2 7×10⁻⁶，都显�
 - **写法的界线不变**：见 `AGENTS.md`。caption 里写 “two independent blind passes by separate Claude instances”（不是作者编的），“raw answers returned by the Claude instances”，分析计划是 “committed with a time-stamp before any batch was coded”（没有外部登记）；作者核验仍是 “each checked separately, consolidated into one sheet”，不写作者间 κ。
 - **指南要点**（逐条核对见 `manuscript/submission/SUBMISSION_CHECKLIST.md`）：摘要 150–250 词、关键词 4–6 个、十进制标题不超三级、表按数字顺序引用且表注用上标字母、图 119 mm 宽（按小开本）8 pt 黑白、参考文献按第一作者姓氏排序且有 DOI 的写成完整链接、语言模型的使用写进方法部分（§3.6）、Statements and Declarations（匿名稿里只留 Data availability；基金、竞争利益、伦理、贡献、致谢在 Snapp 界面里填，稿件文件不含，见核对表第 4 节）、补充材料以 “Online Resource n” 引用并在正文里列出每份的 caption、数据可用性声明写明去哪里取数据。
 - **双盲**：作者信息、作者贡献和竞争利益在 Snapp 界面里填，匿名稿不含这些；匿名稿不再出现仓库链接，数据通过 Online Resource 提供。补充文件里 “作者姓名、通讯作者邮箱” 的指南要求与双盲相冲突，送审版本建议写 “withheld”（待 Qu 知悉）。
-- **补充材料**：ESM_1–7 由数据线程建（`v7_work/submission/supplement/`），正文按它的清单引用，成品交付后由评审线程做一次合规与数字核对。
+- **补充材料**：ESM_1–7 由数据线程建，交付后已入库 `manuscript/submission/supplement/`（重建脚本 `scripts/supplement_build/`，内部）；主稿线程逐项核对过（caption、行数、属性、匿名、ESM_7 重跑 249/0），自查脚本 `yisheng_submission_audit.py v10 --rerun-esm7` 可复核；评审线程再做一次合规与数字核对。第三方许可（ESM_1 §8）待 Qu 确认。
 - **自查**：`scripts/yisheng_submission_audit.py v10`，输出存 `manuscript/submission/audit_v10_output.txt`。

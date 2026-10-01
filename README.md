@@ -38,7 +38,7 @@ v8（2026-09-30）由主稿线程据扩大盲编的结果修订 v7：数据线�
 
 v9（2026-09-30）是 v8 的长版：Qu 13:58 放开 5,000–7,000 词的上限，评审线程对 v8 的意见（M1、S1–S7、补回清单、篇幅分配）逐项落实，Qu 16:42 更正的核验说法（两位作者各自核对再汇总）写入，数据线程当天的两项新分析（第二次回答替换、偏差临界点）并入。正文约 8,600 词，连表约 10,600 词，表 12 张、图 1 张，参考文献仍是 37 条。另备双盲投稿用的匿名版和题名页。v9 还待评审线程复核。过程见 `v9_evaluation.md`。
 
-v10（2026-10-01）：评审线程复核了 v9（没有必须改的）；Qu 在 04:08 指示「这一版不必再优化，按morphology投稿要求排版，然后把补充材料安排好即可」，所以 v10 是 v9 按 Springer 的 Submission guidelines 和 Snapp 说明排好的版：十进制标题、关键词 6 个、表按顺序引用、图 1 重画为 119 mm 宽的黑白图（EPS/TIFF/PNG）、§3.6 写明语言模型的使用、补充材料 Online Resource 1–7 的引用和说明、文末 “Statements and Declarations”（完整版里有全部声明；匿名稿里只留 Data availability，因为 Snapp 双盲页规定稿件文件不含基金、竞争利益、伦理、贡献和致谢声明，它们在界面里填，英文底稿在题名页）；评审 S2、S5 顺手改了，S1、S3 没做，数字不变。匿名稿、题名页、cover letter 和图放在 `youwen/manuscript/submission/`，核对表在其中的 `SUBMISSION_CHECKLIST.md`，补充材料由数据线程另建。过程见 `v10_evaluation.md`。
+v10（2026-10-01）：评审线程复核了 v9（没有必须改的）；Qu 在 04:08 指示「这一版不必再优化，按morphology投稿要求排版，然后把补充材料安排好即可」，所以 v10 是 v9 按 Springer 的 Submission guidelines 和 Snapp 说明排好的版：十进制标题、关键词 6 个、表按顺序引用、图 1 重画为 119 mm 宽的黑白图（EPS/TIFF/PNG）、§3.6 写明语言模型的使用、补充材料 Online Resource 1–7 的引用和说明、文末 “Statements and Declarations”（完整版里有全部声明；匿名稿里只留 Data availability，因为 Snapp 双盲页规定稿件文件不含基金、竞争利益、伦理、贡献和致谢声明，它们在界面里填，英文底稿在题名页）；评审 S2、S5 顺手改了，S1、S3 没做，数字不变。匿名稿、题名页、cover letter 和图放在 `youwen/manuscript/submission/`，核对表在其中的 `SUBMISSION_CHECKLIST.md`，补充材料 Online Resource 1–7（ESM_1–7，数据线程建、主稿线程核对）在 `youwen/manuscript/submission/supplement/`，重建脚本在 `youwen/scripts/supplement_build/`（内部，不上传）。过程见 `v10_evaluation.md`。
 
 ### 论文还缺什么
 
