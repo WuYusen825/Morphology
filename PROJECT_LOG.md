@@ -428,3 +428,9 @@
 - Qu 14:16：作者贡献的英文句子 “对”（Yusen Wu: conceptualization, methodology, data curation, software, formal analysis, investigation, visualization, writing – original draft, writing – review and editing. Weiyi Qu: investigation (coding) and literature review.）；补充材料许可 “同意，保留”：作者贡献 CC BY 4.0、代码 MIT、第三方列保留原条款，Baxter–Sagart 构拟字符串两列（`oc_bs2014`、`head_oc_bs2014`）保留。
 - 核对表第 3、7、9、11 节、README 同步；`yisheng_make_submission_files.py` 里贡献句的注释改为 “Qu 确认”。文本、DOCX 无变化。
 - 仍待：数据线程给 ESM_7 加 Apache-2.0 许可证文本和 NOTICE（67→69 个文件），之后我重核 ESM_7；评审线程一次合规与数字核对。
+
+## 2026-10-01 · Claude（主稿线程）· ESM_7 加 Apache-2.0 许可证文本和 NOTICE（69 个文件）
+
+- 数据线程 14:22 交付新的 ESM_7：在 67 个成员之外加 `LICENSE-Apache-2.0.txt`（说文数据仓库提交 6553a35 的 LICENSE 原文）和 `NOTICE.txt`，README 的布局和许可两处各加一句；脚本逻辑和数字不变。我重核并入库：审计脚本（`--rerun-esm7`，文件数改为 69）133 项通过、0 失败，解压重跑 249 项通过；其余六份文件与上一次逐字节相同；`supplement_build/` 同步。
+- 不再改的：ESM_5、ESM_2、ESM_3 不另附许可文本（ESM_1 §8 和 ESM_5 README 已写项目名、许可和网址，ESM_7 里有许可文本）。
+- 核对表第 8、11 节同步。

@@ -166,7 +166,7 @@ def supplement_checks(anon, rerun):
               "ESM_5: 14 prompts, 14 raw answers and the 2 unused second answers", f"{len(names)} files: {len(pr)} prompts, {len(ra)} answer files")
     if "ESM_7.zip" in blobs:
         names = zipfile.ZipFile(io.BytesIO(blobs["ESM_7.zip"])).namelist()
-        check(len(names) == 67, "ESM_7: 67 members", f"{len(names)}")
+        check(len(names) == 69, "ESM_7: 69 members (67 files of the package, the Apache-2.0 licence text and the NOTICE)", f"{len(names)}")
         if rerun:
             with tempfile.TemporaryDirectory() as tmp:
                 zipfile.ZipFile(io.BytesIO(blobs["ESM_7.zip"])).extractall(tmp)

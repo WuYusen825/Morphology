@@ -88,6 +88,40 @@ def pdf_checks(name, path):
     return d
 
 
+def apache_checks(name, z, names):
+    """ESM_7 carries the Apache-2.0 licence text and a NOTICE that lists exactly the files holding Shuowen text."""
+    import csv
+    top = names[0].split('/')[0] + '/'
+    lic, notice = top + 'LICENSE-Apache-2.0.txt', top + 'NOTICE.txt'
+    ok(lic in names and notice in names, f'{name}: LICENSE-Apache-2.0.txt and NOTICE.txt present')
+    if not (lic in names and notice in names):
+        return
+    lt, nt = z.read(lic).decode('utf-8'), z.read(notice).decode('utf-8')
+    ok(lt.lstrip().startswith('Apache License') and 'Version 2.0, January 2004' in lt and 'TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION' in lt
+       and 'END OF TERMS AND CONDITIONS' in lt and 'APPENDIX: How to apply the Apache License' in lt, f'{name}: the licence file is the text of the Apache License 2.0')
+    ok('6553a35' in nt and 'https://github.com/shuowenjiezi/shuowen' in nt and 'Apache License, Version 2.0' in nt and 'LICENSE-Apache-2.0.txt' in nt, f'{name}: NOTICE names the project, the commit and the licence file')
+    # probe strings from the Shuowen glosses of the pair table
+    rows = list(csv.DictReader(z.read(top + 'data/pairs.csv').decode('utf-8-sig').splitlines()))
+    probes = set()
+    for r in rows:
+        for c in ('shuowen_gloss', 'head_gloss'):
+            g = r[c]
+            if g and g != 'None':
+                probes.add(g[:8]); probes.add(g.split('从')[0][:8])
+    probes = {g for g in probes if len(g) >= 5}
+    ok(len(probes) > 1500, f'{name}: gloss probes found ({len(probes)})')
+    carriers = set()
+    for n_ in names:
+        if n_ in (lic, notice, top + 'README.txt') or not n_.endswith(('.csv', '.txt', '.py', '.md')):
+            continue
+        t_ = z.read(n_).decode('utf-8')
+        if any(g in t_ for g in probes):
+            carriers.add(n_[len(top):])
+    listed = {m.group(1) for m in (re.fullmatch(r'  ((?:data|expected)/\S+)', l) for l in nt.split('\n')) if m}
+    ok(listed == carriers, f'{name}: the files listed in NOTICE are the files that hold Shuowen text: only in NOTICE {sorted(listed - carriers)}, missing from NOTICE {sorted(carriers - listed)}')
+    ok(len(carriers) == 9, f'{name}: nine files hold Shuowen text ({len(carriers)})')
+
+
 def zip_checks(name, path):
     z = zipfile.ZipFile(path)
     ok(z.comment == b'', f'{name}: zip comment empty')
@@ -112,6 +146,8 @@ def zip_checks(name, path):
             xlsx_checks(f'{name}:{zi.filename}', data)
         elif ext == '.png':
             ok(b'tEXt' not in data[:2000] and b'iTXt' not in data[:2000], f'{name}: PNG without text chunks {zi.filename}')
+    if name == 'ESM_7.zip':
+        apache_checks(name, z, names)
     return z
 
 

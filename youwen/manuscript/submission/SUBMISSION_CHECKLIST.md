@@ -97,7 +97,7 @@
 
 | 要求 | 状态 | 说明 |
 |---|---|---|
-| 文件按 ESM_n.ext 连号命名；文字用 PDF，表格用 xlsx/csv，多文件打成 zip；每份附一句简明 caption | 满足 | ESM_1.pdf（13 页）、ESM_2.xlsx、ESM_3.xlsx、ESM_4.pdf（9 页）、ESM_5.zip（34 个文件）、ESM_6.xlsx（21 个 sheet）、ESM_7.zip（67 个文件）；名称与 SI 一节一致 |
+| 文件按 ESM_n.ext 连号命名；文字用 PDF，表格用 xlsx/csv，多文件打成 zip；每份附一句简明 caption | 满足 | ESM_1.pdf（13 页）、ESM_2.xlsx、ESM_3.xlsx、ESM_4.pdf（9 页）、ESM_5.zip（34 个文件）、ESM_6.xlsx（21 个 sheet）、ESM_7.zip（69 个文件）；名称与 SI 一节一致 |
 | 正文里写明引用，格式 “Online Resource n”；正文里放每份的 caption | 满足 | §3.1、§3.3–3.6 引用，首次引用顺序 1–7；“Supplementary Information” 一节列出 7 条 caption（Online Resources cited in order；each listed with file name and caption） |
 | 每份文件自带的 caption 与正文里的一致 | 满足 | 脚本逐字比对 7/7（PDF 首页、xlsx 的 About 表、zip 里的 README） |
 | 补充材料原样发布，不转换、不编辑 | 满足 | 数据线程第二轮（14:07）改完措辞后的文件就是要上传的文件；已入库 `submission/supplement/` |
@@ -146,5 +146,5 @@ Qu 2026-10-01 13:49 和 14:10 已答，已填入题名页和 cover letter（`yis
 ## 11 补充材料里仍待定的两处（数据线程提出，2026-10-01 14:10）
 
 - **Baxter–Sagart 构拟字符串**：ESM_2 `pairs` 和 ESM_7 `pairs.csv` 的 `oc_bs2014`、`head_oc_bs2014` 两列带有构拟字符串（cddb 仓库 GPL-3.0，数据本身和官方 PDF 扉页没写条款）。A 保留（引用 Baxter 和 Sagart 2014，写明来源）；B 删这两列、只留派生类别（要改 ESM_2、ESM_7、ESM_1，再核一轮）。我倾向 A：审稿人要核上古音读法，来源公开且已引用；Qu 14:16 定：保留（A）。
-- **Apache-2.0 §4**：说文数据（Apache-2.0）要求随附许可证文本；数据线程建议 ESM_7 加 `LICENSE-Apache-2.0.txt` 和 `NOTICE.txt`（67 个文件变 69 个）。我同意，数据线程做完后只重核 ESM_7 和文件数（审计脚本里的 67 改 69）。
+- **Apache-2.0 §4**：说文数据（Apache-2.0）要求随附许可证文本；数据线程建议 ESM_7 加 `LICENSE-Apache-2.0.txt` 和 `NOTICE.txt`（67 个文件变 69 个）。我同意；数据线程 14:22 已加（`LICENSE-Apache-2.0.txt` 是仓库原文逐字节复制，`NOTICE.txt` 写明来源、提交和改动），我已重核 ESM_7（69 个文件，249/0）并把审计脚本改为 69。ESM_5 的提示、ESM_2/3 的工作表同样含说文释义，只在 ESM_1 §8 和 ESM_5 README 写了项目名、许可和网址，没另附许可文本；不再另改（边际收益小），需要时可把两个许可文件也放进 ESM_5。
 - ESM_4 第 7 节 09-30 18:37 条里有 “how items on which the two authors' judgments differed were settled … is not documented”：是原计划修订记录的译文，保持原样，不删（删了就不再是逐字翻译）。分析层级名 `author_adjudicated` 不改。

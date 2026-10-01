@@ -139,14 +139,14 @@ PASS  ESM_6.xlsx: sheet About carries the manuscript's caption, authors and corr
 PASS  ESM_6.xlsx: first sheet About, last sheet data_dictionary                       
 PASS  ESM_6.xlsx: workbook properties empty (no creator, last modifier, company)      filled: []
 PASS  ESM_6.xlsx: no author name, affiliation, e-mail address, local path or session id in any text or member  []
-PASS  ESM_7.zip: README caption identical to the manuscript's, authors and corresponding author withheld  67 members
+PASS  ESM_7.zip: README caption identical to the manuscript's, authors and corresponding author withheld  69 members
 PASS  ESM_7.zip: one root folder, no hidden or system files, no zip comment           ['analysis_code']
 PASS  ESM_7.zip: workbooks inside have empty properties                               []
 PASS  ESM_7.zip: no author name, affiliation, e-mail address, local path or session id in any text or member  []
 PASS  data rows per sheet (1,333 pairs; 227 collated; 104 checked; 100, 767, 126 and 203 codings)  {'pairs': 1333, 'recension_collation': 227, 'daxu_spotcheck': 104, 'first_sample': 100, 'enlarged_coding': 767, 'author_check': 126, 'second_answers': 203}
 PASS  the numbers behind these row counts are the ones stated in the captions         ['1,333 extracted pairs', '104 entries', '126 pairs', '227 labelled entries', '677 new items', '767 pairs', '90 first-sample items']
 PASS  ESM_5: 14 prompts, 14 raw answers and the 2 unused second answers               34 files: 14 prompts, 16 answer files
-PASS  ESM_7: 67 members                                                               67
+PASS  ESM_7: 69 members (67 files of the package, the Apache-2.0 licence text and the NOTICE)  69
 PASS  ESM_7: unpacked and run (python scripts/run_all.py): all checks pass, exit status 0  249 checks passed, 0 failed
 
 133 passed, 0 failed, 17 for information
