@@ -100,7 +100,7 @@ def supplement_checks(anon, rerun):
             d = pymupdf.open(stream=data, filetype="pdf")
             first = norm(d[0].get_text())
             check(cap in first and "Withheld for double-anonymous review" in first and bool(re.search(r"Journal:? Morphology", first)),
-                  f"{fname}: caption on page 1 identical to the manuscript's, authors and corresponding author withheld", f"{d.page_count} pages")
+                  f"{fname}: caption on page 1 identical to the manuscript's (apart from straight versus curly quotation marks), authors and corresponding author withheld", f"{d.page_count} pages")
             md = d.metadata
             filled = [k for k in ("author", "subject", "keywords", "creator", "producer") if md.get(k)]
             check(not filled, f"{fname}: PDF properties without author, creator or producer", f"title: {md.get('title')!r}; filled: {filled}")
@@ -118,7 +118,7 @@ def supplement_checks(anon, rerun):
             readme = [m for m in z.namelist() if m.endswith("README.txt") and m.count("/") == 1]
             txt = norm(z.read(readme[0]).decode("utf-8-sig")) if readme else ""
             check(bool(readme) and ("Caption: " + cap) in txt and "Withheld for double-anonymous review" in txt,
-                  f"{fname}: README caption identical to the manuscript's, authors and corresponding author withheld", f"{len(z.namelist())} members")
+                  f"{fname}: README caption identical to the manuscript's (apart from straight versus curly quotation marks), authors and corresponding author withheld", f"{len(z.namelist())} members")
             roots = {m.split("/")[0] for m in z.namelist()}
             check(len(roots) == 1 and not any(re.search(r"(^|/)(\.|__MACOSX|Thumbs\.db)", m) for m in z.namelist()) and z.comment == b"",
                   f"{fname}: one root folder, no hidden or system files, no zip comment", f"{sorted(roots)}")

@@ -99,7 +99,7 @@
 |---|---|---|
 | 文件按 ESM_n.ext 连号命名；文字用 PDF，表格用 xlsx/csv，多文件打成 zip；每份附一句简明 caption | 满足 | ESM_1.pdf（13 页）、ESM_2.xlsx、ESM_3.xlsx、ESM_4.pdf（9 页）、ESM_5.zip（34 个文件）、ESM_6.xlsx（21 个 sheet）、ESM_7.zip（69 个文件）；名称与 SI 一节一致 |
 | 正文里写明引用，格式 “Online Resource n”；正文里放每份的 caption | 满足 | §3.1、§3.3–3.6 引用，首次引用顺序 1–7；“Supplementary Information” 一节列出 7 条 caption（Online Resources cited in order；each listed with file name and caption） |
-| 每份文件自带的 caption 与正文里的一致 | 满足 | 脚本逐字比对 7/7（PDF 首页、xlsx 的 About 表、zip 里的 README） |
+| 每份文件自带的 caption 与正文里的一致 | 满足 | 脚本比对 7/7（PDF 首页、xlsx 的 About 表、zip 里的 README），字词逐字相同；撇号和引号的字形除外（Word 稿里是弯引号，ESM_3、ESM_5、ESM_6 里是直撇号，独立评审指出，不影响内容，不改） |
 | 补充材料原样发布，不转换、不编辑 | 满足 | 数据线程第二轮（14:07）改完措辞后的文件就是要上传的文件；已入库 `submission/supplement/` |
 | 每个文件里写明文章题目、刊名、作者姓名、通讯作者单位和邮箱 | 需 Qu 知悉 | 与双盲相冲突：每份文件开头有识别块——题名、刊名、caption，“Authors” 和 “Corresponding author” 都写 “Withheld for double-anonymous review”，录用后再补 |
 | 提供数据给审稿人时，数据里的作者信息也应匿名（Research data and peer review） | 满足 | 文件属性全空（xlsx、PDF、zip 里的 xlsx）；我扫了七份文件的全部文本、单元格、属性、zip 成员名和额外字段，没有姓名、单位、邮箱、本地路径和会话号；仓库链接只有两个开源来源（digling/cddb、shuowenjiezi/shuowen） |
