@@ -351,3 +351,26 @@
 - **读法**：极端的压力测试，不是估计（它假定 31 对都真有意义联系）。反方向的误编抹不掉差别，也降不到 1；普通组假阳的方向才可能降到 1（见 §8）。论文里引用 GEE 的数，不要引 2.17。
 - **新文件**（`youwen/ext_coding/`）：`ext_bias_reverse_scenario.py`、`ext_bias_reverse_scenario_output.txt`、`yisheng_bias_reverse_scenario.csv`；摘要 §8 末尾补了一句，计划 §7、`youwen/youwen_criteria.md` §10 已记。
 - **未改动**：原数据文件、既有模型结果、既有脚本、论文稿。主检验仍是第一次盲编的 OR 2.35，判读不变；是否写进论文由主稿线程决定。
+
+## 2026-10-01 · Claude（主稿线程）· v10：按 Morphology 投稿要求排版（不再优化）
+
+- **用户要求**：Qu 2026-10-01 04:08（项目聊天，附两份 PDF：*Morphology* 的 Submission guidelines、Springer Nature 的 Submit faster on Snapp）：「这一版不必再优化，按morphology投稿要求排版，然后把补充材料安排好即可（包括命名和内部格式，注意英文为主要呈现语言）」；04:17 Qu：额度已重置，可以开始。04:04 Qu 对 126 条原表和汇总规则一问答「我和另一位作者做了编码的，和之前编的是一致的，可以忽略这个问题」：不再追问，v9 的措辞不变。
+- **本次提交**：
+  - 合并数据线程的新提交（`93fa1d4`：措辞更正“预注册”→“分析前已固定”、反方向偏差情景）；`PROJECT_LOG.md`、`youwen_criteria.md` 的冲突按“两边条目都留”处理。
+  - 新增 `youwen/manuscript/yisheng_paper_v10.md/.docx`（完整版）、`yisheng_paper_v10_anonymised.md/.docx`（双盲投稿用）、`yisheng_v10_title_page.md/.docx`（题名页）、`yisheng_v10_cover_letter.md/.docx`（cover letter）、`yisheng_paper_v10_numbers.md`、`v10_evaluation.md`；按 Springer 和 Snapp 要求排好的上传文件和核对表在 `youwen/manuscript/submission/`（`Manuscript_anonymised.docx`、`Title_page.docx`、`Cover_letter.docx`、`Fig1.eps/.tif/.png`、`SUBMISSION_CHECKLIST.md`、`audit_v10_output.txt`）。
+  - 新增脚本 `youwen/scripts/yisheng_v10_figure.py`（图 1，Springer 规格）、`yisheng_submission_audit.py`（对照指南的自查）；`yisheng_make_submission_files.py` 按 v10 的结构重写（A4、Times New Roman 11 pt、三线表、自动页码、匿名稿断言）。
+  - README、AGENTS.md、`youwen_criteria.md`（新 §13）已更新：当前稿改为 v10，加上传文件、核对表和新脚本的说明；规则由“另存为 v10”改为“另存为 v11，不要覆盖 v10”。`v9_evaluation.md` 文首的更新说明改正：评审已复核 v9，S2、S5 在 v10 里改了，S1、S3 没做。
+- **v10 相对 v9 的改动**（全部列在 `yisheng_paper_v10_numbers.md`）：没有新数字。S2（§1 对 Wang Yun 的说法与 §2.2 矛盾）和 S5（“encoffined/coffined”）；表按数字顺序首次引用（5 处向后引用改成章节引用）；关键词 7 个减为 6 个；摘要缩两处措辞（246 词）；§3.6 写明语言模型的使用；图 1 重画（119 mm 宽、8 pt、黑白）并改用 Springer 的图题写法；文末改成 Supplementary Information（7 条 caption）和 Statements and Declarations；仓库路径换成 Online Resource 1–7（数据线程 2026-10-01 04:30 的临时清单，经协调者转来），caption 里的数字逐个对文件核过；4 条参考文献补了 DOI。
+- **验证**：
+  - `yisheng_submission_audit.py v10`：摘要、关键词、标题层级、缩写、表和图的编号与引用顺序、表注字母、图题格式、图的像素与 dpi 与元数据、参考文献的排序与 DOI、Statements and Declarations、Online Resource 的引用顺序和 caption、匿名稿与 DOCX 全部 XML 无作者信息、无批注与修订、页码字段，共 97 项通过，0 项失败；占位符（通讯作者、邮箱、ORCID、贡献、再用材料、编委身份）以 INFO 报告。
+  - DOCX 经 LibreOffice 渲染后逐页看过（匿名稿 28 页，题名页、cover letter 各 1 页）。
+  - 汇总核对 caption 的数字：`yisheng_dataset.csv` 1,333 行，小徐对勘 227 行，`daxu_spotcheck_v6.csv` 104 行，`ext_coding/prompts/` 14 个提示，`ext_coding/raw/` 两份未用的第二次回答。
+  - **没有做到的**：Word 里的实际显示没有看（只有 LibreOffice）；图宽按小开本取 119 mm，没有查到 *Morphology* 的开本；补充材料文件还在建，只核了 caption 的数字，没有打开文件；ESM_2 里再分发的中古音和上古音数据的许可条款仓库里没有记录（数据线程在 ESM_1 注明）。
+- **从失败中得到的做法**：
+  - LibreOffice 报 “source file could not be loaded”，原因是没装 `libreoffice-writer`（只有 `soffice` 启动器）：`apt-get update && apt-get install -y libreoffice-writer` 之后能转 DOCX→PDF，再用 pymupdf 转 PNG 看版面。已写进团队记忆的云端工具记录。
+  - 自查脚本里 `[㐀-鿿\U00020000-\U0002fffff]` 多写了一位：`\U` 要恰好八位十六进制，`\U0002fffff` 被读成 `\U0002ffff` 加一个字面的 `f`，于是每个 f 都算汉字，摘要的 “把汉字各算一词” 字数被虚报成 250（实际 247）。字符区间写 `\U0002fa1f`，并拿独立方法对数一次。
+  - pandoc 模板放在 Python f-string 里时，`::: {custom-style="…"}` 的花括号要双写，否则报 `f-string: expecting '}'`。
+  - 上下文压缩后，协调者在压缩前转来的补充材料清单摘要里没有；先用 `fetch_thread`（新到旧）读自己线程的最近活动，里面有 “Received a message from the coordinator” 条目，从中补回遗漏的转达。
+  - 排序检查把 “(100 CE)”“(10th century)” 当成无年份，误报字母序错；检查日期时要容许这两种写法。
+- **权威版本**：当前稿由 v9 改为 v10（完整版、匿名稿、题名页、cover letter、上传文件）；v10 的数字与 v9 相同。
+- **未改动**：数据文件、编码表、模型结果、正式计数；`ext_coding/` 里数据线程的文件；参考文献的条目和数量（37 条，仅补 DOI）；Qu 的 v5 DOCX 未提交改动。

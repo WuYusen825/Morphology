@@ -11,16 +11,18 @@
 
 | 要看什么 | 文件 |
 |---|---|
-| 论文当前稿（v9，2026-09-30；v8 的长版，并入评审意见和数据线程的两项新分析） | [`youwen/manuscript/yisheng_paper_v9.md`](youwen/manuscript/yisheng_paper_v9.md)，Word 版 [`yisheng_paper_v9.docx`](youwen/manuscript/yisheng_paper_v9.docx)；*Morphology* 双盲投稿用匿名版 [`yisheng_paper_v9_anonymised.docx`](youwen/manuscript/yisheng_paper_v9_anonymised.docx) 加题名页 [`yisheng_v9_title_page.docx`](youwen/manuscript/yisheng_v9_title_page.docx)（.md 同名，由 `scripts/yisheng_make_submission_files.py` 生成） |
-| v9 新增、改动和恢复的数字的出处（没变的数字见 v8、v7 的出处文件） | [`yisheng_paper_v9_numbers.md`](youwen/manuscript/yisheng_paper_v9_numbers.md)、[`yisheng_paper_v8_numbers.md`](youwen/manuscript/yisheng_paper_v8_numbers.md)、[`yisheng_paper_v7_numbers.md`](youwen/manuscript/yisheng_paper_v7_numbers.md) |
-| v9 评价：相对 v8 的变化、评审意见的落实、投稿形式（双盲）、仍待 Qu 的事 | [`v9_evaluation.md`](youwen/manuscript/v9_evaluation.md) |
+| 论文当前稿（v10，2026-10-01；v9 的内容按 *Morphology* 投稿要求排版，数字不变） | [`youwen/manuscript/yisheng_paper_v10.md`](youwen/manuscript/yisheng_paper_v10.md)，Word 版 [`yisheng_paper_v10.docx`](youwen/manuscript/yisheng_paper_v10.docx)；双盲投稿用匿名版 [`yisheng_paper_v10_anonymised.md`](youwen/manuscript/yisheng_paper_v10_anonymised.md)（.docx 同名）、题名页 [`yisheng_v10_title_page.md`](youwen/manuscript/yisheng_v10_title_page.md)、cover letter [`yisheng_v10_cover_letter.md`](youwen/manuscript/yisheng_v10_cover_letter.md)（均由 `scripts/yisheng_make_submission_files.py` 生成）；**按 Springer 和 Snapp 要求排好的上传文件**在 [`youwen/manuscript/submission/`](youwen/manuscript/submission/)：`Manuscript_anonymised.docx`、`Title_page.docx`、`Cover_letter.docx`、`Fig1.eps/.tif/.png` |
+| 投稿核对表（逐条对照 *Morphology* 的 Submission guidelines 与 Snapp 说明：满足／不适用／需 Qu／待补充材料）和自查输出 | [`submission/SUBMISSION_CHECKLIST.md`](youwen/manuscript/submission/SUBMISSION_CHECKLIST.md)、[`submission/audit_v10_output.txt`](youwen/manuscript/submission/audit_v10_output.txt)（`scripts/yisheng_submission_audit.py` 的输出） |
+| v10 相对 v9 的改动（没有新的结果数字）和补充材料说明里数字的出处；v9、v8、v7 的出处 | [`yisheng_paper_v10_numbers.md`](youwen/manuscript/yisheng_paper_v10_numbers.md)、[`yisheng_paper_v9_numbers.md`](youwen/manuscript/yisheng_paper_v9_numbers.md)、[`yisheng_paper_v8_numbers.md`](youwen/manuscript/yisheng_paper_v8_numbers.md)、[`yisheng_paper_v7_numbers.md`](youwen/manuscript/yisheng_paper_v7_numbers.md) |
+| v10 评价：排版与合规、评审 v9 小建议的处理、我这里看不到或做了假设的地方、重新生成的命令 | [`v10_evaluation.md`](youwen/manuscript/v10_evaluation.md) |
+| 上一稿（v9，2026-09-30；v8 的长版，并入评审意见和数据线程的两项新分析）及其评价 | [`yisheng_paper_v9.md`](youwen/manuscript/yisheng_paper_v9.md)、[`yisheng_paper_v9.docx`](youwen/manuscript/yisheng_paper_v9.docx)（匿名版 [`yisheng_paper_v9_anonymised.docx`](youwen/manuscript/yisheng_paper_v9_anonymised.docx)、题名页 [`yisheng_v9_title_page.docx`](youwen/manuscript/yisheng_v9_title_page.docx)）；[`v9_evaluation.md`](youwen/manuscript/v9_evaluation.md)（相对 v8 的变化、评审意见的落实、仍待 Qu 的事） |
 | 上一稿（v8）及其评价 | [`yisheng_paper_v8.md`](youwen/manuscript/yisheng_paper_v8.md)、[`yisheng_paper_v8.docx`](youwen/manuscript/yisheng_paper_v8.docx)；[`v8_evaluation.md`](youwen/manuscript/v8_evaluation.md)（文首有 2026-09-30 关于核验说法的更正；v8 正文仍写“联合核验”，保留作历史） |
 | 扩大盲编（767 对语义编码：编码前提交的分析计划、两次盲编、作者各自核验再汇总） | [`youwen/ext_coding/`](youwen/ext_coding/)：分析计划 [`analysis_plan.md`](youwen/ext_coding/analysis_plan.md)，结果摘要 [`ext_summary.md`](youwen/ext_coding/ext_summary.md)，结果 [`yisheng_models_ext_coding.csv`](youwen/ext_coding/yisheng_models_ext_coding.csv)、[`yisheng_models_ext_author_check.csv`](youwen/ext_coding/yisheng_models_ext_author_check.csv) |
 | 上一稿（v7）及其评价、计划、评审报告 | [`yisheng_paper_v7.md`](youwen/manuscript/yisheng_paper_v7.md)、[`yisheng_paper_v7.docx`](youwen/manuscript/yisheng_paper_v7.docx)；[`v7_evaluation.md`](youwen/manuscript/v7_evaluation.md)、[`v7_plan.md`](youwen/manuscript/v7_plan.md)；评审线程的报告在 [`v7_review/`](youwen/manuscript/v7_review/)（含对扩大盲编的复核 `ext_coding_review.md`） |
 | 更早的稿子（v6） | [`yisheng_paper_v6.md`](youwen/manuscript/yisheng_paper_v6.md)，Word 版 [`yisheng_paper_v6.docx`](youwen/manuscript/yisheng_paper_v6.docx) |
 | Codex 的 v6 系统重构修改计划（2026-09-29 修订；v7 只作参考） | [`v6_系统重构修改计划.md`](youwen/manuscript/v6_系统重构修改计划.md)，附[关键例组核查](youwen/manuscript/lexical_examples_audit_v7.md)；按该计划写到一半的稿子改名为 [`yisheng_paper_v7_codex_partial.md`](youwen/manuscript/yisheng_paper_v7_codex_partial.md)，含占位符，留存备查 |
 | v6 大徐本抽核与编码来源 | [`daxu_spotcheck_v6.csv`](youwen/manuscript/daxu_spotcheck_v6.csv)、[`daxu_source_audit_v6.md`](youwen/manuscript/daxu_source_audit_v6.md)、[`coding_provenance_v6.md`](youwen/manuscript/coding_provenance_v6.md) |
-| 文献综述（v0.3 即 v7、v8 的第 2 节，也是 v9 的 §2.2–§2.5，逐字相同；v9 的 §2.1 是新加的小导引，没有新文献；附书目编号） | [`youwen/literature_review.md`](youwen/literature_review.md) |
+| 文献综述（v0.3 即 v7、v8 的第 2 节，也是 v9、v10 的 §2.2–§2.5，逐字相同；v9 的 §2.1 是新加的小导引，没有新文献；附书目编号） | [`youwen/literature_review.md`](youwen/literature_review.md) |
 | 注释书目（编号 A1–F2，综述和论文都按这个编号引用） | [`youwen/bibliography.md`](youwen/bibliography.md) |
 | 数据怎么来的、判定标准、各轮结果 | [`youwen/youwen_criteria.md`](youwen/youwen_criteria.md)（亦声部分在 §6b–§6e，v7 补充检验与编码写法在 §9，扩大盲编在 §10，v8 的用法在 §11，v9 的用法在 §12） |
 | 王筠《说文释例》原文录文与书页 | [`youwen/shili_pages/README.md`](youwen/shili_pages/README.md) |
@@ -28,7 +30,7 @@
 | v5 参考文献 DOI 核对表 | [`youwen/doi_audit_v5.md`](youwen/doi_audit_v5.md) |
 | 期刊 Discussion 写法学习（两轮精读的总结与对 v6 的建议；v7 据此改写） | [`youwen/Discussion精读总结.md`](youwen/Discussion精读总结.md)、[`Discussion宏观写作指导.md`](youwen/Discussion宏观写作指导.md)；逐篇笔记 [`discussion_close_reading.md`](youwen/discussion_close_reading.md)、[`discussion_close_reading_morphology2026.md`](youwen/discussion_close_reading_morphology2026.md)，阅读范围 [`discussion_reading_index.md`](youwen/discussion_reading_index.md) |
 
-v1–v8 是旧稿，只留作对照。以后实质改稿请另存为 v10，不要覆盖 v9。
+v1–v9 是旧稿，只留作对照。v10 只在版式、投稿信息和补充材料引用上不同于 v9；以后改内容或数字，请另存为 v11，不要覆盖 v10。
 
 v7 由 Claude 的三个线程分工完成（2026-09-29/30）：主稿线程按两份 Discussion 总结改写计划、写全文并负责提交；文献线程按 Release `literature` 的 Markdown 重写第 2 节和参考文献；评审线程对照 11 篇 *Morphology* 文章审了四轮，第四轮认为可以定稿。过程与评价见 `v7_evaluation.md`。
 
@@ -36,20 +38,22 @@ v8（2026-09-30）由主稿线程据扩大盲编的结果修订 v7：数据线�
 
 v9（2026-09-30）是 v8 的长版：Qu 13:58 放开 5,000–7,000 词的上限，评审线程对 v8 的意见（M1、S1–S7、补回清单、篇幅分配）逐项落实，Qu 16:42 更正的核验说法（两位作者各自核对再汇总）写入，数据线程当天的两项新分析（第二次回答替换、偏差临界点）并入。正文约 8,600 词，连表约 10,600 词，表 12 张、图 1 张，参考文献仍是 37 条。另备双盲投稿用的匿名版和题名页。v9 还待评审线程复核。过程见 `v9_evaluation.md`。
 
+v10（2026-10-01）：评审线程复核了 v9（没有必须改的）；Qu 在 04:08 指示「这一版不必再优化，按morphology投稿要求排版，然后把补充材料安排好即可」，所以 v10 是 v9 按 Springer 的 Submission guidelines 和 Snapp 说明排好的版：十进制标题、关键词 6 个、表按顺序引用、图 1 重画为 119 mm 宽的黑白图（EPS/TIFF/PNG）、§3.6 写明语言模型的使用、“Statements and Declarations”、补充材料 Online Resource 1–7 的引用和说明；评审 S2、S5 顺手改了，S1、S3 没做，数字不变。匿名稿、题名页、cover letter 和图放在 `youwen/manuscript/submission/`，核对表在其中的 `SUBMISSION_CHECKLIST.md`，补充材料由数据线程另建。过程见 `v10_evaluation.md`。
+
 ### 论文还缺什么
 
-详见 [`v9_evaluation.md`](youwen/manuscript/v9_evaluation.md) 第 5 节，要点：
+详见 [`v10_evaluation.md`](youwen/manuscript/v10_evaluation.md) 和 [`submission/SUBMISSION_CHECKLIST.md`](youwen/manuscript/submission/SUBMISSION_CHECKLIST.md) 第 9 节（v9 的旧清单在 [`v9_evaluation.md`](youwen/manuscript/v9_evaluation.md) 第 5 节），要点：
 
-- **待 Qu**：通讯作者、邮箱、ORCID 和作者贡献（题名页留了占位）；两位作者各自填的 126 条原表是否还在（在，则可算作者间 κ）；数据存档用 OSF 还是 Zenodo（建议 OSF：可生成匿名的只读链接，供双盲评审）；*Morphology* 自己的投稿须知（字数、匿名要求、格式；会话打不开 Springer 页面）。
+- **待 Qu**：通讯作者、邮箱、ORCID 和作者贡献（题名页和 cover letter 留了占位）；是否以学位论文、会议稿等形式发表过，两位是否都不是 *Morphology* 编委；是否另把数据存到 Zenodo 或 OSF 取 DOI（补充材料已作为 Online Resource 随稿提交，DOI 为可选）；是否推荐审稿人（可选）；用 Word 打开匿名稿看一遍表格和图 1。*Morphology* 的投稿须知已由 Qu 04:08 发来的两份 PDF 解决，逐条核对见 `SUBMISSION_CHECKLIST.md`。关于两位作者各自填的 126 条原表和汇总规则：Qu 2026-10-01 04:04 答「我和另一位作者做了编码的，和之前编的是一致的，可以忽略这个问题」，不再追问，v9、v10 的措辞不变（各自核对、汇总成一张表，不写作者间 κ）。
 - **Qu 已答**（2026-09-30 13:58）：篇幅不设上限，参考 *Morphology* 和往期论文，把事情说清楚；参考文献先保持 37 条；不必再核 *Morphology* 的 SSCI 收录；作者 Yusen Wu 与 Weiyi Qu，单位 School of English and International Studies, Beijing Foreign Studies University，无基金、无利益冲突。可转投的周期快的 SSCI 期刊由另一线程调研（工作文件在共享文件夹 `v7_work/journals/`）。
 - **已完成**：扩大盲编，用来区分“意义先行”与“同词或最小派生”两种解释（Qu 2026-09-30 决定做）。结果支持“同词或最小派生”，程度中等，已写进 v9 的 §3.4、§4.3、§4.4、表 7–8、图 1、§5.2、§6 和摘要。数据线程当天的两项探索性分析也已写入：第二次回答替换（OR 2.39 [1.38, 4.14]）和偏差临界点（若标注在相关性之外没有信息，约 11% 的真不相关普通对得被编成相关，两次盲编之间只有 4%）。**待评审线程复核 v9。**
-- 作者单位、基金和利益冲突声明已补全（v9 的声明与题名页）；通讯作者信息和作者贡献待补。
+- 作者单位、基金和利益冲突声明已补全（v9、v10 的声明与题名页）；通讯作者信息和作者贡献待补。
 - 编码的写法按 Qu 2026-09-30 的决定：以两份机器编码表为编码记录（盲编一轮用于分析，建库时的第一轮作对照），两位作者的独立编码与盲编逐项一致，作为核验；个人工作表未保存。κ = 0.773 是两次机器编码之间的一致度，不能称为人工编码者信度。
 - 扩大盲编（`youwen/ext_coding/`）的 677 条新条目由两次独立盲编，κ = 0.817，同样是机器之间的一致度；主检验用第一次盲编（OR 2.35）。Qu 交回的核验表（126 条）由两位作者各自核对、再汇总成一张表（Qu 2026-09-30 16:42 的更正），表上看得到两次盲编的编码，只作核验和敏感性分析（改判后 OR 2.73），不是独立的人工编码；在手的只有汇总表，不能据此算作者间信度。全文写“pre-specified”，不写“preregistered”（分析计划在编码前提交并有时间戳，但没有在外部平台登记）。
 - 书目里仍标 † 的只剩 A11（王筠《说文释例》的版本）和论文没有引用的 E4–E6，投稿前核实。
 - 分析集 212 条中的 104 条已对照早稻田所藏陈昌治 1873 年刻本扫描作定点抽核；抽核并非随机，余下 108 条未核，按 Qu 的决定已停止。䢈、𨻺 两处差异未解决。
 
-## 主要结论（v9）
+## 主要结论（v9，v10 相同）
 
 - 分析集：大徐本 227 条亦声字头，去掉 4 条"亦"本身作声符的误检和 11 条新附，得 212 条，分布在 172 个声符上；对照组是同声符的 953 个普通形声字。
 - 亦声字与声符字更常同音（H1a，GEE OR 2.38，声符内 2.15），更常是去声 \*-s 交替（H1c 第一步 OR 2.42）；其他声调、清浊交替不富集，上古其他词缀（H1b）也没有证据。语义上远更常相关（H2：首批样本 25/33 对 6/50，OR 22.0；扩大编码 141/172 对 79/462，OR 21.6 [13.3, 35.0]）。
@@ -63,7 +67,7 @@ v9（2026-09-30）是 v8 的长版：Qu 13:58 放开 5,000–7,000 词的上限�
 
 ```
 youwen/
-├── manuscript/            论文稿 v1–v9（.md 为主，.docx 为 Word 版；v9 另有匿名版和题名页）、v6 来源记录和核数脚本、v7–v9 的数字出处、评价、计划与评审报告、图 1（`figures/`）
+├── manuscript/            论文稿 v1–v10（.md 为主，.docx 为 Word 版；v9、v10 另有匿名版和题名页，v10 另有 cover letter）、v6 来源记录和核数脚本、v7–v10 的数字出处、评价、计划与评审报告、图 1（`figures/`）、按 *Morphology* 要求排好的上传文件和核对表（`submission/`）
 ├── ext_coding/            扩大盲编：分析计划（编码前提交）、抽样与分析脚本、14 批提示与原始回答、两次盲编表、结果、作者核验表
 ├── literature_review.md   英文文献综述
 ├── literature_review_access_log.md   哪些文献读了全文、哪些只读了摘要
@@ -172,13 +176,17 @@ python3 youwen/ext_coding/ext_bias_sensitivity.py            # → ext_bias_sens
 python3 youwen/ext_coding/ext_second_answer_sensitivity.py   # → ext_second_answer_sensitivity_output.txt、yisheng_models_ext_second_answer.csv（第二次回答替换，探索性）
 ```
 
-v9 的图、计数和投稿文件（在仓库根目录运行）：
+v9、v10 的图、计数和投稿文件（在仓库根目录运行）：
 
 ```bash
-python3 youwen/scripts/yisheng_v9_counts.py                  # v9 正文里结果文件不直接给出的计数（带断言，与文件不符就报错）
-python3 youwen/scripts/yisheng_v9_figure.py                  # → manuscript/figures/fig1_h5_forest.png 与 fig1_h5_forest_values.csv（H5 及其检验的 OR 森林图）
-python3 youwen/scripts/yisheng_make_submission_files.py v9   # → 匿名版、题名页和三个 DOCX；断言匿名版没有作者信息
+python3 youwen/scripts/yisheng_v9_counts.py                  # v9（和 v10）正文里结果文件不直接给出的计数（带断言，与文件不符就报错）
+python3 youwen/scripts/yisheng_v9_figure.py                  # → manuscript/figures/fig1_h5_forest.png 与 fig1_h5_forest_values.csv（v9 的图 1：H5 及其检验的 OR 森林图）
+python3 youwen/scripts/yisheng_v10_figure.py                 # → manuscript/submission/Fig1.png/.eps/.tif（v10 的图 1，Springer 规格：119 mm 宽、8 pt、黑白）
+python3 youwen/scripts/yisheng_make_submission_files.py v10  # → v10 的匿名稿、题名页、cover letter 及 DOCX，并复制到 manuscript/submission/；断言匿名稿没有作者信息；个人信息未填时加 --allow-todo
+python3 youwen/scripts/yisheng_submission_audit.py v10       # 对照 Morphology 指南的自查（输出存为 manuscript/submission/audit_v10_output.txt）
 ```
+
+（`yisheng_make_submission_files.py` 已按 v10 的结构重写，不能再用来重新生成 v9 的文件；v9 的文件已生成并保留。）
 
 注意：
 

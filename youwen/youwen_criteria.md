@@ -339,4 +339,14 @@ Holm 校正后（三检验）：H1a 0.004，H1c 0.011，H2 7×10⁻⁶，都显�
 - **作者核验的写法**：两位作者各自核对 126 条，再汇总成一张表（Qu 2026-09-30 16:42 的更正）；v9 全文写 “each reviewed … separately and consolidated their judgments”，没有 joint、jointly；汇总表显示了两次盲编的编码，不独立于它们；只有汇总表在手，不报作者间一致度。
 - **偏差临界点与第二次回答替换**：都是探索性的事后分析，数据线程做，v9 只引用：要把合并 OR 降到 1 需要约 11% 的真不相关普通对被编成相关，降到 2 需要约 6%；两次盲编之间 4%；作者汇总判断折合约 10%（区间 2.5%–21%）。第 3、6 批改用第二次回答，主检验 OR 2.39 [1.38, 4.14]。主检验仍是第一次盲编的 2.35。
 - **双盲**：*Morphology* 据搜索引擎摘要是双盲评审，投稿用匿名版加题名页；匿名版没有作者、单位、资助与利益声明，仓库链接换成“匿名副本经投稿系统提供”。仓库目前私有且属主名暴露作者，投稿前要另备匿名的数据副本（OSF 匿名只读链接，待 Qu 决定）。
-- **复核**：v9 待评审线程复核；评审对 v8 的意见在 `v7_work/review/v8_review.md`。
+- **复核**：评审线程已复核 v9（`v7_work/review/v9_review.md`，没有必须改的）；评审对 v8 的意见在 `v7_work/review/v8_review.md`。
+
+## 13. 2026-10-01 v10：按 *Morphology* 的投稿要求排版（主稿线程）
+
+- **范围**：Qu 2026-10-01 04:08（项目聊天，附 *Morphology* 的 Submission guidelines 和 Snapp 的 Submit faster 两份 PDF）：「这一版不必再优化，按morphology投稿要求排版，然后把补充材料安排好即可（包括命名和内部格式，注意英文为主要呈现语言）」。v10 = v9 的内容 + 版式 + 补充材料引用；**没有新结果，也没有改动任何数字**。评审对 v9 的 S1（组内相关率）、S3（反方向偏差情景）没有做，S2、S5 顺手改了，S4 做成了版式。
+- **数字**：v10 的改动清单和补充材料说明（Supplementary Information 的 7 条 caption）里数字的出处见 `manuscript/yisheng_paper_v10_numbers.md`：1,333 对 = `yisheng_dataset.csv` 的行数，227 条小徐对勘 = `yisheng_xiaoxu_collation_final.csv` 的行数，104 条 = `manuscript/daxu_spotcheck_v6.csv`，767 对 = 677 新条目 + 90 框内首批条目，14 条提示 = `ext_coding/prompts/` 下 7 批 × 2 遍，两份未用的第二次回答 = `ext_coding/raw/` 下 pass1_b03、b06。
+- **写法的界线不变**：见 `AGENTS.md`。caption 里写 “two independent blind passes by separate Claude instances”（不是作者编的），“raw answers returned by the Claude instances”，分析计划是 “committed with a time-stamp before any batch was coded”（没有外部登记）；作者核验仍是 “each checked separately, consolidated into one sheet”，不写作者间 κ。
+- **指南要点**（逐条核对见 `manuscript/submission/SUBMISSION_CHECKLIST.md`）：摘要 150–250 词、关键词 4–6 个、十进制标题不超三级、表按数字顺序引用且表注用上标字母、图 119 mm 宽（按小开本）8 pt 黑白、参考文献按第一作者姓氏排序且有 DOI 的写成完整链接、语言模型的使用写进方法部分（§3.6）、Statements and Declarations、补充材料以 “Online Resource n” 引用并在正文里列出每份的 caption、数据可用性声明写明去哪里取数据。
+- **双盲**：作者信息、作者贡献和竞争利益在 Snapp 界面里填，匿名稿不含这些；匿名稿不再出现仓库链接，数据通过 Online Resource 提供。补充文件里 “作者姓名、通讯作者邮箱” 的指南要求与双盲相冲突，送审版本建议写 “withheld”（待 Qu 知悉）。
+- **补充材料**：ESM_1–7 由数据线程建（`v7_work/submission/supplement/`），正文按它的清单引用，成品交付后由评审线程做一次合规与数字核对。
+- **自查**：`scripts/yisheng_submission_audit.py v10`，输出存 `manuscript/submission/audit_v10_output.txt`。
