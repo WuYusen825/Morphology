@@ -114,14 +114,15 @@
 
 ## 9 需要 Qu 回答或决定的事
 
-投稿前必须回答（1–6）：
+Qu 2026-10-01 13:49 和 14:10 已答，已填入题名页和 cover letter（`yisheng_make_submission_files.py` 顶部）：
 
-1. 通讯作者是谁，邮箱是什么（界面里要填，题名页和 cover letter 的占位都要换）。
-2. 两位作者的 ORCID（有就给，没有可不填）。
-3. 作者贡献：谁整理数据与分析、谁写初稿；或回 “两人共同完成”。
-4. 这篇稿子的内容是否以学位论文、会议论文等形式发表过；两位是否都不是 *Morphology* 编委。
-5. 论文 §3.1 写 “We visually checked the headword, gloss and formula of 104 of them … against the Waseda University Library scan”，而记录（v6 的核查记录）是 Codex 逐页读的扫描，补充材料 ESM_1 写 “with the assistance of Codex”，§3.6 写 Codex “assisted with source checks”。请二选一：(a) 是 Codex 读的扫描，两位作者没有自己逐页看——我把 §3.1 那句改成 “were checked page by page against the scan, with Codex’s assistance (Section 3.6)”；(b) 两位作者也逐页看了——保持现状。
-6. 补充材料的许可：作者自己的贡献用 CC BY 4.0、代码用 MIT，第三方各列保留原条款（第 7 节末行）是否同意；Baxter–Sagart 构拟串是保留还是删去。
+1. 通讯作者 Yusen Wu，邮箱 wu_yusen825@icloud.com；Weiyi Qu 的邮箱 202520101018@bfsu.edu.cn（Qu 答 “对”）。
+2. ORCID：两位都没有（N/A）。
+3. 竞争利益：无；两位都不是 *Morphology* 编委（Qu：“都不是”）；基金：无。
+4. 再用：本稿内容未曾以学位论文、会议论文或预印本发表过（Qu：“否”），cover letter 已写 “re-uses no text, tables or figures …”。
+5. 论文 §3.1 “We visually checked … 104 of them”：Qu 选 B，两位作者也逐页看了扫描，**保持原样**（不改成 Codex 协助）。
+6. 作者贡献：Qu 原话「Qu参与编码，文献综述；其他都是Wu完成（先说Wu）」，又要求 “按文献主要做的具体工作分配稍微详细一些”。我按 CRediT 写成：“Yusen Wu: conceptualization, methodology, data curation, software, formal analysis, investigation, visualization, writing – original draft, writing – review and editing. Weiyi Qu: investigation (coding) and literature review.” **待 Qu 确认这句英文**。
+7. 补充材料的许可：作者贡献用 CC BY 4.0、代码用 MIT，第三方各列保留原条款（第 7 节末行）是否同意；Baxter–Sagart 构拟串是保留还是删去：**仍待 Qu**。
 
 可选或知悉（7–12）：
 

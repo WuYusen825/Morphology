@@ -15,7 +15,7 @@ The study compares all 212 labelled entries of the Dà Xú recension with the 95
 In line with the journal's guidelines:
 
 - The manuscript is original, has not been published before in any form or language and is not under consideration elsewhere.
-- Re-use of material: **[TO BE CONFIRMED: the authors confirm that the manuscript re-uses no text, tables or figures from earlier publications, theses or conference papers; otherwise say what is re-used]**
+- Re-use of material: The manuscript re-uses no text, tables or figures from earlier publications, theses or conference papers.
 - All authors have approved the manuscript and its submission. The authors have no competing interests, no funding to declare, and no human participants or animals were involved.
 - The manuscript is anonymised for double-anonymous review; the authors' details and the statements on funding, competing interests, ethics and contributions are entered in the submission system, not in the manuscript file. The data, the semantic codings and the analysis scripts are supplied as Online Resources.
 - Large language models (Claude, Anthropic; Codex, OpenAI) were used for data extraction, blind semantic coding, statistical scripting and drafting; the use is documented in Section 3.6, and the authors are accountable for the final text.
@@ -27,7 +27,7 @@ Thank you for considering our manuscript.
 
 Yours sincerely,
 
-**[TO BE SUPPLIED: name of the corresponding author]**
+Yusen Wu
 
 on behalf of Yusen Wu and Weiyi Qu
 

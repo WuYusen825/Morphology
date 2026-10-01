@@ -406,3 +406,11 @@
   - 后台 Bash 任务里启动长时间运行的脚本，返回的 “completed (exit 0)” 只是外层 shell 的结束，不是脚本的结束；要另开一个后台 until 循环，等输出文件里出现 “exit 0”（ESM_7 的 run_all 约 53 秒）。
   - 内置安全检查会拦下 `rm -rf *` 一类的清理命令：不要绕，改用全新的目录，需要删的只删自己刚建的具体文件。
 - **未改动**：论文正文（除数据可用性一段）、表、图、数字；参考文献；数据文件和 `ext_coding/` 里数据线程的文件；Qu 的 v5 DOCX 未提交改动。
+
+## 2026-10-01 · Claude（主稿线程）· 填入 Qu 的作者信息，重新生成题名页和 cover letter
+
+- **Qu 的回答**（项目聊天 13:49，线程 14:10）：ORCID 两位都没有（N/A）；通讯作者 Yusen Wu；邮箱 wu_yusen825@icloud.com（Yusen Wu）、202520101018@bfsu.edu.cn（Weiyi Qu），Qu 确认这一对应；无竞争利益，两位都不是 *Morphology* 编委；内容未曾以学位论文、会议论文或预印本发表；§3.1 “We visually checked … 104 of them” 两位作者也逐页看了扫描（选 B，保持原样，不改成 Codex 协助）；作者贡献原话「Qu参与编码，文献综述；其他都是Wu完成（先说Wu）」，并要求写得更具体。
+- **改了什么**：`yisheng_make_submission_files.py` 顶部填入 CORRESPONDING、EMAILS、ORCIDS、CONTRIBUTIONS、PRIOR_PUBLICATION_CONFIRMED、EDITORIAL_BOARD_CONFIRMED；重新生成题名页、cover letter 及其 DOCX（占位符已清空，署名为 Yusen Wu）和 `yisheng_paper_v10.md` 里的 Author contributions；匿名稿不变（不含这些）。自查 101 项通过（新增 “title page and cover letter complete”），0 失败。核对表第 9 节、README 同步。
+- **作者贡献的英文**（CRediT 写法，**待 Qu 确认**）：“Yusen Wu: conceptualization, methodology, data curation, software, formal analysis, investigation, visualization, writing – original draft, writing – review and editing. Weiyi Qu: investigation (coding) and literature review.” 只按 Qu 的原话（Wu 做除编码和文献综述之外的全部，Qu 参与编码和文献综述）拆成通行类别，没有添加别的 “谁做了什么”。
+- **仍待**：作者贡献句子的确认、补充材料许可、数据线程改 ESM 措辞后补充材料入库。
+- **未改动**：论文正文、表、图、数字、参考文献、数据文件。

@@ -54,7 +54,7 @@ PASS  every Online Resource is cited in the text, first citations in numerical o
 PASS  each Online Resource is listed with its file name ESM_n.ext and a caption       
 PASS  no unresolved markers in the anonymised manuscript                              
 PASS  no placeholders in the anonymised manuscript                                    
-INFO  title page and cover letter complete                                            9 placeholders left
+PASS  title page and cover letter complete                                            0 placeholders left
 PASS  title page has: Corresponding author                                            
 PASS  title page has: Acknowledgements                                                
 PASS  title page has: Author contributions                                            
@@ -118,4 +118,4 @@ PASS  no paragraph that is mostly Chinese                                       
 INFO  Chinese characters in the text                                                  473 characters against 10976 Latin-script words; they are examples and data, with pinyin or English
 INFO  supplement files (submission/supplement/)                                       not in the repository yet
 
-100 passed, 0 failed, 19 for information
+101 passed, 0 failed, 18 for information
