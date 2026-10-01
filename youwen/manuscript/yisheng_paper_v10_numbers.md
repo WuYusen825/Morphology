@@ -30,6 +30,7 @@
 | 文末 | 原 “Data availability”（仓库路径）、“Declarations”、“Use of AI tools” 改成 “Supplementary Information”（7 条 caption）与 “Statements and Declarations”（Funding、Competing interests、Ethics approval and consent、Coding、Author contributions、Data availability） | 指南的标题与内容要求；仓库地址不能出现在匿名稿里 |
 | 参考文献 | Baxter & Sagart (1998, 2014)、Sagart (1999)、Schuessler (2007) 补了 DOI（Crossref 2026-10-01 核对） | 指南：有 DOI 一律写成完整链接 |
 | 作者单位 | “Beijing Foreign Studies University, School of English and International Studies, Beijing, China” | 指南：机构、（院系）、城市、国家 |
+| §3.3、§5.3、§5.4 | “judgement” 4 处统一为 “judgment”（全文其余 12 处已是 “judgment”）；“the released files” 改为 “the supplementary files” | 拼写一致；补充材料不叫 released |
 
 ## 补充材料说明里的数字（“Supplementary Information” 一节）
 
