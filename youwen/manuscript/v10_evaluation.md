@@ -7,7 +7,7 @@
 ## 0 结论
 
 - **v10 可以交给 Qu 填完个人信息后投稿**，前提是数据线程的补充材料 ESM_1–7 交付并通过一次合规与数字核对（评审线程做）。
-- 自查脚本 `youwen/scripts/yisheng_submission_audit.py` 对匿名稿、题名页、cover letter、图和补充材料清单共 97 项检查全部通过、0 项失败（输出在 [`submission/audit_v10_output.txt`](submission/audit_v10_output.txt)）；核对表里按 “满足／不适用／需 Qu／待补充材料” 逐条列了指南的要求。
+- 自查脚本 `youwen/scripts/yisheng_submission_audit.py` 对匿名稿、题名页、cover letter、图和补充材料清单共 100 项检查全部通过、0 项失败（输出在 [`submission/audit_v10_output.txt`](submission/audit_v10_output.txt)）；核对表里按 “满足／不适用／需 Qu／待补充材料” 逐条列了指南的要求。
 - 还缺的都是只有 Qu 能给的：通讯作者及邮箱、ORCID、作者贡献、“再用过材料” 与 “编委身份” 的确认；以及补充材料成品。题名页和 cover letter 里以 `[TO BE SUPPLIED: …]` 占位，Word 里高亮显示。
 
 ## 1 做了什么
@@ -16,7 +16,7 @@
 |---|---|
 | 文件拆分 | 匿名稿 `Manuscript_anonymised.docx`（上传）；题名页 `Title_page.docx`（不上传，Snapp 的双盲流程要求作者信息和声明在界面里填，它是填写底稿）；`Cover_letter.docx`；图 `Fig1.eps/.tif/.png` |
 | 版式 | A4，页边距 25 mm，Times New Roman 11 pt（汉字宋体），1.5 倍行距，标题 13/11/11 pt 粗体且不超过三级，表格 9 pt 三线表、表头加粗、表注用上标小写字母，图题 10 pt，参考文献 10 pt 悬挂缩进，只有自动页码一个域，无脚注、尾注、批注、修订 |
-| 正文结构 | 十进制标题；§3.6 新增 “Use of large language models”；文末依次为 Supplementary Information（7 条 caption）、Statements and Declarations、References |
+| 正文结构 | 十进制标题；§3.6 新增 “Use of large language models”；文末依次为 Supplementary Information（7 条 caption）、Statements and Declarations（匿名稿里只有 Data availability，见第 3 节第 7 项）、References |
 | 图 1 | 重画为 119 mm 宽、8 pt 的 Arial 兼容字体、黑白（靠标记形状和空心/实心区分）、线宽至少 0.6 pt；EPS（字体嵌入）、TIFF、PNG 三份，PNG 为 2811 × 2490 像素、600 dpi；图题用 Springer 的写法 |
 | 参考文献 | 按 APA 第 7 版的格式，4 条补了 DOI（Crossref 核对），共 17 条有 DOI；按第一作者姓氏排序（脚本检查） |
 | 补充材料 | 正文引用 Online Resource 1–7（首次引用顺序 1–7），列出 7 条 caption，数据可用性声明改为 “Included in the paper or Supplementary Information”，不再出现仓库地址；caption 里的数字已对文件核过 |
@@ -41,6 +41,7 @@
 4. **补充材料文件本身。** 数据线程仍在建；我只核了 caption 里的数字，没有打开文件。每个文件里写 “作者姓名、通讯作者邮箱” 的指南要求与双盲相冲突，核对表第 8 节建议送审版写 “withheld”，请 Qu 知悉。
 5. **第三方数据的许可。** ESM_2 里再分发中古音（tshet-uinh）和上古音（cddb/Baxter–Sagart）数据，许可条款仓库里只记了 *Shuōwén* 数据的 Apache-2.0；请数据线程在 ESM_1 里注明。
 6. **语言模型版本。** 方法部分只写了 “Claude (Anthropic)” 和 “Codex (OpenAI)”，没有版本号（各次编码用的模型版本在材料里能否查到，要看数据线程的 `provenance.tsv`）。
+7. **声明放在稿件里还是界面里。** Morphology 的指南 PDF 一边说 “Statements and Declarations” 随论文发表，没有声明的稿件会被退回，一边说换用 Snapp 后作者贡献、竞争利益等在界面里填。Springer Nature 的 Snapp 双盲页（我 2026-10-01 抓取原页核对）明确写稿件文件不应含致谢、贡献、竞争利益、伦理和基金声明，也没有提题名页和数据可用性声明。我按 Snapp 页办：匿名稿只留 Data availability，Funding、Competing interests、Ethics 三段和 “Coding” 一段（后者含作者姓名，内容已见 §3.3–3.5）移到题名页，那是在界面里逐项填写的英文底稿。如编辑部要求声明写进稿件，全文版里有现成的，删去 Author contributions 后贴回即可（核对表第 4 节）。
 
 ## 4 重新生成
 

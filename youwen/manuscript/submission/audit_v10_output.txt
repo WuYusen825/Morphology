@@ -41,10 +41,13 @@ INFO  entries with a DOI                                                        
 PASS  journal and book titles italicised                                              
 PASS  every dated reference is cited in the text                                      not found: []
 INFO  in-text name-year pairs without an entry (for a person to look at)              Changzhi's 1873; Guoying 1996; Hledíková 2026; Jianshi 1935; Kuo 1090; Li 1982; Mititelu 2026; Ning 2019; Schuessler's 2007; Shuo 2022; Shushi 2024; Yucai 1815; Yun 1837; Zhang's 2022
-PASS  Statements and Declarations in the manuscript: Funding                          
-PASS  Statements and Declarations in the manuscript: Competing interests              
-PASS  Statements and Declarations in the manuscript: Ethics approval and consent      
 PASS  Statements and Declarations in the manuscript: Data availability                
+PASS  manuscript file has no Funding statement (Snapp double-anonymous instructions)  
+PASS  manuscript file has no Competing interests statement (Snapp double-anonymous instructions)  
+PASS  manuscript file has no Ethics approval and consent statement (Snapp double-anonymous instructions)  
+PASS  manuscript file has no Author contributions statement (Snapp double-anonymous instructions)  
+PASS  manuscript file has no Acknowledgements statement (Snapp double-anonymous instructions)  
+PASS  manuscript file has no Acknowledgments statement (Snapp double-anonymous instructions)  
 PASS  no author names or contributions in the anonymised manuscript                   
 PASS  Online Resources: cited ones are listed with a caption, numbered 1..n           listed [1, 2, 3, 4, 5, 6, 7], cited [1, 2, 3, 4, 5, 6, 7]
 PASS  every Online Resource is cited in the text, first citations in numerical order  first citations: [1, 2, 3, 4, 5, 6, 7]
@@ -112,6 +115,6 @@ PASS  Fig1.eps 119 mm wide                                                      
 PASS  Fig1.eps: fonts embedded                                                        
 PASS  Fig1.eps: no author, for or copyright line, no author's name                    
 PASS  no paragraph that is mostly Chinese                                             0 found
-INFO  Chinese characters in the text                                                  473 characters against 11012 Latin-script words; they are examples and data, with pinyin or English
+INFO  Chinese characters in the text                                                  473 characters against 10916 Latin-script words; they are examples and data, with pinyin or English
 
-97 passed, 0 failed, 18 for information
+100 passed, 0 failed, 18 for information

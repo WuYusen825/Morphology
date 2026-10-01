@@ -17,7 +17,7 @@ In line with the journal's guidelines:
 - The manuscript is original, has not been published before in any form or language and is not under consideration elsewhere.
 - Re-use of material: **[TO BE CONFIRMED: the authors confirm that the manuscript re-uses no text, tables or figures from earlier publications, theses or conference papers; otherwise say what is re-used]**
 - All authors have approved the manuscript and its submission. The authors have no competing interests, no funding to declare, and no human participants or animals were involved.
-- The manuscript is anonymised for double-anonymous review; the title page, with the authors' details and the statements, is a separate file. The data, the semantic codings and the analysis scripts are supplied as Online Resources.
+- The manuscript is anonymised for double-anonymous review; the authors' details and the statements on funding, competing interests, ethics and contributions are entered in the submission system, not in the manuscript file. The data, the semantic codings and the analysis scripts are supplied as Online Resources.
 - Large language models (Claude, Anthropic; Codex, OpenAI) were used for data extraction, blind semantic coding, statistical scripting and drafting; the use is documented in Section 3.6, and the authors are accountable for the final text.
 - Fig. 1 was made with Python 3 (matplotlib) and is supplied as Fig1.eps, Fig1.tif and Fig1.png.
 

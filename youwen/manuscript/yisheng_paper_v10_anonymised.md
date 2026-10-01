@@ -425,14 +425,6 @@ The online version contains the following supplementary material (Online Resourc
 
 ## Statements and Declarations
 
-**Funding** The authors did not receive support from any organization for the submitted work.
-
-**Competing interests** The authors have no competing interests to declare that are relevant to the content of this article.
-
-**Ethics approval and consent** Not applicable. The study analyses historical texts and involves no human participants or animals.
-
-**Coding** The two authors each coded the first semantic sample independently from the unlabelled sheet and checked it against the blind machine coding, each reviewed 126 items of the enlarged coding separately and consolidated their judgments, and both reviewed the relation types of the homophonous pairs.
-
 **Data availability** The data supporting the findings of this study are included in the Supplementary Information: the pair-level dataset (Online Resource 2), the semantic codings (Online Resource 3), the analysis plan and the materials of the enlarged coding (Online Resources 4 and 5), the result tables (Online Resource 6) and the analysis code (Online Resource 7); Online Resource 1 is a guide to all files. The source texts and linguistic resources behind the dataset are open and are cited in Section 3: the digital *Shuōwén* of the shuowenjiezi project, the tshet-uinh database (nk2028), the cddb database of Baxter and Sagart's reconstruction, and the Kanseki Repository.
 
 ## References

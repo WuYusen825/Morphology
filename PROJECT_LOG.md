@@ -374,3 +374,13 @@
   - 排序检查把 “(100 CE)”“(10th century)” 当成无年份，误报字母序错；检查日期时要容许这两种写法。
 - **权威版本**：当前稿由 v9 改为 v10（完整版、匿名稿、题名页、cover letter、上传文件）；v10 的数字与 v9 相同。
 - **未改动**：数据文件、编码表、模型结果、正式计数；`ext_coding/` 里数据线程的文件；参考文献的条目和数量（37 条，仅补 DOI）；Qu 的 v5 DOCX 未提交改动。
+
+## 2026-10-01 · Claude（主稿线程）· v10 小改：匿名稿按 Snapp 双盲页只留 Data availability
+
+- **起因**：v10 交付后，我对照 Springer Nature 自己的 Snapp 双盲页（springernature.com/gp/snapp/submitting/how-to-submit/double-anonymous，2026-10-01 抓取原页）复核。该页写明稿件文件 “should not include: author acknowledgements or contribution statements; a competing interest statement; an ethics statement; funding information”，这些由 Snapp 询问，填入的内容进入发表版；没有提数据可用性声明，也没有提单独的题名页。*Morphology* 的指南 PDF 则一边说 “Statements and Declarations” 随论文发表（没有声明的稿件会被退回），一边在开头说换用 Snapp 后这类声明 “instead of including it in the manuscript” 在界面里填。两处不一致，我按 Snapp 页办（它是平台的现行说明，也是指南开头那句所指的做法），并在核对表第 4 节写明理由和退路。这是排版合规，不是内容改动：正文、表、图和数字都不变。
+- **改了什么**：
+  - `yisheng_make_submission_files.py`：匿名稿去掉 Funding、Competing interests、Ethics approval and consent、Coding、Author contributions 五段，只留 Data availability（“Coding” 一段含作者姓名，内容已见 §3.3–3.5）；题名页的说明改为 “不是匿名稿的一部分，是 Snapp 表单的英文底稿，系统要求题名页时再传”；cover letter 一条说明相应改写。
+  - `yisheng_submission_audit.py`：匿名稿必须有 Data availability，不得有 Funding、Competing interests、Ethics、Author contributions、Acknowledgements/Acknowledgments；结果 100 项通过，0 项失败（原 97 项；声明部分的检查由 4 条变为 7 条）。
+  - 重新生成匿名稿、题名页、cover letter 及其 DOCX，复制到 `submission/`；`SUBMISSION_CHECKLIST.md` 第 1、4 节、`v10_evaluation.md`（§3 第 7 项）、`yisheng_paper_v10_numbers.md`（“文末” 一行）、README、AGENTS.md、`youwen_criteria.md` 同步。完整版 `yisheng_paper_v10.md` 不变，仍含全部声明；如编辑部要求声明写进稿件，删去 Author contributions（含作者姓名缩写）后贴回即可。
+- **从这件事得到的做法**：搜索摘要和抓取原页对同一页说得不一样（搜索摘要提到 “separate Title Page”，原页没有）；以抓取到的原页为准，并分别写明哪些是原页明文、哪些是推断。云端环境里 `WebSearch`/`WebFetch` 可以访问 springernature.com；投稿规则以平台页和期刊指南的原文为准，不以记忆或摘要为准。
+- **未改动**：论文正文、表、图、数字、参考文献；数据文件和 `ext_coding/` 里数据线程的文件；补充材料（仍在数据线程手里）。

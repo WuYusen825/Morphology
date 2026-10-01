@@ -2,10 +2,13 @@
 """Builds the submission files of a paper version from its full Markdown text, in the form Morphology (Springer) asks for.
 
 From youwen/manuscript/yisheng_paper_<v>.md it makes
-  yisheng_paper_<v>_anonymised.md  the manuscript for double-anonymous review: no authors, affiliation or contributions,
-                                   no repository owner in links (the declarations that name nobody stay)
+  yisheng_paper_<v>_anonymised.md  the manuscript for double-anonymous review: no authors, affiliation or contributions, no repository
+                                   owner in links; of the declarations only the data availability statement stays, because Snapp
+                                   (Springer Nature, double-anonymous instructions) asks for the funding, competing-interest, ethics,
+                                   contribution and acknowledgement statements in its own form and wants none of them in the file
   yisheng_<v>_title_page.md        title, authors, affiliation, corresponding author, ORCID, acknowledgements and all
-                                   Statements and Declarations (placeholders, highlighted in Word, for what only the authors know)
+                                   Statements and Declarations (placeholders, highlighted in Word, for what only the authors know);
+                                   the English source text for Snapp's form, not part of the manuscript file
   yisheng_<v>_cover_letter.md      cover letter to the editors
 and the Word files yisheng_paper_<v>.docx, ..._anonymised.docx, yisheng_<v>_title_page.docx, yisheng_<v>_cover_letter.docx.
 Copies of the last four, under the names the submission system gets, go to youwen/manuscript/submission/:
@@ -433,9 +436,14 @@ def anonymise(t, v):
     a = t
     a = rep(a, f'author:\n  - "{AUTHORS}"\n  - "{AFFILIATION}"\n', "")
     a = re.sub(r'^date: ".*"\n', "", a, count=1, flags=re.M)
-    a = rep(a, "**Coding** Yusen Wu and Weiyi Qu each coded", "**Coding** The two authors each coded")
-    a, n = re.subn(r"\*\*Author contributions\*\* .*\n\n", "", a)
-    assert n == 1, "Author contributions paragraph"
+    # Snapp, double-anonymous instructions: "Your manuscript file should not include: author acknowledgements or contribution
+    # statements, a competing interest statement, an ethics statement, funding information" (they are asked for in the system and
+    # come from the title page file). The data availability statement is not on that list and stays. The "Coding" paragraph
+    # (who coded what, with the authors' names) repeats Sections 3.3-3.5 as a contribution-like statement and goes with them.
+    for label in ("Funding", "Competing interests", "Ethics approval and consent", "Coding", "Author contributions"):
+        a, n = re.subn(rf"\*\*{label}\*\* .*\n\n", "", a)
+        assert n == 1, f"{label} paragraph"
+    assert "**Data availability**" in a.split("## References")[0]
     for bad in REVEALING:
         assert bad not in a, bad
     body = a.split("## References")[0]
@@ -493,7 +501,7 @@ title: "Title page"
 
 **Use of large language models** The use of Claude (Anthropic) and Codex (OpenAI) is documented in Section 3.6 of the manuscript.
 
-**Note on the files** The anonymised manuscript is `Manuscript_anonymised.docx` ({round(c["main"], -2):,} words of main text, abstract {c["abstract"]} words, {c["n_tables"]} tables, {c["n_figures"]} figure, {c["n_refs"]} references); the figure is supplied as `Fig1.png`, `Fig1.eps` and `Fig1.tif`. This page identifies the authors and is submitted separately from the anonymised manuscript.
+**Note on the files** The anonymised manuscript is `Manuscript_anonymised.docx` ({round(c["main"], -2):,} words of main text, abstract {c["abstract"]} words, {c["n_tables"]} tables, {c["n_figures"]} figure, {c["n_refs"]} references); the figure is supplied as `Fig1.png`, `Fig1.eps` and `Fig1.tif`. This page identifies the authors and is not part of the anonymised manuscript. Snapp asks for these statements in its own form (the manuscript file must not contain the funding, competing-interest, ethics and contribution statements), so the page is the English source text for that form; upload it only if the system asks for a title page.
 '''
 
 
@@ -523,7 +531,7 @@ In line with the journal's guidelines:
 - The manuscript is original, has not been published before in any form or language and is not under consideration elsewhere.
 - Re-use of material: {prior}
 - All authors have approved the manuscript and its submission. The authors have no competing interests, no funding to declare, and no human participants or animals were involved.
-- The manuscript is anonymised for double-anonymous review; the title page, with the authors' details and the statements, is a separate file. The data, the semantic codings and the analysis scripts are supplied as Online Resources.
+- The manuscript is anonymised for double-anonymous review; the authors' details and the statements on funding, competing interests, ethics and contributions are entered in the submission system, not in the manuscript file. The data, the semantic codings and the analysis scripts are supplied as Online Resources.
 - Large language models (Claude, Anthropic; Codex, OpenAI) were used for data extraction, blind semantic coding, statistical scripting and drafting; the use is documented in Section 3.6, and the authors are accountable for the final text.
 - Fig. 1 was made with Python 3 (matplotlib) and is supplied as Fig1.eps, Fig1.tif and Fig1.png.
 

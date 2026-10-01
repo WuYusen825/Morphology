@@ -130,9 +130,14 @@ def main(v):
     check(True, "in-text name-year pairs without an entry (for a person to look at)", "; ".join(stray[:40]) or "none", info=True)
 
     # ---- statements, online resources -----------------------------------------------------------------------------------
+    # Snapp's double-anonymous instructions (springernature.com/gp/snapp/submitting/how-to-submit/double-anonymous): the manuscript
+    # file carries no acknowledgement, contribution, competing-interest, ethics or funding statement (the system asks for them, and
+    # the title page file is their source text); the data availability statement is not on that list and stays.
     sd = anon[anon.index("## Statements and Declarations"):anon.index("## References")]
-    for label in ("Funding", "Competing interests", "Ethics approval and consent", "Data availability"):
-        check(f"**{label}**" in sd, f"Statements and Declarations in the manuscript: {label}")
+    check("**Data availability**" in sd, "Statements and Declarations in the manuscript: Data availability")
+    for label in ("Funding", "Competing interests", "Ethics approval and consent", "Author contributions", "Acknowledgements", "Acknowledgments"):
+        check(f"**{label}**" not in anon and f"## {label}" not in anon,
+              f"manuscript file has no {label} statement (Snapp double-anonymous instructions)")
     check("Author contributions" not in anon.split("## References")[0] and "Yusen" not in anon, "no author names or contributions in the anonymised manuscript")
     ors_cited = sorted({int(n) for n in re.findall(r"Online Resources? (\d+)", anon)} | {int(n) for n in re.findall(r"Online Resources \d+[–-](\d+)", anon)})
     listed = [int(n) for n in re.findall(r"^\*\*Online Resource (\d+)\*\*", anon, re.M)]

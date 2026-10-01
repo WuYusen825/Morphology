@@ -10,7 +10,7 @@
 |---|---|---|
 | 稿件用 Word（.docx），正文、图、表放在同一个可编辑文件里（Source Files；Snapp：single editable file） | 满足 | `Manuscript_anonymised.docx`：12 个 Word 表格，图 1 嵌入，页码为自动页码，无域代码、尾注、批注和修订痕迹 |
 | 图单独提供时，矢量用 EPS、半色调用 TIFF，文件名为 “Fig” + 编号（Fig1.eps） | 满足 | `Fig1.eps`（字体已嵌入）、`Fig1.tif`、`Fig1.png`；嵌入稿件的是 PNG |
-| 双盲：作者信息和声明在系统界面里填，不放在稿件里或单独的题名页里 | 满足（需 Qu 在界面里填） | 匿名稿不含任何作者信息；`Title_page.docx` 不上传，仅作为在界面里逐项填写的底稿 |
+| 双盲：作者信息和声明在系统界面里填，不放在稿件里或单独的题名页里 | 满足（需 Qu 在界面里填） | 匿名稿不含任何作者信息，也不含致谢、贡献、竞争利益、伦理、基金声明（第 4 节）；`Title_page.docx` 不上传，仅作为在界面里逐项填写的底稿，系统若要求题名页再传 |
 | 先上传稿件，不要预先填字段；上传后核对系统自动抽取的标题、摘要和声明（Snapp） | 需 Qu | 上传后核对一次抽取结果 |
 | 补充材料：见第 8 节 | 待补充材料 | |
 | cover letter | 满足（有占位） | `Cover_letter.docx`；日期、署名、“是否再用过材料”待 Qu |
@@ -43,14 +43,18 @@
 | 基金信息（界面里填） | 满足 | 无基金：“The authors did not receive support from any organization for the submitted work.” |
 | 试验注册号 | 不适用 | 非临床试验 |
 
-## 4 Statements and Declarations（匿名稿里有，标题与指南一致）
+## 4 Statements and Declarations（匿名稿里只留数据可用性声明，其余在界面里填）
+
+**两处说明不一致，我按 Snapp 页办。** Morphology 的指南 PDF 说 “Statements and Declarations” 一节随论文发表，没有声明的稿件 “will be returned as incomplete”，但同一份指南开头又说，本刊换用 Snapp 后，作者贡献、竞争利益等 “instead of including it in the manuscript” 而在界面里填，并写明 “we are currently working on revising our submission guidelines”。Springer Nature 的 Snapp 双盲页（springernature.com/gp/snapp/submitting/how-to-submit/double-anonymous，2026-10-01 抓取原页核对）明确写：“Your manuscript file should not include: author acknowledgements or contribution statements; a competing interest statement; an ethics statement; funding information”，这些由 Snapp 询问，填入的内容会进入发表版；该页没有提到数据可用性声明，也没有提到单独的题名页。所以 v10 的匿名稿只保留 Data availability，其余声明的英文底稿在 `Title_page.docx`，在界面里填。
 
 | 要求 | 状态 | 说明 |
 |---|---|---|
-| Funding、Competing interests、Ethics approval and consent、Data availability 各有声明 | 满足 | 稿件末尾 “Statements and Declarations”（statements in the manuscript）；另有 “Coding” 一段说明两位作者做了什么，措辞沿用 v9 |
-| 伦理、同意、动物 | 不适用 | “Not applicable. The study analyses historical texts and involves no human participants or animals.” |
-| 数据可用性声明：说清数据在哪里、怎么取；每个数据集写明标题、仓库名、持久标识符（如 DOI）；不公开的要解释 | 满足（可选增强见第 9 节） | 属于 Snapp 页列的第三种写法 “Included in the paper or Supplementary Information”：数据、编码、材料、结果表和代码都作为 Online Resource 1–7；源文本与数据库按 §3 引用。尚无 DOI |
+| 稿件文件不含致谢、作者贡献、竞争利益、伦理、基金信息（Snapp 双盲页） | 满足 | 匿名稿的 “Statements and Declarations” 下只有 Data availability；Funding、Competing interests、Ethics approval and consent 三段移出，“Coding” 一段（谁编了什么，含作者姓名，内容已见 §3.3–3.5）也不再放在匿名稿里；脚本逐项检查（manuscript file has no … statement） |
+| 这些声明各有英文底稿、在界面里填 | 满足 | `Title_page.docx`：Funding、Competing interests、Ethics approval and consent、Author contributions、Data availability；贡献和编委身份待 Qu（第 3、9 节）。全文版 `yisheng_paper_v10.md` 保留完整的 “Statements and Declarations”（含 Coding） |
+| 伦理、同意、动物 | 不适用 | 界面里填 “Not applicable. The study analyses historical texts and involves no human participants or animals.” |
+| 数据可用性声明：说清数据在哪里、怎么取；每个数据集写明标题、仓库名、持久标识符（如 DOI）；不公开的要解释 | 满足（可选增强见第 9 节） | 属于 Snapp 页列的第三种写法 “Included in the paper or Supplementary Information”：数据、编码、材料、结果表和代码都作为 Online Resource 1–7；源文本与数据库按 §3 引用。尚无 DOI。匿名稿里有，界面里再粘一次 |
 | 代码可用性 | 满足 | 并入数据声明（Online Resource 7） |
+| 万一编辑部回信要求把声明写进稿件 | 需 Qu 知悉 | 全文版里有现成的 “Statements and Declarations”：删去 Author contributions 一段（它会含作者姓名缩写）后即可贴回匿名稿；Morphology 指南那句 “returned as incomplete” 针对的是没有声明的稿件，在界面里填了应算有 |
 
 ## 5 参考文献
 
