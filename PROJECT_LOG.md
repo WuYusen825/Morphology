@@ -440,3 +440,8 @@
 - **评审结论**（`v7_work/review/v10_submission_review.md`，14:31）：匿名全过（七个补充文件、匿名稿、图、两个 zip 内部均无姓名、单位、邮箱、仓库属主、本地路径，属性为空）；ESM_7 run_all 249/0；审计脚本 133 项通过；LICENSE 和 NOTICE 正确；正文数字重算无差；与 Qu 的既定决定无冲突。**必须改一处（M1）**：ESM_5.zip 的 README 称作者核验表 “填完自己的判断之后才显示两次盲编的代码”，与 ESM_1、ESM_4、ESM_6、ESM_7 和论文不一致（表上一直显示着两次盲编的代码，只是要求先填再看）。由数据线程改并重打 ESM_5.zip，我重核后入库。
 - **我做的**：S1（ESM_3、ESM_5、ESM_6 的 caption 用直撇号，Word 稿用弯撇号）只改措辞：审计脚本的检查名和核对表第 8 节写 “字词逐字相同，撇号和引号字形除外”，文件不动。
 - **已知的小问题，不做**（Qu 14:08 前的指示 “这一版不必再优化”，改动会让 ESM_6、ESM_7 再重核一轮）：S2，ESM_6 `ext_coding_models` 的 note、ESM_7 `expected/yisheng_models_ext_coding.csv` 和 `scripts/ext_analysis.py` 第 144、162 行指向包外的 `yisheng_models_v7_checks.csv`；S3，ESM_7 未装 matplotlib 时 `run_all.py` 在最后一步报错（README §2 已写 matplotlib 和 `--no-figure`）。
+
+## 2026-10-01 · Claude（主稿线程）· ESM_5 README 更正（评审 M1），补充材料定稿
+
+- 数据线程改了 ESM_5.zip 的 README：作者核验表 “显示每项的类型和两次盲编的代码（H、I 列），说明要求作者先填自己的判断再看代码”，与 ESM_1、ESM_4、ESM_6、ESM_7 和论文一致。我重核：其余六份文件与 80e35c2 逐字节相同；ESM_5 的 caption、属性、匿名、14 个提示和 16 份回答文件的检查全过；审计脚本（`--rerun-esm7`）133 项通过、0 失败。ESM_5 入库，`supplement_build/` 同步。
+- 补充材料至此定稿；评审线程只需知悉（M1 已改，S1 改措辞，S2、S3 不做）。

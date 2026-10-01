@@ -117,7 +117,7 @@ PASS  Fig1.eps: no author, for or copyright line, no author's name
 PASS  no paragraph that is mostly Chinese                                             0 found
 INFO  Chinese characters in the text                                                  473 characters against 10976 Latin-script words; they are examples and data, with pinyin or English
 PASS  supplement folder holds exactly the files named in the manuscript, ESM_n.ext    ['ESM_1.pdf', 'ESM_2.xlsx', 'ESM_3.xlsx', 'ESM_4.pdf', 'ESM_5.zip', 'ESM_6.xlsx', 'ESM_7.zip']
-PASS  ESM_1.pdf: caption on page 1 identical to the manuscript's, authors and corresponding author withheld  13 pages
+PASS  ESM_1.pdf: caption on page 1 identical to the manuscript's (apart from straight versus curly quotation marks), authors and corresponding author withheld  13 pages
 PASS  ESM_1.pdf: PDF properties without author, creator or producer                   title: 'Online Resource 1: guide to the electronic supplementary material'; filled: []
 PASS  ESM_1.pdf: no author name, affiliation, e-mail address, local path or session id in any text or member  []
 PASS  ESM_2.xlsx: sheet About carries the manuscript's caption, authors and corresponding author withheld  sheets 5, first About, last data_dictionary
@@ -128,10 +128,10 @@ PASS  ESM_3.xlsx: sheet About carries the manuscript's caption, authors and corr
 PASS  ESM_3.xlsx: first sheet About, last sheet data_dictionary                       
 PASS  ESM_3.xlsx: workbook properties empty (no creator, last modifier, company)      filled: []
 PASS  ESM_3.xlsx: no author name, affiliation, e-mail address, local path or session id in any text or member  []
-PASS  ESM_4.pdf: caption on page 1 identical to the manuscript's, authors and corresponding author withheld  9 pages
+PASS  ESM_4.pdf: caption on page 1 identical to the manuscript's (apart from straight versus curly quotation marks), authors and corresponding author withheld  9 pages
 PASS  ESM_4.pdf: PDF properties without author, creator or producer                   title: 'Online Resource 4: analysis plan for the enlarged coding'; filled: []
 PASS  ESM_4.pdf: no author name, affiliation, e-mail address, local path or session id in any text or member  []
-PASS  ESM_5.zip: README caption identical to the manuscript's, authors and corresponding author withheld  34 members
+PASS  ESM_5.zip: README caption identical to the manuscript's (apart from straight versus curly quotation marks), authors and corresponding author withheld  34 members
 PASS  ESM_5.zip: one root folder, no hidden or system files, no zip comment           ['enlarged_coding_materials']
 PASS  ESM_5.zip: workbooks inside have empty properties                               []
 PASS  ESM_5.zip: no author name, affiliation, e-mail address, local path or session id in any text or member  []
@@ -139,7 +139,7 @@ PASS  ESM_6.xlsx: sheet About carries the manuscript's caption, authors and corr
 PASS  ESM_6.xlsx: first sheet About, last sheet data_dictionary                       
 PASS  ESM_6.xlsx: workbook properties empty (no creator, last modifier, company)      filled: []
 PASS  ESM_6.xlsx: no author name, affiliation, e-mail address, local path or session id in any text or member  []
-PASS  ESM_7.zip: README caption identical to the manuscript's, authors and corresponding author withheld  69 members
+PASS  ESM_7.zip: README caption identical to the manuscript's (apart from straight versus curly quotation marks), authors and corresponding author withheld  69 members
 PASS  ESM_7.zip: one root folder, no hidden or system files, no zip comment           ['analysis_code']
 PASS  ESM_7.zip: workbooks inside have empty properties                               []
 PASS  ESM_7.zip: no author name, affiliation, e-mail address, local path or session id in any text or member  []

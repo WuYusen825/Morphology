@@ -102,8 +102,8 @@ CONTENTS
   author_check_sheet_blank.xlsx
       The sheet on which the authors checked 126 items, blank, as sent (English rendering of the instructions and headers; the original
       was in Chinese and is given beside the English). The sheet showed the type of each item (the passes disagree / drawn at random from
-      those that agree) and, after the authors had entered their own judgment, the codes of the two passes. The consolidated filled sheet
-      is the sheet "author_check" of Online Resource 3.
+      those that agree) and the codes of the two passes (columns H and I); the instructions asked the authors to enter their own judgment
+      before looking at the codes. The consolidated filled sheet is the sheet "author_check" of Online Resource 3.
   collection_log.csv
       When each answer was collected (UTC), whether the prompt that was sent was identical to the file in prompts/, the tool calls the
       instance reported (the only one is the hand-back of its answer; the first answer of pass 1, batch 3 came as plain text, with none),

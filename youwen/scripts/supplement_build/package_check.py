@@ -33,9 +33,11 @@ RX = [re.compile(p, re.I if p not in (r'\bQu\b', r'\bWu\b') else 0) for p in PAT
 
 
 PATHPAT = {r'/home/', r'/tmp/', r'/mnt/', r'C:\\Users'}
+CORPUS = {}                                                # every text of the package, by file name, for the cross-file wording checks at the end
 
 
 def scan(name, text):
+    CORPUS[name] = text
     hits = []
     for rx in RX:
         if name.endswith('self_check.py') and rx.pattern in PATHPAT: continue     # the self-check lists the path patterns it looks for
@@ -181,6 +183,18 @@ if ms.exists():
     ok('Online Resources 4 and 5' in da and 'Online Resource 1 is a guide to all files' in da, 'data availability statement refers to the Online Resources')
 else:
     print('manuscript not found; captions not compared')
+
+# the order of events on the authors' 126-item check is told the same way everywhere (the reviewer's finding on the ESM_5 README, 2026-10-01):
+# the sheet always showed the codes of the two passes; the instructions asked the authors to enter their own judgment first
+FLAT = {k: re.sub(r'\s+', ' ', v) for k, v in CORPUS.items()}
+for k, v in FLAT.items():
+    m = re.search(r'after the authors (had )?(entered|filled|written|judged|made)', v, re.I)
+    ok(m is None, f'{k}: says the codes were shown only after the authors had entered their judgment: {v[max(0, m.start() - 60):m.end() + 80] if m else ""}')
+r5 = FLAT.get('ESM_5.zip:enlarged_coding_materials/README.txt', '')
+ok('and the codes of the two passes (columns H and I); the instructions asked the authors to enter their own judgment before looking at the codes' in r5,
+   'ESM_5 README: the sheet showed the codes of the two passes (columns H and I); the instructions asked for the authors\' own judgment first')
+r1 = FLAT.get('ESM_1.pdf text', '')
+ok(r1.count('the codes of the two passes (the instructions asked the authors to enter their own judgment first)') >= 2, 'ESM_1: both statements on the sheet (Guide table, Section 9) say what the sheet showed and what the instructions asked')
 
 print(f'{n} checks, {len(fails)} failed')
 sys.exit(1 if fails else 0)
