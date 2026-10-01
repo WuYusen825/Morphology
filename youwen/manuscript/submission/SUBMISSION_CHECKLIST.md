@@ -20,8 +20,8 @@
 | 要求 | 状态 | 说明 |
 |---|---|---|
 | 题名简明、有信息量 | 满足 | 15 个词 |
-| 摘要 150–250 词，无未定义的缩写和未指明的引用 | 满足 | 246 词（把 亦聲 两个字各算一词为 247；按空格分词的 Word 口径）（abstract 150-250 words；no abbreviations in the abstract） |
-| 4–6 个关键词 | 满足 | 6 个（4-6 keywords） |
+| 摘要 150–250 词，无未定义的缩写和未指明的引用 | 满足 | 200 词（把 亦聲 两个字各算一词为 201；按空格分词的 Word 口径；Qu 14:51 改写，不含数据）（abstract 150-250 words；no abbreviations in the abstract） |
+| 4–6 个关键词 | 满足 | 6 个：Derivation · Lexical relatedness · Conversion · Phonetic compounds · Chinese writing system · Old Chinese（Qu 14:51 标准化；4-6 keywords） |
 | 十进制标题，不超过三级 | 满足 | 31 个标题，最深三级（decimal headings） |
 | 缩写在首次出现时定义，之后一致使用 | 满足 | 人工逐个核过：MC、OC、OR、CI、GEE、MH 都在首次出现处定义；其余是代码字母（I、R、O、V、C；Y、E、N、X；L、F、C、U）和表内说明 |
 | 脚注用脚注不用尾注；脚注不只含引文、不含书目信息、不含图表 | 满足 | 全文没有脚注（0 个），也没有尾注 |

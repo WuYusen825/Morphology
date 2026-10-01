@@ -10,7 +10,7 @@
 |---|---:|---:|---|
 | 正文 §1–§7 | 8,838 词 | 8,614 词 | 多出的 224 词：§3.6（原在 Declarations 里的 “Use of AI tools” 一段，指南要求写进方法部分，约 120 词）和正文里新增的 “Online Resource n” 引用句（约 100 词） |
 | 汉字（正文，不含表） | 342 个 | 342 个 | 按同一方法重数，v9 也是 342（v9 数字文件写的是 339，口径略有出入）；汉字只作例证，均有拼音或英文释义 |
-| 摘要 | 246 词 | 249 词 | 把 亦聲 两个字各算一词时为 247；把小数点拆开的 \w+ 口径为 252；指南上限 250。为留余量改了两处措辞，意思不变 |
+| 摘要 | 200 词 | 246 词 | Qu 2026-10-01 14:48 要求改写为 150–200 词、不写数据、不用疑问句开头（宏观说明研究、按问题—对象—方法—发现—结论推进）；按空格分词 200，把 亦聲 两个字各算一词为 201，\w+ 口径 202；摘要里不再有百分比和样本数 |
 | 表格、表注和图注 | 2,044 词 + 图注 96 词 | 同 | 12 张表、1 幅图 |
 | 参考文献 | 37 条 | 37 条 | 4 条补了 DOI，共 17 条有 DOI |
 | 关键词 | 6 个 | 7 个 | 指南要求 4–6 个，删去 Metalinguistic evidence |
@@ -51,3 +51,5 @@
 ## 图 1
 
 数字同三个结果文件（`ext_coding/yisheng_models_ext_coding.csv`、`…_author_check.csv`、`…_second_answer.csv`），由 `youwen/scripts/yisheng_v10_figure.py` 读入；脚本断言正文引用的五个值：主检验 2.35 [1.43, 3.86]、作者判断替换 2.73 [1.61, 4.65]、声符内 MH 2.01 [0.75, 5.39]、第二次回答替换 2.39 [1.38, 4.14]、X3 1.80 [0.95, 3.42]。作图用 Python 3 + matplotlib（Liberation Sans，与 Arial 度量兼容）。
+
+| 关键词（Qu 14:51 要求标准化） | Derivation · Lexical relatedness · Conversion · Phonetic compounds · Chinese writing system · Old Chinese | Lexical relatedness · Derivation · Conversion · Old Chinese · Suffix \*-s · Writing systems | 去掉 “Suffix *-s”（不是标准的关键词），换为 “Phonetic compounds”；“Writing systems” 改为 “Chinese writing system”；按从一般到具体排序 |

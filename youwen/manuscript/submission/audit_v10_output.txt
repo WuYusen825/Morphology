@@ -1,6 +1,6 @@
-PASS  abstract 150-250 words                                                          246 words by whitespace, 247 if each Chinese character counts, 252 by \w+ (decimals split)
-INFO  abstract margin                                                                 \w+ count 252
-PASS  4-6 keywords                                                                    6: Lexical relatedness; Derivation; Conversion; Old Chinese; Suffix \*-s; Writing systems
+PASS  abstract 150-250 words                                                          200 words by whitespace, 201 if each Chinese character counts, 202 by \w+ (decimals split)
+INFO  abstract margin                                                                 \w+ count 202
+PASS  4-6 keywords                                                                    6: Derivation; Lexical relatedness; Conversion; Phonetic compounds; Chinese writing system; Old Chinese
 PASS  no abbreviations in the abstract                                                
 PASS  decimal headings, at most three levels                                          31 headings; odd ones: []
 PASS  LLM use documented in the Methods (Section 3.6)                                 
@@ -115,7 +115,7 @@ PASS  Fig1.eps 119 mm wide                                                      
 PASS  Fig1.eps: fonts embedded                                                        
 PASS  Fig1.eps: no author, for or copyright line, no author's name                    
 PASS  no paragraph that is mostly Chinese                                             0 found
-INFO  Chinese characters in the text                                                  473 characters against 10976 Latin-script words; they are examples and data, with pinyin or English
+INFO  Chinese characters in the text                                                  473 characters against 10939 Latin-script words; they are examples and data, with pinyin or English
 PASS  supplement folder holds exactly the files named in the manuscript, ESM_n.ext    ['ESM_1.pdf', 'ESM_2.xlsx', 'ESM_3.xlsx', 'ESM_4.pdf', 'ESM_5.zip', 'ESM_6.xlsx', 'ESM_7.zip']
 PASS  ESM_1.pdf: caption on page 1 identical to the manuscript's (apart from straight versus curly quotation marks), authors and corresponding author withheld  13 pages
 PASS  ESM_1.pdf: PDF properties without author, creator or producer                   title: 'Online Resource 1: guide to the electronic supplementary material'; filled: []

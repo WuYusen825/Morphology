@@ -445,3 +445,9 @@
 
 - 数据线程改了 ESM_5.zip 的 README：作者核验表 “显示每项的类型和两次盲编的代码（H、I 列），说明要求作者先填自己的判断再看代码”，与 ESM_1、ESM_4、ESM_6、ESM_7 和论文一致。我重核：其余六份文件与 80e35c2 逐字节相同；ESM_5 的 caption、属性、匿名、14 个提示和 16 份回答文件的检查全过；审计脚本（`--rerun-esm7`）133 项通过、0 失败。ESM_5 入库，`supplement_build/` 同步。
 - 补充材料至此定稿；评审线程只需知悉（M1 已改，S1 改措辞，S2、S3 不做）。
+
+## 2026-10-01 · Claude（主稿线程）· 摘要改写（200 词）和关键词标准化
+
+- **Qu 的要求**：14:48 要摘要改为 150–200 词、宏观说明研究、不在摘要里详细写数据；14:49 “不要问句，顺序推进逻辑”；14:51 “把这个摘要替换后，关键词也标准化一下，然后生成一个新的 zip”；14:52 指出 “suffix *-s” 不应出现在关键词里。
+- **改了什么**：`yisheng_paper_v10.md` 的摘要换成 200 词的新版（问题—对象—方法—发现—结论，无百分比和样本数，不以疑问句开头，结论措辞与正文一致：moderate，不涉方向）；关键词改为 Derivation · Lexical relatedness · Conversion · Phonetic compounds · Chinese writing system · Old Chinese（去掉 Suffix *-s）。匿名稿、题名页、cover letter 及其 DOCX 重新生成；自查（含 ESM_7 重跑）133 项通过。`yisheng_paper_v10_numbers.md`、核对表同步。正文、表、图、数字和补充材料不变。
+- **注意**：摘要变了，v10 与 v9 在摘要上不再相同；补充材料的 caption 不受影响。

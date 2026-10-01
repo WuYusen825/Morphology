@@ -16,7 +16,7 @@ Weiyi Qu^1^ · ORCID: N/A · e-mail: 202520101018@bfsu.edu.cn
 
 **Acknowledgements** None.
 
-**Keywords** Lexical relatedness; Derivation; Conversion; Old Chinese; Suffix \*-s; Writing systems
+**Keywords** Derivation; Lexical relatedness; Conversion; Phonetic compounds; Chinese writing system; Old Chinese
 
 **Statements and Declarations**
 
@@ -32,4 +32,4 @@ Weiyi Qu^1^ · ORCID: N/A · e-mail: 202520101018@bfsu.edu.cn
 
 **Use of large language models** The use of Claude (Anthropic) and Codex (OpenAI) is documented in Section 3.6 of the manuscript.
 
-**Note on the files** The anonymised manuscript is `Manuscript_anonymised.docx` (8,800 words of main text, abstract 246 words, 12 tables, 1 figure, 37 references); the figure is supplied as `Fig1.png`, `Fig1.eps` and `Fig1.tif`. This page identifies the authors and is not part of the anonymised manuscript. Snapp asks for these statements in its own form (the manuscript file must not contain the funding, competing-interest, ethics and contribution statements), so the page is the English source text for that form; upload it only if the system asks for a title page.
+**Note on the files** The anonymised manuscript is `Manuscript_anonymised.docx` (8,800 words of main text, abstract 200 words, 12 tables, 1 figure, 37 references); the figure is supplied as `Fig1.png`, `Fig1.eps` and `Fig1.tif`. This page identifies the authors and is not part of the anonymised manuscript. Snapp asks for these statements in its own form (the manuscript file must not contain the funding, competing-interest, ethics and contribution statements), so the page is the English source text for that form; upload it only if the system asks for a title page.
