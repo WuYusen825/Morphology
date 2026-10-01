@@ -38,7 +38,7 @@
 | 明确标出一位通讯作者及其可用邮箱（Snapp：一位 responsible corresponding author） | 满足 | Yusen Wu，wu_yusen825@icloud.com（Qu 2026-10-01 13:49、14:10）；Weiyi Qu 的邮箱 202520101018@bfsu.edu.cn |
 | 两位作者的 ORCID（有则填） | 满足 | 两位都没有（N/A，Qu 13:49） |
 | 致谢 | 满足 | “None.”（无基金、无致谢，Qu 2026-09-30 13:58） |
-| 作者贡献声明（必须在界面里填，只有界面里的会进入发表版） | 需 Qu 确认一句 | 已按 Qu 的原话（Qu 参与编码和文献综述，其余 Wu 完成，Wu 在前）并按 Qu 要求的 “更具体” 写成 CRediT 句，见第 9 节第 6 项；Qu 未回之前以此为准 |
+| 作者贡献声明（必须在界面里填，只有界面里的会进入发表版） | 满足 | 按 Qu 的原话（Qu 参与编码和文献综述，其余 Wu 完成，Wu 在前）并按 Qu 要求的 “更具体” 写成 CRediT 句，Qu 14:16 确认 “对”（第 9 节第 6 项） |
 | 竞争利益声明（必须在界面里填）；编委成员须自行声明 | 满足 | “no competing interests”（Qu 2026-09-30 13:58、10-01 13:49）；两位都不是 *Morphology* 编委（Qu 14:10 “都不是”） |
 | 基金信息（界面里填） | 满足 | 无基金：“The authors did not receive support from any organization for the submitted work.” |
 | 试验注册号 | 不适用 | 非临床试验 |
@@ -89,7 +89,7 @@
 | 稿件原创、未曾发表、未同时投他处；如有再用（学位论文、会议稿）须在 cover letter 里说明 | 需 Qu | cover letter 写了 “原创、未发表、未一稿两投”，“再用的材料” 一条留作 Qu 确认 |
 | 全体作者已批准稿件及其提交；所在机构（如需）已同意 | 需 Qu | cover letter 已写 “All authors have approved…”，请 Qu 确认属实 |
 | 可推荐或回避审稿人（可选）；推荐须附机构邮箱或主页链接 | 需 Qu（可选） | 不填也可以 |
-| 第三方数据与软件的使用许可 | 需 Qu 确认 | ESM_1 §8 和各文件的 About／README 写明来源与条款：*Shuōwén* 文本 Apache-2.0；中古音（nk2028 的 Qieyun 数据 CC0，tshet-uinh 软件 MIT）；上古音构拟字符串来自 Baxter–Sagart，经 cddb 仓库（GPL-3.0），引用时请引 Baxter 和 Sagart（2014）。作者自己的贡献（编码、标注、表、文档）用 CC BY 4.0、代码用 MIT，是数据线程提议的，由 Qu 定。我没有核各来源的 LICENSE 原文（这些仓库不在本环境可访问的范围内），上述条款是数据线程读原文后写的。是否在 CC BY 4.0 的文件里再分发 GPL-3.0 仓库里的 Baxter–Sagart 构拟串，请 Qu 定：保留（现状，各列保留原条款，文件里已写明），或删去 `oc_bs2014`、`head_oc_bs2014` 两列只留派生类别（会影响 ESM_7 的自检，要数据线程重做） |
+| 第三方数据与软件的使用许可 | 满足（Qu 14:16 同意） | ESM_1 §8 和各文件的 About／README 写明来源与条款：*Shuōwén* 文本 Apache-2.0；中古音（nk2028 的 Qieyun 数据 CC0，tshet-uinh 软件 MIT）；上古音构拟字符串来自 Baxter–Sagart，经 cddb 仓库（GPL-3.0），引用时请引 Baxter 和 Sagart（2014）。作者自己的贡献（编码、标注、表、文档）用 CC BY 4.0、代码用 MIT，是数据线程提议的，由 Qu 定。我没有核各来源的 LICENSE 原文（这些仓库不在本环境可访问的范围内），上述条款是数据线程读原文后写的。是否在 CC BY 4.0 的文件里再分发 GPL-3.0 仓库里的 Baxter–Sagart 构拟串，请 Qu 定：保留（现状，各列保留原条款，文件里已写明），或删去 `oc_bs2014`、`head_oc_bs2014` 两列只留派生类别（会影响 ESM_7 的自检，要数据线程重做） |
 
 ## 8 补充材料（Supplementary Information）
 
@@ -121,8 +121,8 @@ Qu 2026-10-01 13:49 和 14:10 已答，已填入题名页和 cover letter（`yis
 3. 竞争利益：无；两位都不是 *Morphology* 编委（Qu：“都不是”）；基金：无。
 4. 再用：本稿内容未曾以学位论文、会议论文或预印本发表过（Qu：“否”），cover letter 已写 “re-uses no text, tables or figures …”。
 5. 论文 §3.1 “We visually checked … 104 of them”：Qu 选 B，两位作者也逐页看了扫描，**保持原样**（不改成 Codex 协助）。
-6. 作者贡献：Qu 原话「Qu参与编码，文献综述；其他都是Wu完成（先说Wu）」，又要求 “按文献主要做的具体工作分配稍微详细一些”。我按 CRediT 写成：“Yusen Wu: conceptualization, methodology, data curation, software, formal analysis, investigation, visualization, writing – original draft, writing – review and editing. Weiyi Qu: investigation (coding) and literature review.” **待 Qu 确认这句英文**。
-7. 补充材料的许可：作者贡献用 CC BY 4.0、代码用 MIT，第三方各列保留原条款（第 7 节末行）是否同意；Baxter–Sagart 构拟串是保留还是删去：**仍待 Qu**。
+6. 作者贡献：Qu 原话「Qu参与编码，文献综述；其他都是Wu完成（先说Wu）」，又要求 “按文献主要做的具体工作分配稍微详细一些”。我按 CRediT 写成：“Yusen Wu: conceptualization, methodology, data curation, software, formal analysis, investigation, visualization, writing – original draft, writing – review and editing. Weiyi Qu: investigation (coding) and literature review.” Qu 14:16 确认 “对”。
+7. 补充材料的许可：作者贡献用 CC BY 4.0、代码用 MIT，第三方各列保留原条款（第 7 节末行）是否同意；Baxter–Sagart 构拟串是保留还是删去：Qu 14:16：同意许可，Baxter–Sagart 两列保留。
 
 可选或知悉（7–12）：
 
@@ -145,6 +145,6 @@ Qu 2026-10-01 13:49 和 14:10 已答，已填入题名页和 cover letter（`yis
 
 ## 11 补充材料里仍待定的两处（数据线程提出，2026-10-01 14:10）
 
-- **Baxter–Sagart 构拟字符串**：ESM_2 `pairs` 和 ESM_7 `pairs.csv` 的 `oc_bs2014`、`head_oc_bs2014` 两列带有构拟字符串（cddb 仓库 GPL-3.0，数据本身和官方 PDF 扉页没写条款）。A 保留（引用 Baxter 和 Sagart 2014，写明来源）；B 删这两列、只留派生类别（要改 ESM_2、ESM_7、ESM_1，再核一轮）。我倾向 A：审稿人要核上古音读法，来源公开且已引用；**请 Qu 定**。
+- **Baxter–Sagart 构拟字符串**：ESM_2 `pairs` 和 ESM_7 `pairs.csv` 的 `oc_bs2014`、`head_oc_bs2014` 两列带有构拟字符串（cddb 仓库 GPL-3.0，数据本身和官方 PDF 扉页没写条款）。A 保留（引用 Baxter 和 Sagart 2014，写明来源）；B 删这两列、只留派生类别（要改 ESM_2、ESM_7、ESM_1，再核一轮）。我倾向 A：审稿人要核上古音读法，来源公开且已引用；Qu 14:16 定：保留（A）。
 - **Apache-2.0 §4**：说文数据（Apache-2.0）要求随附许可证文本；数据线程建议 ESM_7 加 `LICENSE-Apache-2.0.txt` 和 `NOTICE.txt`（67 个文件变 69 个）。我同意，数据线程做完后只重核 ESM_7 和文件数（审计脚本里的 67 改 69）。
 - ESM_4 第 7 节 09-30 18:37 条里有 “how items on which the two authors' judgments differed were settled … is not documented”：是原计划修订记录的译文，保持原样，不删（删了就不再是逐字翻译）。分析层级名 `author_adjudicated` 不改。

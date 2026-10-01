@@ -48,7 +48,7 @@ CORRESPONDING = "Yusen Wu"
 EMAILS = {"Yusen Wu": "wu_yusen825@icloud.com", "Weiyi Qu": "202520101018@bfsu.edu.cn"}   # Qu 2026-10-01 13:49 and 14:10
 ORCIDS = {"Yusen Wu": "N/A", "Weiyi Qu": "N/A"}   # Qu 13:49: both N/A
 CONTRIBUTIONS = ("Yusen Wu: conceptualization, methodology, data curation, software, formal analysis, investigation, visualization, "
-                 "writing \u2013 original draft, writing \u2013 review and editing. Weiyi Qu: investigation (coding) and literature review.")   # draft after Qu 13:49; wording awaits Qu
+                 "writing \u2013 original draft, writing \u2013 review and editing. Weiyi Qu: investigation (coding) and literature review.")   # Qu 13:49 wording, confirmed 14:16
 PRIOR_PUBLICATION_CONFIRMED = True    # Qu 14:10: not published before as thesis, conference paper or preprint
 EDITORIAL_BOARD_CONFIRMED = True    # Qu 14:10: neither author is a member of the editorial board of Morphology
 

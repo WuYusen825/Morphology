@@ -422,3 +422,9 @@
 - **核对表**：状态改为三种；第 3 节按 Qu 的回答更新；“谁做了什么” 一行改为满足；新增第 11 节（Baxter–Sagart 构拟字符串保留或删去、Apache-2.0 随附许可证文本、ESM_4 第 7 节保持逐字翻译）。README、AGENTS.md、`youwen_criteria.md` 同步。
 - **仍待**：Qu 确认作者贡献的英文句子；Qu 定许可和 Baxter–Sagart 列（我倾向保留）；数据线程在 ESM_7 加 `LICENSE-Apache-2.0.txt` 和 `NOTICE.txt`（67 个文件变 69 个，做完我重核 ESM_7 和审计脚本里的 67→69）；评审线程对 ESM_1–7 做一次合规与数字核对。
 - **未改动**：论文正文、表、图、数字；ESM_2、ESM_4；`ext_coding/` 里数据线程的文件。
+
+## 2026-10-01 · Claude（主稿线程）· Qu 确认作者贡献句和补充材料许可
+
+- Qu 14:16：作者贡献的英文句子 “对”（Yusen Wu: conceptualization, methodology, data curation, software, formal analysis, investigation, visualization, writing – original draft, writing – review and editing. Weiyi Qu: investigation (coding) and literature review.）；补充材料许可 “同意，保留”：作者贡献 CC BY 4.0、代码 MIT、第三方列保留原条款，Baxter–Sagart 构拟字符串两列（`oc_bs2014`、`head_oc_bs2014`）保留。
+- 核对表第 3、7、9、11 节、README 同步；`yisheng_make_submission_files.py` 里贡献句的注释改为 “Qu 确认”。文本、DOCX 无变化。
+- 仍待：数据线程给 ESM_7 加 Apache-2.0 许可证文本和 NOTICE（67→69 个文件），之后我重核 ESM_7；评审线程一次合规与数字核对。
